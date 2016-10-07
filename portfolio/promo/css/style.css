@@ -1,0 +1,94 @@
+/* 
+    Created on : 10.03.2016, 15:12:22
+    Author     : Artik
+*/
+* {
+  font-family: 'Open Sans', sans-serif;
+  color: #fdbb2e;
+}
+body {
+  background: #084966 url(../images/pattern-startup-bg.jpg);
+}
+.page {
+  padding-top: 15px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.text30 {
+  font-size: 30pt;
+}
+.text24 {
+  font-size: 24pt;
+}
+p {
+  font-size: 16pt;
+}
+.standup:before {
+  height: 270px;
+  content: "";
+  width: 200%;
+  position: absolute;
+  background: rgba(8, 80, 111, 0.3);
+  top: 25%;
+  left: -50%;
+  display: block;
+  transform: rotate(-15deg);
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+}
+.standup:after {
+  height: 200px;
+  content: "";
+  width: 200%;
+  position: absolute;
+  background: rgba(8, 80, 111, 0.3);
+  top: 25%;
+  left: -50%;
+  display: block;
+  transform: rotate(-15deg);
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+}
+.standup {
+  position: relative;
+  display: table;
+}
+.standup .row {
+  display: table-row;
+}
+.standup .standup-item {
+  text-align: center;
+  padding-bottom: 50px;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 2;
+  display: table-cell;
+}
+.standup .standup-item img {
+  vertical-align: bottom;
+  margin-bottom: 10px;
+}
+.standup .logo {
+  padding-top: 0;
+}
+.standup-footer {
+  text-align: center;
+  position: relative;
+  display: block;
+  z-index: 3;
+  background: #fdbb2e;
+  padding: 20px 15px;
+  color: #084966;
+  text-decoration: underline;
+  font-size: 24pt;
+  width: 100%;
+}
+.standup-footer:hover {
+  color: #337ab7;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

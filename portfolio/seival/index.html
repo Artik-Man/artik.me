@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Сейвал</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="template_styles.css" rel="stylesheet" type="text/css"/>
+        <script src="scripts/jquery-2.1.4.min.js" type="text/javascript"></script>
+        <script src="scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="scripts/script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="page">
+            <div class="menu">
+                <div class="container">
+                    <ul class="nav-menu">
+                        <li class="logo">
+                            <a href="#">
+                                <img src="images/logo.png" alt="">
+                            </a>
+                        </li>
+                        <li><a href="#vacancy" class="scroll-link">Список вакансий</a></li>
+                        <li><a href="#respond" class="scroll-link">Откликнуться на вакансию</a></li>
+                        <li><a href="#contacts" class="scroll-link">Контакты</a></li>
+                        <li class="lang">
+                            <button class="button selected">рус</button>
+                            <button class="button">eng</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="banner">
+                <div class="container">
+                    <div class="text">
+                        <h1>Трудоустройство специалистов на суда дальнего плавания</h1>
+                        <div class="slide">
+                            <p>
+                                <a href="#" class="slide-link">офис в Архангельске</a>
+                            </p>
+                            <p>ул. Поморская 61, оф. 300</p>
+                            <p>+7 (952) 308-8007, +7 (953) 267-3323</p>
+                            <p>+7 8182 210 792</p>
+                        </div>
+                        <div class="slide">
+                            <p>
+                                <a href="#s" class="slide-link">офис в Петрозаводске</a>
+                            </p>
+                            <p>ул. Луначарского 41-А</p>
+                            <p>+7 (814) 259-2015</p>
+                            <p>+7 (953) 525-0303</p>
+                        </div>
+                        <div class="slide">
+                            <p>
+                                <a href="#" class="slide-link">офис в Санкт-Петербурге</a>
+                            </p>
+                            <p>Петроградская набережная, 34, офис 322</p>
+                            <p>+7 (953) 267-33-23</p>
+                            <p> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-2">
+                <div class="container">
+                    <div class="text">
+                        <h2>Кюринговая компания «Сейвал»</h2>
+                        <p>
+                            Ключевое направление деятельности нашей компании — трудоустройство специалистов на суда дальнего плавания. 
+                        </p>
+                        <p>
+                            Давние сложившиеся партнерские отношения с зарубежными организациями и судовладельцами позволяют отлажено работать и сотрудничать в формировании команды на суда. 
+                        </p>
+                        <p>
+                            Мы работаем только с проверенными партнерами, команда может быть уверена в надежности нанимателя, судовладельцы гарантированно получат настоящих професионалов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actual-vacancy show-content" id="vacancy">
+                <div class="container">
+                    <h2>Список актуальных вакансий</h2>
+                    <div class="animation-block">
+                        <div class="frame-block">
+                            <iframe src="https://swco.crewinspector.com/public/vacancy?referring_office_id=1" seamless="">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="respond show-content" id="respond">
+                <div class="container">
+                    <h2>Откликнуться на вакансию</h2>
+                    <div class="animation-block">
+                        <div class="inputs">
+                            <label>
+                                Ваше имя *
+                                <input type="text">
+                            </label>
+                            <label>
+                                Контактный e-mail или телефон *
+                                <input type="text">
+                            </label>
+                            <label>
+                                Специальность
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="textarea">
+                            <label>
+                                Сообщение *
+                                <textarea></textarea>
+                            </label>
+
+                            <div class="input-file">
+                                <button class="short-file">Прикрепить файл</button>
+                                <input type="file">
+
+                            </div>
+
+                            <input type="submit" class="button" value="Отправить">
+
+                        </div>
+                        <p>* — поля обязательные для заполнения</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts show-content" id="contacts">
+                <div class="container">
+                    <h2>Контактная информация</h2>
+                    <div class="animation-block">
+                        <div class="text spb">
+                            <h3>Офис в Санкт-Петербурге</h3>
+                            <p>Петроградская набережная, 34, офис 322</p>
+                            <p>+7 (953) 267-33-23</p>
+                            <a href="mailto:spb@seawhale-co.com">spb@seawhale-co.com</a>
+                        </div>
+
+                        <div class="text ptz">
+                            <h3>Офис в Петрозаводске</h3>
+                            <p>ул. Луначарского 41-А</p>
+                            <p>+7 (814) 259-2015</p>
+                            <p>+7 (953) 525-0303</p>
+                            <a href="mailto:ptz@seawhale-co.com">ptz@seawhale-co.com</a>
+                        </div>
+
+                        <div class="text arh">
+                            <h3>Офис в Архангельске</h3>
+                            <p>ул. Поморская 61, оф. 300</p>
+                            <p>+7 (952) 308-8007</p>
+                            <p>+7(953) 267-3323</p>
+                            <p>+7 8182 210 792</p>
+                            <a href="mailto:arh@seawhale-co.com">arh@seawhale-co.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="container">
+                    <div class="text">
+                        <h3>Seawhale Co Ltd</h3>
+                        <p>Трудоустройство специалистов на суда дальнего плавания</p>
+                        <a href="#" data-toggle="modal" data-target="#popup">Напишите нам</a>
+                    </div>
+                    <div class="ppx">
+                        <a href="#">
+                            <span>Разработка сайта</span>
+                            <span> — </span>
+                            <img src="images/ppx.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="popup" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </div>
+                        <div class="modal-body popup">
+                            <h2>Напишите нам</h2>
+                            <div class="inputs">
+                                <label>
+                                    Ваше имя *
+                                    <input type="text">
+                                </label>
+                                <label>
+                                    Контактный e-mail или телефон *
+                                    <input type="text">
+                                </label>
+                            </div>
+                            <div class="textarea">
+                                <label>
+                                    Сообщение *
+                                    <textarea></textarea>
+                                </label>
+                                <input type="submit" class="button" value="Отправить" data-dismiss="modal">
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </body>
+</html>

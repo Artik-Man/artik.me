@@ -1,0 +1,8 @@
+# robots.txt for http://artik.me.pn
+User-Agent: *
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /js/
+Disallow: /less/
+Disallow: /libs/
