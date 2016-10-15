@@ -1,0 +1,16 @@
+{
+  "name": "cv",
+  "authors": [
+    "Mangasaryan Artashes"
+  ],
+  "description": "curriculum vitae",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "http://artik-man.ru",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "components-font-awesome": "^4.6.3",
+    "jquery": "^3.1.1"
+  }
+}
