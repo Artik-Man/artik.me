@@ -228,27 +228,9 @@
   .hidden-xs {
     display: none;
   }
-  .hidden-sm {
-    display: block;
-  }
-  .hidden-md {
-    display: block;
-  }
-  .hidden-lg {
-    display: block;
-  }
 }
 @media (min-width: 768px) {
   .hidden-xs {
-    display: block;
-  }
-  .hidden-sm {
-    display: none;
-  }
-  .hidden-md {
-    display: block;
-  }
-  .hidden-lg {
     display: block;
   }
   .col-sm-1,
@@ -420,17 +402,8 @@
   }
 }
 @media (min-width: 992px) {
-  .hidden-xs {
-    display: block;
-  }
-  .hidden-sm {
-    display: block;
-  }
   .hidden-md {
     display: none;
-  }
-  .hidden-lg {
-    display: block;
   }
   .col-md-1,
   .col-md-2,
@@ -601,15 +574,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .hidden-xs {
-    display: block;
-  }
-  .hidden-sm {
-    display: block;
-  }
-  .hidden-md {
-    display: block;
-  }
   .hidden-lg {
     display: none;
   }
@@ -828,21 +792,21 @@
 }
 .body {
   background: #ccc url(images/bg.jpg);
-  padding: 100px 0 0 0;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
 }
 .body .page {
   position: relative;
   background: #D03322;
   padding: 50px;
   max-width: 1170px;
-  margin: 0 auto;
+  margin: 100px auto 0 auto;
 }
 .body .page .container {
   position: relative;
 }
 .button {
+  cursor: pointer;
   width: 100%;
   display: block;
   border: 1px solid #D03322;
@@ -852,9 +816,14 @@
   text-transform: uppercase;
   padding: 15px;
   outline: none !important;
-  transition: all 150ms ease-in-out;
   text-align: center;
   text-decoration: none !important;
+  font-size: 14px;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 .button:hover {
   background: #fff;
@@ -865,6 +834,14 @@
 }
 .padding-h {
   padding: 0 10%;
+}
+.padding-h-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.padding-v {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 header {
   position: absolute;
@@ -1234,6 +1211,7 @@ h2 {
 .progress-content .text {
   text-align: center;
   font-size: 20px;
+  margin-top: -10px;
 }
 .progress-content img {
   margin: 0;
@@ -1243,4 +1221,111 @@ h2 {
 }
 .progress-content.active img {
   transform: scale(1);
+}
+.ngdialog-content {
+  background: none;
+  position: relative;
+}
+.c-modal {
+  width: 100%;
+}
+.c-modal .success,
+.c-modal .error {
+  display: none;
+  text-align: center;
+}
+.c-modal .close {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.c-modal .container {
+  max-width: 1070px;
+  margin: 0 auto;
+}
+.c-modal .call-form {
+  margin-top: 50px;
+  cursor: default;
+  background: #fff url(images/cat.jpg) no-repeat;
+  background-position: 0 100%;
+  background-size: 17%;
+  padding: 50px 10px;
+  color: #000;
+}
+.c-modal .call-form h3 {
+  font-family: "SegoeUIBlack", fantasy;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.c-modal .call-form form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.c-modal .call-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-family: "LatoRegular", sans-serif;
+}
+.c-modal .call-form label input[type="text"],
+.c-modal .call-form label input[type="email"] {
+  display: block;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.c-modal .call-form label textarea {
+  width: 100%;
+  display: block;
+  resize: vertical;
+  height: 80px;
+  max-height: 200px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 14px;
+}
+.c-modal .call-form label input[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  border: 1px solid #D03322;
+  background: #D03322;
+  color: #fff;
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: 15px;
+  outline: none !important;
+  text-align: center;
+  text-decoration: none !important;
+  font-size: 14px;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.c-modal .call-form label input[type="submit"]:hover {
+  background: #fff;
+  color: #D03322;
+}
+.c-modal .call-form label .err {
+  border-color: #D03322 !important;
+}
+@media (max-width: 1200px) {
+  .body .page {
+    width: 980px;
+  }
+  .progress-content {
+    padding: 20px;
+  }
+  .content-block .skill {
+    width: 33%;
+  }
+  .c-modal .container {
+    max-width: 880px;
+  }
 }

@@ -11,6 +11,9 @@
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
     "components-font-awesome": "^4.6.3",
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "ng-dialog": "^0.6.4",
+    "nanoscroller": "^0.8.7",
+    "angular-nanoscroller": "^0.2.1"
   }
 }

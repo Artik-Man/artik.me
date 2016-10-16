@@ -1,15 +1,20 @@
 'use strict';
 
-angular.module('cvApp.landing', [])
+angular.module('cvApp.landing', ['ngDialog'])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: 'app/view/landing.html',
             controller: 'landingCtrl'
         });
     }])
-    .controller('landingCtrl', ['$scope', function ($scope) {
-        console.log('ctrl', $scope)
+    .controller('landingCtrl', ['$rootScope', '$scope', 'ngDialog', function ($rootScope, $scope, ngDialog) {
 
+        $scope.modalOpen = function () {
+            ngDialog.open({
+                template: '/app/view/modal.html',
+                showClose: false
+            });
+        };
 
         $scope.skills = [
             {

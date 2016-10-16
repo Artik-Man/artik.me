@@ -14,13 +14,11 @@
     </nav>
 </header>
 
-
 <h1>
     Артик
     <span>Мангасарян</span>
     <label>Frontend-разработчик</label>
 </h1>
-
 
 <section class="content-block">
 
@@ -30,7 +28,7 @@
                 <img src="/styles/images/me.jpg" alt="My photo">
             </div>
             <div class="padding-h hidden-sm hidden-xs">
-                <a href="#feedback" class="modal-open button">Обратная связь</a>
+                <a href="#feedback" class="button" ng-click="modalOpen()">Обратная связь</a>
             </div>
         </div>
         <div class="col-md-8">
@@ -41,15 +39,11 @@
                 </div>
                 <div>
                     <label>Вуз:</label>
-                    <p>Северный (Арктический) федеральный университет мени М. В. Ломоносова</p>
+                    <p>Северный (Арктический) федеральный университет имени М. В. Ломоносова</p>
                 </div>
                 <div>
                     <label>Факультет:</label>
                     <p>Институт математики, информационных и космических технологий</p>
-                </div>
-                <div>
-                    <label>Личные качества:</label>
-                    <p>Люблю изучать новые технологии, стараюсь доводить работу до идеала</p>
                 </div>
                 <div>
                     <label>Опыт работы:</label>
@@ -89,7 +83,7 @@
     </div>
     <div class="row hidden-lg hidden-md">
         <div class="col-sm-offset-3 col-sm-6 col-xs-12 padding-v padding-h-10">
-            <a href="#feedback" class="modal-open button">Обратная связь</a>
+            <a href="#feedback" class="button" ng-click="modalOpen()">Обратная связь</a>
         </div>
     </div>
 
@@ -109,7 +103,7 @@
     <div class="row">
         <div class="col-sm-4 col-xs-6 col-xxs-12 project" ng-repeat="item in portfolio">
             <a href="{{item.link}}" target="_blank">
-                <img ng-src="http://portfolio.artik-man.ru/0-web/{{item.image}}" alt="{{item.title.ru}}"
+                <img ng-src="/styles/images/projects/{{item.image}}" alt="{{item.title.ru}}"
                      title="{{item.title.ru}}">
                 <p><span>{{item.title.ru}}</span></p>
             </a>
@@ -138,7 +132,7 @@
             <a href="https://vk.com/artasches" target="_blank" rel="nofollow">Артик Мангасарян</a>
         </label>
         <div class="padding-v">
-            <a href="#feedback" class="modal-open button">Обратная связь</a>
+            <a href="#feedback" class="button" ng-click="modalOpen()">Обратная связь</a>
         </div>
     </div>
 

@@ -226,27 +226,9 @@
   .hidden-xs {
     display: none;
   }
-  .hidden-sm {
-    display: block;
-  }
-  .hidden-md {
-    display: block;
-  }
-  .hidden-lg {
-    display: block;
-  }
 }
 @media (min-width: 768px) {
   .hidden-xs {
-    display: block;
-  }
-  .hidden-sm {
-    display: none;
-  }
-  .hidden-md {
-    display: block;
-  }
-  .hidden-lg {
     display: block;
   }
   .col-sm-1,
@@ -418,17 +400,8 @@
   }
 }
 @media (min-width: 992px) {
-  .hidden-xs {
-    display: block;
-  }
-  .hidden-sm {
-    display: block;
-  }
   .hidden-md {
     display: none;
-  }
-  .hidden-lg {
-    display: block;
   }
   .col-md-1,
   .col-md-2,
@@ -599,15 +572,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .hidden-xs {
-    display: block;
-  }
-  .hidden-sm {
-    display: block;
-  }
-  .hidden-md {
-    display: block;
-  }
   .hidden-lg {
     display: none;
   }
