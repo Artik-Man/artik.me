@@ -8,7 +8,10 @@ angular.module('cvApp.landing', ['ngDialog'])
         });
     }])
     .controller('landingCtrl', ['$rootScope', '$scope', 'ngDialog', function ($rootScope, $scope, ngDialog) {
-
+        var scrollTop = 0;
+        $rootScope.$on('scroll', function (event, data) {
+            scrollTop = data.top;
+        });
         $scope.modalOpen = function () {
             ngDialog.open({
                 template: '/app/view/modal.html',
