@@ -117,7 +117,6 @@ angular.module('cvApp.landing', ['ngDialog'])
 									$scope.styles.disable = true;
 								},
 								complete: function(e, jqXHR, textStatus) {
-									console.log(e, jqXHR, textStatus)
 									if (e.status === 0 || e.status === 200) {
 										$scope.styles.form = false;
 										$scope.styles.error_cat = false;
@@ -151,8 +150,6 @@ angular.module('cvApp.landing', ['ngDialog'])
 							});
 						}
 					};
-
-					console.log($scope)
 				}]
 			});
 		};
