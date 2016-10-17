@@ -41,7 +41,7 @@
   },
   {
     "link": "",
-    "short_link": "http://portfolio.artik-man.ru/park/",
+    "short_link": "/portfolio/park/",
     "image": "park.jpg",
     "hide": false,
     "title": {
@@ -61,7 +61,7 @@
   },
   {
     "link": "",
-    "short_link": "http://portfolio.artik-man.ru/seival/",
+    "short_link": "/portfolio/seival/",
     "image": "seawhale.jpg",
     "hide": false,
     "title": {
@@ -71,7 +71,7 @@
   },
   {
     "link": "",
-    "short_link": "http://portfolio.artik-man.ru/creative/",
+    "short_link": "/portfolio/creative/",
     "image": "creative.jpg",
     "hide": false,
     "title": {
@@ -81,7 +81,7 @@
   },
   {
     "link": "",
-    "short_link": "http://portfolio.artik-man.ru/promo/",
+    "short_link": "/portfolio/promo/",
     "image": "promo.jpg",
     "hide": false,
     "title": {
