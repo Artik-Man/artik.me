@@ -18,10 +18,10 @@ angular.module('skillBuilder', [])
 
 				$rootScope.$on('scroll', function(event, data) {
 					offset = $(element).offset().top;
-					if (data.top + $(window).height() * 0.7 > offset && x) {
+					if ($(window).height() * 0.7 > offset && x) {
 						scope.rotate = -90 * (100 - scope.skill.percent) / 100;
 						x = false;
-						scope.$apply();
+						scope.$digest();
 					}
 				})
 			}

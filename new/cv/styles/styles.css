@@ -976,6 +976,9 @@ h2 {
 .text-center {
   text-align: center;
 }
+.ngdialog-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
 .content-block {
   padding: 30px;
   position: relative;
@@ -1257,8 +1260,8 @@ h2 {
 }
 .c-modal .success,
 .c-modal .error {
-  display: none;
   text-align: center;
+  font-size: 18px;
 }
 .c-modal .close {
   position: absolute;
@@ -1274,9 +1277,12 @@ h2 {
   cursor: default;
   background: #fff url(images/cat.jpg) no-repeat;
   background-position: 0 100%;
-  background-size: 17%;
+  background-size: 16%;
   padding: 50px 10px;
   color: #000;
+}
+.c-modal .call-form.error {
+  background-image: url(images/cat2.jpg);
 }
 .c-modal .call-form h3 {
   font-family: "SegoeUIBlack", fantasy;
@@ -1373,6 +1379,12 @@ h2 {
   .body .page {
     width: 750px;
   }
+  .c-modal {
+    padding: 50px;
+  }
+  .c-modal .container {
+    max-width: 650px;
+  }
 }
 @media (min-width: 600px) and (max-width: 767px) {
   .avatar-box {
@@ -1396,6 +1408,12 @@ h2 {
   .about-text div label {
     width: 160px;
   }
+  .c-modal {
+    padding: 50px;
+  }
+  .c-modal .container {
+    max-width: 650px;
+  }
 }
 @media (max-width: 599px) {
   header nav ul li a {
@@ -1415,6 +1433,12 @@ h2 {
   }
   .content-block .skill {
     width: 100%;
+  }
+  .content-block .skill:nth-last-child(1),
+  .content-block .skill:nth-last-child(2),
+  .content-block .skill:nth-last-child(3),
+  .content-block .skill:nth-last-child(4) {
+    display: none;
   }
   .about-text div label {
     width: 160px;
@@ -1438,7 +1462,7 @@ h2 {
     top: 0;
     left: 0;
     padding: 36vh 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
   }
   header nav ul li {
     display: block;
@@ -1449,6 +1473,7 @@ h2 {
     margin: 0;
     padding: 2vh 2vw;
     font-size: 3vh;
+    text-shadow: 0 0 40px #000;
   }
   .about-text {
     display: block;

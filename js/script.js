@@ -51,7 +51,7 @@
         }
 
         function fail() {
-            container.css("background-image", "url(/images/cat2.jpg)");
+            container.css("background-image", "url(images/cat2.jpg)");
             container.find(".error").fadeIn(200);
             frm.css("display", "none");
             frm.find("input[type='submit']").attr('disabled', false);

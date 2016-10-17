@@ -235,6 +235,10 @@ h2 {
   text-align: center;
 }
 
+.ngdialog-overlay {
+  background: fade(@black, 80%);
+}
+
 .content-block {
   padding: 30px;
   position: relative;
@@ -501,8 +505,8 @@ h2 {
   width: 100%;
   .success,
   .error {
-    display: none;
     text-align: center;
+    font-size: 18px;
   }
   .close {
     position: absolute;
@@ -518,9 +522,12 @@ h2 {
     cursor: default;
     background: #fff url(images/cat.jpg) no-repeat;
     background-position: 0 100%;
-    background-size: 17%;
+    background-size: 16%;
     padding: 50px 10px;
     color: #000;
+    &.error {
+      background-image: url(images/cat2.jpg);
+    }
     h3 {
       #font>.segoe> .bold;
       font-size: 30px;
@@ -612,6 +619,13 @@ h2 {
       width: 750px;
     }
   }
+
+  .c-modal {
+    padding: 50px;
+    .container {
+      max-width: 650px;
+    }
+  }
 }
 
 @media (min-width: 600px) and (max-width: 767px) {
@@ -649,6 +663,12 @@ h2 {
     }
   }
 
+  .c-modal {
+    padding: 50px;
+    .container {
+      max-width: 650px;
+    }
+  }
 }
 
 @media (max-width: 599px) {
@@ -681,6 +701,12 @@ h2 {
   .content-block {
     .skill {
       width: 100%;
+      &:nth-last-child(1),
+      &:nth-last-child(2),
+      &:nth-last-child(3),
+      &:nth-last-child(4){
+        display: none;
+      }
     }
   }
 
@@ -715,17 +741,17 @@ h2 {
           top: 0;
           left: 0;
           padding: 36vh 0;
-          background: fade(@black, 50%);
+          .ngdialog-overlay;
         }
         li {
           display: block;
           text-align: center;
-
           a {
             display: inline-block;
             margin: 0;
             padding: 2vh 2vw;
             font-size: 3vh;
+            text-shadow: 0 0 40px #000;
           }
         }
       }

@@ -1,13 +1,13 @@
-<header class="">
+<header>
 	<div class="logo">
-		<a href="#top">AM</a>
+		<a href="#top" class="short-link">AM</a>
 	</div>
 	<nav>
 		<button class="hide-menu" ng-click="menuOpen()"><i class="fa fa-bars"></i></button>
 		<ul ng-class="{'active':menuIsOpen}" ng-click="menuClose()">
-			<li><a href="#skills">Навыки</a></li>
-			<li><a href="#projects">Портфолио</a></li>
-			<li><a href="#contacts">Контакты</a></li>
+			<li><a href="#skills" class="short-link">Навыки</a></li>
+			<li><a href="#projects" class="short-link">Портфолио</a></li>
+			<li><a href="#contacts" class="short-link">Контакты</a></li>
 			<li><a href="#">EN</a></li>
 		</ul>
 
@@ -89,7 +89,7 @@
 
 </section>
 
-<h2>ОСНОВНЫЕ НАВЫКИ</h2>
+<h2 id="skills">ОСНОВНЫЕ НАВЫКИ</h2>
 
 <section class="content-block text-center">
 
@@ -97,7 +97,7 @@
 
 </section>
 
-<h2>ПОРТФОЛИО</h2>
+<h2 id="projects">ПОРТФОЛИО</h2>
 
 <section class="content-block projects">
 	<div class="row">
@@ -111,7 +111,7 @@
 	</div>
 </section>
 
-<h2>КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
+<h2 id="contacts">КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
 
 <section class="content-block">
 	<div class="contacts">

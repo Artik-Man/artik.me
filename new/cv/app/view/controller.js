@@ -8,15 +8,116 @@ angular.module('cvApp.landing', ['ngDialog'])
 		});
 	}])
 	.controller('landingCtrl', ['$rootScope', '$scope', 'ngDialog', function($rootScope, $scope, ngDialog) {
+
+		$('a.short-link').on('click', function (e) {
+			e.preventDefault();
+			var target = $(this).attr("href");
+			if ($(target).length > 0) {
+				$('.nano-content').stop().animate({
+					scrollTop: $(target).offset().top - 70
+				}, 1000);
+			}
+		});
+
 		$scope.modalOpen = function() {
 			ngDialog.open({
 				template: '/app/view/modal.html',
-				showClose: false
+				showClose: false,
+				controller: ['$scope', '$http', function($scope, $http) {
+					function validateEmail(email) {
+						var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+						return re.test(email);
+					}
+
+					$scope.styles = {
+						form: true,
+						error_cat: false,
+						success: false,
+						error: false,
+						disable: false,
+						err: {
+							name: false,
+							mail: false,
+							text: false
+						}
+					};
+					$scope.data = {
+						'entry.878354685':'',
+						'entry.1171937833':'',
+						'entry.246362975':''
+					};
+					$scope.submit = function(i) {
+						$scope.styles.err = {
+							name: false,
+							mail: false,
+							text: false
+						};
+						var err = false;
+						if ($scope.data['entry.878354685'].length < 2) {
+							err = true;
+							$scope.styles.err.name = true;
+						}
+						if (!validateEmail($scope.data['entry.1171937833'])) {
+							err = true;
+							$scope.styles.err.mail = true;
+						}
+						if ($scope.data['entry.246362975'].length < 2) {
+							err = true;
+							$scope.styles.err.text = true;
+						}
+						if (!err) {
+							//https://docs.google.com/a/artik-man.ru/forms/d/1UgaZGeh-a-P5XicohpUS4M7NhKIA-saselG0timvnto/formResponse
+							//http://docs.google.com/forms/d/1UgaZGeh-a-P5XicohpUS4M7NhKIA-saselG0timvnto/formResponse
+							$.ajax({
+								url: "https://docs.google.com/a/artik-man.ru/forms/d/1UgaZGeh-a-P5XicohpUS4M7NhKIA-saselG0timvnto/formResponse",
+								type: "POST",
+								dataType: "xml",
+								data: $scope.data,
+								beforeSend: function() { // перед отправкой
+									$scope.styles.disable = true;
+								},
+								complete: function(e, jqXHR, textStatus) {
+									console.log(e, jqXHR, textStatus)
+									if (e.status === 0 || e.status === 200) {
+										$scope.styles.form = false;
+										$scope.styles.error_cat = false;
+										$scope.styles.success = true;
+										$scope.styles.error = false;
+
+										setTimeout(function() {
+											$scope.styles.form = true;
+											$scope.styles.error_cat = false;
+											$scope.styles.success = false;
+											$scope.styles.error = false;
+											$scope.styles.disable = false;
+											ngDialog.closeAll()
+										}, 3000);
+									}
+									else {
+										$scope.styles.form = false;
+										$scope.styles.error_cat = true;
+										$scope.styles.success = false;
+										$scope.styles.error = true;
+										setTimeout(function() {
+											$scope.styles.form = true;
+											$scope.styles.error_cat = false;
+											$scope.styles.success = false;
+											$scope.styles.error = false;
+											$scope.styles.disable = false;
+										}, 3000);
+									}
+									$scope.$apply()
+								}
+							});
+						}
+					};
+
+					console.log($scope)
+				}]
 			});
 		};
 
 		$scope.menuIsOpen = false;
-
 		$scope.menuOpen = function() {
 			$scope.menuIsOpen = true;
 		};
@@ -32,7 +133,7 @@ angular.module('cvApp.landing', ['ngDialog'])
 			}, {
 				image: "angular.png",
 				title: "AngularJS",
-				percent: 45
+				percent: 50
 			}, {
 				image: "bitrix.png",
 				title: "1C-Bitrix",
@@ -56,7 +157,7 @@ angular.module('cvApp.landing', ['ngDialog'])
 			}, {
 				image: "jq.png",
 				title: "jQuery",
-				percent: 80
+				percent: 85
 			}, {
 				image: "js.png",
 				title: "JavaScript",
@@ -64,7 +165,7 @@ angular.module('cvApp.landing', ['ngDialog'])
 			}, {
 				image: "less.png",
 				title: "less",
-				percent: 75
+				percent: 80
 			}, {
 				image: "mysql.png",
 				title: "MySQL",
@@ -77,7 +178,6 @@ angular.module('cvApp.landing', ['ngDialog'])
 		].sort(function(a, b) {
 			return (b.percent - a.percent);
 		});
-
 
 		$scope.portfolio = [
 			{
