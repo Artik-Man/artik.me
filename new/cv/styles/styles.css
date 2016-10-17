@@ -224,15 +224,7 @@
 .col-xs-offset-0 {
   margin-left: 0;
 }
-@media (max-width: 767px) {
-  .hidden-xs {
-    display: none;
-  }
-}
 @media (min-width: 768px) {
-  .hidden-xs {
-    display: block;
-  }
   .col-sm-1,
   .col-sm-2,
   .col-sm-3,
@@ -402,9 +394,6 @@
   }
 }
 @media (min-width: 992px) {
-  .hidden-md {
-    display: none;
-  }
   .col-md-1,
   .col-md-2,
   .col-md-3,
@@ -574,9 +563,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .hidden-lg {
-    display: none;
-  }
   .col-lg-1,
   .col-lg-2,
   .col-lg-3,
@@ -762,6 +748,26 @@
 .row:after {
   clear: both;
 }
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
 #font .lato .bold {
   font-family: "LatoBold", sans-serif;
 }
@@ -832,6 +838,9 @@
 .button:focus {
   color: #fff;
 }
+.nano .nano-pane {
+  width: 6px;
+}
 .padding-h {
   padding: 0 10%;
 }
@@ -869,9 +878,23 @@ header .logo a {
 header nav {
   display: table-cell;
   vertical-align: middle;
+  text-align: right;
 }
 header nav .hide-menu {
   display: none;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 24px;
+  cursor: pointer;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+header nav .hide-menu:hover {
+  color: #fff;
 }
 header nav ul {
   padding: 0;
@@ -1056,6 +1079,7 @@ h2 {
   background: #fff;
   left: 10%;
   width: 80%;
+  max-width: 380px;
   -webkit-box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.3);
@@ -1066,6 +1090,8 @@ h2 {
 .about-text {
   display: table;
   padding: 30px 0;
+  max-width: 700px;
+  margin: 0 auto;
 }
 .about-text div {
   display: table-row;
@@ -1312,10 +1338,13 @@ h2 {
   background: #fff;
   color: #D03322;
 }
+.c-modal .call-form label input[type="submit"]:focus {
+  color: #fff;
+}
 .c-modal .call-form label .err {
   border-color: #D03322 !important;
 }
-@media (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .body .page {
     width: 980px;
   }
@@ -1327,5 +1356,134 @@ h2 {
   }
   .c-modal .container {
     max-width: 880px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size: 170px;
+  }
+  .content-block .skill {
+    width: 50%;
+  }
+  .avatar-box {
+    margin: 0 auto -50px auto;
+    left: 0;
+    top: -100px;
+  }
+  .body .page {
+    width: 750px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .avatar-box {
+    margin: 0 auto -50px auto;
+    left: 0;
+    top: -100px;
+  }
+  .content-block .skill {
+    width: 50%;
+  }
+  .body .page {
+    width: 100% !important;
+  }
+  h1 {
+    font-size: 100px;
+    padding-bottom: 200px;
+  }
+  h1 span {
+    font-size: 34px;
+  }
+  .about-text div label {
+    width: 160px;
+  }
+}
+@media (max-width: 599px) {
+  header nav ul li a {
+    margin-left: 20px;
+  }
+  h1 {
+    font-size: 100px;
+    padding-bottom: 200px;
+  }
+  h1 span {
+    font-size: 34px;
+  }
+  .avatar-box {
+    margin: 0 auto -50px auto;
+    left: 0;
+    top: -100px;
+  }
+  .content-block .skill {
+    width: 100%;
+  }
+  .about-text div label {
+    width: 160px;
+  }
+}
+@media (max-width: 550px) {
+  .body .page {
+    padding: 50px 10px;
+  }
+  header nav .hide-menu {
+    display: inline-block;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav ul.active {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 36vh 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  header nav ul li {
+    display: block;
+    text-align: center;
+  }
+  header nav ul li a {
+    display: inline-block;
+    margin: 0;
+    padding: 2vh 2vw;
+    font-size: 3vh;
+  }
+  .about-text {
+    display: block;
+  }
+  .about-text div {
+    display: block;
+  }
+  .about-text div label {
+    width: 100%;
+    display: block;
+  }
+  .about-text div p {
+    display: block;
+  }
+}
+@media (max-width: 420px) {
+  .content-block .contacts {
+    width: 100%;
+  }
+  .content-block .contacts label span {
+    display: block;
+    width: 100%;
+  }
+  .content-block .contacts label span .fa {
+    width: 20px;
+  }
+  .content-block .contacts label a {
+    padding-left: 35px;
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    font-size: 75px;
+  }
+  h2 {
+    font-size: 32px;
   }
 }

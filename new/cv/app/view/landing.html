@@ -1,91 +1,91 @@
 <header class="">
-    <div class="logo">
-        <a href="#top">AM</a>
-    </div>
-    <nav>
-        <button class="hide-menu"><i class="fa fa-bars"></i></button>
-        <ul>
-            <li><a href="#skills">Навыки</a></li>
-            <li><a href="#projects">Портфолио</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-            <li><a href="#">EN</a></li>
-        </ul>
+	<div class="logo">
+		<a href="#top">AM</a>
+	</div>
+	<nav>
+		<button class="hide-menu" ng-click="menuOpen()"><i class="fa fa-bars"></i></button>
+		<ul ng-class="{'active':menuIsOpen}" ng-click="menuClose()">
+			<li><a href="#skills">Навыки</a></li>
+			<li><a href="#projects">Портфолио</a></li>
+			<li><a href="#contacts">Контакты</a></li>
+			<li><a href="#">EN</a></li>
+		</ul>
 
-    </nav>
+	</nav>
 </header>
 
 <h1>
-    Артик
-    <span>Мангасарян</span>
-    <label>Frontend-разработчик</label>
+	Артик
+	<span>Мангасарян</span>
+	<label>Frontend-разработчик</label>
 </h1>
 
 <section class="content-block">
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="avatar-box">
-                <img src="/styles/images/me.jpg" alt="My photo">
-            </div>
-            <div class="padding-h hidden-sm hidden-xs">
-                <a href="#feedback" class="button" ng-click="modalOpen()">Обратная связь</a>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="about-text">
-                <div>
-                    <label>Дата рождения:</label>
-                    <p>01.08.1994</p>
-                </div>
-                <div>
-                    <label>Вуз:</label>
-                    <p>Северный (Арктический) федеральный университет имени М. В. Ломоносова</p>
-                </div>
-                <div>
-                    <label>Факультет:</label>
-                    <p>Институт математики, информационных и космических технологий</p>
-                </div>
-                <div>
-                    <label>Опыт работы:</label>
-                    <p>2 года</p>
-                </div>
-                <div>
-                    <label>Контакты:</label>
-                    <p>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="avatar-box">
+				<img src="/styles/images/me.jpg" alt="My photo">
+			</div>
+			<div class="padding-h hidden-sm hidden-xs">
+				<button class="button" ng-click="modalOpen()">Обратная связь</button>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="about-text">
+				<div>
+					<label>Дата рождения:</label>
+					<p>01.08.1994</p>
+				</div>
+				<div>
+					<label>Вуз:</label>
+					<p>Северный (Арктический) федеральный университет имени М. В. Ломоносова</p>
+				</div>
+				<div>
+					<label>Факультет:</label>
+					<p>Институт математики, информационных и космических технологий</p>
+				</div>
+				<div>
+					<label>Опыт работы:</label>
+					<p>2 года</p>
+				</div>
+				<div>
+					<label>Контакты:</label>
+					<p>
                         <span>
                             <a href="tel:89062824201" rel="nofollow">
                                 <i class="fa fa-phone"></i>
                                 +7 906 282-42-01
                             </a>
                         </span>
-                        <span>
+						<span>
                             <a href="mailto:artik.alpha@ya.ru" rel="nofollow">
                                 <i class="fa fa-envelope"></i>
                                 artik.alpha@ya.ru
                             </a>
                         </span>
-                        <span>
+						<span>
                             <a href="skype:art-man-1994?call" rel="nofollow">
                                 <i class="fa fa-skype"></i>
                                 art-man-1994
                             </a>
                         </span>
-                        <span>
+						<span>
                             <a href="https://vk.com/artasches" target="_blank" rel="nofollow">
                                 <i class="fa fa-vk"></i>
                                 Артик Мангасарян
                             </a>
                         </span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row hidden-lg hidden-md">
-        <div class="col-sm-offset-3 col-sm-6 col-xs-12 padding-v padding-h-10">
-            <a href="#feedback" class="button" ng-click="modalOpen()">Обратная связь</a>
-        </div>
-    </div>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row hidden-lg hidden-md">
+		<div class="col-sm-offset-3 col-sm-6 col-xs-12 padding-v padding-h-10">
+			<button class="button" ng-click="modalOpen()">Обратная связь</button>
+		</div>
+	</div>
 
 </section>
 
@@ -93,47 +93,47 @@
 
 <section class="content-block text-center">
 
-    <div class="skill" ng-repeat="skill in skills" skill-builder skill="skill"></div>
+	<div class="skill" ng-repeat="skill in skills" skill-builder skill="skill"></div>
 
 </section>
 
 <h2>ПОРТФОЛИО</h2>
 
 <section class="content-block projects">
-    <div class="row">
-        <div class="col-sm-4 col-xs-6 col-xxs-12 project" ng-repeat="item in portfolio">
-            <a href="{{item.link}}" target="_blank">
-                <img ng-src="/styles/images/projects/{{item.image}}" alt="{{item.title.ru}}"
-                     title="{{item.title.ru}}">
-                <p><span>{{item.title.ru}}</span></p>
-            </a>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-md-4 col-sm-6 col-xs-12 project" ng-repeat="item in portfolio">
+			<a href="{{item.link}}" target="_blank">
+				<img ng-src="/styles/images/projects/{{item.image}}" alt="{{item.title.ru}}"
+					 title="{{item.title.ru}}">
+				<p><span>{{item.title.ru}}</span></p>
+			</a>
+		</div>
+	</div>
 </section>
 
 <h2>КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
 
 <section class="content-block">
-    <div class="contacts">
-        <label>
-            <span><i class="fa fa-phone"></i> Телефон: </span>
-            <a href="tel:89062824201" rel="nofollow">+7 906 282-42-01</a>
-        </label>
-        <label>
-            <span><i class="fa fa-envelope"></i> E-mail: </span>
-            <a href="mailto:artik.alpha@ya.ru" rel="nofollow">artik.alpha@ya.ru</a>
-        </label>
-        <label>
-            <span><i class="fa fa-skype"></i> Skype: </span>
-            <a href="skype:art-man-1994?call" rel="nofollow">art-man-1994</a>
-        </label>
-        <label>
-            <span><i class="fa fa-vk"></i> VK: </span>
-            <a href="https://vk.com/artasches" target="_blank" rel="nofollow">Артик Мангасарян</a>
-        </label>
-        <div class="padding-v">
-            <a href="#feedback" class="button" ng-click="modalOpen()">Обратная связь</a>
-        </div>
-    </div>
+	<div class="contacts">
+		<label>
+			<span><i class="fa fa-phone"></i>Телефон:</span>
+			<a href="tel:89062824201" rel="nofollow">+7 906 282-42-01</a>
+		</label>
+		<label>
+			<span><i class="fa fa-envelope"></i>E-mail:</span>
+			<a href="mailto:artik.alpha@ya.ru" rel="nofollow">artik.alpha@ya.ru</a>
+		</label>
+		<label>
+			<span><i class="fa fa-skype"></i>Skype:</span>
+			<a href="skype:art-man-1994?call" rel="nofollow">art-man-1994</a>
+		</label>
+		<label>
+			<span><i class="fa fa-vk"></i>VK:</span>
+			<a href="https://vk.com/artasches" target="_blank" rel="nofollow">Артик Мангасарян</a>
+		</label>
+		<div class="padding-v">
+			<button class="button" ng-click="modalOpen()">Обратная связь</button>
+		</div>
+	</div>
 
 </section>

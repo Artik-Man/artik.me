@@ -90,10 +90,15 @@
     background: @white;
     color: @red;
   }
+  &:focus {
+    color: @white;
+  }
 }
 
-.button:focus {
-  color: @white;
+.nano {
+  .nano-pane {
+    width: 6px;
+  }
 }
 
 .padding-h {
@@ -135,8 +140,18 @@ header {
   nav {
     display: table-cell;
     vertical-align: middle;
+    text-align: right;
     .hide-menu {
       display: none;
+      background: none;
+      border: none;
+      color: fade(@white, 70%);
+      font-size: 24px;
+      cursor: pointer;
+      .animate(150ms);
+      &:hover {
+        color: @white;
+      }
     }
     ul {
       padding: 0;
@@ -328,6 +343,7 @@ h2 {
   background: @white;
   left: 10%;
   width: 80%;
+  max-width: 380px;
   -webkit-box-shadow: 0 20px 60px -10px fade(@black, 30%);
   -moz-box-shadow: 0 20px 60px -10px fade(@black, 30%);
   box-shadow: 0 20px 60px -10px fade(@black, 30%);
@@ -339,6 +355,8 @@ h2 {
 .about-text {
   display: table;
   padding: 30px 0;
+  max-width: 700px;
+  margin: 0 auto;
   div {
     display: table-row;
     font-size: 18px;
@@ -548,15 +566,7 @@ h2 {
   }
 }
 
-@media (max-width: 767px) {
-
-}
-
-@media (max-width: 991px) {
-
-}
-
-@media (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .body {
     .page {
       width: 980px;
@@ -577,5 +587,192 @@ h2 {
     .container {
       max-width: 880px;
     }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size: 170px;
+  }
+
+  .content-block {
+    .skill {
+      width: 50%;
+    }
+  }
+
+  .avatar-box {
+    margin: 0 auto -50px auto;
+    left: 0;
+    top: -100px;
+  }
+
+  .body {
+    .page {
+      width: 750px;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .avatar-box {
+    margin: 0 auto -50px auto;
+    left: 0;
+    top: -100px;
+  }
+
+  .content-block {
+    .skill {
+      width: 50%;
+    }
+  }
+
+  .body {
+    .page {
+      width: 100% !important;
+    }
+  }
+
+  h1 {
+    font-size: 100px;
+    padding-bottom: 200px;
+    span {
+      font-size: 34px;
+    }
+  }
+
+  .about-text {
+    div {
+      label {
+        width: 160px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 599px) {
+  header {
+    nav {
+      ul {
+        li {
+          a {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-size: 100px;
+    padding-bottom: 200px;
+    span {
+      font-size: 34px;
+    }
+  }
+
+  .avatar-box {
+    margin: 0 auto -50px auto;
+    left: 0;
+    top: -100px;
+  }
+
+  .content-block {
+    .skill {
+      width: 100%;
+    }
+  }
+
+  .about-text {
+    div {
+      label {
+        width: 160px;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .body {
+    .page {
+      padding: 50px 10px;
+    }
+  }
+
+  header {
+    nav {
+      .hide-menu {
+        display: inline-block;
+      }
+      ul {
+        display: none;
+        &.active {
+          display: block;
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          padding: 36vh 0;
+          background: fade(@black, 50%);
+        }
+        li {
+          display: block;
+          text-align: center;
+
+          a {
+            display: inline-block;
+            margin: 0;
+            padding: 2vh 2vw;
+            font-size: 3vh;
+          }
+        }
+      }
+    }
+  }
+
+  .about-text {
+    display: block;
+    div {
+      display: block;
+      label {
+        width: 100%;
+        display: block;
+      }
+      p {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .content-block {
+    .contacts {
+      width: 100%;
+      label {
+        span {
+          display: block;
+          width: 100%;
+          .fa {
+            width: 20px;
+          }
+        }
+        a {
+          padding-left: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 75px;
+  }
+
+  h2 {
+    font-size: 32px;
   }
 }

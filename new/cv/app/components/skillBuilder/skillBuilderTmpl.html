@@ -1,16 +1,15 @@
 <div class="progress-content">
-    <img ng-src="/styles/images/skills/{{image}}" alt="{{title}}">
-    <div class="text"><span>{{percent}}</span><span>%</span></div>
-    <div class="progress-item">
-        <div class="round-progress"
-             ng-class="{'green':percent>=70, 'orange':percent>=40&&percent<70}">
-            <div class="r0">
-                <div class="r1" ng-style="{'transform': 'rotate('+rotate+'deg)'}">
-                    <div class="r2" ng-style="{'transform': 'rotate('+rotate+'deg)'}">
-                        <div class="r3" ng-style="{'transform': 'rotate('+rotate+'deg)'}"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<img ng-src="/styles/images/skills/{{image}}" alt="{{title}}">
+	<div class="text"><span>{{percent}}</span><span>%</span></div>
+	<div class="progress-item">
+		<div class="round-progress" ng-class="{'green':percent>=70, 'orange':percent>=40&&percent<70}">
+			<div class="r0">
+				<div class="r1" ng-style="{'transform': 'rotate('+rotate+'deg)'}">
+					<div class="r2" ng-style="{'transform': 'rotate('+rotate+'deg)'}">
+						<div class="r3" ng-style="{'transform': 'rotate('+rotate+'deg)'}"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
