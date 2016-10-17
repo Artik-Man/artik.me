@@ -9,7 +9,11 @@ angular.module('cvApp.landing', ['ngDialog'])
 	}])
 	.controller('landingCtrl', ['$rootScope', '$scope', 'ngDialog', function($rootScope, $scope, ngDialog) {
 
-		$('a.short-link').on('click', function (e) {
+		addOnWheel($('.nano-content')[0], function(e) {
+			$('.nano-content').stop();
+		});
+
+		$('a.short-link').on('click', function(e) {
 			e.preventDefault();
 			var target = $(this).attr("href");
 			if ($(target).length > 0) {
@@ -17,6 +21,31 @@ angular.module('cvApp.landing', ['ngDialog'])
 					scrollTop: $(target).offset().top - 70
 				}, 1000);
 			}
+		});
+
+		// scroll animate fix
+		function addOnWheel(elem, handler) {
+			if (elem.addEventListener) {
+				if ('onwheel' in document) {
+					elem.addEventListener("wheel", handler);
+				} else if ('onmousewheel' in document) {
+					elem.addEventListener("mousewheel", handler);
+				} else {
+					elem.addEventListener("MozMousePixelScroll", handler);
+				}
+			} else {
+				elem.attachEvent("onmousewheel", handler);
+			}
+		}
+
+		$scope.fly = false;
+		$rootScope.$on('scroll', function(event, data) {
+			if (data.top > 200) {
+				$scope.fly = true;
+			} else {
+				$scope.fly = false;
+			}
+			$scope.$digest();
 		});
 
 		$scope.modalOpen = function() {
@@ -42,9 +71,9 @@ angular.module('cvApp.landing', ['ngDialog'])
 						}
 					};
 					$scope.data = {
-						'entry.878354685':'',
-						'entry.1171937833':'',
-						'entry.246362975':''
+						'entry.878354685': '',
+						'entry.1171937833': '',
+						'entry.246362975': ''
 					};
 					$scope.submit = function(i) {
 						$scope.styles.err = {

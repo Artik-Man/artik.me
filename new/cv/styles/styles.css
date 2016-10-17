@@ -860,6 +860,35 @@ header {
   height: 40px;
   display: table;
 }
+header.fly {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 1170px;
+  margin-left: -585px;
+  padding: 0 50px;
+}
+header.fly:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -1000px;
+  width: 4000px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+header.fly .logo {
+  position: relative;
+  z-index: 2;
+  padding: 5px 0;
+}
+header.fly nav {
+  position: relative;
+  z-index: 2;
+  padding: 15px 0;
+}
 header a {
   color: inherit;
   text-decoration: none !important;

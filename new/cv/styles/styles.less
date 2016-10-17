@@ -122,6 +122,36 @@ header {
   width: 100%;
   height: 40px;
   display: table;
+  @w: 1170px;
+  &.fly {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: @w;
+    margin-left: -1*@w/2;
+    padding: 0 50px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -1000px;
+      width: 4000px;
+      height: 100%;
+      background: fade(@black, 80%);
+      z-index: 1;
+    }
+    .logo {
+      position: relative;
+      z-index: 2;
+      padding: 5px 0;
+    }
+    nav {
+      position: relative;
+      z-index: 2;
+      padding: 15px 0;
+    }
+  }
   a {
     color: inherit;
     text-decoration: none !important;
@@ -704,7 +734,7 @@ h2 {
       &:nth-last-child(1),
       &:nth-last-child(2),
       &:nth-last-child(3),
-      &:nth-last-child(4){
+      &:nth-last-child(4) {
         display: none;
       }
     }
