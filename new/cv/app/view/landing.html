@@ -5,19 +5,19 @@
 	<nav>
 		<button class="hide-menu" ng-click="menuOpen()"><i class="fa fa-bars"></i></button>
 		<ul ng-class="{'active':menuIsOpen}" ng-click="menuClose()">
-			<li><a href="#skills" class="short-link">Навыки</a></li>
-			<li><a href="#projects" class="short-link">Портфолио</a></li>
-			<li><a href="#contacts" class="short-link">Контакты</a></li>
-			<li><a href="#">EN</a></li>
+			<li><a href="#skills" class="short-link">{{LANG.MENU_SKILLS}}</a></li>
+			<li><a href="#projects" class="short-link">{{LANG.MENU_PROJECTS}}</a></li>
+			<li><a href="#contacts" class="short-link">{{LANG.MENU_CONTACTS}}</a></li>
+			<li><button ng-click="changeLang()">{{LANG.MENU_LANG}}</button></li>
 		</ul>
 
 	</nav>
 </header>
 
 <h1>
-	Артик
-	<span>Мангасарян</span>
-	<label>Frontend-разработчик</label>
+	{{LANG.ARTIK}}
+	<span>{{LANG.MANGASARYAN}}</span>
+	<label>{{LANG.SUBTITLE}}</label>
 </h1>
 
 <section class="content-block">
@@ -28,29 +28,29 @@
 				<img src="/styles/images/me.jpg" alt="My photo">
 			</div>
 			<div class="padding-h hidden-sm hidden-xs">
-				<button class="button" ng-click="modalOpen()">Обратная связь</button>
+				<button class="button" ng-click="modalOpen()">{{LANG.FEEDBACK}}</button>
 			</div>
 		</div>
 		<div class="col-md-8">
 			<div class="about-text">
 				<div>
-					<label>Дата рождения:</label>
-					<p>01.08.1994</p>
+					<label>{{LANG.INFO_B_DAY_Q}}:</label>
+					<p>{{LANG.INFO_B_DAY_A}}</p>
 				</div>
 				<div>
-					<label>Вуз:</label>
-					<p>Северный (Арктический) федеральный университет имени М. В. Ломоносова</p>
+					<label>{{LANG.INFO_UNIVER_Q}}:</label>
+					<p>{{LANG.INFO_UNIVER_A}}</p>
 				</div>
 				<div>
-					<label>Факультет:</label>
-					<p>Институт математики, информационных и космических технологий</p>
+					<label>{{LANG.INFO_DEP_Q}}:</label>
+					<p>{{LANG.INFO_DEP_A}}</p>
 				</div>
 				<div>
-					<label>Опыт работы:</label>
-					<p>2 года</p>
+					<label>{{LANG.INFO_EXP_Q}}:</label>
+					<p>2 {{LANG.INFO_EXP_A}}</p>
 				</div>
 				<div>
-					<label>Контакты:</label>
+					<label>{{LANG.INFO_CONTACTS_Q}}:</label>
 					<p>
                         <span>
                             <a href="tel:89062824201" rel="nofollow">
@@ -73,7 +73,7 @@
 						<span>
                             <a href="https://vk.com/artasches" target="_blank" rel="nofollow">
                                 <i class="fa fa-vk"></i>
-                                Артик Мангасарян
+                               {{LANG.ARTIK}} {{LANG.MANGASARYAN}}
                             </a>
                         </span>
 					</p>
@@ -83,13 +83,13 @@
 	</div>
 	<div class="row hidden-lg hidden-md">
 		<div class="col-sm-offset-3 col-sm-6 col-xs-12 padding-v padding-h-10">
-			<button class="button" ng-click="modalOpen()">Обратная связь</button>
+			<button class="button" ng-click="modalOpen()">{{LANG.FEEDBACK}}</button>
 		</div>
 	</div>
 
 </section>
 
-<h2 id="skills">ОСНОВНЫЕ НАВЫКИ</h2>
+<h2 id="skills">{{LANG.TITLE_SKILLS}}</h2>
 
 <section class="content-block text-center">
 
@@ -97,42 +97,42 @@
 
 </section>
 
-<h2 id="projects">ПОРТФОЛИО</h2>
+<h2 id="projects">{{LANG.TITLE_PROJECTS}}</h2>
 
 <section class="content-block projects">
 	<div class="row">
 		<div class="col-md-4 col-sm-6 col-xs-12 project" ng-repeat="item in portfolio">
 			<a href="{{item.link}}" target="_blank">
-				<img ng-src="/styles/images/projects/{{item.image}}" alt="{{item.title.ru}}"
-					 title="{{item.title.ru}}">
-				<p><span>{{item.title.ru}}</span></p>
+				<img ng-src="/styles/images/projects/{{item.image}}" alt="{{item.title[LNG]}}"
+					 title="{{item.title[LNG]}}">
+				<p><span>{{item.title[LNG]}}</span></p>
 			</a>
 		</div>
 	</div>
 </section>
 
-<h2 id="contacts">КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
+<h2 id="contacts">{{LANG.TITLE_CONTACTS}}</h2>
 
 <section class="content-block">
 	<div class="contacts">
 		<label>
-			<span><i class="fa fa-phone"></i>Телефон:</span>
+			<span><i class="fa fa-phone"></i>{{LANG.PHONE}}:</span>
 			<a href="tel:89062824201" rel="nofollow">+7 906 282-42-01</a>
 		</label>
 		<label>
-			<span><i class="fa fa-envelope"></i>E-mail:</span>
-			<a href="mailto:artik.alpha@ya.ru" rel="nofollow">artik.alpha@ya.ru</a>
+			<span><i class="fa fa-envelope"></i>{{LANG.MAIL}}:</span>
+			<a href="mailto:artik.alpha@ya.ru" rel="nofollow">artik.alpha@gmail.com</a>
 		</label>
 		<label>
-			<span><i class="fa fa-skype"></i>Skype:</span>
+			<span><i class="fa fa-skype"></i>{{LANG.SKYPE}}:</span>
 			<a href="skype:art-man-1994?call" rel="nofollow">art-man-1994</a>
 		</label>
 		<label>
-			<span><i class="fa fa-vk"></i>VK:</span>
-			<a href="https://vk.com/artasches" target="_blank" rel="nofollow">Артик Мангасарян</a>
+			<span><i class="fa fa-vk"></i>{{LANG.VK}}:</span>
+			<a href="https://vk.com/artasches" target="_blank" rel="nofollow">{{LANG.ARTIK}} {{LANG.MANGASARYAN}}</a>
 		</label>
 		<div class="padding-v">
-			<button class="button" ng-click="modalOpen()">Обратная связь</button>
+			<button class="button" ng-click="modalOpen()">{{LANG.FEEDBACK}}</button>
 		</div>
 	</div>
 

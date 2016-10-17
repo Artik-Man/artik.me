@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="cvApp">
+<html ng-app="cvApp" cv-lang>
 <head>
-	<meta charset="UTF-8">
-	<title>Artik Mangasaryan</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.min.css">
-	<link rel="stylesheet" href="bower_components/nanoscroller/bin/css/nanoscroller.css">
-	<link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8">
+    <title>Artik Mangasaryan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.min.css">
+    <link rel="stylesheet" href="bower_components/nanoscroller/bin/css/nanoscroller.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 <div class="body" id="top" scrollable>
-	<div class="page" scroll>
-		<div class="container" ng-view></div>
-	</div>
+    <div class="page" scroll>
+        <div class="container" ng-view></div>
+    </div>
 </div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -22,10 +22,10 @@
 <script src="bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js"></script>
 <script src="bower_components/angular-nanoscroller/scrollable.js"></script>
 <script src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
-<script src="app/app.js"></script>
-<script src="app/view/controller.js"></script>
+<script src="app/components/cvLang/langCtrl.js"></script>
 <script src="app/components/scroll/scroll.js"></script>
 <script src="app/components/skillBuilder/skillBuilderCtrl.js"></script>
-
+<script src="app/view/controller.js"></script>
+<script src="app/app.js"></script>
 </body>
 </html>

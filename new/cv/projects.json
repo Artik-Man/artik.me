@@ -1,0 +1,92 @@
+[
+  {
+    "link": "http://primepix.ru/portfolio/3-15/",
+    "short_link": "http://3-15.ru/",
+    "image": "m315.jpg",
+    "hide": false,
+    "title": {
+      "ru": "Интернет-магазин наручных часов «3–15»",
+      "en": "Watches online shop «3–15»"
+    }
+  },
+  {
+    "link": "http://primepix.ru/portfolio/webasto/",
+    "short_link": "http://webasto29.ru/",
+    "image": "webasto.jpg",
+    "hide": false,
+    "title": {
+      "ru": "WEBASTO — предпусковые обогреватели",
+      "en": "WEBASTO"
+    }
+  },
+  {
+    "link": "http://primepix.ru/portfolio/mgrabber/",
+    "short_link": "http://pricereporter.ru/",
+    "image": "pr.jpg",
+    "hide": false,
+    "title": {
+      "ru": "Прайсрепортер",
+      "en": "Pricereporter"
+    }
+  },
+  {
+    "link": "",
+    "short_link": "http://bklyncommons.com/",
+    "image": "bklyn.jpg",
+    "hide": false,
+    "title": {
+      "ru": "BKLYN Commons",
+      "en": "BKLYN Commons"
+    }
+  },
+  {
+    "link": "",
+    "short_link": "http://portfolio.artik-man.ru/park/",
+    "image": "park.jpg",
+    "hide": false,
+    "title": {
+      "ru": "Парк «Потешный двор»",
+      "en": "Amusement Park"
+    }
+  },
+  {
+    "link": "http://primepix.ru/portfolio/Verona-for-me/",
+    "short_link": "http://verona-for.me/",
+    "image": "verona.jpg",
+    "hide": false,
+    "title": {
+      "ru": "Итальянская мебель Verona",
+      "en": "Verona"
+    }
+  },
+  {
+    "link": "",
+    "short_link": "http://portfolio.artik-man.ru/seival/",
+    "image": "seawhale.jpg",
+    "hide": false,
+    "title": {
+      "ru": "Сейвал",
+      "en": "Seawhale"
+    }
+  },
+  {
+    "link": "",
+    "short_link": "http://portfolio.artik-man.ru/creative/",
+    "image": "creative.jpg",
+    "hide": false,
+    "title": {
+      "ru": "Салон красоты «Креатив»",
+      "en": "Beauty Salon «Creative»"
+    }
+  },
+  {
+    "link": "",
+    "short_link": "http://portfolio.artik-man.ru/promo/",
+    "image": "promo.jpg",
+    "hide": false,
+    "title": {
+      "ru": "Promo",
+      "en": "Promo"
+    }
+  }
+]

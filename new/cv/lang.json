@@ -1,0 +1,118 @@
+{
+  "HTML_TITLE": {
+    "ru": "Артик Мангасарян",
+    "en": "Artik Mangasaryan"
+  },
+  "MENU_SKILLS": {
+    "ru": "Навыки",
+    "en": "Skills"
+  },
+  "MENU_PROJECTS": {
+    "ru": "Портфолио",
+    "en": "Projects"
+  },
+  "MENU_CONTACTS": {
+    "ru": "Контакты",
+    "en": "Contacts"
+  },
+  "MENU_LANG": {
+    "ru": "EN",
+    "en": "RU"
+  },
+  "ARTIK": {
+    "ru": "Артик",
+    "en": "Artik"
+  },
+  "MANGASARYAN": {
+    "ru": "Мангасарян",
+    "en": "Mangasaryan"
+  },
+  "SUBTITLE": {
+    "ru": "Frontend-разработчик",
+    "en": "Frontend-developer"
+  },
+  "INFO_B_DAY_Q": {
+    "ru": "Дата рождения",
+    "en": "Date of Birth"
+  },
+  "INFO_B_DAY_A": {
+    "ru": "01 августа 1994",
+    "en": "The 1 of August, 1994"
+  },
+  "INFO_UNIVER_Q": {
+    "ru": "Вуз",
+    "en": "University"
+  },
+  "INFO_UNIVER_A": {
+    "ru": "Северный (Арктический) федеральный университет имени М. В. Ломоносова",
+    "en": "Northern (Arctic) Federal University"
+  },
+  "INFO_DEP_Q": {
+    "ru": "Факультет",
+    "en": "Department"
+  },
+  "INFO_DEP_A": {
+    "ru": "Институт математики, информационных и космических технологий",
+    "en": "Institute of mathemathics, information and space technologies"
+  },
+  "INFO_EXP_Q": {
+    "ru": "Опыт работы",
+    "en": "Experience"
+  },
+  "INFO_EXP_A": {
+    "ru": "года",
+    "en": "years"
+  },
+  "INFO_CONTACTS_Q": {
+    "ru": "Контакты",
+    "en": "Contacts"
+  },
+  "FEEDBACK": {
+    "ru": "Обратная связь",
+    "en": "Feedback"
+  },
+  "TITLE_SKILLS": {
+    "ru": "Основные навыки",
+    "en": "BASIC SKILLS"
+  },
+  "TITLE_PROJECTS": {
+    "ru": "Портфолио",
+    "en": "Projects"
+  },
+  "TITLE_CONTACTS": {
+    "ru": "Контактная информация",
+    "en": "CONTACT INFORMATION"
+  },
+  "PHONE": {
+    "ru": "Телефон",
+    "en": "Phone"
+  },
+  "MAIL": {
+    "ru": "E-mail",
+    "en": "E-mail"
+  },
+  "SKYPE": {
+    "ru": "Skype",
+    "en": "Skype"
+  },
+  "VK": {
+    "ru": "VK",
+    "en": "VK"
+  },
+  "SEND": {
+    "ru": "Отправить",
+    "en": "Send"
+  },
+  "INPUT_NAME": {
+    "ru": "Ваше имя",
+    "en": "Your name"
+  },
+  "INPUT_MAIL": {
+    "ru": "Ваш e-mail",
+    "en": "Your e-mail"
+  },
+  "INPUT_MESSAGE": {
+    "ru": "Сообщение",
+    "en": "Your message"
+  }
+}

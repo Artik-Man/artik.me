@@ -889,12 +889,14 @@ header.fly nav {
   z-index: 2;
   padding: 15px 0;
 }
-header a {
+header a,
+header button {
   color: inherit;
   text-decoration: none !important;
   text-transform: uppercase;
 }
-header a .fa {
+header a .fa,
+header button .fa {
   margin-right: 10px;
 }
 header .logo {
@@ -934,19 +936,28 @@ header nav ul li {
   vertical-align: top;
   display: inline-block;
 }
-header nav ul li a {
+header nav ul li a,
+header nav ul li button {
+  font-size: 16px;
+  display: inline-block;
   color: rgba(255, 255, 255, 0.7);
   margin-left: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "LatoRegular", sans-serif;
   -webkit-transition: all 150ms ease-in-out;
   -moz-transition: all 150ms ease-in-out;
   -ms-transition: all 150ms ease-in-out;
   -o-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
-header nav ul li a:hover {
+header nav ul li a:hover,
+header nav ul li button:hover {
   color: #fff;
 }
-header nav ul li a:focus {
+header nav ul li a:focus,
+header nav ul li button:focus {
   color: rgba(255, 255, 255, 0.7);
 }
 header nav ul li.active {
@@ -1283,25 +1294,20 @@ h2 {
 .ngdialog-content {
   background: none;
   position: relative;
+  max-width: 1070px;
+  margin: 0 auto;
 }
-.c-modal {
-  width: 100%;
-}
-.c-modal .success,
-.c-modal .error {
+.ngdialog-content .success,
+.ngdialog-content .error {
   text-align: center;
   font-size: 18px;
 }
-.c-modal .close {
+.ngdialog-content .close {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.c-modal .container {
-  max-width: 1070px;
-  margin: 0 auto;
-}
-.c-modal .call-form {
+.ngdialog-content .call-form {
   margin-top: 50px;
   cursor: default;
   background: #fff url(images/cat.jpg) no-repeat;
@@ -1310,10 +1316,10 @@ h2 {
   padding: 50px 10px;
   color: #000;
 }
-.c-modal .call-form.error {
+.ngdialog-content .call-form.error {
   background-image: url(images/cat2.jpg);
 }
-.c-modal .call-form h3 {
+.ngdialog-content .call-form h3 {
   font-family: "SegoeUIBlack", fantasy;
   font-size: 30px;
   text-transform: uppercase;
@@ -1321,25 +1327,25 @@ h2 {
   padding-bottom: 40px;
   text-align: center;
 }
-.c-modal .call-form form {
+.ngdialog-content .call-form form {
   max-width: 400px;
   margin: 0 auto;
 }
-.c-modal .call-form label {
+.ngdialog-content .call-form label {
   display: block;
   margin-bottom: 10px;
   font-weight: 300;
   font-family: "LatoRegular", sans-serif;
 }
-.c-modal .call-form label input[type="text"],
-.c-modal .call-form label input[type="email"] {
+.ngdialog-content .call-form label input[type="text"],
+.ngdialog-content .call-form label input[type="email"] {
   display: block;
   padding: 5px;
   width: 100%;
   border: 1px solid #ccc;
   font-size: 14px;
 }
-.c-modal .call-form label textarea {
+.ngdialog-content .call-form label textarea {
   width: 100%;
   display: block;
   resize: vertical;
@@ -1349,7 +1355,7 @@ h2 {
   padding: 5px;
   font-size: 14px;
 }
-.c-modal .call-form label input[type="submit"] {
+.ngdialog-content .call-form label input[type="submit"] {
   cursor: pointer;
   width: 100%;
   display: block;
@@ -1369,19 +1375,23 @@ h2 {
   -o-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
-.c-modal .call-form label input[type="submit"]:hover {
+.ngdialog-content .call-form label input[type="submit"]:hover {
   background: #fff;
   color: #D03322;
 }
-.c-modal .call-form label input[type="submit"]:focus {
+.ngdialog-content .call-form label input[type="submit"]:focus {
   color: #fff;
 }
-.c-modal .call-form label .err {
+.ngdialog-content .call-form label .err {
   border-color: #D03322 !important;
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .body .page {
     width: 980px;
+  }
+  header.fly {
+    width: 980px;
+    margin-left: -490px;
   }
   .progress-content {
     padding: 20px;
@@ -1389,13 +1399,17 @@ h2 {
   .content-block .skill {
     width: 33%;
   }
-  .c-modal .container {
+  .ngdialog-content {
     max-width: 880px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   h1 {
     font-size: 170px;
+  }
+  header.fly {
+    width: 750px;
+    margin-left: -375px;
   }
   .content-block .skill {
     width: 50%;
@@ -1408,10 +1422,7 @@ h2 {
   .body .page {
     width: 750px;
   }
-  .c-modal {
-    padding: 50px;
-  }
-  .c-modal .container {
+  .ngdialog-content {
     max-width: 650px;
   }
 }
@@ -1420,6 +1431,11 @@ h2 {
     margin: 0 auto -50px auto;
     left: 0;
     top: -100px;
+  }
+  header.fly {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
   }
   .content-block .skill {
     width: 50%;
@@ -1437,14 +1453,21 @@ h2 {
   .about-text div label {
     width: 160px;
   }
-  .c-modal {
-    padding: 50px;
-  }
-  .c-modal .container {
+  .ngdialog-content {
     max-width: 650px;
+    margin: 0 50px;
   }
 }
 @media (max-width: 599px) {
+  .ngdialog-content {
+    max-width: 650px;
+    margin: 0 50px;
+  }
+  header.fly {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+  }
   header nav ul li a {
     margin-left: 20px;
   }
@@ -1474,6 +1497,10 @@ h2 {
   }
 }
 @media (max-width: 550px) {
+  .ngdialog-content {
+    max-width: 650px;
+    margin: 0 10px;
+  }
   .body .page {
     padding: 50px 10px;
   }

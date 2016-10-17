@@ -1,30 +1,28 @@
 <div class="c-modal">
-	<div class="container">
-		<div class="call-form" ng-class="{'error':styles.error_cat}">
-			<h3>Обратная связь</h3>
-			<form ng-submit="submit(this)" ng-show="styles.form">
-				<label>
-					<input type="text" placeholder="Ваше имя" ng-model="data['entry.878354685']"
-						   ng-class="{'err':styles.err.name}">
-				</label>
-				<label>
-					<input type="email" placeholder="Ваш e-mail" ng-model="data['entry.1171937833']"
-						   ng-class="{'err':styles.err.mail}">
-				</label>
-				<label>
+	<div class="call-form" ng-class="{'error':styles.error_cat}">
+		<h3>Обратная связь</h3>
+		<form ng-submit="submit(this)" ng-show="styles.form">
+			<label>
+				<input type="text" placeholder="Ваше имя" ng-model="data['entry.878354685']"
+					   ng-class="{'err':styles.err.name}">
+			</label>
+			<label>
+				<input type="email" placeholder="Ваш e-mail" ng-model="data['entry.1171937833']"
+					   ng-class="{'err':styles.err.mail}">
+			</label>
+			<label>
 					<textarea placeholder="Сообщение" ng-model="data['entry.246362975']"
 							  ng-class="{'err':styles.err.text}"></textarea>
-				</label>
-				<label>
-					<input type="submit" value="Отправить" ng-disabled="styles.disable">
-				</label>
-			</form>
-			<div class="success" ng-show="styles.success">
-				Ваше сообщение доставлено.
-			</div>
-			<div class="error" ng-show="styles.error">
-				Произошла какая-то ошибка...
-			</div>
+			</label>
+			<label>
+				<input type="submit" value="Отправить" ng-disabled="styles.disable">
+			</label>
+		</form>
+		<div class="success" ng-show="styles.success">
+			Ваше сообщение доставлено.
+		</div>
+		<div class="error" ng-show="styles.error">
+			Произошла какая-то ошибка...
 		</div>
 	</div>
 </div>
