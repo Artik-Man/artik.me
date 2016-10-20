@@ -10,14 +10,16 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 	.controller('landingCtrl', ['$rootScope', '$scope', '$http', 'ngDialog', 'cvLang',function($rootScope, $scope, $http, ngDialog, cvLang) {
 
 		$scope.LANG = cvLang.lang;
-
+		$scope.LNG = cvLang.lng;
 		$rootScope.$on('lang-is-loaded',function() {
 			$scope.LANG = cvLang.lang;
+			$scope.LNG = cvLang.lng;
 		});
 
 		$scope.changeLang = function() {
 			cvLang.changeLng();
 			$scope.LANG = cvLang.lang;
+			$scope.LNG = cvLang.lng;
 		};
 
 		addOnWheel($('.nano-content')[0], function(e) {

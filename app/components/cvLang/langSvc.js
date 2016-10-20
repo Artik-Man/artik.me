@@ -1,28 +1,27 @@
 angular.module('cvLang', [])
 	.service('cvLang', function($http, $rootScope) {
 		var self = this;
-		var lng = 'ru';
 		var json = {};
+		self.lng = 'ru';
 		self.lang = {};
 		self.changeLng = function() {
-			if (lng == 'ru') {
-				lng = 'en'
+			if (self.lng == 'ru') {
+				self.lng = 'en'
 			} else {
-				lng = 'ru'
+				self.lng = 'ru'
 			}
 			self.update();
 		};
 		self.update = function() {
-			console.log('update', json, lng)
 			self.lang = {};
 			angular.forEach(json, function(value, key) {
-				self.lang[key] = value[lng];
+				self.lang[key] = value[self.lng];
 			});
 		};
 		(function() {
-			lng = (navigator.language || navigator.browserLanguage).substring(0, 2).toLowerCase();
-			if (lng !== 'ru' && lng !== 'en') {
-				lng = 'ru';
+			self.lng = (navigator.language || navigator.browserLanguage).substring(0, 2).toLowerCase();
+			if (self.lng !== 'ru' && self.lng !== 'en') {
+				self.lng = 'ru';
 			}
 			$http.get('/lang.json').then(function(resp) {
 				json = resp.data;
