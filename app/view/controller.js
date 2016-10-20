@@ -7,11 +7,11 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 			controller: 'landingCtrl'
 		});
 	}])
-	.controller('landingCtrl', ['$rootScope', '$scope', '$http', 'ngDialog', 'cvLang',function($rootScope, $scope, $http, ngDialog, cvLang) {
+	.controller('landingCtrl', ['$rootScope', '$scope', '$http', 'ngDialog', 'cvLang', function($rootScope, $scope, $http, ngDialog, cvLang) {
 
 		$scope.LANG = cvLang.lang;
 		$scope.LNG = cvLang.lng;
-		$rootScope.$on('lang-is-loaded',function() {
+		$rootScope.$on('lang-is-loaded', function() {
 			$scope.LANG = cvLang.lang;
 			$scope.LNG = cvLang.lng;
 		});
@@ -65,7 +65,7 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 			ngDialog.open({
 				template: '/app/view/modal.html',
 				showClose: false,
-				controller: ['$scope', 'cvLang',function($scope,cvLang) {
+				controller: ['$scope', 'cvLang', function($scope, cvLang) {
 
 					$scope.LANG = cvLang.lang;
 
@@ -91,7 +91,7 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 						'entry.1171937833': '',
 						'entry.246362975': ''
 					};
-					$scope.submit = function(i) {
+					$scope.submit = function() {
 						$scope.styles.err = {
 							name: false,
 							mail: false,
@@ -179,7 +179,7 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 		$http.get('/projects.json').then(function(resp) {
 			$scope.portfolio = [];
 			resp.data.forEach(function(item) {
-				if(!item.hide){
+				if (!item.hide) {
 					item.link = (item.link.length < 5 ? item.short_link : item.link);
 					$scope.portfolio.push(item);
 				}
