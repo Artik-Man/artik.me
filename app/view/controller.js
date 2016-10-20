@@ -1,24 +1,24 @@
 'use strict';
 
-angular.module('cvApp.landing', ['ngDialog'])
+angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/', {
 			templateUrl: 'app/view/landing.html',
 			controller: 'landingCtrl'
 		});
 	}])
-	.controller('landingCtrl', ['$rootScope', '$scope', '$http', 'ngDialog', function($rootScope, $scope, $http, ngDialog) {
-		$scope.LNG = $rootScope.lng;
-		$scope.LANG = $rootScope.lang;
+	.controller('landingCtrl', ['$rootScope', '$scope', '$http', 'ngDialog', 'cvLang',function($rootScope, $scope, $http, ngDialog, cvLang) {
+
+		$scope.LANG = cvLang.lang;
+
+		$rootScope.$on('lang-is-loaded',function() {
+			$scope.LANG = cvLang.lang;
+		});
 
 		$scope.changeLang = function() {
-			$rootScope.$broadcast('change-lang');
+			cvLang.changeLng();
+			$scope.LANG = cvLang.lang;
 		};
-
-		$rootScope.$on('lang-is-changed', function() {
-			$scope.LNG = $rootScope.lng;
-			$scope.LANG = $rootScope.lang;
-		});
 
 		addOnWheel($('.nano-content')[0], function(e) {
 			$('.nano-content').stop();
@@ -63,9 +63,9 @@ angular.module('cvApp.landing', ['ngDialog'])
 			ngDialog.open({
 				template: '/app/view/modal.html',
 				showClose: false,
-				controller: ['$scope', function($scope) {
-					$scope.LNG = $rootScope.lng;
-					$scope.LANG = $rootScope.lang;
+				controller: ['$scope', 'cvLang',function($scope,cvLang) {
+
+					$scope.LANG = cvLang.lang;
 
 					function validateEmail(email) {
 						var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
