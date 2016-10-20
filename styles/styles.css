@@ -843,7 +843,8 @@
   color: #D03322;
 }
 .button:focus {
-  color: #fff;
+  background: #fff;
+  color: #D03322;
 }
 .nano .nano-pane {
   width: 6px;
@@ -1401,7 +1402,8 @@ h2 {
   color: #D03322;
 }
 .ngdialog-content .call-form label input[type="submit"]:focus {
-  color: #fff;
+  background: #fff;
+  color: #D03322;
 }
 .ngdialog-content .call-form label .err {
   border-color: #D03322 !important;
