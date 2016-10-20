@@ -1,3 +1,6 @@
+@import "/bower_components/components-font-awesome/css/font-awesome.min.css";
+@import "/bower_components/ng-dialog/css/ngDialog.min.css";
+@import "/bower_components/nanoscroller/bin/css/nanoscroller.css";
 @import "fonts/lato/lato.css";
 @import "fonts/segoe/segoe.css";
 .row {
@@ -852,6 +855,9 @@
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.padding-t {
+  padding-top: 15px;
+}
 header {
   position: absolute;
   color: #fff;
@@ -972,7 +978,7 @@ h1 {
   letter-spacing: -5px;
   padding: 50px 15px 130px 15px;
   text-transform: uppercase;
-  color: #db3826;
+  color: #D23E2D;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -987,7 +993,7 @@ h1 span {
   left: 0;
   width: 100%;
   color: #ffffff;
-  font-size: 54px;
+  font-size: 50px;
   font-family: "SegoePrint", fantasy;
   text-transform: none;
   letter-spacing: 0;
@@ -1020,12 +1026,15 @@ h2 {
   background: rgba(0, 0, 0, 0.8);
 }
 .content-block {
-  padding: 30px;
+  padding: 50px;
   position: relative;
   background: #fff;
   -webkit-box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.3);
+}
+.content-block .avatar-box + .padding-h {
+  margin-top: -50px;
 }
 .content-block.projects {
   padding-bottom: 0;
@@ -1116,9 +1125,9 @@ h2 {
   vertical-align: middle;
 }
 .avatar-box {
-  padding: 40px;
+  padding: 30px;
   position: relative;
-  top: -50px;
+  top: -100px;
   background: #fff;
   left: 10%;
   width: 80%;
@@ -1386,6 +1395,9 @@ h2 {
   border-color: #D03322 !important;
 }
 @media (min-width: 992px) and (max-width: 1200px) {
+  .avatar-box {
+    padding: 20px;
+  }
   .body .page {
     width: 980px;
   }
@@ -1405,7 +1417,14 @@ h2 {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   h1 {
-    font-size: 170px;
+    font-size: 140px;
+  }
+  h1 span {
+    font-size: 36px;
+    top: 37%;
+  }
+  h1 label {
+    top: 69%;
   }
   header.fly {
     width: 750px;
@@ -1418,6 +1437,7 @@ h2 {
     margin: 0 auto -50px auto;
     left: 0;
     top: -100px;
+    width: 50%;
   }
   .body .page {
     width: 750px;
@@ -1431,6 +1451,7 @@ h2 {
     margin: 0 auto -50px auto;
     left: 0;
     top: -100px;
+    width: 50%;
   }
   header.fly {
     width: 100%;
@@ -1463,12 +1484,20 @@ h2 {
     max-width: 650px;
     margin: 0 50px;
   }
+  header {
+    padding: 0;
+  }
   header.fly {
     width: 100%;
     margin-left: 0;
     left: 0;
+    padding: 0 10px;
   }
-  header nav ul li a {
+  header .hide-menu .fa {
+    margin: 0;
+  }
+  header nav ul li a,
+  header nav ul li button {
     margin-left: 20px;
   }
   h1 {
@@ -1482,6 +1511,7 @@ h2 {
     margin: 0 auto -50px auto;
     left: 0;
     top: -100px;
+    width: 80%;
   }
   .content-block .skill {
     width: 100%;
@@ -1504,6 +1534,9 @@ h2 {
   .body .page {
     padding: 50px 10px;
   }
+  header.fly nav {
+    padding: 10px 0;
+  }
   header nav .hide-menu {
     display: inline-block;
   }
@@ -1524,12 +1557,16 @@ h2 {
     display: block;
     text-align: center;
   }
-  header nav ul li a {
+  header nav ul li a,
+  header nav ul li button {
     display: inline-block;
     margin: 0;
     padding: 2vh 2vw;
     font-size: 3vh;
     text-shadow: 0 0 40px #000;
+  }
+  .content-block {
+    padding: 20px;
   }
   .about-text {
     display: block;
@@ -1546,6 +1583,19 @@ h2 {
   }
 }
 @media (max-width: 420px) {
+  .avatar-box {
+    margin: 0 auto -50px auto;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 75px;
+  }
+  h2 {
+    font-size: 32px;
+  }
   .content-block .contacts {
     width: 100%;
   }
@@ -1558,13 +1608,5 @@ h2 {
   }
   .content-block .contacts label a {
     padding-left: 35px;
-  }
-}
-@media (max-width: 320px) {
-  h1 {
-    font-size: 75px;
-  }
-  h2 {
-    font-size: 32px;
   }
 }

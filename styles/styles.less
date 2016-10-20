@@ -1,7 +1,6 @@
 @import "grid";
-@import "fonts/lato/lato.css";
-@import "fonts/segoe/segoe.css";
-
+@import "plugins";
+@import "fonts";
 @red: #D03322;
 @orange: #f0ad4e;
 @green: #5cb85c;
@@ -17,34 +16,6 @@
   -ms-transition: all @speed ease-in-out;
   -o-transition: all @speed ease-in-out;
   transition: all @speed ease-in-out;
-}
-
-#font {
-  .lato {
-    .bold {
-      font-family: "LatoBold", sans-serif;
-    }
-    .medium {
-      font-family: "LatoRegular", sans-serif;
-    }
-    .light {
-      font-family: "LatoLight", sans-serif;
-    }
-  }
-  .segoe {
-    .bold {
-      font-family: "SegoeUIBlack", fantasy;
-    }
-    .medium {
-      font-family: "SegoeUIRegular", fantasy;
-    }
-    .light {
-      font-family: "SegoeUILight", fantasy;
-    }
-    .print {
-      font-family: "SegoePrint", fantasy;
-    }
-  }
 }
 
 * {
@@ -113,6 +84,10 @@
 .padding-v {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.padding-t {
+  padding-top: 15px;
 }
 
 header {
@@ -224,7 +199,7 @@ h1 {
   letter-spacing: -5px;
   padding: 50px 15px 130px 15px;
   text-transform: uppercase;
-  color: lighten(@red, 3%);
+  color: #D23E2D;
   text-shadow: 4px 4px 8px fade(@black, 30%);
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -238,7 +213,7 @@ h1 {
     left: 0;
     width: 100%;
     color: rgba(255, 255, 255, 1);
-    font-size: 54px;
+    font-size: 50px;
     #font>.segoe> .print;
     text-transform: none;
     letter-spacing: 0;
@@ -276,12 +251,15 @@ h2 {
 }
 
 .content-block {
-  padding: 30px;
+  padding: 50px;
   position: relative;
   background: @white;
   -webkit-box-shadow: 0 20px 60px -10px fade(@black, 30%);
   -moz-box-shadow: 0 20px 60px -10px fade(@black, 30%);
   box-shadow: 0 20px 60px -10px fade(@black, 30%);
+  .avatar-box + .padding-h {
+    margin-top: -50px;
+  }
   &.projects {
     padding-bottom: 0;
   }
@@ -377,9 +355,9 @@ h2 {
 }
 
 .avatar-box {
-  padding: 40px;
+  padding: 30px;
   position: relative;
-  top: -50px;
+  top: -100px;
   background: @white;
   left: 10%;
   width: 80%;
@@ -604,6 +582,10 @@ h2 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+  .avatar-box {
+    padding: 20px;
+  }
+
   .body {
     .page {
       width: 980px;
@@ -635,7 +617,14 @@ h2 {
 
 @media (min-width: 768px) and (max-width: 991px) {
   h1 {
-    font-size: 170px;
+    font-size: 140px;
+    span {
+      font-size: 36px;
+      top: 37%;
+    }
+    label {
+      top: 69%;
+    }
   }
 
   header {
@@ -656,6 +645,7 @@ h2 {
     margin: 0 auto -50px auto;
     left: 0;
     top: -100px;
+    width: 50%;
   }
 
   .body {
@@ -674,6 +664,7 @@ h2 {
     margin: 0 auto -50px auto;
     left: 0;
     top: -100px;
+    width: 50%;
   }
 
   header {
@@ -724,17 +715,25 @@ h2 {
     max-width: 650px;
     margin: 0 50px;
   }
+
   header {
     @w: 100%;
+    padding: 0;
     &.fly {
       width: @w;
       margin-left: 0;
       left: 0;
+      padding: 0 10px
+    }
+    .hide-menu {
+      .fa {
+        margin: 0;
+      }
     }
     nav {
       ul {
         li {
-          a {
+          a, button {
             margin-left: 20px;
           }
         }
@@ -754,6 +753,7 @@ h2 {
     margin: 0 auto -50px auto;
     left: 0;
     top: -100px;
+    width: 80%;
   }
 
   .content-block {
@@ -782,6 +782,7 @@ h2 {
     max-width: 650px;
     margin: 0 10px;
   }
+
   .body {
     .page {
       padding: 50px 10px;
@@ -789,6 +790,11 @@ h2 {
   }
 
   header {
+    &.fly {
+      nav {
+        padding: 10px 0;
+      }
+    }
     nav {
       .hide-menu {
         display: inline-block;
@@ -808,7 +814,7 @@ h2 {
         li {
           display: block;
           text-align: center;
-          a {
+          a, button {
             display: inline-block;
             margin: 0;
             padding: 2vh 2vw;
@@ -818,6 +824,10 @@ h2 {
         }
       }
     }
+  }
+
+  .content-block {
+    padding: 20px;
   }
 
   .about-text {
@@ -836,6 +846,22 @@ h2 {
 }
 
 @media (max-width: 420px) {
+  .avatar-box {
+    margin: 0 auto -50px auto;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 75px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
   .content-block {
     .contacts {
       width: 100%;
@@ -852,15 +878,5 @@ h2 {
         }
       }
     }
-  }
-}
-
-@media (max-width: 320px) {
-  h1 {
-    font-size: 75px;
-  }
-
-  h2 {
-    font-size: 32px;
   }
 }
