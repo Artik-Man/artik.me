@@ -63,7 +63,10 @@ angular.module('cvApp.landing', ['ngDialog'])
 			ngDialog.open({
 				template: '/app/view/modal.html',
 				showClose: false,
-				controller: ['$scope', '$http', function($scope, $http) {
+				controller: ['$scope', function($scope) {
+					$scope.LNG = $rootScope.lng;
+					$scope.LANG = $rootScope.lang;
+
 					function validateEmail(email) {
 						var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 						return re.test(email);

@@ -114,5 +114,13 @@
   "INPUT_MESSAGE": {
     "ru": "Сообщение",
     "en": "Your message"
+  },
+  "MESS_SUCCESS": {
+    "ru": "Ваше сообщение доставлено.",
+    "en": "Message has been sent."
+  },
+  "MESS_ERROR": {
+    "ru": "Произошла какая-то ошибка...",
+    "en": "An error has occurred..."
   }
 }
