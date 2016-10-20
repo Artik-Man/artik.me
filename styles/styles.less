@@ -1,6 +1,7 @@
 @import "grid";
 @import "plugins";
 @import "fonts";
+
 @red: #D03322;
 @orange: #f0ad4e;
 @green: #5cb85c;
@@ -664,6 +665,12 @@ h2 {
 }
 
 @media (min-width: 600px) and (max-width: 767px) {
+  .body {
+    .page {
+      margin-top: 0;
+    }
+  }
+
   .avatar-box {
     margin: 0 auto -50px auto;
     left: 0;
@@ -715,6 +722,12 @@ h2 {
 }
 
 @media (max-width: 599px) {
+  .body {
+    .page {
+      margin-top: 0;
+    }
+  }
+
   .ngdialog-content {
     max-width: 650px;
     margin: 0 50px;
