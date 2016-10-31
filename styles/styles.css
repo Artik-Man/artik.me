@@ -828,6 +828,10 @@
   text-align: center;
   text-decoration: none !important;
   font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: all 150ms ease-in-out;
   -moz-transition: all 150ms ease-in-out;
   -ms-transition: all 150ms ease-in-out;
@@ -839,7 +843,8 @@
   color: #D03322;
 }
 .button:focus {
-  color: #fff;
+  background: #fff;
+  color: #D03322;
 }
 .nano .nano-pane {
   width: 6px;
@@ -863,20 +868,12 @@ header {
   color: #fff;
   z-index: 1;
   width: 100%;
-  height: 40px;
+  height: 50px;
   display: table;
 }
-header.fly {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  width: 1170px;
-  margin-left: -585px;
-  padding: 0 50px;
-}
-header.fly:before {
+header:before {
   content: '';
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: -1000px;
@@ -884,6 +881,18 @@ header.fly:before {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   z-index: 1;
+}
+header.fly {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 1170px;
+  height: 50px;
+  margin-left: -585px;
+  padding: 0 50px;
+}
+header.fly:before {
+  display: block;
 }
 header.fly .logo {
   position: relative;
@@ -1378,6 +1387,10 @@ h2 {
   text-align: center;
   text-decoration: none !important;
   font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: all 150ms ease-in-out;
   -moz-transition: all 150ms ease-in-out;
   -ms-transition: all 150ms ease-in-out;
@@ -1389,7 +1402,8 @@ h2 {
   color: #D03322;
 }
 .ngdialog-content .call-form label input[type="submit"]:focus {
-  color: #fff;
+  background: #fff;
+  color: #D03322;
 }
 .ngdialog-content .call-form label .err {
   border-color: #D03322 !important;
@@ -1447,6 +1461,9 @@ h2 {
   }
 }
 @media (min-width: 600px) and (max-width: 767px) {
+  .body .page {
+    margin-top: 0;
+  }
   .avatar-box {
     margin: 0 auto -50px auto;
     left: 0;
@@ -1480,6 +1497,9 @@ h2 {
   }
 }
 @media (max-width: 599px) {
+  .body .page {
+    margin-top: 0;
+  }
   .ngdialog-content {
     max-width: 650px;
     margin: 0 50px;
