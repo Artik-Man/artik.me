@@ -15,7 +15,9 @@
 							  ng-class="{'err':styles.err.text}"></textarea>
 			</label>
 			<label>
-				<input type="submit" class="button" value="{{LANG.SEND}}" ng-disabled="styles.disable" ng-click="submit()">
+				<button type="submit" class="button" ng-disabled="styles.disable" ng-click="submit()">
+					{{LANG.SEND}}
+				</button>
 			</label>
 		</form>
 		<div class="success" ng-show="styles.success">

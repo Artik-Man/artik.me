@@ -27,10 +27,20 @@
   #font>.lato> .medium;
 }
 
+@keyframes bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -1024px;
+  }
+}
+
 .body {
   background: #ccc url(images/bg.jpg);
   position: relative;
   height: 100vh;
+  background-position: 0 0;
   .page {
     position: relative;
     background: @red;
@@ -622,6 +632,15 @@ h2 {
 
   .ngdialog-content {
     max-width: 880px;
+  }
+}
+
+@media (min-width: 768px) {
+  .body {
+    animation-name: bg;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
 }
 
