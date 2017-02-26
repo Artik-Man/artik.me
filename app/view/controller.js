@@ -11,6 +11,7 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 
 		$scope.LANG = cvLang.lang;
 		$scope.LNG = cvLang.lng;
+		$scope.EXP = (new Date).getFullYear() - 2014;
 		$rootScope.$on('lang-is-loaded', function() {
 			$scope.LANG = cvLang.lang;
 			$scope.LNG = cvLang.lng;
@@ -110,7 +111,9 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 							err = true;
 							$scope.styles.err.text = true;
 						}
-						if (!err) {
+						if (localStorage.getItem("sended") == "ok") {
+							ajaxComplere($scope);
+						} else if (!err) {
 							//https://docs.google.com/a/artik-man.ru/forms/d/1UgaZGeh-a-P5XicohpUS4M7NhKIA-saselG0timvnto/formResponse
 							//http://docs.google.com/forms/d/1UgaZGeh-a-P5XicohpUS4M7NhKIA-saselG0timvnto/formResponse
 							$.ajax({
@@ -123,32 +126,10 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 								},
 								complete: function(e, jqXHR, textStatus) {
 									if (e.status === 0 || e.status === 200) {
-										$scope.styles.form = false;
-										$scope.styles.error_cat = false;
-										$scope.styles.success = true;
-										$scope.styles.error = false;
-
-										setTimeout(function() {
-											$scope.styles.form = true;
-											$scope.styles.error_cat = false;
-											$scope.styles.success = false;
-											$scope.styles.error = false;
-											$scope.styles.disable = false;
-											ngDialog.closeAll()
-										}, 3000);
+										ajaxComplere($scope);
 									}
 									else {
-										$scope.styles.form = false;
-										$scope.styles.error_cat = true;
-										$scope.styles.success = false;
-										$scope.styles.error = true;
-										setTimeout(function() {
-											$scope.styles.form = true;
-											$scope.styles.error_cat = false;
-											$scope.styles.success = false;
-											$scope.styles.error = false;
-											$scope.styles.disable = false;
-										}, 3000);
+										ajaxError($scope);
 									}
 									$scope.$apply()
 								}
@@ -158,7 +139,34 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 				}]
 			});
 		};
-
+		var ajaxComplere = function($scope) {
+			$scope.styles.form = false;
+			$scope.styles.error_cat = false;
+			$scope.styles.success = true;
+			$scope.styles.error = false;
+			localStorage.setItem("sended", "ok");
+			setTimeout(function() {
+				$scope.styles.form = true;
+				$scope.styles.error_cat = false;
+				$scope.styles.success = false;
+				$scope.styles.error = false;
+				$scope.styles.disable = false;
+				ngDialog.closeAll()
+			}, 3000);
+		};
+		var ajaxError = function($scope) {
+			$scope.styles.form = false;
+			$scope.styles.error_cat = true;
+			$scope.styles.success = false;
+			$scope.styles.error = true;
+			setTimeout(function() {
+				$scope.styles.form = true;
+				$scope.styles.error_cat = false;
+				$scope.styles.success = false;
+				$scope.styles.error = false;
+				$scope.styles.disable = false;
+			}, 3000);
+		};
 		$scope.menuIsOpen = false;
 		$scope.menuOpen = function() {
 			$scope.menuIsOpen = true;

@@ -1,8 +1,9 @@
-# robots.txt for http://artik.me.pn
+User-Agent: Yandex
 User-Agent: *
-Disallow: /css/
-Disallow: /fonts/
-Disallow: /images/
-Disallow: /js/
-Disallow: /less/
-Disallow: /libs/
+
+Disallow: /styles/
+Disallow: /bower_components/
+Disallow: /app/
+Disallow: /portfolio/
+
+Host: artik.me
