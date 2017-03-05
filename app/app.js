@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('cvApp', [
-    'cvLang',
+	'slick',
+	'cvLang',
 	'ngRoute',
 	'cvApp.landing',
 	'scroll',
 	'skillBuilder',
 	'ngDialog',
-	'sun.scrollable',
-	'slick'
+	'sun.scrollable'
 ]).config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	$routeProvider.otherwise({redirectTo: ''});
 }]);
