@@ -15,6 +15,7 @@
     "ng-dialog": "^0.6.4",
     "nanoscroller": "^0.8.7",
     "angular-nanoscroller": "^0.2.1",
-    "angular-slick": "^0.2.1"
+    "angular-slick": "^0.2.1",
+    "angular-throttle-debounce": "^0.0.7"
   }
 }

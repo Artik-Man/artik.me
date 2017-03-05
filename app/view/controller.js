@@ -13,7 +13,7 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 		$scope.LNG = cvLang.lng;
 		var date = new Date();
 		$scope.EXP = date.getFullYear() - 2015;
-		$scope.AGE = Math.floor(((date.getFullYear() * 12 + date.getMonth()) - (1994 * 12 + 9))/12);
+		$scope.AGE = Math.floor(((date.getFullYear() * 12 + date.getMonth()) - (1994 * 12 + 9)) / 12);
 
 		$rootScope.$on('lang-is-loaded', function() {
 			$scope.LANG = cvLang.lang;
@@ -57,12 +57,11 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 
 		var scrollTop = 0;
 		$scope.fly = false;
+		$scope.showNav = false;
 		$rootScope.$on('scroll', function(event, data) {
-			if (data.top < scrollTop && data.top >= 100) {
-				$scope.fly = true;
-			} else {
-				$scope.fly = false;
-			}
+			$scope.fly = (data.top >= 100);
+			$scope.showNav = (data.top < scrollTop);
+			console.log(data.top , scrollTop)
 			scrollTop = data.top;
 			$scope.$digest();
 		});

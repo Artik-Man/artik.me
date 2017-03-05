@@ -1,9 +1,17 @@
 angular.module('scroll', [])
-	.directive('scroll', function($rootScope) {
+	.directive('scroll', function($rootScope, throttle) {
 		return function() {
 			var element = angular.element('.nano-content');
+			var fn = throttle(function(s) {
+				$rootScope.$broadcast('scroll', {top: s});
+			}, 100);
 			element.bind('scroll', function() {
-				$rootScope.$broadcast('scroll', {top: element.scrollTop()});
+				var s = element.scrollTop();
+				if (s > 100) {
+					fn(s);
+				} else {
+					$rootScope.$broadcast('scroll', {top: s});
+				}
 			});
 		};
 	});

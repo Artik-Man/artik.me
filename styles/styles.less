@@ -15,7 +15,6 @@
 .animate(@speed) {
   -webkit-transition: all @speed ease-in-out;
   -moz-transition: all @speed ease-in-out;
-  -ms-transition: all @speed ease-in-out;
   -o-transition: all @speed ease-in-out;
   transition: all @speed ease-in-out;
 }
@@ -129,8 +128,11 @@ header {
     height: 50px;
     margin-left: -1*@w/2;
     padding: 0 50px;
-    margin-top: 0;
+    margin-top: -55px;
     .animate(150ms);
+    &.show{
+      margin-top: 0;
+    }
     &:before {
       display: block;
     }
@@ -257,10 +259,10 @@ h1 {
     //width: 100%;
     display: block;
     color: fade(@white, 70%);
-    font-weight: 100;
     font-size: 12px;
     letter-spacing: 4px;
     padding-top: 50px;
+    font-weight: 300;
   }
 }
 
@@ -491,9 +493,10 @@ h5 {
     a {
       color: inherit;
       text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -619,8 +622,7 @@ h3 {
   .call-form {
     margin-top: 50px;
     cursor: default;
-    background: #fff url(images/cat.jpg) no-repeat;
-    background-position: 0 100%;
+    background: #fff url(images/cat.jpg) bottom no-repeat;
     background-size: 16%;
     padding: 50px 10px;
     color: #000;
@@ -995,7 +997,6 @@ h3 {
     left: 0;
     top: -100px;
     width: 100%;
-    padding: 20px;
   }
 
   h1 {

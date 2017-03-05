@@ -1,4 +1,4 @@
-<header ng-class="{'fly':fly}">
+<header ng-class="{'show':showNav,'fly':fly}">
 	<div class="logo">
 		<a href="#top" class="short-link">AM</a>
 	</div>
@@ -101,7 +101,8 @@
 
 <h2 id="projects">{{LANG.TITLE_PROJECTS}}</h2>
 
-<section class="content-block projects" slick dots="true" infinite="true" speed="300" init-onload="true" data="portfolio">
+<section class="content-block projects" slick dots="true" infinite="true" speed="300" init-onload="true"
+		 data="portfolio" autoplay="true" autoplay-speed="2000">
 
 	<div class="project" ng-repeat="item in portfolio ">
 		<a href="{{item.link}}" target="_blank"><h4>{{item.title[LNG]}}</h4></a>

@@ -8,7 +8,8 @@ angular.module('cvApp', [
 	'scroll',
 	'skillBuilder',
 	'ngDialog',
-	'sun.scrollable'
+	'sun.scrollable',
+	'angular-throttle-debounce'
 ]).config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	$routeProvider.otherwise({redirectTo: ''});
 }]);
