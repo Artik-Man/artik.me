@@ -2,27 +2,27 @@
   {
     "image": "ajax.png",
     "title": "AJAX",
-    "percent": 80
+    "percent": 93
   },
   {
     "image": "angular.png",
     "title": "AngularJS",
-    "percent": 70
+    "percent": 94
   },
   {
-    "image": "bitrix.png",
-    "title": "1C-Bitrix",
-    "percent": 20
+    "image": "require.png",
+    "title": "RequireJS",
+    "percent": 90
   },
   {
     "image": "bootstrap.png",
     "title": "Bootstrap",
-    "percent": 75
+    "percent": 96
   },
   {
     "image": "css.png",
     "title": "CSS",
-    "percent": 90
+    "percent": 99
   },
   {
     "image": "git.png",
@@ -32,31 +32,31 @@
   {
     "image": "html.png",
     "title": "HTML",
-    "percent": 95
+    "percent": 100
   },
   {
     "image": "jq.png",
     "title": "jQuery",
-    "percent": 85
+    "percent": 97
   },
   {
     "image": "js.png",
     "title": "JavaScript",
-    "percent": 80
+    "percent": 98
   },
   {
     "image": "less.png",
     "title": "less",
-    "percent": 90
+    "percent": 95
   },
   {
     "image": "mysql.png",
     "title": "MySQL",
-    "percent": 60
+    "percent": 91
   },
   {
     "image": "php.png",
     "title": "PHP",
-    "percent": 40
+    "percent": 92
   }
 ]

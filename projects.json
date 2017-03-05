@@ -1,5 +1,62 @@
 [
   {
+    "link": "",
+    "short_link": "https://hashboard.ru/",
+    "image": "hashboard.jpg",
+    "hide": false,
+    "title": {
+      "ru": "#hashboard",
+      "en": "#hashboard"
+    },
+    "description": {
+      "ru": "Разработка клиентской части сервиса #hashboard. По ссылке доступен лендинг.",
+      "en": "Development of client-side service #hashboard. The Landing page is available at the link"
+    },
+    "technologies": [
+      "JQuery",
+      "Bootstrap",
+      "LESS"
+    ]
+  },
+  {
+    "link": "",
+    "short_link": "https://new.hashboard.ru/play/?login=artik@hb.ru",
+    "image": "hashboard-player.jpg",
+    "hide": false,
+    "title": {
+      "ru": "#hashboard player",
+      "en": "#hashboard player"
+    },
+    "description": {
+      "ru": "Разработка клиентской части сервиса #hashboard. По ссылке доступна демонстрация плеера.",
+      "en": "Development of client-side service #hashboard. The Player is available at the link"
+    },
+    "technologies": [
+      "RequireJS",
+      "JQuery",
+      "REST"
+    ]
+  },
+  {
+    "link": "",
+    "short_link": "https://new.hashboard.ru/cabinet/",
+    "image": "hashboard-cabinet.jpg",
+    "hide": false,
+    "title": {
+      "ru": "#hashboard cabinet",
+      "en": "#hashboard cabinet"
+    },
+    "description": {
+      "ru": "Разработка клиентской части сервиса #hashboard. По ссылке доступен личный кабинет.",
+      "en": "Development of client-side service #hashboard. The Cabinet is available at the link"
+    },
+    "technologies": [
+      "AngularJS",
+      "RequireJS",
+      "REST"
+    ]
+  },
+  {
     "link": "http://primepix.ru/portfolio/3-15/",
     "short_link": "http://3-15.ru/",
     "image": "m315.jpg",
@@ -7,7 +64,16 @@
     "title": {
       "ru": "Интернет-магазин наручных часов «3–15»",
       "en": "Watches online shop «3–15»"
-    }
+    },
+    "description": {
+      "ru": "Вёрстка интернет-магазина на основе PSD-макетов",
+      "en": "Markup of a online store based on the PSD-layouts"
+    },
+    "technologies": [
+      "AgularJS",
+      "Bootstrap",
+      "Bitrix"
+    ]
   },
   {
     "link": "http://primepix.ru/portfolio/webasto/",
@@ -17,7 +83,16 @@
     "title": {
       "ru": "WEBASTO — предпусковые обогреватели",
       "en": "WEBASTO"
-    }
+    },
+    "description": {
+      "ru": "Вёрстка лендинга на основе PSD-макета",
+      "en": "Markup of a landing page, based on the PSD-layouts"
+    },
+    "technologies": [
+      "JQuery",
+      "Bootstrap",
+      "Bitrix"
+    ]
   },
   {
     "link": "http://primepix.ru/portfolio/mgrabber/",
@@ -27,7 +102,16 @@
     "title": {
       "ru": "Прайсрепортер",
       "en": "Pricereporter"
-    }
+    },
+    "description": {
+      "ru": "Вёрстка и поддержка рекламного сайта",
+      "en": "Markup and support of a advertising site"
+    },
+    "technologies": [
+      "JQuery",
+      "Bootstrap",
+      "Bitrix"
+    ]
   },
   {
     "link": "",
@@ -37,7 +121,16 @@
     "title": {
       "ru": "BKLYN Commons",
       "en": "BKLYN Commons"
-    }
+    },
+    "description": {
+      "ru": "Вёрстка лендинга для предприятия, предоставляющего в аренду рабочие пространства",
+      "en": "Markup of a landing page"
+    },
+    "technologies": [
+      "JQuery",
+      "Bootstrap",
+      "LESS"
+    ]
   },
   {
     "link": "",
@@ -47,17 +140,35 @@
     "title": {
       "ru": "Парк «Потешный двор»",
       "en": "Amusement Park"
-    }
+    },
+    "description": {
+      "ru": "Вёрстка сайта для архангельского детского парка",
+      "en": "Markup of a site of amusement park "
+    },
+    "technologies": [
+      "JQuery",
+      "LESS",
+      "HTML5"
+    ]
   },
   {
-    "link": "http://primepix.ru/portfolio/Verona-for-me/",
+    "link": "/portfolio/verona/",
     "short_link": "http://verona-for.me/",
     "image": "verona.jpg",
     "hide": false,
     "title": {
       "ru": "Итальянская мебель Verona",
       "en": "Verona"
-    }
+    },
+    "description": {
+      "ru": "Вёрстка сайта для магазина кухонной мебели",
+      "en": "Markup of a site for the store kitchen furniture"
+    },
+    "technologies": [
+      "JQuery",
+      "Bootstrap",
+      "LESS"
+    ]
   },
   {
     "link": "",
@@ -67,7 +178,16 @@
     "title": {
       "ru": "Сейвал",
       "en": "Seawhale"
-    }
+    },
+    "description": {
+      "ru": "Вёрстка лендинга для кюринговой компании",
+      "en": "Markup of a landing page"
+    },
+    "technologies": [
+      "JQuery",
+      "Bootstrap",
+      "LESS"
+    ]
   },
   {
     "link": "",
@@ -77,16 +197,15 @@
     "title": {
       "ru": "Салон красоты «Креатив»",
       "en": "Beauty Salon «Creative»"
-    }
-  },
-  {
-    "link": "",
-    "short_link": "/portfolio/promo/",
-    "image": "promo.jpg",
-    "hide": false,
-    "title": {
-      "ru": "Promo",
-      "en": "Promo"
-    }
+    },
+    "description": {
+      "ru": "Вёрстка сайта салона красоты",
+      "en": "Markup of a site for the beauty salon"
+    },
+    "technologies": [
+      "JQuery",
+      "Bootstrap",
+      "Bitrix"
+    ]
   }
 ]

@@ -7,7 +7,8 @@ angular.module('cvApp', [
 	'scroll',
 	'skillBuilder',
 	'ngDialog',
-	'sun.scrollable'
+	'sun.scrollable',
+	'slick'
 ]).config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	$routeProvider.otherwise({redirectTo: ''});
 }]);

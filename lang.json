@@ -36,7 +36,7 @@
     "en": "Date of Birth"
   },
   "INFO_B_DAY_A": {
-    "ru": "01 августа 1994",
+    "ru": "1 августа 1994",
     "en": "The 1 of August, 1994"
   },
   "INFO_UNIVER_Q": {
@@ -122,5 +122,13 @@
   "MESS_ERROR": {
     "ru": "Произошла какая-то ошибка...",
     "en": "An error has occurred..."
+  },
+  "TECHNOLOGIES": {
+    "ru": "Используемые технологии",
+    "en": "Technologies"
+  },
+  "PARTICIPATION": {
+    "ru": "Участие в проекте",
+    "en": "Participation in the project"
   }
 }
