@@ -1,7 +1,7 @@
 angular.module('scroll', [])
 	.directive('scroll', function($rootScope, throttle) {
 		return function() {
-			var element = angular.element('.nano-content');
+			var element = angular.element(window);
 			var fn = throttle(function(s) {
 				$rootScope.$broadcast('scroll', {top: s});
 			}, 100);

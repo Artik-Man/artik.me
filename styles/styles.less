@@ -29,17 +29,44 @@
   font-weight: 300;
 }
 
+body {
+  background: @dark-blue url(images/forest.jpg) 0 0 fixed;
+}
+
 .body {
-  background: #ccc url(images/forest.jpg) center;
-  background-size: cover;
+  //height: 100vh;
   position: relative;
-  height: 100vh;
+  &:before {
+    content: '';
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    min-height: 100vh;
+    z-index: 1;
+    background: url(images/forest.jpg) 0 0;
+    background-size: cover;
+  }
+  &:after {
+    content: '';
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    background: rgba(58, 62, 103, .5);
+  }
   .page {
     position: relative;
     background: none;
     padding: 100px 50px;
     max-width: 1170px;
     margin: 0 auto;
+    z-index: 3;
     .container {
       position: relative;
     }
@@ -101,13 +128,13 @@
 
 header {
   position: relative;
-  color: @black;
+  color: @white;
   z-index: 1;
   width: 100%;
   height: 50px;
   display: table;
   @w: 1170px;
-  margin-top: -50px;
+  margin-top: -55px;
   &:before {
     content: '';
     display: none;
@@ -130,7 +157,7 @@ header {
     padding: 0 50px;
     margin-top: -55px;
     .animate(150ms);
-    &.show{
+    &.show {
       margin-top: 0;
     }
     &:before {
@@ -172,7 +199,7 @@ header {
       margin-right: 10px;
     }
     &:hover {
-      color: @dark-blue;
+      color: @gray;
     }
   }
   .logo {
@@ -187,12 +214,12 @@ header {
       display: none;
       background: none;
       border: none;
-      color: fade(@black, 50%);
+      color: fade(@white, 50%);
       font-size: 24px;
       cursor: pointer;
       .animate(150ms);
       &:hover, &:focus {
-        color: @black;
+        color: @white;
       }
     }
     ul {
@@ -263,6 +290,7 @@ h1 {
     letter-spacing: 4px;
     padding-top: 50px;
     font-weight: 300;
+    text-shadow: 0 0 6px fade(@black, 50%);
   }
 }
 
@@ -385,6 +413,7 @@ h2 {
       text-align: center;
       font-weight: 100;
       margin-bottom: 50px;
+      text-shadow: 0 0 6px fade(@black, 50%);
       .lato;
     }
     a {
@@ -445,9 +474,9 @@ h5 {
   left: 10%;
   width: 80%;
   max-width: 380px;
-  -webkit-box-shadow: 0 20px 60px -10px fade(@black, 30%);
-  -moz-box-shadow: 0 20px 60px -10px fade(@black, 30%);
-  box-shadow: 0 20px 60px -10px fade(@black, 30%);
+  -webkit-box-shadow: 0 20px 60px -10px fade(@black, 80%);
+  -moz-box-shadow: 0 20px 60px -10px fade(@black, 80%);
+  box-shadow: 0 20px 60px -10px fade(@black, 80%);
   img {
     width: 100%;
     display: block;
@@ -605,7 +634,7 @@ h3 {
 }
 
 .ngdialog-content {
-  background: none;
+  //background: none;
   position: relative;
   max-width: 1070px;
   margin: 0 auto;
@@ -622,12 +651,12 @@ h3 {
   .call-form {
     margin-top: 50px;
     cursor: default;
-    background: #fff url(images/cat.jpg) bottom no-repeat;
+    //background: #fff url(images/cat.jpg) bottom no-repeat;
     background-size: 16%;
     padding: 50px 10px;
     color: #000;
     &.error {
-      background-image: url(images/cat2.jpg);
+      //background-image: url(images/cat2.jpg);
     }
     form {
       max-width: 400px;
@@ -819,6 +848,7 @@ h3 {
   .body {
     .page {
       margin-top: 0;
+      width: 100% !important;
     }
   }
 
@@ -998,9 +1028,15 @@ h3 {
     top: -100px;
     width: 100%;
   }
-
   h1 {
     font-size: 75px;
+    padding-bottom: 200px;
+    span {
+      font-size: 22px;
+      &.small {
+        font-size: 17px;
+      }
+    }
   }
 
   h2 {

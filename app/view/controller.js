@@ -26,16 +26,17 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 			$scope.LNG = cvLang.lng;
 		};
 
-		addOnWheel($('.nano-content')[0], function(e) {
-			$('.nano-content').stop();
+		addOnWheel($('body')[0], function(e) {
+			$('body').stop();
 		});
 
 		$('a.short-link').on('click', function(e) {
 			e.preventDefault();
+
 			var target = $(this).attr("href");
 			if ($(target).length > 0) {
-				$('.nano-content').stop().animate({
-					scrollTop: $(target).position().top
+				$('body').stop().animate({
+					scrollTop: $(target).offset().top
 				}, 500);
 			}
 		});
@@ -61,7 +62,6 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 		$rootScope.$on('scroll', function(event, data) {
 			$scope.fly = (data.top >= 100);
 			$scope.showNav = (data.top < scrollTop);
-			console.log(data.top , scrollTop)
 			scrollTop = data.top;
 			$scope.$digest();
 		});
