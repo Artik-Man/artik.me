@@ -9,8 +9,8 @@
       "en": "#hashboard"
     },
     "description": {
-      "ru": "Разработка клиентской части сервиса #hashboard. По ссылке доступен лендинг.",
-      "en": "Development of client-side service #hashboard. The Landing page is available at the link"
+      "ru": "Разработка клиентской части сервиса, состоящего из нескольких веб-приложений. Кроссбраузерная адаптивная вёрстка, локализация. ",
+      "en": "Client-side development of #hashboard service. Cross-browser code, responsive layout, Website localization."
     },
     "technologies": [
       "JQuery",
@@ -28,8 +28,8 @@
       "en": "#hashboard player"
     },
     "description": {
-      "ru": "Разработка клиентской части сервиса #hashboard. По ссылке доступна демонстрация плеера.",
-      "en": "Development of client-side service #hashboard. The Player is available at the link"
+      "ru": "Разработка клиентской части сервиса, состоящего из нескольких веб-приложений. Работа с html5 Audio/Video, полностью резиновая вёрстка, работа приложения в условиях плохого интернет-соединения, оптимизация фронтенда. ",
+      "en": "Client-side development of #hashboard service. This web application uses HTML5 Video and Audio, handles internet-connection troubles. Web site has a fluid layout."
     },
     "technologies": [
       "RequireJS",
@@ -47,8 +47,8 @@
       "en": "#hashboard cabinet"
     },
     "description": {
-      "ru": "Разработка клиентской части сервиса #hashboard. По ссылке доступен личный кабинет.",
-      "en": "Development of client-side service #hashboard. The Cabinet is available at the link"
+      "ru": " Разработка клиентской части сервиса, состоящего из нескольких веб-приложений. Локализация на клиенте, работа с HTML5 Audio/Video, связка AngularJS+RequireJS+REST API",
+      "en": " Client-side development of #hashboard service.  This web application uses client-side localization, HTML5 Audio/Video, the combination of AngularJS + RequireJS + REST API."
     },
     "technologies": [
       "AngularJS",
@@ -66,8 +66,8 @@
       "en": "Watches online shop «3–15»"
     },
     "description": {
-      "ru": "Вёрстка интернет-магазина на основе PSD-макетов",
-      "en": "Markup of a online store based on the PSD-layouts"
+      "ru": "Вёрстка интернет-магазина на основе PSD-макетов, расширение Bootstrap-сетки, CSS3-анимации.",
+      "en": "Frontend development, extension of bootstrap grid, CSS3-transitions."
     },
     "technologies": [
       "AgularJS",
@@ -85,8 +85,8 @@
       "en": "WEBASTO"
     },
     "description": {
-      "ru": "Вёрстка лендинга на основе PSD-макета",
-      "en": "Markup of a landing page, based on the PSD-layouts"
+      "ru": "Вёрстка лендинга на основе PSD-макета, CSS3-анимации.",
+      "en": "Frontend development, css3-transitions."
     },
     "technologies": [
       "JQuery",
@@ -104,8 +104,8 @@
       "en": "Pricereporter"
     },
     "description": {
-      "ru": "Вёрстка и поддержка рекламного сайта",
-      "en": "Markup and support of a advertising site"
+      "ru": " Вёрстка и поддержка рекламного сайта, CSS3-анимации, JS-анимации.",
+      "en": "Frontend development of advertising site , css3-transitions, JS-animations."
     },
     "technologies": [
       "JQuery",
@@ -123,8 +123,8 @@
       "en": "BKLYN Commons"
     },
     "description": {
-      "ru": "Вёрстка лендинга для предприятия, предоставляющего в аренду рабочие пространства",
-      "en": "Markup of a landing page"
+      "ru": "Вёрстка лендинга для предприятия, предоставляющего в аренду рабочие пространства в Бруклине.",
+      "en": "Frontend development of a landing page."
     },
     "technologies": [
       "JQuery",
@@ -142,8 +142,8 @@
       "en": "Amusement Park"
     },
     "description": {
-      "ru": "Вёрстка сайта для архангельского детского парка",
-      "en": "Markup of a site of amusement park "
+      "ru": "Вёрстка сайта для архангельского детского парка.",
+      "en": "Frontend development of a site."
     },
     "technologies": [
       "JQuery",
@@ -162,7 +162,7 @@
     },
     "description": {
       "ru": "Вёрстка сайта для магазина кухонной мебели",
-      "en": "Markup of a site for the store kitchen furniture"
+      "en": "Frontend development of a site for furniture factory"
     },
     "technologies": [
       "JQuery",
@@ -180,8 +180,8 @@
       "en": "Seawhale"
     },
     "description": {
-      "ru": "Вёрстка лендинга для кюринговой компании",
-      "en": "Markup of a landing page"
+      "ru": "Вёрстка адаптивного лендинга для кюринговой компании с использованием CSS3-анимаций.",
+      "en": "Frontend development of a landing page."
     },
     "technologies": [
       "JQuery",
@@ -199,8 +199,8 @@
       "en": "Beauty Salon «Creative»"
     },
     "description": {
-      "ru": "Вёрстка сайта салона красоты",
-      "en": "Markup of a site for the beauty salon"
+      "ru": "Вёрстка адаптивного сайта для Московского салона красоты.",
+      "en": "Frontend development of a site for beauty salon in Moscow."
     },
     "technologies": [
       "JQuery",
