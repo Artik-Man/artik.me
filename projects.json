@@ -9,7 +9,7 @@
       "en": "#hashboard"
     },
     "description": {
-      "ru": "Разработка клиентской части сервиса, состоящего из нескольких веб-приложений. Кроссбраузерная адаптивная вёрстка, локализация. ",
+      "ru": "Разработка клиентской части сервиса, состоящего из нескольких веб-приложений. Кроссбраузерная адаптивная вёрстка, локализация.",
       "en": "Client-side development of #hashboard service. Cross-browser code, responsive layout, Website localization."
     },
     "technologies": [
@@ -28,7 +28,7 @@
       "en": "#hashboard player"
     },
     "description": {
-      "ru": "Разработка клиентской части сервиса, состоящего из нескольких веб-приложений. Работа с html5 Audio/Video, полностью резиновая вёрстка, работа приложения в условиях плохого интернет-соединения, оптимизация фронтенда. ",
+      "ru": "Разработка клиентской части сервиса, состоящего из нескольких веб-приложений. Работа с HTML5 Audio/Video, полностью резиновая вёрстка, работа приложения в условиях плохого интернет-соединения, оптимизация фронтенда.",
       "en": "Client-side development of #hashboard service. This web application uses HTML5 Video and Audio, handles internet-connection troubles. Web site has a fluid layout."
     },
     "technologies": [
@@ -47,8 +47,8 @@
       "en": "#hashboard cabinet"
     },
     "description": {
-      "ru": " Разработка клиентской части сервиса, состоящего из нескольких веб-приложений. Локализация на клиенте, работа с HTML5 Audio/Video, связка AngularJS+RequireJS+REST API",
-      "en": " Client-side development of #hashboard service.  This web application uses client-side localization, HTML5 Audio/Video, the combination of AngularJS + RequireJS + REST API."
+      "ru": "Разработка клиентской части сервиса, состоящего из нескольких веб-приложений. Локализация на клиенте, работа с HTML5 Audio/Video, связка AngularJS+RequireJS+REST API.",
+      "en": "Client-side development of #hashboard service.  This web application uses client-side localization, HTML5 Audio/Video, the combination of AngularJS + RequireJS + REST API."
     },
     "technologies": [
       "AngularJS",
@@ -86,7 +86,7 @@
     },
     "description": {
       "ru": "Вёрстка лендинга на основе PSD-макета, CSS3-анимации.",
-      "en": "Frontend development, css3-transitions."
+      "en": "Frontend development, CSS3-transitions."
     },
     "technologies": [
       "JQuery",
@@ -105,7 +105,7 @@
     },
     "description": {
       "ru": " Вёрстка и поддержка рекламного сайта, CSS3-анимации, JS-анимации.",
-      "en": "Frontend development of advertising site , css3-transitions, JS-animations."
+      "en": "Frontend development of advertising site , CSS3-transitions, JS-animations."
     },
     "technologies": [
       "JQuery",
@@ -161,8 +161,8 @@
       "en": "Verona"
     },
     "description": {
-      "ru": "Вёрстка сайта для магазина кухонной мебели",
-      "en": "Frontend development of a site for furniture factory"
+      "ru": "Вёрстка сайта для магазина кухонной мебели.",
+      "en": "Frontend development of a site for furniture factory."
     },
     "technologies": [
       "JQuery",
