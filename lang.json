@@ -130,5 +130,9 @@
   "PARTICIPATION": {
     "ru": "Участие в проекте",
     "en": "Participation in the project"
+  },
+  "OPEN_IN_A_NEW_TAB":{
+    "ru": "Откроется в новой вкладке",
+    "en": "Open in a new tab"
   }
 }

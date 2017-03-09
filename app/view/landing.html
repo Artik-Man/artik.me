@@ -105,7 +105,7 @@
 		 slick dots="true" infinite="true" speed="300" init-onload="true" data="portfolio">
 
 	<div class="project" ng-repeat="item in portfolio ">
-		<a href="{{item.link}}" target="_blank"><h4>{{item.title[LNG]}}</h4></a>
+		<h4><a href="{{item.link}}" target="_blank">{{item.title[LNG]}}</a></h4>
 		<div class="box">
 			<div class="info">
 				<h5 ng-if="item.description[LNG].length">{{LANG.PARTICIPATION}}:</h5>
@@ -115,9 +115,12 @@
 					<li ng-repeat="t in item.technologies">{{t}}</li>
 				</ul>
 			</div>
-			<a href="{{item.link}}" target="_blank" class="image-box">
-				<img ng-src="/styles/images/projects/{{item.image}}" alt="{{item.title[LNG]}}">
-			</a>
+			<div class="image-box">
+				<a href="{{item.link}}" target="_blank" class="link">
+					<img ng-src="/styles/images/projects/{{item.image}}" alt="{{item.title[LNG]}}">
+					<span class="link-info"><span class="text">{{LANG.OPEN_IN_A_NEW_TAB}}</span></span>
+				</a>
+			</div>
 		</div>
 	</div>
 </section>
