@@ -37,7 +37,7 @@
 			<div class="about-text">
 				<div>
 					<label>{{LANG.INFO_B_DAY_Q}}:</label>
-					<p>{{LANG.INFO_B_DAY_A}} ({{AGE}} {{LANG.INFO_EXP_A}})</p>
+					<p>{{LANG.INFO_B_DAY_A}}</p>
 				</div>
 				<div>
 					<label>{{LANG.INFO_UNIVER_Q}}:</label>
@@ -93,18 +93,31 @@
 
 <h2 id="skills">{{LANG.TITLE_SKILLS}}</h2>
 
-<section class="content-block text-center">
-
-	<div class="skill" ng-repeat="skill in skills" skill-builder skill="skill"></div>
-
+<section class="content-block text-center"
+		 slick
+		 dots="true"
+		 infinite="true"
+		 speed="500"
+		 init-onload="true"
+		 data="skills"
+		 slides-to-show="5"
+		 autoplay="true"
+		 autoplay-speed="2000"
+		 responsive="slickResp">
+	<div class="skill-group" ng-repeat="g in slickGroups">
+		<div class="skill" ng-repeat="skill in g">
+			<div class="image-box">
+				<img ng-src="/styles/images/skills/{{skill.image}}" alt="{{skill.title}}">
+			</div>
+		</div>
+	</div>
 </section>
 
 <h2 id="projects">{{LANG.TITLE_PROJECTS}}</h2>
 
-<section class="content-block projects"
-		 slick dots="true" infinite="true" speed="300" init-onload="true" data="portfolio">
+<section class="content-block projects">
 
-	<div class="project" ng-repeat="item in portfolio ">
+	<div class="project" ng-repeat="item in portfolioPiece">
 		<h4><a href="{{item.link}}" target="_blank">{{item.title[LNG]}}</a></h4>
 		<div class="box">
 			<div class="info">
@@ -122,6 +135,9 @@
 				</a>
 			</div>
 		</div>
+	</div>
+	<div class="project" ng-if="portfolioPiece.length < portfolio.length">
+		<h4 class="show-more" ng-click="showMoreProjects()">{{LANG.SHOW_MORE}}</h4>
 	</div>
 </section>
 

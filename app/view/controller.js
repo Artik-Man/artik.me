@@ -179,14 +179,57 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 			$scope.menuIsOpen = false;
 		};
 
+		$scope.slickResp = [
+			{
+				breakpoint: 1200,
+				settings: {
+					arrows: true,
+					slidesToShow: 4
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+					slidesToShow: 2
+				}
+			}
+		];
+		$scope.slickGroups = [];
 		$http.get('/skills.json').then(function(resp) {
 			$scope.skills = resp.data;
 			$scope.skills.sort(function(a, b) {
 				return (b.percent - a.percent);
 			});
+			var group = [];
+			$scope.skills.forEach(function(item) {
+				group.push(item);
+				if (group.length > 1) {
+					$scope.slickGroups.push(group);
+					group = [];
+				}
+			})
 		}, function(resp) {
 			console.error(resp)
 		});
+
+		$scope.portfolioPiece = [];
+		$scope.showPiece = 4;
+		function showMoreProjects() {
+			$scope.portfolioPiece = $scope.portfolio.slice(0, $scope.showPiece)
+		}
+
+		$scope.showMoreProjects = function() {
+			$scope.showPiece += 5;
+			showMoreProjects();
+		};
 
 		$http.get('/projects.json').then(function(resp) {
 			$scope.portfolio = [];
@@ -196,6 +239,7 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 					$scope.portfolio.push(item);
 				}
 			});
+			showMoreProjects();
 		}, function(resp) {
 			console.error(resp)
 		});

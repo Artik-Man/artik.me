@@ -6,7 +6,6 @@ angular.module('cvApp', [
 	'ngRoute',
 	'cvApp.landing',
 	'scroll',
-	'skillBuilder',
 	'ngDialog',
 	'sun.scrollable',
 	'angular-throttle-debounce'

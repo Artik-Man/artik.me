@@ -372,11 +372,16 @@ h2 {
   .avatar-box + .padding-h {
     margin-top: -10px;
   }
-  .skill {
+  .skill-group {
     display: inline-block;
+  }
+  .skill {
+    //display: inline-block;
     vertical-align: top;
-    width: 25%;
-    margin-right: -4px;
+    //width: 25%;
+    //margin-right: -4px;
+    display: block;
+    width: 100%;
     text-align: center;
     padding: 30px;
     .image-box {
@@ -429,7 +434,15 @@ h2 {
   .project {
     color: @white;
     position: relative;
-    cursor: e-resize;
+    padding-bottom: 25vh;
+    &:nth-child(2n) {
+      .image-box, .info {
+        float: right;
+      }
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
     h4 {
       color: @white;
       font-size: 32px;
@@ -438,6 +451,12 @@ h2 {
       margin-bottom: 50px;
       text-shadow: 0 0 6px fade(@black, 50%);
       .lato;
+      &.show-more{
+        cursor: pointer;
+        &:hover{
+          color: @gray;
+        }
+      }
       a {
         text-decoration: none;
         color: @white;
@@ -467,6 +486,9 @@ h2 {
       .link {
         position: relative;
         display: block;
+        padding: 10px;
+        background: rgba(0, 0, 0, .3);
+        border-radius: 4px;
         &:hover {
           .link-info {
             opacity: 1;
@@ -775,7 +797,7 @@ h3 {
 
   .content-block {
     .skill {
-      width: 33%;
+      //width: 33%;
     }
   }
 
@@ -806,8 +828,11 @@ h3 {
 
   .content-block {
     .skill {
-      width: 33%;
+      //width: 33%;
       padding: 10px;
+      .image-box {
+        padding: 15px;
+      }
     }
   }
 
@@ -858,7 +883,11 @@ h3 {
 
   .content-block {
     .skill {
-      width: 50%;
+      //width: 50%;
+      padding: 20px;
+      .image-box {
+        padding: 20px;
+      }
     }
   }
 
@@ -977,7 +1006,7 @@ h3 {
 
   .content-block {
     .skill {
-      width: 50%;
+      //width: 50%;
       padding: 10px;
       .image-box {
         padding: 10px;

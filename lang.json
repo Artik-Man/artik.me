@@ -37,23 +37,23 @@
   },
   "INFO_B_DAY_A": {
     "ru": "1 августа 1994",
-    "en": "The 1 of August, 1994"
+    "en": "August 1, 1994"
   },
   "INFO_UNIVER_Q": {
     "ru": "Вуз",
     "en": "University"
   },
   "INFO_UNIVER_A": {
-    "ru": "С(А)ФУ имени М. В. Ломоносова",
+    "ru": "Северный (Арктический) федеральный университет имени М.В. Ломоносова",
     "en": "Northern (Arctic) Federal University"
   },
   "INFO_DEP_Q": {
     "ru": "Факультет",
-    "en": "Department"
+    "en": "Institute"
   },
   "INFO_DEP_A": {
     "ru": "Институт математики, информационных и космических технологий",
-    "en": "Institute of mathemathics, information and space technologies"
+    "en": "Institute of Mathemathics, Information and Space Technologies"
   },
   "INFO_EXP_Q": {
     "ru": "Опыт работы",
@@ -69,7 +69,7 @@
   },
   "FEEDBACK": {
     "ru": "Обратная связь",
-    "en": "Feedback"
+    "en": "Contact me"
   },
   "TITLE_SKILLS": {
     "ru": "Основные навыки",
@@ -125,14 +125,18 @@
   },
   "TECHNOLOGIES": {
     "ru": "Используемые технологии",
-    "en": "Technologies"
+    "en": "Used technologies"
   },
   "PARTICIPATION": {
     "ru": "Участие в проекте",
-    "en": "Participation in the project"
+    "en": "My contribution to the project"
   },
   "OPEN_IN_A_NEW_TAB":{
     "ru": "Откроется в новой вкладке",
     "en": "Open in a new tab"
+  },
+  "SHOW_MORE":{
+    "ru": "Показать больше проектов...",
+    "en": "Show more projects..."
   }
 }
