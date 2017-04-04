@@ -67,7 +67,7 @@
     },
     "description": {
       "ru": "Вёрстка интернет-магазина на основе PSD-макетов, расширение Bootstrap-сетки, CSS3-анимации.",
-      "en": "Frontend development, extension of bootstrap grid, CSS3-transitions."
+      "en": "Front-end web development, extension of bootstrap grid, CSS3-transitions."
     },
     "technologies": [
       "AgularJS",
@@ -86,7 +86,7 @@
     },
     "description": {
       "ru": "Вёрстка лендинга на основе PSD-макета, CSS3-анимации.",
-      "en": "Frontend development, CSS3-transitions."
+      "en": "Front-end web development, CSS3-transitions."
     },
     "technologies": [
       "JQuery",
@@ -104,8 +104,8 @@
       "en": "Pricereporter"
     },
     "description": {
-      "ru": " Вёрстка и поддержка рекламного сайта, CSS3-анимации, JS-анимации.",
-      "en": "Frontend development of the commercial site. CSS3-transitions, JS-animations."
+      "ru": "Вёрстка и поддержка рекламного сайта, CSS3-анимации, JS-анимации.",
+      "en": "Front-end web development and technical support of a commercial site"
     },
     "technologies": [
       "JQuery",
@@ -124,7 +124,7 @@
     },
     "description": {
       "ru": "Вёрстка лендинга для предприятия, предоставляющего в аренду рабочие пространства в Бруклине.",
-      "en": "Frontend development of a landing page."
+      "en": "Front-end web development of a landing page."
     },
     "technologies": [
       "JQuery",
@@ -143,7 +143,7 @@
     },
     "description": {
       "ru": "Вёрстка сайта для архангельского детского парка.",
-      "en": "Frontend development of a site."
+      "en": "Front-end web development of a site."
     },
     "technologies": [
       "JQuery",
@@ -162,7 +162,7 @@
     },
     "description": {
       "ru": "Вёрстка сайта для магазина кухонной мебели.",
-      "en": "Frontend development of a site for furniture factory."
+      "en": "Front-end web development of a site for furniture factory."
     },
     "technologies": [
       "JQuery",
@@ -181,7 +181,7 @@
     },
     "description": {
       "ru": "Вёрстка адаптивного лендинга для кюринговой компании с использованием CSS3-анимаций.",
-      "en": "Frontend development of a landing page."
+      "en": "Front-end web development of a landing page."
     },
     "technologies": [
       "JQuery",
@@ -200,7 +200,7 @@
     },
     "description": {
       "ru": "Вёрстка адаптивного сайта для Московского салона красоты.",
-      "en": "Frontend development of a site for beauty salon in Moscow."
+      "en": "Front-end web development of a site for beauty salon in Moscow."
     },
     "technologies": [
       "JQuery",

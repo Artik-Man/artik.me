@@ -35,7 +35,7 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 
 			var target = $(this).attr("href");
 			if ($(target).length > 0) {
-				$('body').stop().animate({
+				$('html, body').stop().animate({
 					scrollTop: $(target).offset().top
 				}, 500);
 			}
