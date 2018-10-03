@@ -11,8 +11,8 @@ angular.module('cvApp.landing', ['ngDialog', 'cvLang'])
 
 		$scope.LANG = cvLang.lang;
 		$scope.LNG = cvLang.lng;
-		var date = new Date();
-		$scope.EXP = date.getFullYear() - 2015;
+		var date = ((new Date().getTime()) - (new Date('01-05-2015').getTime())) / (1000 * 60 * 60 * 24 * 365);
+		$scope.EXP = { y: Math.floor(date), m: Math.floor((date - y) * 100 / 12)};
 		$scope.AGE = Math.floor(((date.getFullYear() * 12 + date.getMonth()) - (1994 * 12 + 9)) / 12);
 
 		$rootScope.$on('lang-is-loaded', function() {
