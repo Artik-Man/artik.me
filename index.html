@@ -1,130 +1,286 @@
 <!DOCTYPE html>
 <html ng-app="cvApp">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Artik Mangasaryan</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Artik Mangasaryan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<meta name="keywords"
-		  content="резюме, разработчик, ключевые навыки, поиск персонала, верстальщик, frontend, front-end, фронтэнд, фронтэндер, Артик, Арташес, Мангасарян">
-	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <meta name="keywords" content="резюме, разработчик, ключевые навыки, поиск персонала, верстальщик, frontend, front-end, фронтэнд, фронтэндер, Артик, Арташес, Мангасарян, CV, Mangasaryan, Artik, Artashes" />
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-	<link rel="shortcut icon" type="image/png" href="styles/images/icons/16.png" sizes="16x16">
-	<link rel="icon" type="image/png" href="styles/images/icons/32.png" sizes="32x32">
-	<link rel="apple-touch-icon" sizes="57x57" href="styles/images/icons/57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="styles/images/icons/60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="styles/images/icons/72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="styles/images/icons/76.png">
-	<link rel="icon" type="image/png" href="styles/images/icons/96.png" sizes="96x96">
-	<link rel="apple-touch-icon" sizes="114x114" href="styles/images/icons/114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="styles/images/icons/120.png">
-	<meta name="twitter:image:src" content="styles/images/icons/120.png"/>
-	<link rel="apple-touch-icon" sizes="144x144" href="styles/images/icons/144.png">
-	<meta name="msapplication-TileImage" content="styles/images/icons/144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="styles/images/icons/152.png">
-	<link rel="apple-touch-icon" sizes="167x167" href="styles/images/icons/167.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="styles/images/icons/180.png">
-	<link rel="icon" type="image/png" href="styles/images/icons/192.png" sizes="192x192">
-	<link rel="image_src" href="styles/images/icons/vk.jpg"/>
-	<meta property="og:image" content="styles/images/icons/og.jpg"/>
-	<link rel="mask-icon" href="styles/images/icons/16.png" color="#173D66">
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<meta name="msapplication-TileColor" content="#173D66">
-	<meta name="theme-color" content="#173D66">
-	<meta name="twitter:card" content="summary"/>
-	<meta name="twitter:title" content="Артик Мангасарян">
-	<meta name="title" content="Артик Мангасарян"/>
-	<meta property="og:title" content="Артик Мангасарян"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="http://artik-man.ru"/>
-	<meta name="twitter:domain" content="http://artik-man.ru"/>
-	<meta name="description" content="Резюме Мангасаряна Арташеса">
-	<meta property="og:site_name" content="Резюме Мангасаряна Арташеса"/>
-	<meta name="twitter:site" content="Резюме Мангасаряна Арташеса"/>
-	<meta name="twitter:description" content="Резюме Мангасаряна Арташеса"/>
-	<meta property="og:description" content="Резюме Мангасаряна Арташеса"/>
-	<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
-	<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
-	<link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" type="image/png" href="styles/images/icons/16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="styles/images/icons/32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" sizes="57x57" href="styles/images/icons/57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="styles/images/icons/60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="styles/images/icons/72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="styles/images/icons/76.png" />
+  <link rel="icon" type="image/png" href="styles/images/icons/96.png" sizes="96x96" />
+  <link rel="apple-touch-icon" sizes="114x114" href="styles/images/icons/114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="styles/images/icons/120.png" />
+  <meta name="twitter:image:src" content="styles/images/icons/120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="styles/images/icons/144.png" />
+  <meta name="msapplication-TileImage" content="styles/images/icons/144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="styles/images/icons/152.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="styles/images/icons/167.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="styles/images/icons/180.png" />
+  <link rel="icon" type="image/png" href="styles/images/icons/192.png" sizes="192x192" />
+  <link rel="image_src" href="styles/images/icons/vk.jpg" />
+  <meta property="og:image" content="styles/images/icons/og.jpg" />
+  <link rel="mask-icon" href="styles/images/icons/16.png" color="#173D66" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="msapplication-TileColor" content="#173D66" />
+  <meta name="theme-color" content="#173D66" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Артик Мангасарян" />
+  <meta name="title" content="Артик Мангасарян" />
+  <meta property="og:title" content="Артик Мангасарян" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://artik.me" />
+  <meta name="twitter:domain" content="http://artik.me" />
+  <meta name="description" content="Резюме Мангасаряна Арташеса" />
+  <meta property="og:site_name" content="Резюме Мангасаряна Арташеса" />
+  <meta name="twitter:site" content="Резюме Мангасаряна Арташеса" />
+  <meta name="twitter:description" content="Резюме Мангасаряна Арташеса" />
+  <meta property="og:description" content="Резюме Мангасаряна Арташеса" />
+  <link rel="stylesheet" href="styles/fonts/lato/font.css" />
+  <link rel="stylesheet" href="styles/fonts/bebas/font.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
-<body scroll>
-<div class="body" id="top">
-	<div class="page">
-		<div class="container" ng-view></div>
-	</div>
-</div>
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-route/angular-route.min.js"></script>
-<script src="bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js"></script>
-<script src="bower_components/angular-nanoscroller/scrollable.js"></script>
-<script src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
-<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
-<script src="bower_components/angular-slick/dist/slick.min.js"></script>
-<script src="bower_components/angular-throttle-debounce/dist/angular-throttle-debounce.min.js"></script>
-<script src="app/components/cvLang/langSvc.js"></script>
-<script src="app/components/scroll/scroll.js"></script>
-<script src="app/components/skillBuilder/skillBuilderCtrl.js"></script>
-<script src="app/view/controller.js"></script>
-<script src="app/app.js"></script>
+<body>
+  <div class="page">
+    <header>
+      <div class="container">
+        <div class="flex">
+          <div class="left-block"><a href="/" class="logo">AM</a></div>
+          <ul class="right-block contacts">
+            <li>
+              <a href="tel:+79062824201" rel="nofollow">
+                <i class="icon icon_phone"></i>
+                <span class="text">+7 906 282 42 01</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:mail@artik.me" rel="nofollow">
+                <i class="icon icon_email"></i>
+                <span class="text">mail@artik.me</span>
+              </a>
+            </li>
+            <li>
+              <a href="//hh.ru/resume/db6e39e7ff0357d63c0039ed1f617172787049" target="_blank" rel="nofollow">
+                <i class="icon icon_hh"></i>
+                <span class="text">HeadHunter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <h1>Artik
+          <small>Mangasaryan</small>
+        </h1>
+        <p class="subtitle">Frontend-developer</p>
+      </div>
+    </section>
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-	(function(d, w, c) {
-		(w[c] = w[c] || []).push(function() {
-			try {
-				w.yaCounter35320200 = new Ya.Metrika({
-					id: 35320200,
-					clickmap: true,
-					trackLinks: true,
-					accurateTrackBounce: true,
-					webvisor: true
-				});
-			} catch (e) {
-			}
-		});
+    <section>
+      <div class="container">
+        <h2>About</h2>
+        <table>
+          <tr>
+            <th>Commercial Experience</th>
+            <td>3 years and 7 months</td>
+          </tr>
+          <tr>
+            <th>Languages</th>
+            <td>Russian (native), English (Pre-Intermediate)</td>
+          </tr>
+        </table>
+        <cite>This site does not use JavaScript. <br><i class="space"></i> Imagine what happens if I use it.</cite>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="experience">
+          <div class="table">
+            <div class="tr">
+              <div class="td empty">
+                <h4 class="text-right">Education</h4>
+              </div>
+              <div class="td"></div>
+              <div class="td">
+                <h4>Work</h4>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td"></div>
+              <div class="td">
+                <div class="year">
+                  <i class="icon icon_merge"></i>
+                </div>
+              </div>
+              <div class="td">
+                <div class="right"></div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td">
+                <div class="left">
+                  <p class="title">Masrer`s degree</p>
+                  <p class="description">
+                    <b>Northern (Arctic) Federal University</b> <br>
+                    Higher School of Information Technologies and Automated Systems <br>
+                    2016 &mdash; 2018
+                  </p>
+                </div>
+              </div>
+              <div class="td">
+                <div class="year">2018</div>
+              </div>
+              <div class="td">
+                <div class="right">
+                  <p class="title"><a href="//kaspersky.com" target="_blank" rel="nofollow">Kaspersky Lab.</a></p>
+                  <p class="description">Developer</p>
+                </div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td"> </div>
+              <div class="td">
+                <div class="year">2017
+                  <i class="icon icon_merge"></i>
+                </div>
+              </div>
+              <div class="td">
+                <div class="right">
+                  <p class="title"><a href="//luxoft.com" target="_blank" rel="nofollow">Luxoft</a></p>
+                  <p class="description">Senior Frontend Developer</p>
+                </div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td">
+                <div class="left">
+                  <p class="title">Bachelor`s degree</p>
+                  <p class="description">
+                    <b>Northern (Arctic) Federal University</b> <br>
+                    Institute of Mathematics, Information and Space Technologies <br>
+                    2012 &mdash; 2016
+                  </p>
+                </div>
+              </div>
+              <div class="td">
+                <div class="year">2016</div>
+              </div>
+              <div class="td">
+                <div class="right">
+                  <p class="title"><a href="//hashboard.ru" target="_blank" rel="nofollow">Hashboard</a></p>
+                  <p class="description">Frontend Developer</p>
+                </div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td"> </div>
+              <div class="td">
+                <div class="year">2015
+                  <i class="icon icon_merge"></i>
+                </div>
+              </div>
+              <div class="td empty">
+                <div class="right">
+                  <p class="title"><a href="//primepix.ru" target="_blank" rel="nofollow">PrimePix</a></p>
+                  <p class="description">Junior Frontend Developer</p>
+                </div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td">
+                <div class="left">
+                  <p class="description">Webmaster`s coursers</p>
+                </div>
+              </div>
+              <div class="td">
+                <div class="year">2014</div>
+              </div>
+              <div class="td empty"></div>
+            </div>
+            <div class="tr">
+              <div class="td"> </div>
+              <div class="td">
+                <div class="year">2013</div>
+              </div>
+              <div class="td empty"></div>
+            </div>
+            <div class="tr">
+              <div class="td">
+                <div class="left">
+                  <p class="title">Initial commit</p>
+                  <p class="description">
+                    In 2012 I entered the university
+                  </p>
+                </div>
+              </div>
+              <div class="td">
+                <div class="year">2012</div>
+              </div>
+              <div class="td empty">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-		var n = d.getElementsByTagName("script")[0],
-			s = d.createElement("script"),
-			f = function() {
-				n.parentNode.insertBefore(s, n);
-			};
-		s.type = "text/javascript";
-		s.async = true;
-		s.src = "https://mc.yandex.ru/metrika/watch.js";
+  <script src="app.js"></script>
 
-		if (w.opera == "[object Opera]") {
-			d.addEventListener("DOMContentLoaded", f, false);
-		} else {
-			f();
-		}
-	})(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript>
-	<div><img src="https://mc.yandex.ru/watch/35320200" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter -->
+  <!--
+      <script type="text/javascript">
+        (function(d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+            try {
+              w.yaCounter35320200 = new Ya.Metrika({
+                id: 35320200,
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true,
+              });
+            } catch (e) {}
+          });
 
-<!-- Google Analytics counter -->
-<script>
-	(function(i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r;
-		i[r] = i[r] || function() {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-		a = s.createElement(o),
-			m = s.getElementsByTagName(o)[0];
-		a.async = 1;
-		a.src = g;
-		m.parentNode.insertBefore(a, m)
-	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+          var n = d.getElementsByTagName('script')[0],
+            s = d.createElement('script'),
+            f = function() {
+              n.parentNode.insertBefore(s, n);
+            };
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = 'https://mc.yandex.ru/metrika/watch.js';
 
-	ga('create', 'UA-73709959-1', 'auto');
-	ga('send', 'pageview');
-
-</script>
-<!-- /Google Analytics counter -->
-
+          if (w.opera == '[object Opera]') {
+            d.addEventListener('DOMContentLoaded', f, false);
+          } else {
+            f();
+          }
+        })(document, window, 'yandex_metrika_callbacks');
+      </script>
+      <noscript>
+        <div>
+          <img
+            src="https://mc.yandex.ru/watch/35320200"
+            style="position:absolute; left:-9999px;"
+            alt=""
+          />
+        </div>
+      </noscript>
+    -->
+  <!-- /Yandex.Metrika counter -->
 </body>
+
 </html>
