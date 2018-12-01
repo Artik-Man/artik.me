@@ -11,13 +11,23 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background: @dark;
 }
 
 .page {
-  background: @dark;
   min-height: 100vh;
   color: @white;
-  overflow: hidden;
+  overflow: hidden; // &:before {
+  //   content: '';
+  //   position: fixed;
+  //   top: -50px;
+  //   left: 0;
+  //   right: 0;
+  //   height: 50px;
+  //   @shadow: 0 0 50px 10px @dark;
+  //   box-shadow: @shadow;
+  //   z-index: 10;
+  // }
 }
 
 .container {
@@ -75,6 +85,21 @@ header {
   &:hover {
     color: fade(@white, 70%);
   }
+}
+
+.ava-box {
+  margin: 32px auto;
+  float: none;
+  width: 240px;
+}
+
+.ava {
+  background: url('./images/me.jpg') 50% 0% no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  border: 1px solid fade(@white, 50%);
 }
 
 section {
@@ -153,12 +178,105 @@ section {
   }
 }
 
+.hidden-md {
+  display: table-row;
+}
+
+.skills {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  ul {
+    margin: 0 100px 0 0;
+    padding-left: 20px;
+    li {
+      font-size: 22px;
+      font-weight: 100;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.project {
+  border-left: 4px solid fade(@white, 50%);
+  border-radius: 2px;
+  padding: 0 0 0 16px;
+  margin-bottom: 32px;
+  position: relative;
+  h3 {
+    font-family: Lato, sans-serif;
+    padding-bottom: 24px;
+  }
+  h4 {
+    font-family: Lato, sans-serif;
+    padding-bottom: 8px;
+  }
+  p {}
+  ul {
+    li {}
+  }
+  .description {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  .image {
+    margin: 32px 0;
+    img {
+      max-width: 100%;
+      max-height: 420px;
+    }
+  }
+}
+
 @media (min-width: 600px) {
   .container {
     max-width: 600px;
   }
   h1 {
     font-size: 140px;
+  }
+  .project {
+    border-left-color: fade(@white, 50%);
+    &:hover {
+      border-left-color: fade(@white, 100%);
+      .description {
+        opacity: 1;
+      }
+      .image {
+        img {
+          opacity: 1;
+        }
+      }
+    }
+    h3 {
+      padding-right: 332px;
+    }
+    .description {
+      transition: opacity 150ms ease-in-out;
+      padding-right: 332px;
+      opacity: .5;
+    }
+    .image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 320px;
+      margin: 0;
+      border-radius: 4px;
+      overflow: hidden;
+      img {
+        transition: opacity 150ms ease-in-out;
+        opacity: .3;
+      }
+    }
+  }
+  .ava-box {
+    margin: 0 32px 0 0;
+    float: left;
   }
   .experience {
     .table {
@@ -187,10 +305,10 @@ section {
             border-color: transparent !important;
           }
           &:first-child {
-            border-right: 2px solid @white;
+            border-right: 2px solid fade(@white, 50%);
           }
           &:last-child {
-            border-left: 2px solid @white;
+            border-left: 2px solid fade(@white, 50%);
           }
         }
       }
@@ -232,6 +350,9 @@ section {
         display: inline;
       }
     }
+  }
+  .hidden-md {
+    display: none;
   }
 }
 
