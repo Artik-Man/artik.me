@@ -1,36 +1,16 @@
 <!DOCTYPE html>
-<html ng-app="cvApp">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <title>Artik Mangasaryan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <meta name="keywords" content="резюме, разработчик, ключевые навыки, поиск персонала, верстальщик, frontend, front-end, фронтэнд, фронтэндер, Артик, Арташес, Мангасарян, CV, Mangasaryan, Artik, Artashes" />
   <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-  <link rel="shortcut icon" type="image/png" href="styles/images/icons/16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="styles/images/icons/32.png" sizes="32x32" />
-  <link rel="apple-touch-icon" sizes="57x57" href="styles/images/icons/57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="styles/images/icons/60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="styles/images/icons/72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="styles/images/icons/76.png" />
-  <link rel="icon" type="image/png" href="styles/images/icons/96.png" sizes="96x96" />
-  <link rel="apple-touch-icon" sizes="114x114" href="styles/images/icons/114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="styles/images/icons/120.png" />
-  <meta name="twitter:image:src" content="styles/images/icons/120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="styles/images/icons/144.png" />
-  <meta name="msapplication-TileImage" content="styles/images/icons/144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="styles/images/icons/152.png" />
-  <link rel="apple-touch-icon" sizes="167x167" href="styles/images/icons/167.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="styles/images/icons/180.png" />
-  <link rel="icon" type="image/png" href="styles/images/icons/192.png" sizes="192x192" />
-  <link rel="image_src" href="styles/images/icons/vk.jpg" />
-  <meta property="og:image" content="styles/images/icons/og.jpg" />
-  <link rel="mask-icon" href="styles/images/icons/16.png" color="#173D66" />
+  <link rel="manifest" href="/manifest.json">
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="msapplication-TileColor" content="#173D66" />
-  <meta name="theme-color" content="#173D66" />
+  <meta name="msapplication-TileColor" content="#10272f" />
+  <meta name="theme-color" content="#10272f" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Артик Мангасарян" />
   <meta name="title" content="Артик Мангасарян" />
@@ -53,23 +33,23 @@
     <header>
       <div class="container">
         <div class="flex">
-          <div class="left-block"><a href="/" class="logo">AM</a></div>
+          <div class="left-block"><a href="/" class="logo" aria-label="Artik Mangasaryan">AM</a></div>
           <ul class="right-block contacts">
             <li>
-              <a href="tel:+79062824201" rel="nofollow">
-                <i class="icon icon_phone"></i>
+              <a href="tel:+79062824201" rel="noreferrer" aria-label="Phone">
+                <i aria-hidden="true" class="icon icon_phone"></i>
                 <span class="text">+7 906 282 42 01</span>
               </a>
             </li>
             <li>
-              <a href="mailto:mail@artik.me" rel="nofollow">
-                <i class="icon icon_email"></i>
+              <a href="mailto:mail@artik.me" rel="noreferrer"aria-label="Email">
+                <i aria-hidden="true" class="icon icon_email"></i>
                 <span class="text">mail@artik.me</span>
               </a>
             </li>
             <li>
-              <a href="//hh.ru/resume/db6e39e7ff0357d63c0039ed1f617172787049" target="_blank" rel="nofollow">
-                <i class="icon icon_hh"></i>
+              <a href="//hh.ru/resume/db6e39e7ff0357d63c0039ed1f617172787049" target="_blank" rel="noreferrer" aria-label="External CV">
+                <i aria-hidden="true" class="icon icon_hh"></i>
                 <span class="text">HeadHunter</span>
               </a>
             </li>
@@ -128,8 +108,8 @@
             <tr class="hidden-md">
               <th>Phone</th>
               <td>
-                <a href="tel:+79062824201" rel="nofollow">
-                  <i class="icon icon_phone"></i>
+                <a href="tel:+79062824201" rel="noreferrer" aria-label="Phone">
+                  <i aria-hidden="true" class="icon icon_phone"></i>
                   <span class="text">+7 906 282 42 01</span>
                 </a>
               </td>
@@ -137,8 +117,8 @@
             <tr class="hidden-md">
               <th>Email</th>
               <td>
-                <a href="mailto:mail@artik.me" rel="nofollow">
-                  <i class="icon icon_email"></i>
+                <a href="mailto:mail@artik.me" rel="noreferrer"aria-label="Email">
+                  <i aria-hidden="true" class="icon icon_email"></i>
                   <span class="text">mail@artik.me</span>
                 </a>
               </td>
@@ -146,8 +126,8 @@
             <tr class="hidden-md">
               <th>External CV</th>
               <td>
-                <a href="//hh.ru/resume/db6e39e7ff0357d63c0039ed1f617172787049" target="_blank" rel="nofollow">
-                  <i class="icon icon_hh"></i>
+                <a href="//hh.ru/resume/db6e39e7ff0357d63c0039ed1f617172787049" target="_blank" rel="noreferrer" aria-label="External CV">
+                  <i aria-hidden="true" class="icon icon_hh"></i>
                   <span class="text">HeadHunter</span>
                 </a>
               </td>
@@ -198,7 +178,7 @@
               <div class="td"></div>
               <div class="td">
                 <div class="year">
-                  <i class="icon icon_merge"></i>
+                  <i aria-hidden="true" class="icon icon_merge"></i>
                 </div>
               </div>
               <div class="td">
@@ -221,7 +201,7 @@
               </div>
               <div class="td">
                 <div class="right">
-                  <p class="title"><a href="//kaspersky.com" target="_blank" rel="nofollow">Kaspersky Lab.</a></p>
+                  <p class="title"><a href="//kaspersky.com" target="_blank" rel="noreferrer" aria-label="Kaspersky Lab.">Kaspersky Lab.</a></p>
                   <p class="description">Developer</p>
                 </div>
               </div>
@@ -230,12 +210,12 @@
               <div class="td"> </div>
               <div class="td">
                 <div class="year">2017
-                  <i class="icon icon_merge"></i>
+                  <i aria-hidden="true" class="icon icon_merge"></i>
                 </div>
               </div>
               <div class="td">
                 <div class="right">
-                  <p class="title"><a href="//luxoft.com" target="_blank" rel="nofollow">Luxoft</a></p>
+                  <p class="title"><a href="//luxoft.com" target="_blank" rel="noreferrer" aria-label="Luxoft">Luxoft</a></p>
                   <p class="description">Senior Frontend Developer</p>
                 </div>
               </div>
@@ -256,7 +236,7 @@
               </div>
               <div class="td">
                 <div class="right">
-                  <p class="title"><a href="//hashboard.ru" target="_blank" rel="nofollow">Hashboard</a></p>
+                  <p class="title"><a href="//hashboard.ru" target="_blank" rel="noreferrer" aria-label="Hashboard">Hashboard</a></p>
                   <p class="description">Frontend Developer</p>
                 </div>
               </div>
@@ -265,12 +245,12 @@
               <div class="td"> </div>
               <div class="td">
                 <div class="year">2015
-                  <i class="icon icon_merge"></i>
+                  <i aria-hidden="true" class="icon icon_merge"></i>
                 </div>
               </div>
               <div class="td empty">
                 <div class="right">
-                  <p class="title"><a href="//primepix.ru" target="_blank" rel="nofollow">PrimePix</a></p>
+                  <p class="title"><a href="//primepix.ru" target="_blank" rel="noreferrer" aria-label="PrimePix">PrimePix</a></p>
                   <p class="description">Junior Frontend Developer</p>
                 </div>
               </div>
@@ -333,10 +313,10 @@
         </div>
 
         <div class="project">
-          <h3><a href="//hashboard.ru" target="_blank" rel="nofollow">#hashboard</a></h3>
+          <h3><a href="//hashboard.ru" target="_blank" rel="noreferrer"  aria-label="Hashboard">#hashboard</a></h3>
           <div class="description">
             <div class="image">
-              <a href="//hashboard.ru" target="_blank" rel="nofollow">
+              <a href="//hashboard.ru" target="_blank" rel="noreferrer" aria-label="Hashboard">
                 <img src="./styles/images/projects/hashboard.jpg" alt="">
               </a>
             </div>
@@ -353,10 +333,10 @@
         </div>
 
         <div class="project">
-          <h3><a href="//new.hashboard.ru/play/?login=artik@hb.ru" target="_blank" rel="nofollow">#hashboard player</a></h3>
+          <h3><a href="//new.hashboard.ru/play/?login=artik@hb.ru" target="_blank" rel="noreferrer" aria-label="Hashboard Player">#hashboard player</a></h3>
           <div class="description">
             <div class="image">
-              <a href="//new.hashboard.ru/play/?login=artik@hb.ru" target="_blank" rel="nofollow">
+              <a href="//new.hashboard.ru/play/?login=artik@hb.ru" target="_blank" rel="noreferrer" aria-label="Hashboard Player">
                 <img src="./styles/images/projects/hashboard-player.jpg" alt="">
               </a>
             </div>
@@ -373,10 +353,10 @@
         </div>
 
         <div class="project">
-          <h3><a href="//new.hashboard.ru/cabinet/" target="_blank" rel="nofollow">#hashboard cabinet</a></h3>
+          <h3><a href="//new.hashboard.ru/cabinet/" target="_blank" rel="noreferrer"  aria-label="Hashboard Cabinet">#hashboard cabinet</a></h3>
           <div class="description">
             <div class="image">
-              <a href="//new.hashboard.ru/cabinet/" target="_blank" rel="nofollow">
+              <a href="//new.hashboard.ru/cabinet/" target="_blank" rel="noreferrer"  aria-label="Hashboard Cabinet">
                 <img src="./styles/images/projects/hashboard-cabinet.jpg" alt="">
               </a>
             </div>
@@ -393,10 +373,10 @@
         </div>
 
         <div class="project">
-          <h3><a href="//primepix.ru/portfolio/3-15/" target="_blank" rel="nofollow">Watches online shop «3–15»</a></h3>
+          <h3><a href="//primepix.ru/portfolio/3-15/" target="_blank" rel="noreferrer" aria-label="3-15">Watches online shop «3–15»</a></h3>
           <div class="description">
             <div class="image">
-              <a href="//primepix.ru/portfolio/3-15/" target="_blank" rel="nofollow">
+              <a href="//primepix.ru/portfolio/3-15/" target="_blank" rel="noreferrer" aria-label="3-15">
                 <img src="./styles/images/projects/m315.jpg" alt="">
               </a>
             </div>
@@ -412,10 +392,10 @@
         </div>
 
         <div class="project">
-          <h3><a href="//primepix.ru/portfolio/mgrabber/" target="_blank" rel="nofollow">Pricereporter</a></h3>
+          <h3><a href="//primepix.ru/portfolio/mgrabber/" target="_blank" rel="noreferrer"  aria-label="Pricereporter">Pricereporter</a></h3>
           <div class="description">
             <div class="image">
-              <a href="//primepix.ru/portfolio/mgrabber/" target="_blank" rel="nofollow">
+              <a href="//primepix.ru/portfolio/mgrabber/" target="_blank" rel="noreferrer"  aria-label="Pricereporter">
                 <img src="./styles/images/projects/pr.jpg" alt="">
               </a>
             </div>
