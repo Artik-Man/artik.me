@@ -10,6 +10,11 @@ const precacheResources = [
   'styles/images/projects/hashboard-player.jpg',
   'styles/images/projects/m315.jpg',
   'styles/images/projects/pr.jpg',
+  'styles/fonts/bebas/font/bebasneuethin.woff2',
+  'styles/fonts/bebas/font/bebasneuelight.woff2',
+  'styles/fonts/lato/fonts/Lato-Light.woff2',
+  'styles/fonts/lato/fonts/Lato-Regular.woff2',
+  'styles/fonts/lato/fonts/Lato-Thin.woff2',
 ];
 
 self.addEventListener('install', event => {
