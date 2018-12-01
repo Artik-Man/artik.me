@@ -202,7 +202,7 @@ section {
   border-left: 4px solid fade(@white, 50%);
   border-radius: 2px;
   padding: 0 0 0 16px;
-  margin-bottom: 32px;
+  margin: 5vh 0 10vh;
   position: relative;
   h3 {
     font-family: Lato, sans-serif;
@@ -240,37 +240,36 @@ section {
     font-size: 140px;
   }
   .project {
-    border-left-color: fade(@white, 50%);
+    border-left: none;
     &:hover {
-      border-left-color: fade(@white, 100%);
       .description {
         opacity: 1;
       }
       .image {
         img {
           opacity: 1;
+          filter: grayscale(0);
         }
       }
     }
     h3 {
-      padding-right: 332px;
+      padding-left: 332px;
     }
     .description {
       transition: opacity 150ms ease-in-out;
-      padding-right: 332px;
+      padding-left: 332px;
       opacity: .5;
     }
     .image {
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0;
       width: 320px;
       margin: 0;
-      border-radius: 4px;
-      overflow: hidden;
       img {
-        transition: opacity 150ms ease-in-out;
-        opacity: .3;
+        transition: all 150ms ease-in-out;
+        opacity: .7;
+        filter: grayscale(1)
       }
     }
   }

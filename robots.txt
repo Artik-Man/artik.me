@@ -2,8 +2,5 @@ User-Agent: Yandex
 User-Agent: *
 
 Disallow: /styles/
-Disallow: /bower_components/
-Disallow: /app/
-Disallow: /portfolio/
 
 Host: artik.me
