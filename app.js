@@ -10,15 +10,12 @@
   ageBlock.innerText = (age.getYear() - 70) + ' years';
   expBlock.innerText = Math.round((exp.getYear() - 70 + exp.getMonth() / 12) / 0.5) * 0.5 + ' years';
 })();
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
     navigator.serviceWorker.register('sw.js')
-      .then(reg => {
-        console.log('Service worker registered! 😎', reg);
-      })
-      .catch(err => {
-        console.log('😥 Service worker registration failed: ', err);
-      });
+      .then(reg => { })
+      .catch(err => { });
   });
 };
 

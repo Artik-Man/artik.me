@@ -10,24 +10,34 @@
 html,
 body {
   padding: 0;
-  margin: 0;
-  background: @dark;
+  margin: 0; // background: @dark;
+  background: #10272f;
+  background: -moz-linear-gradient(left, #10272f 66%, #004363 100%);
+  background: -webkit-linear-gradient(left, #10272f 66%, #004363 100%);
+  background: linear-gradient(to right, #10272f 66%, #004363 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#10272f', endColorstr='#004363', GradientType=1);
+  &:before,
+  &:after {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 50px;
+    box-shadow: 0 0 100px 45px @dark;
+    z-index: 10;
+  }
+  &:before {
+    top: -50px;
+  }
+  &:after {
+    bottom: -50px;
+  }
 }
 
 .page {
   min-height: 100vh;
   color: @white;
-  overflow: hidden; // &:before {
-  //   content: '';
-  //   position: fixed;
-  //   top: -50px;
-  //   left: 0;
-  //   right: 0;
-  //   height: 50px;
-  //   @shadow: 0 0 50px 10px @dark;
-  //   box-shadow: @shadow;
-  //   z-index: 10;
-  // }
+  overflow: hidden;
 }
 
 .container {
@@ -99,6 +109,7 @@ header {
   height: 240px;
   border: 1px solid fade(@white, 50%);
   overflow: hidden;
+  box-shadow: 0 0 30px 5px @dark;
   picture {
     display: block;
     width: 100%;
@@ -351,7 +362,7 @@ picture {
     max-width: 900px;
   }
   h1 {
-    font-size: 180px;
+    font-size: 160px;
   }
   header {
     .contacts {
