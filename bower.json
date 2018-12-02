@@ -4,18 +4,10 @@
     "Mangasaryan Artashes"
   ],
   "description": "curriculum vitae",
-  "main": "index.js",
+  "main": "index.html",
   "license": "MIT",
-  "homepage": "http://artik-man.ru",
+  "homepage": "http://artik.me",
   "dependencies": {
-    "angular": "^1.5.8",
-    "angular-route": "^1.5.8",
-    "components-font-awesome": "^4.6.3",
-    "jquery": "^3.1.1",
-    "ng-dialog": "^0.6.4",
-    "nanoscroller": "^0.8.7",
-    "angular-nanoscroller": "^0.2.1",
-    "angular-slick": "^0.2.1",
-    "angular-throttle-debounce": "^0.0.7"
+   
   }
 }

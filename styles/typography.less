@@ -1,0 +1,138 @@
+// out: false
+@import 'colors';
+a {
+  color: @white;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+  &:hover {
+    opacity: .7;
+  } // text-decoration: underline;
+  // &:hover {
+  //   text-decoration: none;
+  // }
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bebas Neue', monospace;
+  margin: 0;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 100px;
+  line-height: 0.5;
+  word-spacing: 100vw;
+  padding: 20vh 0;
+  small {
+    font-size: 60%;
+    font-family: inherit;
+    font-weight: 100;
+  }
+  +.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 12px;
+    margin-top: -20vh;
+    padding: 36px 0;
+    font-weight: 100;
+    color: fade(@white, 80%);
+  }
+}
+
+h2 {
+  font-size: 48px;
+  padding: 25vh 0 5vh;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+  font-size: 16px;
+  th {
+    font-weight: 400;
+    padding-right: 16px;
+  }
+  td {
+    font-weight: 300;
+  }
+  th,
+  td {
+    text-align: left;
+    padding-bottom: 16px;
+    vertical-align: top;
+    &[colspan='2'] {
+      padding-top: 24px;
+    }
+  }
+}
+
+ul {
+  margin: 0;
+  padding-left: 16px;
+  li {
+    font-size: 14px;
+  }
+}
+
+b {
+  font-weight: 400;
+}
+
+cite {
+  quotes: "«" "»";
+  font-size: 22px;
+  padding: 50px 0;
+  display: block;
+  &:before {
+    content: open-quote;
+  }
+  &:after {
+    content: close-quote;
+  }
+}
+
+.space {
+  display: inline-block;
+  width: 50px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}

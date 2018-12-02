@@ -1,4 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^(www\.)?portfolio\.artik-man\.ru$ [NC]
-RewriteCond %{REQUEST_URI} !/portfolio
-RewriteRule (.*) /portfolio/$1 [L]

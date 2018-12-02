@@ -1,0 +1,37 @@
+// out: false
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  width: 24px;
+  font-size: inherit;
+  &:before {
+    content: '_';
+    color: transparent !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.icon_email {
+    background-image: data-uri('./images/svg/email.svg');
+  }
+  &.icon_phone {
+    background-image: data-uri('./images/svg/phone.svg');
+  }
+  &.icon_merge {
+    background-image: data-uri('./images/svg/merge.svg');
+  }
+  &.icon_hh {
+    background-image: data-uri('./images/svg/hh.svg');
+  }
+  // &.icon_vk {
+  //   background-image: data-uri('./images/svg/vk.svg');
+  // }
+  // &.icon_tg {
+  //   background-image: data-uri('./images/svg/tg.svg');
+  // }
+  // &.icon_whatsapp {
+  //   background-image: data-uri('./images/svg/whatsapp.svg');
+  // }
+}
