@@ -5,12 +5,24 @@ a {
   text-decoration: none;
   opacity: 1;
   transition: opacity 150ms ease-in-out;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    transition: all 250ms ease-in-out;
+    background: @white;
+  }
   &:hover {
-    opacity: .7;
-  } // text-decoration: underline;
-  // &:hover {
-  //   text-decoration: none;
-  // }
+    &:after {
+      width: 100%;
+      left: 0;
+    }
+  }
 }
 
 p {
@@ -25,7 +37,6 @@ h5,
 h6 {
   font-family: 'Bebas Neue', monospace;
   margin: 0;
-  font-weight: 100;
 }
 
 h1 {
@@ -33,6 +44,7 @@ h1 {
   line-height: 0.5;
   word-spacing: 100vw;
   padding: 20vh 0;
+  font-weight: 100;
   small {
     font-size: 60%;
     font-family: inherit;
@@ -44,7 +56,7 @@ h1 {
     font-size: 12px;
     margin-top: -20vh;
     padding: 36px 0;
-    font-weight: 100;
+    font-weight: 300;
     color: fade(@white, 80%);
   }
 }
@@ -52,10 +64,12 @@ h1 {
 h2 {
   font-size: 48px;
   padding: 25vh 0 5vh;
+  font-weight: 200;
 }
 
 h3 {
   font-size: 36px;
+  font-weight: 300;
 }
 
 h4 {
