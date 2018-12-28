@@ -4,6 +4,7 @@ const precacheResources = [
   'styles/styles.css',
   'styles/images/me.webp',
   'styles/images/projects/kaspersky.webp',
+  'styles/images/projects/kmp.webp',
   'styles/images/projects/hashboard.webp',
   'styles/images/projects/hashboard-cabinet.webp',
   'styles/images/projects/hashboard-player.webp',
