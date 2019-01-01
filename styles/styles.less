@@ -16,22 +16,25 @@ body {
   background: -webkit-linear-gradient(left, #10272f 66%, #004363 100%);
   background: linear-gradient(to right, #10272f 66%, #004363 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#10272f', endColorstr='#004363', GradientType=1);
+}
+
+body {
   &:before,
   &:after {
     content: '';
     position: fixed;
     left: 0;
     right: 0;
-    height: 5vh;
-    box-shadow: 0 0 5vh 3vh @dark;
+    height: 0;
+    box-shadow: 0 0 5vh 5vh @dark, 0 0 5vh 5vh @dark;
     z-index: 10;
     background: @dark;
   }
   &:before {
-    top: -5vh;
+    top: 0;
   }
   &:after {
-    bottom: -5vh;
+    bottom: 0;
   }
 }
 
