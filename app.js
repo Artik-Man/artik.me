@@ -12,11 +12,16 @@
 })();
 
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-        navigator.serviceWorker.register('sw.js')
-            .then(function (reg) { })
-            .catch(function (err) { });
-    });
+    if (navigator.serviceWorker.controller) {
+        // active service worker found, no need to register
+    } else {
+        //Register the ServiceWorker
+        navigator.serviceWorker.register('sw.js', {
+            scope: './'
+        }).then(function (reg) {
+            // Service worker has been registered
+        });
+    }
 };
 
 // Yandex.Metrika counter
