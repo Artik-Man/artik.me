@@ -37,11 +37,8 @@ body {
 .page,
 .page:before,
 .page:after {
-  background: @dark;
-  background-image: data-uri("./images/svg/background.svg");
+  background: @dark data-uri("./images/svg/background.svg") right repeat-y;
   background-size: contain;
-  background-repeat: repeat-y;
-  background-position: right;
 }
 
 .page {
