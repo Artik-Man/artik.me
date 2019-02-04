@@ -34,33 +34,13 @@ body {
   }
 }
 
-.page,
-.page:before,
-.page:after {
-  background: @dark data-uri("./images/svg/background.svg") right repeat-y;
-  background-size: contain;
-}
-
 .page {
   min-width: 300px;
   min-height: 100vh;
   color: @white;
-  position: relative;
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    z-index: 1;
-  }
-  &:before {
-    bottom: 100%;
-  }
-  &:after {
-    top: 100%;
-  }
+  background: @dark data-uri("./images/svg/background.svg") right repeat-y;
+  background-size: contain;
+  overflow: hidden;
 }
 
 .container {
@@ -83,7 +63,6 @@ body {
 
 header {
   padding: 5vh 0 0;
-  overflow: hidden;
   .contacts {
     margin: 0;
     .text {
@@ -140,7 +119,6 @@ header {
 
 section {
   position: relative;
-  overflow: hidden;
 }
 
 .experience {
