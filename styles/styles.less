@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: Lato, sans-serif;
   font-weight: 300;
+  &::selection {
+    background-color: lighten(@dark, 15%);
+  }
 }
 
 html,
@@ -138,8 +141,8 @@ section {
         display: block;
         padding: 0 16px 16px;
         position: relative;
-        &:nth-child(2) {
-          order: -1;
+        &:first-child {
+          order: 1;
         }
       }
     }
