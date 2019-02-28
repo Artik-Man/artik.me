@@ -2,7 +2,7 @@
   "name": "artik.me",
   "version": "4.0.0",
   "description": "CV",
-  "main": "index.html",
+  "main": "index.pug",
   "directories": {
     "doc": "docs"
   },

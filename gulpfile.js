@@ -23,13 +23,13 @@ gulp.task('less', () => {
     }))
     .pipe(cssmin())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./docs/styles/'));
+    .pipe(gulp.dest('./styles/'));
 });
 
 gulp.task('pug', () => {
   return gulp.src('./*.pug')
     .pipe(pug({ pretty: true }))
-    .pipe(gulp.dest(file => './docs/'))
+    .pipe(gulp.dest(file => './'))
 });
 
 
