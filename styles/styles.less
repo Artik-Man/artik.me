@@ -1,27 +1,26 @@
-@import 'colors';
-@import 'typography';
-@import 'icons';
+@import "colors";
+@import "typography";
+@import "icons";
 * {
   box-sizing: border-box;
   font-family: Lato, sans-serif;
   font-weight: 300;
+  &::selection {
+    background-color: lighten(@dark, 15%);
+  }
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  background: #10272f;
-  background: -moz-linear-gradient(left, #10272f 66%, #004363 100%);
-  background: -webkit-linear-gradient(left, #10272f 66%, #004363 100%);
-  background: linear-gradient(to right, #10272f 66%, #004363 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#10272f', endColorstr='#004363', GradientType=1);
+  background-color: @dark;
 }
 
 body {
   &:before,
   &:after {
-    content: '';
+    content: "";
     position: fixed;
     left: 0;
     right: 0;
@@ -39,8 +38,11 @@ body {
 }
 
 .page {
+  min-width: 300px;
   min-height: 100vh;
   color: @white;
+  background: @dark data-uri("./images/svg/background.svg") right repeat-y;
+  background-size: contain;
   overflow: hidden;
 }
 
@@ -139,8 +141,8 @@ section {
         display: block;
         padding: 0 16px 16px;
         position: relative;
-        &:nth-child(2) {
-          order: -1;
+        &:first-child {
+          order: 1;
         }
       }
     }
@@ -149,7 +151,7 @@ section {
   .right,
   .year {
     &:before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0;
@@ -159,8 +161,7 @@ section {
       height: 8px;
     }
   }
-  .left:before,
-    {
+  .left:before {
     display: none;
     right: -5px;
   }
@@ -230,7 +231,7 @@ section {
   }
   .description {
     &:after {
-      content: '';
+      content: "";
       display: block;
       clear: both;
     }
@@ -286,7 +287,7 @@ picture {
     .description {
       transition: opacity 150ms ease-in-out;
       padding-left: 332px;
-      opacity: .5;
+      opacity: 0.5;
     }
     .image {
       position: absolute;
@@ -296,8 +297,8 @@ picture {
       margin: 0;
       picture {
         transition: all 150ms ease-in-out;
-        opacity: .7;
-        filter: grayscale(1)
+        opacity: 0.7;
+        filter: grayscale(1);
       }
     }
   }
