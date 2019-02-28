@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Artik Mangasaryan
+    link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+    meta(http-equiv="content-type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="keywords" content="CV, Mangasaryan, Artik, Artashes, frontend, front-end, Curriculum vitae, резюме, разработчик, фронтенд, фронтендер, Артик, Арташес, Мангасарян")
+    meta(name="title" content="Artik Mangasaryan")
+    meta(name="description" content="Curriculum vitae")
+    meta(itemprop="image" content="styles/images/icons/card.jpg")
+
+    link(rel="stylesheet", href="./styles/styles.css")
+  body
+  section
+    .container
+      h2
+      -
+        var projects = [
+          {
+            title: 'Project',
+            url: '//ololo',
+            picture: 'kmp',
+            contribution: 'text',
+            techList: ['one', 'two', 'three']
+          },
+        ]
+      each project in projects
+        .project
+          h3
+            if project.url
+              a(href=project.url)=project.title
+            else
+              =project.title
+          .description
+            .image
+              picture
+                source(srcset="styles/images/projects/"+project.picture+".webp", type="image/webp")
+                source(srcset="styles/images/projects/"+project.picture+".jpg", type="image/jpeg")
+                img(src="styles/images/projects/"+project.picture+".jpg", alt="")
+            h4 Contribution:
+            p= project.contribution
+            h4 Technologies:
+            ul
+            each tech in project.techList
+              li=tech
