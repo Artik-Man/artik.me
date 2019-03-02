@@ -2,11 +2,11 @@
 @import 'typography';
 @import 'icons';
 * {
-  box-sizing: border-box;
-  font-family: Lato, sans-serif;
+  box-sizing: border-box; // font-family: Lato, sans-serif;
+  font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: 300;
   &::selection {
-    background-color: lighten(@dark, 15%);
+    background-color: lighten(black, 90%);
   }
 }
 
@@ -218,7 +218,7 @@ cite {
     padding-left: 20px;
     li {
       font-size: 22px;
-      font-weight: 100;
+      font-weight: 300;
       margin-bottom: 16px;
     }
   }
@@ -231,11 +231,11 @@ cite {
   margin: 5vh 0 10vh;
   position: relative;
   h3 {
-    font-family: Lato, sans-serif;
+    font-family: inherit;
     padding-bottom: 24px;
   }
   h4 {
-    font-family: Lato, sans-serif;
+    font-family: inherit;
     padding-bottom: 8px;
   }
   .description {

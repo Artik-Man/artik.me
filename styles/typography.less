@@ -1,5 +1,12 @@
 // out: false
 @import 'colors';
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Light'), local('BebasNeue-Light'), url('./fonts/bebas/font/bebasneuelight.woff2') format('woff2'), url('./fonts/bebas/font/bebasneuelight.woff') format('woff'), url('./fonts/bebas/font/bebasneuelight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
 a {
   color: @white;
   text-decoration: none;
@@ -36,8 +43,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bebas Neue', monospace;
+  font-family: 'Bebas Neue', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin: 0;
+  >* {
+    font-family: inherit;
+    font-weight: inherit;
+  }
 }
 
 h1 {
@@ -45,13 +56,12 @@ h1 {
   line-height: 0.5;
   word-spacing: 100vw;
   padding: 20vh 0;
-  font-weight: 100;
+  font-weight: 200;
+  opacity: 0.8;
   small {
     font-size: 60%;
-    font-family: inherit;
-    font-weight: 100;
   }
-  + .subtitle {
+  +.subtitle {
     text-transform: uppercase;
     letter-spacing: 6px;
     font-size: 12px;
