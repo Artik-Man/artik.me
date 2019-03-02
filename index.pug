@@ -40,7 +40,7 @@
       title: 'Kaspersky: Tailored Intelligence Reporting System',
       picture: 'kaspersky',
       contribution: 'Front end development of internal data collection/analysis portal for the analytical department.',
-      techList: ['Angular 7', 'TypeScript', 'Webpack']
+      techList: ['Angular 7', 'TypeScript', 'WebSocket']
     },
     {
       title: 'Hashboard cabinet',
@@ -76,6 +76,13 @@
       picture: 'pr',
       contribution: 'Front end web development and technical support of a commercial site',
       techList: ['jQuery', 'Bootstrap', 'Bitrix']
+    },
+     {
+      title: 'Artik.me',
+      url: 'https://github.com/Artik-Man/artik.me',
+      picture: 'artik',
+      contribution: 'Full cycle of development of web page: from design to caching with ServiceWorker',
+      techList: ['ServiceWorker', 'Azure Pipelines', 'Pug']
     },
   ];
 html(lang="en")
@@ -148,36 +155,36 @@ html(lang="en")
                 source(srcset="styles/images/me.webp", type="image/webp")
                 source(srcset="styles/images/me.jpg", type="image/jpeg")
                 img(src="styles/images/me.jpg", alt=meta.title)
-            table
-              tr
-                th Age
-                td 
-                  span#age 24 years
-              tr
-                th Commercial Experience
-                td
-                  span#exp 4 years
-              tr
-                th Languages
-                td 
-                  nobr Russian (native),
-                  nobr English (Pre-Intermediate)
-              tr
-                th Current location
-                td
-                  a(target="_blank", href="//www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986")
-                    i.icon.icon_location
-                    span &nbsp; Russia,&nbsp;
-                      nobr St. Petersburg
-              
-              each contact in contacts
-                tr.hidden-md
-                  th=contact.label
+            .mobile-reverse
+              table
+                tr
+                  th Age
+                  td 
+                    span#age 24 years
+                tr
+                  th Commercial Experience
                   td
-                    a(href=contact.url, aria-label=contact.label, rel="noreferrer")
-                      i.icon(aria-hidden="true", class=contact.iconClass)
-                      span.text=contact.text
-            div
+                    span#exp 4 years
+                tr
+                  th Languages
+                  td 
+                    nobr Russian (native),
+                    nobr English (Pre-Intermediate)
+                tr
+                  th Current location
+                  td
+                    a(target="_blank", href="//www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986")
+                      i.icon.icon_location
+                      span &nbsp; Russia,&nbsp;
+                        nobr St. Petersburg
+                
+                each contact in contacts
+                  tr.hidden-md
+                    th=contact.label
+                    td
+                      a(href=contact.url, aria-label=contact.label, rel="noreferrer")
+                        i.icon(aria-hidden="true", class=contact.iconClass)
+                        span.text=contact.text
               cite Heavy frameworks should be used only where necessary
             
       section
@@ -210,7 +217,7 @@ html(lang="en")
               .tr
                 .td &nbsp;
                 .td
-                  .year
+                  .year 2019
                     i.icon.icon_merge(aria-hidden="true")
                 .td
                   .right
