@@ -1,6 +1,6 @@
-@import "colors";
-@import "typography";
-@import "icons";
+@import 'colors';
+@import 'typography';
+@import 'icons';
 * {
   box-sizing: border-box;
   font-family: Lato, sans-serif;
@@ -20,7 +20,7 @@ body {
 body {
   &:before,
   &:after {
-    content: "";
+    content: '';
     position: fixed;
     left: 0;
     right: 0;
@@ -41,7 +41,7 @@ body {
   min-width: 300px;
   min-height: 100vh;
   color: @white;
-  background: @dark data-uri("./images/svg/background.svg") right repeat-y;
+  background: @dark data-uri('./images/svg/background.svg') right repeat-y;
   background-size: contain;
   overflow: hidden;
 }
@@ -124,6 +124,15 @@ section {
   position: relative;
 }
 
+cite {
+  text-align: center;
+}
+
+.mobile-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .experience {
   padding: 0 0 5vh 0;
   .table {
@@ -151,7 +160,7 @@ section {
   .right,
   .year {
     &:before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 0;
@@ -231,7 +240,7 @@ section {
   }
   .description {
     &:after {
-      content: "";
+      content: '';
       display: block;
       clear: both;
     }
@@ -240,6 +249,7 @@ section {
     margin: 32px 0;
     a {
       display: block;
+      border: none;
       &:after {
         background: fade(@white, 20%);
         bottom: 0;
@@ -267,6 +277,23 @@ picture {
   }
   h1 {
     font-size: 140px;
+  }
+  cite {
+    text-align: left;
+    position: absolute;
+    top: 40px;
+    left: 260px;
+    right: 0;
+  }
+  .about {
+    position: relative;
+    table {
+      margin-top: 50px;
+    }
+  }
+  .ava-box {
+    margin: 0 32px 0 0;
+    float: none;
   }
   .project {
     border-left: none;
@@ -301,10 +328,6 @@ picture {
         filter: grayscale(1);
       }
     }
-  }
-  .ava-box {
-    margin: 0 32px 0 0;
-    float: left;
   }
   .experience {
     .table {
@@ -371,6 +394,15 @@ picture {
   }
   h1 {
     font-size: 160px;
+  }
+  cite {
+    position: static;
+  }
+  .ava-box {
+    float: left;
+  }
+  .mobile-reverse {
+    flex-direction: column;
   }
   header {
     .contacts {
