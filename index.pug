@@ -33,7 +33,8 @@
       url: 'https://github.com/Artik-Man',
       label: 'GitHub',
       iconClass: 'icon_github',
-      text: 'GitHub'
+      text: 'GitHub',
+      fullText: 'github.com/Artik-Man'
     },
   ];
   var projects = [
@@ -167,7 +168,7 @@ html(lang="en")
 
       section
         .container
-          h1 Artik <br>
+          h1 Artik
             small Mangasaryan
           p.subtitle Frontend-developer
 
@@ -208,7 +209,7 @@ html(lang="en")
                     td
                       a(href=contact.url, aria-label=contact.label, rel="noreferrer")
                         i.icon(aria-hidden="true", class=contact.iconClass)
-                        span.text=contact.text
+                        span.text=(contact.fullText||contact.text)
               cite Heavy frameworks should be used only where necessary
             
       section
@@ -232,13 +233,13 @@ html(lang="en")
           .experience
             .table
 
-              .tr
+              .tr.no-print
                 .td.empty
                   h4.text-right Education
                 .td &nbsp;
                 .td
                   h4 Work
-              .tr
+              .tr.no-print
                 .td &nbsp;
                 .td
                   .year 2019
@@ -302,7 +303,7 @@ html(lang="en")
                       a(href="http://primepix.ru", target="_blank", rel="noreferrer", aria-label="PrimePix") PrimePix
                     p.description Junior Frontend Developer
 
-              .tr
+              .tr.no-print
                 .td
                   .left
                     p.description Webmaster`s coursers
@@ -310,7 +311,7 @@ html(lang="en")
                   .year 2014
                 .td.empty
 
-              .tr
+              .tr.no-print
                 .td &nbsp;
                 .td
                   .year 2013
