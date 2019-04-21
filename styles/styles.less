@@ -40,7 +40,7 @@ body {
 .page {
   min-width: 300px;
   min-height: 100vh;
-  color: @white;
+  color: white;
   background: @dark data-uri('./images/svg/background.svg') right repeat-y;
   background-size: contain;
   overflow: hidden;
@@ -56,11 +56,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
   .left-block {
     margin-right: auto;
+    float: left;
   }
   .right-block {
     margin-left: auto;
+    float: right;
   }
 }
 
@@ -113,7 +120,7 @@ header {
   width: 240px;
   height: 240px;
   overflow: hidden;
-  box-shadow: 0 0 30px 5px @dark, 0 0 1px 1px @white, 0 0 1px 1px @white;
+  box-shadow: 0 0 30px 5px @dark, 0 0 1px 1px white, 0 0 1px 1px white;
   picture {
     display: block;
     width: 100%;
@@ -138,7 +145,7 @@ cite {
   .table {
     border-collapse: collapse;
     display: block;
-    border-left: 2px solid @white;
+    border-left: 2px solid white;
     .tr {
       display: flex;
       flex-direction: column;
@@ -164,7 +171,7 @@ cite {
       display: block;
       position: absolute;
       top: 0;
-      background: @white;
+      background: white;
       border-radius: 50%;
       width: 8px;
       height: 8px;
@@ -226,8 +233,7 @@ cite {
 }
 
 .project {
-  border-left: 4px solid fade(@white, 50%);
-  border-radius: 2px;
+  border-left: 2px solid white;
   padding: 0 0 0 16px;
   margin: 5vh 0 10vh;
   position: relative;
@@ -252,7 +258,7 @@ cite {
       display: block;
       border: none;
       &:after {
-        background: fade(@white, 20%);
+        background: fade(white, 20%);
         bottom: 0;
         height: 100%;
       }
@@ -347,7 +353,7 @@ picture {
           &:first-child {
             padding-left: 0;
             &:empty {
-              border-color: fade(@white, 20%);
+              border-color: fade(white, 20%);
             }
           }
           &:last-child {
@@ -357,10 +363,10 @@ picture {
             border-color: transparent !important;
           }
           &:first-child {
-            border-right: 2px solid fade(@white, 50%);
+            border-right: 2px solid fade(white, 50%);
           }
           &:last-child {
-            border-left: 2px solid fade(@white, 50%);
+            border-left: 2px solid fade(white, 50%);
           }
         }
       }
