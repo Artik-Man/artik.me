@@ -6,7 +6,7 @@
     name: 'Artik',
     description: 'Strongly experienced in building custom UI components, adaptive layouts with high knowledge of modern frontend technologies. I’m constantly improving my development skills',
     url: 'https://artik.me',
-    card: 'styles/images/icons/card.jpg',
+    card: 'styles/images/icons/card.png',
     color: '#10272f'
   };
   var iconsSizes = [16, 48, 72, 76, 96, 120, 128, 144, 152, 180, 192, 256, 384, 512];
@@ -120,19 +120,12 @@ html(lang="en")
     meta(name="description", content=meta.description)
     meta(itemprop="image", content=meta.card)
 
-    meta(name="twitter:domain", content=meta.url)
-    meta(name="twitter:title", content=meta.full_name)
-    meta(name="twitter:card", content="summary")
-    meta(name="twitter:description", content=meta.description)
-    meta(name="twitter:image", content=meta.card)
-
-    meta(property="og:url", content=meta.url)
-    meta(property="og:title", content=meta.full_name)
-    meta(property="og:site_name", content=meta.title)
-    meta(property="og:site", content=meta.title)
-    meta(property="og:type", content="website")
-    meta(property="og:description" ,content=meta.description)
     meta(property="og:image", content=meta.card)
+    meta(property="og:site_name", content=meta.title)
+    meta(property="og:type", content="object")
+    meta(property="og:title", content=meta.full_name)
+    meta(property="og:url", content=meta.url)
+    meta(property="og:description" ,content=meta.description)
 
     link(rel="manifest", href="manifest.json")
 
