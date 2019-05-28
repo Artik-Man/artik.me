@@ -4,7 +4,7 @@
     title: 'Artik Mangasaryan — frontend-developer',
     full_name: 'Artik Mangasaryan',
     name: 'Artik',
-    description: 'Strongly experienced in building custom UI components, adaptive layouts with high knowledge of modern frontend technologies. I’m constantly improving my development skills',
+    description: 'Frontend developer with over 4 years of experience. Current stack: TypeScript + Angular',
     url: 'https://artik.me',
     card: 'styles/images/icons/card.png',
     color: '#10272f'
@@ -23,12 +23,6 @@
       iconClass: 'icon_email',
       text: 'mail@artik.me'
     },
-    //- {
-    //-   url: '//hh.ru/resume/db6e39e7ff0357d63c0039ed1f617172787049',
-    //-   label: 'External CV',
-    //-   iconClass: 'icon_hh',
-    //-   text: 'HeadHunter'
-    //- },
     {
       url: 'https://github.com/Artik-Man',
       label: 'GitHub',
@@ -168,7 +162,7 @@ html(lang="en")
       section
         .container
           .about
-            .ava-box 
+            .ava-box(aria-hidden="true")
               picture.ava
                 source(srcset="styles/images/me.webp", type="image/webp")
                 source(srcset="styles/images/me.jpg", type="image/jpeg")
@@ -223,8 +217,8 @@ html(lang="en")
       section
         .container
           h2 Experience
-          .experience
-            .table
+          .experience(aria-label="In 2010 I entered the university. Then in 2014, I passed through webmaster courses. In 2015, I got a job at PrimePix in the position of junior interface developer. In 2016, I graduated from the university, received a bachelor's degree in Mathematics, Information and Space Technologies and started working at Hashboard. In 2017, I moved to St. Petersburg and got a job at Luxoft. Later, in 2018, I started working at Kaspersky Lab. and got a master’s degree in Information Technologies and Automated Systems.")
+            .table(aria-hidden="true")
 
               .tr.no-print
                 .td.empty
@@ -245,7 +239,8 @@ html(lang="en")
                   .left
                     p.title Master`s degree
                     p.description 
-                      b Northern (Arctic) Federal University 
+                      a(href="//narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
+                        b Northern (Arctic) Federal University 
                       <br>
                       | Higher School of Information Technologies and Automated Systems <br>
                       | 2016 &mdash; 2018
@@ -273,7 +268,8 @@ html(lang="en")
                   .left
                     p.title Bachelor`s degree
                     p.description 
-                      b Northern (Arctic) Federal University 
+                      a(href="//narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
+                        b Northern (Arctic) Federal University 
                       <br>
                       | Institute of Mathematics, Information and Space Technologies <br>
                       | 2012 &mdash; 2016
@@ -299,7 +295,7 @@ html(lang="en")
               .tr.no-print
                 .td
                   .left
-                    p.description Webmaster`s coursers
+                    p.description Webmaster Courses
                 .td
                   .year 2014
                 .td.empty
@@ -323,14 +319,14 @@ html(lang="en")
         .container
           h2 Projects
           each project in projects
-            .project
+            article.project
               h3
                 if project.url
                   a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)=project.title
                 else
-                  =project.title
+                  span(aria-label=project.title)=project.title
               .description
-                .image
+                .image(aria-hidden="true")
                    if project.url
                     a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)
                       picture

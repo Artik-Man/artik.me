@@ -1,10 +1,41 @@
 // out: false
 @import 'colors';
+
 @font-face {
   font-family: 'Bebas Neue';
-  src: local('Bebas Neue Light'), local('BebasNeue-Light'), url('./fonts/bebas/font/bebasneuelight.woff2') format('woff2'), url('./fonts/bebas/font/bebasneuelight.woff') format('woff'), url('./fonts/bebas/font/bebasneuelight.ttf') format('truetype');
+  src: local('Bebas Neue Light'), local('BebasNeue-Light'),
+    url('./fonts/bebas/font/bebasneuelight.woff2') format('woff2'),
+    url('./fonts/bebas/font/bebasneuelight.woff') format('woff'),
+    url('./fonts/bebas/font/bebasneuelight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Book'), local('BebasNeueBook'),
+    url('./fonts/bebas/font/bebasneuebook.woff2') format('woff2'),
+    url('./fonts/bebas/font/bebasneuebook.woff') format('woff'),
+    url('./fonts/bebas/font/bebasneuebook.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/lato/font/lato-v15-latin-300.eot');
+  src: local('Lato Light'), local('Lato-Light'),
+    url('./fonts/lato/font/lato-v15-latin-300.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/lato/font/lato-v15-latin-300.woff2') format('woff2'),
+    url('./fonts/lato/font/lato-v15-latin-300.woff') format('woff'),
+    url('./fonts/lato/font/lato-v15-latin-300.ttf') format('truetype'),
+    url('./fonts/lato/font/lato-v15-latin-300.svg#Lato') format('svg');
+}
+
+.bebas {
+  font-family: 'Bebas Neue', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 a {
@@ -14,6 +45,7 @@ a {
   transition: opacity 150ms ease-in-out;
   position: relative;
   display: inline-block;
+
   &:after {
     content: '';
     position: absolute;
@@ -25,6 +57,7 @@ a {
     transition: all 250ms ease-in-out;
     background: white;
   }
+
   &:hover {
     &:after {
       width: 100%;
@@ -43,12 +76,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bebas Neue', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin: 0;
+  font-weight: 200;
+  .bebas;
+
   >* {
     font-family: inherit;
     font-weight: inherit;
   }
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 300;
 }
 
 h1 {
@@ -58,11 +99,13 @@ h1 {
   padding: 20vh 0;
   font-weight: 200;
   opacity: 0.8;
+
   small {
     display: block;
     line-height: 1.2;
     font-size: 60%;
   }
+
   +.subtitle {
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -81,7 +124,7 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 300;
 }
 
@@ -104,18 +147,22 @@ table {
   border: none;
   border-collapse: collapse;
   font-size: 16px;
+
   th {
     font-weight: 400;
     padding-right: 16px;
   }
+
   td {
     font-weight: 300;
   }
+
   th,
   td {
     text-align: left;
     padding-bottom: 16px;
     vertical-align: top;
+
     &[colspan='2'] {
       padding-top: 24px;
     }
@@ -126,6 +173,7 @@ ul {
   margin: 0;
   padding-left: 16px;
   line-height: 1.3;
+
   li {
     font-size: 14px;
   }
@@ -136,13 +184,15 @@ b {
 }
 
 cite {
-  quotes: '«' '»';
+  quotes: '«''»';
   font-size: 22px;
   padding: 50px 0;
   display: block;
+
   &:before {
     content: open-quote;
   }
+
   &:after {
     content: close-quote;
   }
@@ -171,10 +221,12 @@ body {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: @dark;
   }
+
   &::-webkit-scrollbar {
     width: 4px;
     background-color: #f5f5f5;
   }
+
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
