@@ -4,11 +4,12 @@
         born = new Date('1994-08-01'),
         work = new Date('2015-05-01'),
         now = new Date(),
-        age = new Date(now - born),
-        exp = new Date(now - work);
+        age = new Date(now.getTime() - born.getTime()),
+        exp = new Date(now.getTime() - work.getTime()),
+        start = new Date(0);
 
-    ageBlock.innerText = (age.getYear() - 70) + ' years';
-    expBlock.innerText = Math.round((exp.getYear() - 70 + exp.getMonth() / 12) / 0.5) * 0.5 + ' years';
+    ageBlock.innerText = (age.getFullYear() - start.getFullYear()) + ' years';
+    expBlock.innerText = Math.round((exp.getFullYear() - start.getFullYear() + exp.getMonth() / 12) / 0.5) * 0.5 + ' years';
 })();
 
 if ('serviceWorker' in navigator) {
