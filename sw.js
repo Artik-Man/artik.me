@@ -15,14 +15,11 @@ function debounce(func, wait, immediate = false) {
 };
 
 class SiteServiceWorker {
-    urls = new Set();
-    debouncedCompareCommits = debounce(this.checkUpdates, 1000);
-    cacheName = '';
-    commitsUrl = '';
-
     constructor(cacheName, commitsUrl) {
         this.cacheName = cacheName;
         this.commitsUrl = commitsUrl;
+        this.urls = new Set();
+        this.debouncedCompareCommits = debounce(this.checkUpdates, 1000);
     }
 
     async get(request, noCache = false) {
