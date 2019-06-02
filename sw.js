@@ -127,7 +127,9 @@ class SiteServiceWorker {
 const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
 
 self.addEventListener('install', event => {
+    console.log('[SW]: Install');    
     serviceWorker.checkUpdates(true);
+    self.skipWaiting();
 });
 
 self.addEventListener('fetch', event => {
