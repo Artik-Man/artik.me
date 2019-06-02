@@ -1,25 +1,32 @@
-function debounce(func, wait, immediate = false) {
-    let timeout;
-    return function () {
-        const context = this;
-        const args = arguments;
-        let later = function () {
-            timeout = undefined;
-            if (!immediate) func.apply(context, args);
-        };
-        let callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-};
+function throttle(func, ms) {
+    var isThrottled = false,
+        savedArgs,
+        savedThis;
+    function wrapper() {
+        if (isThrottled) {
+            savedArgs = arguments;
+            savedThis = this;
+            return;
+        }
+        func.apply(this, arguments);
+        isThrottled = true;
+        setTimeout(function () {
+            isThrottled = false;
+            if (savedArgs) {
+                wrapper.apply(savedThis, savedArgs);
+                savedArgs = savedThis = null;
+            }
+        }, ms);
+    }
+    return wrapper;
+}
 
 class SiteServiceWorker {
     constructor(cacheName, commitsUrl) {
         this.cacheName = cacheName;
         this.commitsUrl = commitsUrl;
         this.urls = new Set();
-        this.debouncedCompareCommits = debounce(this.checkUpdates, 1000);
+        this.lazyCheckUpdates = throttle(this.checkUpdates, 60 * 60 * 1000);
     }
 
     async get(request, noCache = false) {
@@ -40,11 +47,11 @@ class SiteServiceWorker {
         }
     }
 
-    async updateCache(clone) {
+    async updateCache(clone, clean = true) {
         console.log('[SW]: Update cache');
-
-        await caches.delete(this.cacheName);
-
+        if (clean) {
+            await caches.delete(this.cacheName);
+        }
         const cache = await caches.open(this.cacheName);
         cache.put(this.commitsUrl, clone);
 
@@ -62,13 +69,13 @@ class SiteServiceWorker {
         const clone = fetchedResponse.clone();
         const cache = await caches.open(this.cacheName);
 
-        if (justFetch) {
-            cache.put(this.commitsUrl, clone);
-            return;
-        }
-
         const cachedResponse = await cache.match(this.commitsUrl);
         if (!cachedResponse) {
+            justFetch = true;
+        }
+
+        if (justFetch) {
+            this.updateCache(clone, false);
             return;
         }
 
@@ -99,7 +106,7 @@ class SiteServiceWorker {
             code: 1
         };
 
-        clients.matchAll({ includeUncontrolled: true, type: 'window' }).then(clients => {
+        self.clients.matchAll({ includeUncontrolled: true, type: 'window' }).then(clients => {
             clients.forEach(client => {
                 client.postMessage(JSON.stringify(message));
             })
@@ -112,7 +119,7 @@ class SiteServiceWorker {
         if (canBePreCached) {
             this.urls.add(request.url);
 
-            this.debouncedCompareCommits();
+            this.lazyCheckUpdates();
 
             const cache = await caches.open(this.cacheName);
             const resp = await cache.match(request);
@@ -127,9 +134,11 @@ class SiteServiceWorker {
 const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
 
 self.addEventListener('install', event => {
-    console.log('[SW]: Install');    
-    serviceWorker.checkUpdates(true);
+    console.log('[SW]: Install');
     self.skipWaiting();
+    setTimeout(() => {
+        serviceWorker.checkUpdates(true);
+    }, 2000);
 });
 
 self.addEventListener('fetch', event => {

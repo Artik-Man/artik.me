@@ -26,7 +26,6 @@ if ('serviceWorker' in navigator) {
         navigator.serviceWorker.getRegistration().then(reg => {
             swMessages(reg);
         });
-        swMessages();
     } else {
         navigator.serviceWorker.register('sw.js', {
             scope: './'
