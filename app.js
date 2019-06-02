@@ -13,14 +13,25 @@
 })();
 
 if ('serviceWorker' in navigator) {
+    var swMessages = function (reg) {
+        navigator.serviceWorker.addEventListener('message', function (event) {
+            const message = JSON.parse(event.data);
+            if (message.code === 1) {
+                reg.update();
+            }
+        });
+    }
+
     if (navigator.serviceWorker.controller) {
-        // active service worker found, no need to register
+        navigator.serviceWorker.getRegistration().then(reg => {
+            swMessages(reg);
+        });
+        swMessages();
     } else {
-        //Register the ServiceWorker
         navigator.serviceWorker.register('sw.js', {
             scope: './'
         }).then(function (reg) {
-            // Service worker has been registered
+            swMessages(reg);
         });
     }
 }
