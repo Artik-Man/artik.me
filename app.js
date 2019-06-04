@@ -10,6 +10,35 @@
 
     ageBlock.innerText = (age.getFullYear() - start.getFullYear()) + ' years';
     expBlock.innerText = Math.round((exp.getFullYear() - start.getFullYear() + exp.getMonth() / 12) / 0.5) * 0.5 + ' years';
+
+    var html = document.getElementById('html');
+    var themeSwitcher = document.getElementById('theme-switcher');
+    themeSwitcher.classList.remove('hidden');
+    themeSwitcher.addEventListener('change', function (event) {
+        var checked = event.target.checked;
+        if (checked) {
+            html.classList.add('light');
+            localStorage.setItem('light-theme', event.target.checked);
+        } else {
+            html.classList.remove('light');
+            localStorage.removeItem('light-theme');
+        }
+    });
+
+    if (localStorage.getItem('light-theme')) {
+        html.classList.add('light');
+        themeSwitcher.checked = true;
+    }
+
+    window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && (() => {
+        html.classList.add('light');
+        themeSwitcher.checked = true;
+    })());
+
+    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && (() => {
+        html.classList.remove('light');
+        themeSwitcher.checked = false;
+    })());
 })();
 
 if ('serviceWorker' in navigator) {

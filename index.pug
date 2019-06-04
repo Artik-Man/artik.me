@@ -101,7 +101,7 @@
       techList: ['Angular 7', 'WebSocket', 'Hammer.js']
     },
   ];
-html(lang="en")
+html#html(lang="en")
   head
     meta(charset="UTF-8")
     title=meta.title
@@ -157,6 +157,9 @@ html(lang="en")
           .flex
             .left-block
               a.logo(href="", aria-label=meta.title) AM
+              label.switch-theme(title="Change theme")
+                input#theme-switcher(type="checkbox" role="button")
+                span 
             ul.right-block.contacts
               each contact in contacts
                 li

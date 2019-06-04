@@ -1,0 +1,138 @@
+@import 'colors';
+
+.light {
+  scrollbar-color: #10272f white;
+  background: white;
+
+  body {
+    background: white;
+
+    &:before,
+    &:after {
+      background: white;
+      box-shadow: 0 0 5vh 5vh white, 0 0 5vh 5vh white;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: white;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: @dark;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: @dark;
+    }
+  }
+
+  .page {
+    background: white;
+    color: @dark;
+  }
+
+  .ava {
+    box-shadow: none;
+  }
+
+  a:after {
+    background: @dark;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-weight: 300;
+  }
+
+  .icon {
+    filter: invert(.9);
+  }
+
+  .experience {
+    .table {
+      border-left-color: @dark;
+
+      .tr {
+        .td {
+          &:first-child {
+            border-right-color: fade(@dark, 25%);
+          }
+
+          &:last-child {
+            border-left-color: fade(@dark, 25%);
+          }
+        }
+      }
+    }
+
+    .left:before,
+    .right:before,
+    .year:before {
+      background: fade(@dark, 75%);
+
+    }
+  }
+
+  .project {
+    .description {
+      opacity: 1;
+    }
+  }
+
+}
+
+.switch-theme {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin: 0 0 -3px 0;
+  border: 1px solid darken(white, 50%);
+  opacity: .8;
+  transition: opacity 150ms linear;
+
+  &:hover {
+    opacity: 1;
+
+    input[type='checkbox']:checked+span {
+      right: -40%;
+    }
+
+    input[type='checkbox']:not(:checked)+span {
+      right: -10%;
+    }
+  }
+
+  input[type='checkbox'] {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+
+    &:checked+span {
+      right: -50%;
+    }
+  }
+
+  span {
+    background: #10272f;
+    background: -moz-linear-gradient(left, #10272f 45%, #ffffff 55%);
+    background: -webkit-linear-gradient(left, #10272f 45%, #ffffff 55%);
+    background: linear-gradient(to right, #10272f 45%, #ffffff 55%);
+    display: block;
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transition: right 150ms linear 50ms;
+  }
+}
