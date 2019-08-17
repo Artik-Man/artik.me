@@ -84,7 +84,7 @@ class SiteServiceWorker {
                 return null;
             }
 
-            const commits = commitsResponse.json().then(c => c);
+            const commits = commitsResponse.json().then(c => c); // ERROR! 
             const last = Array.isArray(commits) ? commits.shift() : null;
 
             if (last) {
