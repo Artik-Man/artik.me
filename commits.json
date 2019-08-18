@@ -1,0 +1,2372 @@
+[
+  {
+    "sha": "12a3bb2c3acb951abe5fde97851259cb1e92f895g",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6MTJhM2JiMmMzYWNiOTUxYWJlNWZkZTk3ODUxMjU5Y2IxZTkyZjg5NQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-08-17T18:54:14Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2019-08-17T18:54:14Z"
+      },
+      "message": "Update sw.js",
+      "tree": {
+        "sha": "2487229334c87a2fa6af623cba95c7cbb858f54b",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/2487229334c87a2fa6af623cba95c7cbb858f54b"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/12a3bb2c3acb951abe5fde97851259cb1e92f895",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJdWE1WCRBK7hj4Ov3rIwAAdHIIADiH63fDjvXk+kyxb6E1+Y/v\npDCWhcc9ZaeAS/aXusirmRdVdA6pB1piuvSAp/2WNVeAPi+hfzRgFD9L2+29NwqF\nBVj8gwBFQa2UmNPf1ycqWkpoOS4I3rMfKGU6ga0mHr8+j/lsfSu473cPw2ZF/Dpp\nlDqxRJxzgJerT0oldFWSCAxgf4PwJRquFCv5BGNMH+cwpaE3O/c7DskrlXy5l5x0\nCmu0VxkTWMR+HVPHxcgyxtpGutllyySZUCtKOAAoTYn0qAyMAbg4s3WmBcqlUNAQ\nW9EvQ77TMga368xOlVpFCroB/enuxmbn9K1ZWXJ3O/6JpZJo4sBcjc0Mh1rvkZ0=\n=g7tl\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 2487229334c87a2fa6af623cba95c7cbb858f54b\nparent da4e315c9a28c73f475cea08fa6f1445cbfa88ae\nauthor Artik <mail@artik.me> 1566068054 +0300\ncommitter GitHub <noreply@github.com> 1566068054 +0300\n\nUpdate sw.js"
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/12a3bb2c3acb951abe5fde97851259cb1e92f895",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/12a3bb2c3acb951abe5fde97851259cb1e92f895",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/12a3bb2c3acb951abe5fde97851259cb1e92f895/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "da4e315c9a28c73f475cea08fa6f1445cbfa88ae",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/da4e315c9a28c73f475cea08fa6f1445cbfa88ae",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/da4e315c9a28c73f475cea08fa6f1445cbfa88ae"
+      }
+    ]
+  },
+  {
+    "sha": "da4e315c9a28c73f475cea08fa6f1445cbfa88ae",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6ZGE0ZTMxNWM5YTI4YzczZjQ3NWNlYTA4ZmE2ZjE0NDVjYmZhODhhZQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-08-17T18:39:13Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2019-08-17T18:39:13Z"
+      },
+      "message": "Update README.md",
+      "tree": {
+        "sha": "bca749935dea73e5be28192f4bee64ad0198767a",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/bca749935dea73e5be28192f4bee64ad0198767a"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/da4e315c9a28c73f475cea08fa6f1445cbfa88ae",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJdWEnRCRBK7hj4Ov3rIwAAdHIIADWOdgM+LuwGmFAhS3cJSmFN\nkMPwsia8oc9+BvmcrKzJnhQEHrEsmArna9jjLvL4kUiNECziPqvuoTHXz7ClDGug\nolDLbGLBMJ6r/B3QTCAJjnkQkqVeDPfCoiMEYeIe0RC+EfQ9NU52sfkHzBwsRxeT\nhm3xJjM8ZruUxqANo/JgEL4qW8EvExelgfqFrgAAxIzNkfsuuhuFOjKx8c6ZzzMo\nFItp3/3rPtiCfflAWXtLDzHNRnDiBzeWLSK9qTRRE1qGgWmUzSFwwp7GvvQHq/w3\nk0Eo551UuX8efwH7792MPDZELd93LOamyVx9Yd5H6/Nixn4/5v9HOrBCR1MWUos=\n=imG8\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree bca749935dea73e5be28192f4bee64ad0198767a\nparent 0b9c6ba84a0f4343b270046ac9a8af4345d012eb\nauthor Artik <mail@artik.me> 1566067153 +0300\ncommitter GitHub <noreply@github.com> 1566067153 +0300\n\nUpdate README.md"
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/da4e315c9a28c73f475cea08fa6f1445cbfa88ae",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/da4e315c9a28c73f475cea08fa6f1445cbfa88ae",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/da4e315c9a28c73f475cea08fa6f1445cbfa88ae/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0b9c6ba84a0f4343b270046ac9a8af4345d012eb",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0b9c6ba84a0f4343b270046ac9a8af4345d012eb",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/0b9c6ba84a0f4343b270046ac9a8af4345d012eb"
+      }
+    ]
+  },
+  {
+    "sha": "0b9c6ba84a0f4343b270046ac9a8af4345d012eb",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6MGI5YzZiYTg0YTBmNDM0M2IyNzAwNDZhYzlhOGFmNDM0NWQwMTJlYg==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-08-17T18:25:59Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-08-17T18:25:59Z"
+      },
+      "message": "UPD: new project: html-practice",
+      "tree": {
+        "sha": "bc037c19b3e648821d8857588cb7856ed688ef4a",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/bc037c19b3e648821d8857588cb7856ed688ef4a"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/0b9c6ba84a0f4343b270046ac9a8af4345d012eb",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0b9c6ba84a0f4343b270046ac9a8af4345d012eb",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/0b9c6ba84a0f4343b270046ac9a8af4345d012eb",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0b9c6ba84a0f4343b270046ac9a8af4345d012eb/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d530bea1b8c86266d0ff4c0284d963e76c525b70",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/d530bea1b8c86266d0ff4c0284d963e76c525b70",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/d530bea1b8c86266d0ff4c0284d963e76c525b70"
+      }
+    ]
+  },
+  {
+    "sha": "d530bea1b8c86266d0ff4c0284d963e76c525b70",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6ZDUzMGJlYTFiOGM4NjI2NmQwZmY0YzAyODRkOTYzZTc2YzUyNWI3MA==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-08-17T17:51:37Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-08-17T17:51:37Z"
+      },
+      "message": "UPD: changed submodule url to https",
+      "tree": {
+        "sha": "1104d81e4a55227207a9bde744db3a882e4ad129",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/1104d81e4a55227207a9bde744db3a882e4ad129"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/d530bea1b8c86266d0ff4c0284d963e76c525b70",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/d530bea1b8c86266d0ff4c0284d963e76c525b70",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/d530bea1b8c86266d0ff4c0284d963e76c525b70",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/d530bea1b8c86266d0ff4c0284d963e76c525b70/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4ee8ef95fda96a3a5c46b6a75fd0d24a87bd3ce9",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/4ee8ef95fda96a3a5c46b6a75fd0d24a87bd3ce9",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/4ee8ef95fda96a3a5c46b6a75fd0d24a87bd3ce9"
+      }
+    ]
+  },
+  {
+    "sha": "4ee8ef95fda96a3a5c46b6a75fd0d24a87bd3ce9",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6NGVlOGVmOTVmZGE5NmEzYTVjNDZiNmE3NWZkMGQyNGE4N2JkM2NlOQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-08-17T17:38:06Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-08-17T17:38:06Z"
+      },
+      "message": "ADD: html-practice as submodule",
+      "tree": {
+        "sha": "2293ac372d5a021275662390fe9bb3b41d476676",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/2293ac372d5a021275662390fe9bb3b41d476676"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/4ee8ef95fda96a3a5c46b6a75fd0d24a87bd3ce9",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/4ee8ef95fda96a3a5c46b6a75fd0d24a87bd3ce9",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/4ee8ef95fda96a3a5c46b6a75fd0d24a87bd3ce9",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/4ee8ef95fda96a3a5c46b6a75fd0d24a87bd3ce9/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a35d02f458a4fd141139284c4fe52002022f4098",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/a35d02f458a4fd141139284c4fe52002022f4098",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/a35d02f458a4fd141139284c4fe52002022f4098"
+      }
+    ]
+  },
+  {
+    "sha": "a35d02f458a4fd141139284c4fe52002022f4098",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6YTM1ZDAyZjQ1OGE0ZmQxNDExMzkyODRjNGZlNTIwMDIwMjJmNDA5OA==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-06-04T10:34:32Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-06-04T10:34:32Z"
+      },
+      "message": "ADD: light-theme",
+      "tree": {
+        "sha": "53d8be38c7d79d8060b1af03303529d5f9a92c60",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/53d8be38c7d79d8060b1af03303529d5f9a92c60"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/a35d02f458a4fd141139284c4fe52002022f4098",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/a35d02f458a4fd141139284c4fe52002022f4098",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/a35d02f458a4fd141139284c4fe52002022f4098",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/a35d02f458a4fd141139284c4fe52002022f4098/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7960ed47baae53027b33dac720fcc1ff8dddbc0e",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/7960ed47baae53027b33dac720fcc1ff8dddbc0e",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/7960ed47baae53027b33dac720fcc1ff8dddbc0e"
+      }
+    ]
+  },
+  {
+    "sha": "7960ed47baae53027b33dac720fcc1ff8dddbc0e",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6Nzk2MGVkNDdiYWFlNTMwMjdiMzNkYWM3MjBmY2MxZmY4ZGRkYmMwZQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-06-02T18:45:41Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-06-02T18:45:41Z"
+      },
+      "message": "UPD: checking updates",
+      "tree": {
+        "sha": "08dcf542ee3b646003e93f171161ba57b34606a9",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/08dcf542ee3b646003e93f171161ba57b34606a9"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/7960ed47baae53027b33dac720fcc1ff8dddbc0e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/7960ed47baae53027b33dac720fcc1ff8dddbc0e",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/7960ed47baae53027b33dac720fcc1ff8dddbc0e",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/7960ed47baae53027b33dac720fcc1ff8dddbc0e/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "73f73da04b0a5a1a96172f4c0a0c3e71bc033981",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/73f73da04b0a5a1a96172f4c0a0c3e71bc033981",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/73f73da04b0a5a1a96172f4c0a0c3e71bc033981"
+      }
+    ]
+  },
+  {
+    "sha": "73f73da04b0a5a1a96172f4c0a0c3e71bc033981",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6NzNmNzNkYTA0YjBhNWExYTk2MTcyZjRjMGEwYzNlNzFiYzAzMzk4MQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-06-02T18:14:37Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-06-02T18:14:37Z"
+      },
+      "message": "UPD: SW skip waiting after Install",
+      "tree": {
+        "sha": "db7e06f97878503ead62403bc4b0deda74ec7533",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/db7e06f97878503ead62403bc4b0deda74ec7533"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/73f73da04b0a5a1a96172f4c0a0c3e71bc033981",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/73f73da04b0a5a1a96172f4c0a0c3e71bc033981",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/73f73da04b0a5a1a96172f4c0a0c3e71bc033981",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/73f73da04b0a5a1a96172f4c0a0c3e71bc033981/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4a65bf4ab65c89cdd9cd2dcbad330294b5c084c4",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/4a65bf4ab65c89cdd9cd2dcbad330294b5c084c4",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/4a65bf4ab65c89cdd9cd2dcbad330294b5c084c4"
+      }
+    ]
+  },
+  {
+    "sha": "4a65bf4ab65c89cdd9cd2dcbad330294b5c084c4",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6NGE2NWJmNGFiNjVjODljZGQ5Y2QyZGNiYWQzMzAyOTRiNWMwODRjNA==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-06-02T18:08:17Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-06-02T18:08:17Z"
+      },
+      "message": "UPD: SW Firefox support",
+      "tree": {
+        "sha": "768faf0246c73b8b5da04f15d92111bd85c6afae",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/768faf0246c73b8b5da04f15d92111bd85c6afae"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/4a65bf4ab65c89cdd9cd2dcbad330294b5c084c4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/4a65bf4ab65c89cdd9cd2dcbad330294b5c084c4",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/4a65bf4ab65c89cdd9cd2dcbad330294b5c084c4",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/4a65bf4ab65c89cdd9cd2dcbad330294b5c084c4/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "55e120e8e71bc575149ca6278f9937e818bc1578",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/55e120e8e71bc575149ca6278f9937e818bc1578",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/55e120e8e71bc575149ca6278f9937e818bc1578"
+      }
+    ]
+  },
+  {
+    "sha": "55e120e8e71bc575149ca6278f9937e818bc1578",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6NTVlMTIwZThlNzFiYzU3NTE0OWNhNjI3OGY5OTM3ZTgxOGJjMTU3OA==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-06-02T17:46:56Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-06-02T17:46:56Z"
+      },
+      "message": "UPD: SW version checking",
+      "tree": {
+        "sha": "dafd223d25efd57b7ab4959bf6306563dcec4d68",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/dafd223d25efd57b7ab4959bf6306563dcec4d68"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/55e120e8e71bc575149ca6278f9937e818bc1578",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/55e120e8e71bc575149ca6278f9937e818bc1578",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/55e120e8e71bc575149ca6278f9937e818bc1578",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/55e120e8e71bc575149ca6278f9937e818bc1578/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7474c51bff68aac131d176512cbc5ecc57dddf23",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/7474c51bff68aac131d176512cbc5ecc57dddf23",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/7474c51bff68aac131d176512cbc5ecc57dddf23"
+      }
+    ]
+  },
+  {
+    "sha": "7474c51bff68aac131d176512cbc5ecc57dddf23",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6NzQ3NGM1MWJmZjY4YWFjMTMxZDE3NjUxMmNiYzVlY2M1N2RkZGYyMw==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-06-02T16:59:39Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-06-02T16:59:39Z"
+      },
+      "message": "UPD: VS Code tasks",
+      "tree": {
+        "sha": "d0efb3f12cecd355322be045e290a75cb41841e2",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/d0efb3f12cecd355322be045e290a75cb41841e2"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/7474c51bff68aac131d176512cbc5ecc57dddf23",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/7474c51bff68aac131d176512cbc5ecc57dddf23",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/7474c51bff68aac131d176512cbc5ecc57dddf23",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/7474c51bff68aac131d176512cbc5ecc57dddf23/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0894ceafc0230a471a50eb430567734b238e9652",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0894ceafc0230a471a50eb430567734b238e9652",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/0894ceafc0230a471a50eb430567734b238e9652"
+      }
+    ]
+  },
+  {
+    "sha": "0894ceafc0230a471a50eb430567734b238e9652",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6MDg5NGNlYWZjMDIzMGE0NzFhNTBlYjQzMDU2NzczNGIyMzhlOTY1Mg==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-05-31T21:54:18Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-05-31T21:54:18Z"
+      },
+      "message": "UPD: splashscreen",
+      "tree": {
+        "sha": "e25917dc1bb0be50d272e926971573b4c292249d",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/e25917dc1bb0be50d272e926971573b4c292249d"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/0894ceafc0230a471a50eb430567734b238e9652",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0894ceafc0230a471a50eb430567734b238e9652",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/0894ceafc0230a471a50eb430567734b238e9652",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0894ceafc0230a471a50eb430567734b238e9652/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3ab28fd6d37d3346553fe773a52dc296f7c1a9ae",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/3ab28fd6d37d3346553fe773a52dc296f7c1a9ae",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/3ab28fd6d37d3346553fe773a52dc296f7c1a9ae"
+      }
+    ]
+  },
+  {
+    "sha": "3ab28fd6d37d3346553fe773a52dc296f7c1a9ae",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6M2FiMjhmZDZkMzdkMzM0NjU1M2ZlNzczYTUyZGMyOTZmN2MxYTlhZQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-05-31T20:58:26Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-05-31T20:58:26Z"
+      },
+      "message": "UPD: service worker cache invalidation",
+      "tree": {
+        "sha": "e73a7568ae186425f01bacf5955b44e893866a16",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/e73a7568ae186425f01bacf5955b44e893866a16"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/3ab28fd6d37d3346553fe773a52dc296f7c1a9ae",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/3ab28fd6d37d3346553fe773a52dc296f7c1a9ae",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/3ab28fd6d37d3346553fe773a52dc296f7c1a9ae",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/3ab28fd6d37d3346553fe773a52dc296f7c1a9ae/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "91814ce387f111bdc41c23698c13ef7b9aedcc4b",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/91814ce387f111bdc41c23698c13ef7b9aedcc4b",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/91814ce387f111bdc41c23698c13ef7b9aedcc4b"
+      }
+    ]
+  },
+  {
+    "sha": "91814ce387f111bdc41c23698c13ef7b9aedcc4b",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6OTE4MTRjZTM4N2YxMTFiZGM0MWMyMzY5OGMxM2VmN2I5YWVkY2M0Yg==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-05-31T20:58:09Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-05-31T20:58:09Z"
+      },
+      "message": "UPD: implicit conversion",
+      "tree": {
+        "sha": "c47dc86414917b0db52764102752d85bf522b932",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/c47dc86414917b0db52764102752d85bf522b932"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/91814ce387f111bdc41c23698c13ef7b9aedcc4b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/91814ce387f111bdc41c23698c13ef7b9aedcc4b",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/91814ce387f111bdc41c23698c13ef7b9aedcc4b",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/91814ce387f111bdc41c23698c13ef7b9aedcc4b/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0d63bfdd9c4e35b83ccda568aa9569dcaf91ba6c",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0d63bfdd9c4e35b83ccda568aa9569dcaf91ba6c",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/0d63bfdd9c4e35b83ccda568aa9569dcaf91ba6c"
+      }
+    ]
+  },
+  {
+    "sha": "0d63bfdd9c4e35b83ccda568aa9569dcaf91ba6c",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6MGQ2M2JmZGQ5YzRlMzViODNjY2RhNTY4YWE5NTY5ZGNhZjkxYmE2Yw==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-05-31T20:55:21Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-05-31T20:55:21Z"
+      },
+      "message": "UPD: styles",
+      "tree": {
+        "sha": "1667ffe059f8277d939bd35ac0c8f5d2b05b0218",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/1667ffe059f8277d939bd35ac0c8f5d2b05b0218"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/0d63bfdd9c4e35b83ccda568aa9569dcaf91ba6c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0d63bfdd9c4e35b83ccda568aa9569dcaf91ba6c",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/0d63bfdd9c4e35b83ccda568aa9569dcaf91ba6c",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0d63bfdd9c4e35b83ccda568aa9569dcaf91ba6c/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ec94d6cfe6400ab08e174c5e5a963e634f903531",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/ec94d6cfe6400ab08e174c5e5a963e634f903531",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/ec94d6cfe6400ab08e174c5e5a963e634f903531"
+      }
+    ]
+  },
+  {
+    "sha": "ec94d6cfe6400ab08e174c5e5a963e634f903531",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6ZWM5NGQ2Y2ZlNjQwMGFiMDhlMTc0YzVlNWE5NjNlNjM0ZjkwMzUzMQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-05-28T15:18:19Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-05-28T15:18:19Z"
+      },
+      "message": "UPD: descriptions, mistakes, fonts",
+      "tree": {
+        "sha": "347f590c4348fecc2710640cd7c5ec42f559be54",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/347f590c4348fecc2710640cd7c5ec42f559be54"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/ec94d6cfe6400ab08e174c5e5a963e634f903531",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/ec94d6cfe6400ab08e174c5e5a963e634f903531",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/ec94d6cfe6400ab08e174c5e5a963e634f903531",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/ec94d6cfe6400ab08e174c5e5a963e634f903531/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9a85225582ff88cd930bd36a03b048e0520610f3",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/9a85225582ff88cd930bd36a03b048e0520610f3",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/9a85225582ff88cd930bd36a03b048e0520610f3"
+      }
+    ]
+  },
+  {
+    "sha": "9a85225582ff88cd930bd36a03b048e0520610f3",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6OWE4NTIyNTU4MmZmODhjZDkzMGJkMzZhMDNiMDQ4ZTA1MjA2MTBmMw==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-04-29T13:57:57Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-04-29T13:57:57Z"
+      },
+      "message": "UPD: OpenGraph Meta",
+      "tree": {
+        "sha": "2057c66843b2c4a12650913155b54658018da3d7",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/2057c66843b2c4a12650913155b54658018da3d7"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/9a85225582ff88cd930bd36a03b048e0520610f3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/9a85225582ff88cd930bd36a03b048e0520610f3",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/9a85225582ff88cd930bd36a03b048e0520610f3",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/9a85225582ff88cd930bd36a03b048e0520610f3/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "445e096e6ece902968eb65dbc05b40d28a14acc6",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/445e096e6ece902968eb65dbc05b40d28a14acc6",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/445e096e6ece902968eb65dbc05b40d28a14acc6"
+      }
+    ]
+  },
+  {
+    "sha": "445e096e6ece902968eb65dbc05b40d28a14acc6",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6NDQ1ZTA5NmU2ZWNlOTAyOTY4ZWI2NWRiYzA1YjQwZDI4YTE0YWNjNg==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-04-23T11:47:49Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "mail@artik.me",
+        "date": "2019-04-23T11:47:49Z"
+      },
+      "message": "UPD: print styles",
+      "tree": {
+        "sha": "ce961533bda4d2bf7dde936c200e41263792ea7e",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/ce961533bda4d2bf7dde936c200e41263792ea7e"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/445e096e6ece902968eb65dbc05b40d28a14acc6",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/445e096e6ece902968eb65dbc05b40d28a14acc6",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/445e096e6ece902968eb65dbc05b40d28a14acc6",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/445e096e6ece902968eb65dbc05b40d28a14acc6/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5e96dc1435f941eb53b6373a615c5b544ce62c52",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/5e96dc1435f941eb53b6373a615c5b544ce62c52",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/5e96dc1435f941eb53b6373a615c5b544ce62c52"
+      }
+    ]
+  },
+  {
+    "sha": "5e96dc1435f941eb53b6373a615c5b544ce62c52",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6NWU5NmRjMTQzNWY5NDFlYjUzYjYzNzNhNjE1YzViNTQ0Y2U2MmM1Mg==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-04-21T13:24:38Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-04-21T13:24:38Z"
+      },
+      "message": "UPD: print",
+      "tree": {
+        "sha": "97fe235764f2b633f4a59d4f7b3e69eb4482ddb2",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/97fe235764f2b633f4a59d4f7b3e69eb4482ddb2"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/5e96dc1435f941eb53b6373a615c5b544ce62c52",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/5e96dc1435f941eb53b6373a615c5b544ce62c52",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/5e96dc1435f941eb53b6373a615c5b544ce62c52",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/5e96dc1435f941eb53b6373a615c5b544ce62c52/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f5c825f2ab81b818c4381e611ae0c29b4110a282",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/f5c825f2ab81b818c4381e611ae0c29b4110a282",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/f5c825f2ab81b818c4381e611ae0c29b4110a282"
+      }
+    ]
+  },
+  {
+    "sha": "f5c825f2ab81b818c4381e611ae0c29b4110a282",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6ZjVjODI1ZjJhYjgxYjgxOGM0MzgxZTYxMWFlMGMyOWI0MTEwYTI4Mg==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-04-21T10:54:11Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-04-21T10:54:11Z"
+      },
+      "message": "UPD: semantic, ie9 support",
+      "tree": {
+        "sha": "5ee75d924eeaf0cd8497eebdfc7eea4934f0a5af",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/5ee75d924eeaf0cd8497eebdfc7eea4934f0a5af"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/f5c825f2ab81b818c4381e611ae0c29b4110a282",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/f5c825f2ab81b818c4381e611ae0c29b4110a282",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/f5c825f2ab81b818c4381e611ae0c29b4110a282",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/f5c825f2ab81b818c4381e611ae0c29b4110a282/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e040b181a7f0b565a6ac5dd088ef297af77c70ca",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/e040b181a7f0b565a6ac5dd088ef297af77c70ca",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/e040b181a7f0b565a6ac5dd088ef297af77c70ca"
+      }
+    ]
+  },
+  {
+    "sha": "e040b181a7f0b565a6ac5dd088ef297af77c70ca",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6ZTA0MGIxODFhN2YwYjU2NWE2YWM1ZGQwODhlZjI5N2FmNzdjNzBjYQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-04-14T17:07:35Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-04-14T17:07:35Z"
+      },
+      "message": "UPD: projects, github",
+      "tree": {
+        "sha": "0ee5339966faf1d4352c05c0de7515041d5f54c8",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/0ee5339966faf1d4352c05c0de7515041d5f54c8"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/e040b181a7f0b565a6ac5dd088ef297af77c70ca",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/e040b181a7f0b565a6ac5dd088ef297af77c70ca",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/e040b181a7f0b565a6ac5dd088ef297af77c70ca",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/e040b181a7f0b565a6ac5dd088ef297af77c70ca/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3437c35e4fa6cc5945f25f221bb6ff06351d3ae7",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/3437c35e4fa6cc5945f25f221bb6ff06351d3ae7",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/3437c35e4fa6cc5945f25f221bb6ff06351d3ae7"
+      }
+    ]
+  },
+  {
+    "sha": "3437c35e4fa6cc5945f25f221bb6ff06351d3ae7",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6MzQzN2MzNWU0ZmE2Y2M1OTQ1ZjI1ZjIyMWJiNmZmMDYzNTFkM2FlNw==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-15T20:15:00Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-15T20:15:00Z"
+      },
+      "message": "UPD: mobile icons",
+      "tree": {
+        "sha": "11c61e6570897d5c7eaa797ed4b28f508131de03",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/11c61e6570897d5c7eaa797ed4b28f508131de03"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/3437c35e4fa6cc5945f25f221bb6ff06351d3ae7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/3437c35e4fa6cc5945f25f221bb6ff06351d3ae7",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/3437c35e4fa6cc5945f25f221bb6ff06351d3ae7",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/3437c35e4fa6cc5945f25f221bb6ff06351d3ae7/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "57d9b6624d3a2dfc082b32e321ea27d50c8c0912",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/57d9b6624d3a2dfc082b32e321ea27d50c8c0912",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/57d9b6624d3a2dfc082b32e321ea27d50c8c0912"
+      }
+    ]
+  },
+  {
+    "sha": "57d9b6624d3a2dfc082b32e321ea27d50c8c0912",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6NTdkOWI2NjI0ZDNhMmRmYzA4MmIzMmUzMjFlYTI3ZDUwYzhjMDkxMg==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-06T19:32:33Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-06T19:32:33Z"
+      },
+      "message": "UPD: ServiceWorker",
+      "tree": {
+        "sha": "98be4daea130220d511faba9842e0b2cb1b84bec",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/98be4daea130220d511faba9842e0b2cb1b84bec"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/57d9b6624d3a2dfc082b32e321ea27d50c8c0912",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/57d9b6624d3a2dfc082b32e321ea27d50c8c0912",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/57d9b6624d3a2dfc082b32e321ea27d50c8c0912",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/57d9b6624d3a2dfc082b32e321ea27d50c8c0912/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "358a81eb27a165b50b24feda48eb9c56ec6a75ca",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/358a81eb27a165b50b24feda48eb9c56ec6a75ca",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/358a81eb27a165b50b24feda48eb9c56ec6a75ca"
+      }
+    ]
+  },
+  {
+    "sha": "358a81eb27a165b50b24feda48eb9c56ec6a75ca",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6MzU4YTgxZWIyN2ExNjViNTBiMjRmZWRhNDhlYjljNTZlYzZhNzVjYQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-06T19:27:47Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-06T19:27:47Z"
+      },
+      "message": "UPD: ServiceWorker",
+      "tree": {
+        "sha": "e1e0e157c752e56e560bfabf286ed301a294077e",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/e1e0e157c752e56e560bfabf286ed301a294077e"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/358a81eb27a165b50b24feda48eb9c56ec6a75ca",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/358a81eb27a165b50b24feda48eb9c56ec6a75ca",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/358a81eb27a165b50b24feda48eb9c56ec6a75ca",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/358a81eb27a165b50b24feda48eb9c56ec6a75ca/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e335d71169187c8aaafc4e6e8cb921008efbbb9a",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/e335d71169187c8aaafc4e6e8cb921008efbbb9a",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/e335d71169187c8aaafc4e6e8cb921008efbbb9a"
+      }
+    ]
+  },
+  {
+    "sha": "e335d71169187c8aaafc4e6e8cb921008efbbb9a",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6ZTMzNWQ3MTE2OTE4N2M4YWFhZmM0ZTZlOGNiOTIxMDA4ZWZiYmI5YQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-06T19:27:34Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-06T19:27:34Z"
+      },
+      "message": "UPD: styles",
+      "tree": {
+        "sha": "821d3d0b3ffdabf6fc17b0dce556448af9023086",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/821d3d0b3ffdabf6fc17b0dce556448af9023086"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/e335d71169187c8aaafc4e6e8cb921008efbbb9a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/e335d71169187c8aaafc4e6e8cb921008efbbb9a",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/e335d71169187c8aaafc4e6e8cb921008efbbb9a",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/e335d71169187c8aaafc4e6e8cb921008efbbb9a/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8707708cf5146c1ba8fec59b98a461ca8639567c",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/8707708cf5146c1ba8fec59b98a461ca8639567c",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/8707708cf5146c1ba8fec59b98a461ca8639567c"
+      }
+    ]
+  },
+  {
+    "sha": "8707708cf5146c1ba8fec59b98a461ca8639567c",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6ODcwNzcwOGNmNTE0NmMxYmE4ZmVjNTliOThhNDYxY2E4NjM5NTY3Yw==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-02T20:23:05Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-02T20:23:05Z"
+      },
+      "message": "UPD: yandex meta",
+      "tree": {
+        "sha": "e0afcddeba384dfb75a3ac44d623180cff7b02ff",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/e0afcddeba384dfb75a3ac44d623180cff7b02ff"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/8707708cf5146c1ba8fec59b98a461ca8639567c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/8707708cf5146c1ba8fec59b98a461ca8639567c",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/8707708cf5146c1ba8fec59b98a461ca8639567c",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/8707708cf5146c1ba8fec59b98a461ca8639567c/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "299290da894a1e9fbf6f07717d4e551713e32c2a",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/299290da894a1e9fbf6f07717d4e551713e32c2a",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/299290da894a1e9fbf6f07717d4e551713e32c2a"
+      }
+    ]
+  },
+  {
+    "sha": "299290da894a1e9fbf6f07717d4e551713e32c2a",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6Mjk5MjkwZGE4OTRhMWU5ZmJmNmYwNzcxN2Q0ZTU1MTcxM2UzMmMyYQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-02T20:20:27Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-02T20:20:27Z"
+      },
+      "message": "UPD: yandex meta",
+      "tree": {
+        "sha": "f6aa1e99d14b5d5fe64733b7bac65291201ad802",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/f6aa1e99d14b5d5fe64733b7bac65291201ad802"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/299290da894a1e9fbf6f07717d4e551713e32c2a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/299290da894a1e9fbf6f07717d4e551713e32c2a",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/299290da894a1e9fbf6f07717d4e551713e32c2a",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/299290da894a1e9fbf6f07717d4e551713e32c2a/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ddcaf260169fbd84686e383bc3ff002331f31ab0",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/ddcaf260169fbd84686e383bc3ff002331f31ab0",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/ddcaf260169fbd84686e383bc3ff002331f31ab0"
+      }
+    ]
+  },
+  {
+    "sha": "ddcaf260169fbd84686e383bc3ff002331f31ab0",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6ZGRjYWYyNjAxNjlmYmQ4NDY4NmUzODNiYzNmZjAwMjMzMWYzMWFiMA==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-02T20:13:11Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-02T20:13:11Z"
+      },
+      "message": "UPD: meta title",
+      "tree": {
+        "sha": "e0afcddeba384dfb75a3ac44d623180cff7b02ff",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/e0afcddeba384dfb75a3ac44d623180cff7b02ff"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/ddcaf260169fbd84686e383bc3ff002331f31ab0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/ddcaf260169fbd84686e383bc3ff002331f31ab0",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/ddcaf260169fbd84686e383bc3ff002331f31ab0",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/ddcaf260169fbd84686e383bc3ff002331f31ab0/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "cd5421b94c1efad9c2c5155747daadb4eba44329",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/cd5421b94c1efad9c2c5155747daadb4eba44329",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/cd5421b94c1efad9c2c5155747daadb4eba44329"
+      }
+    ]
+  },
+  {
+    "sha": "cd5421b94c1efad9c2c5155747daadb4eba44329",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6Y2Q1NDIxYjk0YzFlZmFkOWMyYzUxNTU3NDdkYWFkYjRlYmE0NDMyOQ==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-02T20:04:13Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-02T20:04:13Z"
+      },
+      "message": "FIX: mistakes",
+      "tree": {
+        "sha": "585824e331b81a77336fb128421b51bf1882ff41",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/585824e331b81a77336fb128421b51bf1882ff41"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/cd5421b94c1efad9c2c5155747daadb4eba44329",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/cd5421b94c1efad9c2c5155747daadb4eba44329",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/cd5421b94c1efad9c2c5155747daadb4eba44329",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/cd5421b94c1efad9c2c5155747daadb4eba44329/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0202630e1b0934bb6c3c9b3ae9c3b17e5930be28",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0202630e1b0934bb6c3c9b3ae9c3b17e5930be28",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/0202630e1b0934bb6c3c9b3ae9c3b17e5930be28"
+      }
+    ]
+  },
+  {
+    "sha": "0202630e1b0934bb6c3c9b3ae9c3b17e5930be28",
+    "node_id": "MDY6Q29tbWl0NzAyMzY4OTI6MDIwMjYzMGUxYjA5MzRiYjZjM2M5YjNhZTljM2IxN2U1OTMwYmUyOA==",
+    "commit": {
+      "author": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-02T19:59:19Z"
+      },
+      "committer": {
+        "name": "Artik",
+        "email": "artik.alpha@gmail.com",
+        "date": "2019-03-02T19:59:19Z"
+      },
+      "message": "UPD: meta description",
+      "tree": {
+        "sha": "2cf01e1ddfef8910be48738af6cc416dbc6ebdb1",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/git/trees/2cf01e1ddfef8910be48738af6cc416dbc6ebdb1"
+      },
+      "url": "https://api.github.com/repos/Artik-Man/artik.me/git/commits/0202630e1b0934bb6c3c9b3ae9c3b17e5930be28",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0202630e1b0934bb6c3c9b3ae9c3b17e5930be28",
+    "html_url": "https://github.com/Artik-Man/artik.me/commit/0202630e1b0934bb6c3c9b3ae9c3b17e5930be28",
+    "comments_url": "https://api.github.com/repos/Artik-Man/artik.me/commits/0202630e1b0934bb6c3c9b3ae9c3b17e5930be28/comments",
+    "author": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Artik-Man",
+      "id": 6566395,
+      "node_id": "MDQ6VXNlcjY1NjYzOTU=",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6566395?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Artik-Man",
+      "html_url": "https://github.com/Artik-Man",
+      "followers_url": "https://api.github.com/users/Artik-Man/followers",
+      "following_url": "https://api.github.com/users/Artik-Man/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Artik-Man/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Artik-Man/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Artik-Man/subscriptions",
+      "organizations_url": "https://api.github.com/users/Artik-Man/orgs",
+      "repos_url": "https://api.github.com/users/Artik-Man/repos",
+      "events_url": "https://api.github.com/users/Artik-Man/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Artik-Man/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7758b9ff1683b37e8f52bd9e4596688883cd53db",
+        "url": "https://api.github.com/repos/Artik-Man/artik.me/commits/7758b9ff1683b37e8f52bd9e4596688883cd53db",
+        "html_url": "https://github.com/Artik-Man/artik.me/commit/7758b9ff1683b37e8f52bd9e4596688883cd53db"
+      }
+    ]
+  }
+]
