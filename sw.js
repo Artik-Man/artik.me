@@ -141,7 +141,7 @@ class SiteServiceWorker {
         });
     }
 }
-const serviceWorker = new SiteServiceWorker("cache-v4", "./commits.json");
+const serviceWorker = new SiteServiceWorker("cache-v4", "https://api.github.com/repos/Artik-Man/artik.me/commits");
 self.addEventListener("install", () => {
     console.log("[SW]: Install");
     self.skipWaiting();
