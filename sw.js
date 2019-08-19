@@ -110,7 +110,7 @@ class SiteServiceWorker {
         });
     }
     async onFetch(request) {
-        const canBePreCached = request.url.indexOf('/html-practice/') === -1 && request.url.indexOf(location.origin) === 0;
+        const canBePreCached = request.url.indexOf(location.origin) === 0;
         if (canBePreCached) {
             this.urls.add(request.url);
             this.lazyCheckUpdates();
