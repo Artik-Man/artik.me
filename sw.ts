@@ -47,7 +47,7 @@ class SiteServiceWorker {
   async get(request: Request | string, noCache = false): Promise<Response | undefined> {
     try {
       const response = await fetch(request, {
-        cache: noCache ? "no-cache" : "default"
+        cache: noCache ? 'no-cache' : 'default'
       });
 
       if (!noCache) {
@@ -57,13 +57,13 @@ class SiteServiceWorker {
 
       return response;
     } catch (e) {
-      console.warn("[SW]: No internet connection");
+      console.warn('[SW]: No internet connection');
       return;
     }
   }
 
   async updateCache(clone: Response, clean = true): Promise<void> {
-    console.log("[SW]: Update cache");
+    console.log('[SW]: Update cache');
     if (clean) {
       const cachesKeys = await caches.keys();
       cachesKeys.forEach(key => {
@@ -80,7 +80,7 @@ class SiteServiceWorker {
   }
 
   async checkUpdates(justFetch = false): Promise<void> {
-    console.log("[SW]: Check updates...");
+    console.log('[SW]: Check updates...');
     const fetchedResponse = await this.get(this.commitsUrl, true);
     if (!fetchedResponse) {
       return;
@@ -101,7 +101,7 @@ class SiteServiceWorker {
 
     const sha = async (commitsResponse: Response): Promise<string> => {
       if (!commitsResponse) {
-        return "";
+        return '';
       }
 
       const commits: Commit[] = await commitsResponse.clone().json();
@@ -111,7 +111,7 @@ class SiteServiceWorker {
         return last.sha;
       }
 
-      return "";
+      return '';
     };
 
     const fetchedSHA = await sha(fetchedResponse),
@@ -121,21 +121,21 @@ class SiteServiceWorker {
       this.updateCache(clone);
       this.newVersionIsAvailable();
     } else {
-      console.log("[SW]: No updates found");
+      console.log('[SW]: No updates found');
     }
   }
 
   async newVersionIsAvailable(): Promise<void> {
-    console.log("[SW]: Please reload the page");
+    console.log('[SW]: Please reload the page');
 
     const message = {
-      message: "[SW]: Update me, please",
+      message: '[SW]: Update me, please',
       code: 1
     };
 
     // @ts-ignore
     self.clients
-      .matchAll({ includeUncontrolled: true, type: "window" })
+      .matchAll({ includeUncontrolled: true, type: 'window' })
       .then((clients: { forEach: (arg0: (client: any) => void) => void }) => {
         clients.forEach((client: { postMessage: (arg0: any) => void }) => {
           client.postMessage(JSON.stringify(message));
@@ -160,10 +160,10 @@ class SiteServiceWorker {
   }
 }
 
-const serviceWorker = new SiteServiceWorker("cache-v4", "https://api.github.com/repos/Artik-Man/artik.me/commits");
+const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
 
-self.addEventListener("install", () => {
-  console.log("[SW]: Install");
+self.addEventListener('install', () => {
+  console.log('[SW]: Install');
   // @ts-ignore
   self.skipWaiting();
   setTimeout(() => {
@@ -172,7 +172,7 @@ self.addEventListener("install", () => {
 });
 
 self.addEventListener(
-  "fetch",
+  'fetch',
   // @ts-ignore
   (event: FetchEvent) => {
     event.respondWith(serviceWorker.onFetch(event.request));

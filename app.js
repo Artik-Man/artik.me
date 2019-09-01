@@ -1,62 +1,63 @@
 (function() {
-  var ageBlock = document.getElementById("age"),
-    expBlock = document.getElementById("exp"),
-    born = new Date("1994-08-01"),
-    work = new Date("2015-05-01"),
+  var ageBlock = document.getElementById('age'),
+    expBlock = document.getElementById('exp'),
+    born = new Date('1994-08-01'),
+    work = new Date('2015-05-01'),
     now = new Date(),
     age = new Date(now.getTime() - born.getTime()),
     exp = new Date(now.getTime() - work.getTime()),
     start = new Date(0);
 
-  ageBlock.innerText = age.getFullYear() - start.getFullYear() + " years";
+  ageBlock.innerText = age.getFullYear() - start.getFullYear() + ' years';
   expBlock.innerText =
-    Math.round((exp.getFullYear() - start.getFullYear() + exp.getMonth() / 12) / 0.5) * 0.5 + " years";
+    Math.round((exp.getFullYear() - start.getFullYear() + exp.getMonth() / 12) / 0.5) * 0.5 + ' years';
 
-  var html = document.getElementById("html");
-  var themeSwitcher = document.getElementById("theme-switcher");
-  themeSwitcher.classList.remove("hidden");
-  themeSwitcher.addEventListener("change", function(event) {
+  var html = document.getElementById('html');
+  var themeSwitcher = document.getElementById('theme-switcher');
+  themeSwitcher.classList.remove('hidden');
+  themeSwitcher.addEventListener('change', function(event) {
     var checked = event.target.checked;
     if (checked) {
-      html.classList.add("light");
-      localStorage.setItem("light-theme", event.target.checked);
+      html.classList.add('light');
+      localStorage.setItem('light-theme', event.target.checked);
     } else {
-      html.classList.remove("light");
-      localStorage.removeItem("light-theme");
+      html.classList.remove('light');
+      localStorage.removeItem('light-theme');
     }
   });
 
-  if (localStorage.getItem("light-theme")) {
-    html.classList.add("light");
+  if (localStorage.getItem('light-theme')) {
+    html.classList.add('light');
     themeSwitcher.checked = true;
   }
 
-  window.matchMedia("(prefers-color-scheme: light)").addListener(
+  window.matchMedia('(prefers-color-scheme: light)').addListener(
     e =>
       e.matches &&
       (() => {
-        html.classList.add("light");
+        html.classList.add('light');
         themeSwitcher.checked = true;
       })()
   );
 
-  window.matchMedia("(prefers-color-scheme: dark)").addListener(
+  window.matchMedia('(prefers-color-scheme: dark)').addListener(
     e =>
       e.matches &&
       (() => {
-        html.classList.remove("light");
+        html.classList.remove('light');
         themeSwitcher.checked = false;
       })()
   );
 })();
 
-if ("serviceWorker" in navigator) {
+if ('serviceWorker' in navigator) {
   var swMessages = function(reg) {
-    navigator.serviceWorker.addEventListener("message", function(event) {
+    navigator.serviceWorker.addEventListener('message', function(event) {
       const message = JSON.parse(event.data);
-      console.log("[APP]: new message from ServiceWorker:", message);
+      console.log('[APP]: new message from ServiceWorker:', message);
       if (message.code === 1) {
         reg.unregister();
+        location.reload();
       }
     });
   };
@@ -67,8 +68,8 @@ if ("serviceWorker" in navigator) {
     });
   } else {
     navigator.serviceWorker
-      .register("sw.js", {
-        scope: "./"
+      .register('sw.js', {
+        scope: './'
       })
       .then(function(reg) {
         swMessages(reg);
@@ -93,9 +94,9 @@ if ("serviceWorker" in navigator) {
   } catch (e) {
     console.warn('Yandex.Metrika is blocked');
   }
-})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+})(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
 
-ym(35320200, "init", {
+ym(35320200, 'init', {
   id: 35320200,
   clickmap: true,
   trackLinks: true,
