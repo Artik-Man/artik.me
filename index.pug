@@ -37,7 +37,7 @@
       url: './html-practice',
       picture: 'html-practice',
       contribution: 'This is book is for my students.',
-      techList: ['Pug', 'CSS', 'Gulp']
+      techList: ['WebPack', 'TypeScript', 'LESS', 'Pug']
     },
     {
       title: 'Kaspersky: Managed Protection',
@@ -210,7 +210,7 @@ html#html(lang="en")
                       i.icon.icon_location
                       span Russia,&nbsp;
                         nobr St. Petersburg
-                
+
                 each contact in contacts
                   tr.hidden-md
                     th=contact.label
@@ -219,7 +219,7 @@ html#html(lang="en")
                         i.icon(aria-hidden="true", class=contact.iconClass)
                         span.text=(contact.fullText||contact.text)
               cite Heavy frameworks should be used only where necessary
-            
+
       section
         .container
           h2 Key skills
@@ -348,13 +348,13 @@ html#html(lang="en")
                   span(aria-label=project.title)=project.title
               .description
                 .image(aria-hidden="true")
-                   if project.url
+                  if project.url
                     a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)
                       picture
                         source(srcset="styles/images/projects/"+project.picture+".webp", type="image/webp")
                         source(srcset="styles/images/projects/"+project.picture+".jpg", type="image/jpeg")
                         img(src="styles/images/projects/"+project.picture+".jpg", alt=project.title)
-                   else
+                  else
                     picture
                       source(srcset="styles/images/projects/"+project.picture+".webp", type="image/webp")
                       source(srcset="styles/images/projects/"+project.picture+".jpg", type="image/jpeg")
@@ -365,5 +365,5 @@ html#html(lang="en")
                 ul
                   each tech in project.techList
                     li=tech
-    
+
   script(src="app.js")
