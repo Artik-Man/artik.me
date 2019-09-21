@@ -36,20 +36,34 @@
       title: 'HTML Practice',
       url: 'https://artik-man.github.io/HTML-Practice/',
       picture: 'html-practice',
-      contribution: 'This is book is for my students.',
+      contribution: '[Personal project] This is book is for my students.',
       techList: ['WebPack', 'TypeScript', 'LESS', 'Pug']
-    },
-    {
-      title: 'Kaspersky: Managed Protection',
-      picture: 'kmp',
-      contribution: 'Front end development of threat-hunting sequrity service.',
-      techList: ['Angular 7', 'TypeScript', 'Webpack']
     },
     {
       title: 'Kaspersky: Tailored Intelligence Reporting System',
       picture: 'kaspersky',
       contribution: 'Front end development of internal data collection/analysis portal for the analytical department.',
-      techList: ['Angular 7', 'TypeScript', 'WebSocket']
+      techList: ['Angular', 'TypeScript', 'WebSocket']
+    },
+    {
+      title: 'Hiddens',
+      url: 'https://github.com/Artik-Man/hiddens',
+      picture: 'hiddens',
+      contribution: '[Personal project] Front end development of simple chat, based on WebSocket Post Server',
+      techList: ['Angular', 'WebSocket', 'Hammer.js']
+    },
+    {
+      title: 'WebSocket Post Server',
+      url: 'https://github.com/Artik-Man/ws-post-server',
+      picture: 'wsps',
+      contribution: '[Personal project] Back end development of simple WebSocket Server',
+      techList: ['Node.js', 'WebSocket', 'Express.js']
+    },
+    {
+      title: 'Kaspersky: Managed Protection',
+      picture: 'kmp',
+      contribution: 'Front end development of threat-hunting sequrity service.',
+      techList: ['Angular', 'TypeScript', 'Webpack']
     },
     {
       title: 'Hashboard cabinet',
@@ -92,21 +106,7 @@
       picture: 'artik',
       contribution: '[Personal project] Full cycle of development of web page: from design to caching with ServiceWorker',
       techList: ['ServiceWorker', 'HTML5', 'Pug']
-    },
-    {
-      title: 'WebSocket Post Server',
-      url: 'https://github.com/Artik-Man/ws-post-server',
-      picture: 'wsps',
-      contribution: '[Personal project] Back end development of simple WebSocket Server',
-      techList: ['Node.js', 'WebSocket', 'Express.js']
-    },
-    {
-      title: 'Hiddens',
-      url: 'https://github.com/Artik-Man/hiddens',
-      picture: 'hiddens',
-      contribution: '[Personal project] Front end development of simple chat, based on WebSocket Post Server',
-      techList: ['Angular 7', 'WebSocket', 'Hammer.js']
-    },
+    }
   ];
 html#html(lang="en")
   head
@@ -154,8 +154,7 @@ html#html(lang="en")
       link(sizes=(size+'x'+size), href=("styles/images/icons/icon-"+(size+'x'+size)+".png"), rel="icon")
       link(sizes=(size+'x'+size), href=("styles/images/icons/icon-"+(size+'x'+size)+".png"), rel="apple-touch-icon")
 
-    //- link(rel="stylesheet", href="./styles/fonts/lato/font.css")
-    //- link(rel="stylesheet", href="./styles/fonts/bebas/font.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Yanone+Kaffeesatz:200,300&display=swap&subset=cyrillic")
     link(rel="stylesheet", href="./styles/styles.css")
   body
     main.page
@@ -177,7 +176,7 @@ html#html(lang="en")
       section
         .container
           h1 Artik
-            b Man
+            span Man
           p.subtitle Frontend-developer
 
       section
@@ -359,9 +358,9 @@ html#html(lang="en")
                       source(srcset="styles/images/projects/"+project.picture+".webp", type="image/webp")
                       source(srcset="styles/images/projects/"+project.picture+".jpg", type="image/jpeg")
                       img(src="styles/images/projects/"+project.picture+".jpg", alt=project.title)
-                h4 Contribution:
+                h5 Contribution:
                 p= project.contribution
-                h4 Technologies:
+                h5 Technologies:
                 ul
                   each tech in project.techList
                     li=tech

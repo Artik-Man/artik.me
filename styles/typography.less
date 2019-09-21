@@ -1,41 +1,45 @@
 // out: false
 @import 'colors';
 
-@font-face {
-  font-family: 'Bebas Neue';
-  src: local('Bebas Neue Light'), local('BebasNeue-Light'),
-    url('./fonts/bebas/font/bebasneuelight.woff2') format('woff2'),
-    url('./fonts/bebas/font/bebasneuelight.woff') format('woff'),
-    url('./fonts/bebas/font/bebasneuelight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Bebas Neue';
+//   src: local('Bebas Neue Light'), local('BebasNeue-Light'),
+//     url('./fonts/bebas/font/bebasneuelight.woff2') format('woff2'),
+//     url('./fonts/bebas/font/bebasneuelight.woff') format('woff'),
+//     url('./fonts/bebas/font/bebasneuelight.ttf') format('truetype');
+//   font-weight: 200;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: 'Bebas Neue';
-  src: local('Bebas Neue Book'), local('BebasNeueBook'), url('./fonts/bebas/font/bebasneuebook.woff2') format('woff2'),
-    url('./fonts/bebas/font/bebasneuebook.woff') format('woff'),
-    url('./fonts/bebas/font/bebasneuebook.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Bebas Neue';
+//   src: local('Bebas Neue Book'), local('BebasNeueBook'), url('./fonts/bebas/font/bebasneuebook.woff2') format('woff2'),
+//     url('./fonts/bebas/font/bebasneuebook.woff') format('woff'),
+//     url('./fonts/bebas/font/bebasneuebook.ttf') format('truetype');
+//   font-weight: 300;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: 'Lato Light';
-  font-style: normal;
-  font-weight: 300;
-  src: url('./fonts/lato/font/lato-v15-latin-300.eot');
-  src: local('Lato Light'), local('Lato-Light'),
-    url('./fonts/lato/font/lato-v15-latin-300.eot?#iefix') format('embedded-opentype'),
-    url('./fonts/lato/font/lato-v15-latin-300.woff2') format('woff2'),
-    url('./fonts/lato/font/lato-v15-latin-300.woff') format('woff'),
-    url('./fonts/lato/font/lato-v15-latin-300.ttf') format('truetype'),
-    url('./fonts/lato/font/lato-v15-latin-300.svg#Lato') format('svg');
-}
+// @font-face {
+//   font-family: 'Lato Light';
+//   font-style: normal;
+//   font-weight: 300;
+//   src: url('./fonts/lato/font/lato-v15-latin-300.eot');
+//   src: local('Lato Light'), local('Lato-Light'),
+//     url('./fonts/lato/font/lato-v15-latin-300.eot?#iefix') format('embedded-opentype'),
+//     url('./fonts/lato/font/lato-v15-latin-300.woff2') format('woff2'),
+//     url('./fonts/lato/font/lato-v15-latin-300.woff') format('woff'),
+//     url('./fonts/lato/font/lato-v15-latin-300.ttf') format('truetype'),
+//     url('./fonts/lato/font/lato-v15-latin-300.svg#Lato') format('svg');
+// }
 
-.bebas {
-  font-family: 'Bebas Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+// .bebas {
+//   font-family: 'Bebas Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+//     'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+// }
+
+.font-primary {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 a {
@@ -78,7 +82,8 @@ h5,
 h6 {
   margin: 0;
   font-weight: 200;
-  .bebas;
+  text-transform: uppercase;
+  .font-primary;
 
   > * {
     font-family: inherit;
@@ -93,12 +98,14 @@ h6 {
 }
 
 h1 {
-  font-size: 23vw;
-  line-height: 1.2;
+  font-size: 22vw;
+  line-height: 1;
   padding: 20vh 0 0;
   font-weight: 200;
+  text-transform: uppercase;
   opacity: 0.8;
-  b {
+  span {
+    font-weight: 300;
     &::before {
       content: ' ';
     }
@@ -131,12 +138,12 @@ h3 {
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 200;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 200;
 }
 
@@ -151,7 +158,6 @@ table {
   font-size: 16px;
 
   th {
-    font-weight: 400;
     padding-right: 16px;
   }
 

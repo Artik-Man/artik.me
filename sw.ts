@@ -47,7 +47,7 @@ class SiteServiceWorker {
   async get(request: Request | string, noCache = false): Promise<Response | undefined> {
     try {
       const response = await fetch(request, {
-        cache: noCache ? 'no-cache' : 'default'
+        cache: noCache ? 'no-cache' : 'default',
       });
 
       if (!noCache) {
@@ -130,7 +130,7 @@ class SiteServiceWorker {
 
     const message = {
       message: '[SW]: Update me, please',
-      code: 1
+      code: 1,
     };
 
     // @ts-ignore
@@ -160,21 +160,23 @@ class SiteServiceWorker {
   }
 }
 
-const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
+if (location.hostname !== 'localhost') {
+  const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
 
-self.addEventListener('install', () => {
-  console.log('[SW]: Install');
-  // @ts-ignore
-  self.skipWaiting();
-  setTimeout(() => {
-    serviceWorker.checkUpdates(true);
-  }, 2000);
-});
+  self.addEventListener('install', () => {
+    console.log('[SW]: Install');
+    // @ts-ignore
+    self.skipWaiting();
+    setTimeout(() => {
+      serviceWorker.checkUpdates(true);
+    }, 2000);
+  });
 
-self.addEventListener(
-  'fetch',
-  // @ts-ignore
-  (event: FetchEvent) => {
-    event.respondWith(serviceWorker.onFetch(event.request));
-  }
-);
+  self.addEventListener(
+    'fetch',
+    // @ts-ignore
+    (event: FetchEvent) => {
+      event.respondWith(serviceWorker.onFetch(event.request));
+    },
+  );
+}

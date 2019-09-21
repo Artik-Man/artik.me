@@ -30,7 +30,7 @@ class SiteServiceWorker {
     async get(request, noCache = false) {
         try {
             const response = await fetch(request, {
-                cache: noCache ? 'no-cache' : 'default'
+                cache: noCache ? 'no-cache' : 'default',
             });
             if (!noCache) {
                 const cache = await caches.open(this.cacheName);
@@ -99,7 +99,7 @@ class SiteServiceWorker {
         console.log('[SW]: Please reload the page');
         const message = {
             message: '[SW]: Update me, please',
-            code: 1
+            code: 1,
         };
         self.clients
             .matchAll({ includeUncontrolled: true, type: 'window' })
@@ -123,14 +123,16 @@ class SiteServiceWorker {
         }
     }
 }
-const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
-self.addEventListener('install', () => {
-    console.log('[SW]: Install');
-    self.skipWaiting();
-    setTimeout(() => {
-        serviceWorker.checkUpdates(true);
-    }, 2000);
-});
-self.addEventListener('fetch', (event) => {
-    event.respondWith(serviceWorker.onFetch(event.request));
-});
+if (location.hostname !== 'localhost') {
+    const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
+    self.addEventListener('install', () => {
+        console.log('[SW]: Install');
+        self.skipWaiting();
+        setTimeout(() => {
+            serviceWorker.checkUpdates(true);
+        }, 2000);
+    });
+    self.addEventListener('fetch', (event) => {
+        event.respondWith(serviceWorker.onFetch(event.request));
+    });
+}

@@ -64,6 +64,7 @@
     <link sizes="384x384" href="styles/images/icons/icon-384x384.png" rel="apple-touch-icon"/>
     <link sizes="512x512" href="styles/images/icons/icon-512x512.png" rel="icon"/>
     <link sizes="512x512" href="styles/images/icons/icon-512x512.png" rel="apple-touch-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Yanone+Kaffeesatz:200,300&amp;display=swap&amp;subset=cyrillic"/>
     <link rel="stylesheet" href="./styles/styles.css"/>
   </head>
   <body>
@@ -86,7 +87,7 @@
       </header>
       <section>
         <div class="container">
-          <h1>Artik<b>Man</b></h1>
+          <h1>Artik<span>Man</span></h1>
           <p class="subtitle">Frontend-developer</p>
         </div>
       </section>
@@ -290,34 +291,14 @@
                     <source srcset="styles/images/projects/html-practice.jpg" type="image/jpeg"/><img src="styles/images/projects/html-practice.jpg" alt="HTML Practice"/>
                   </picture></a>
               </div>
-              <h4>Contribution:</h4>
-              <p>This is book is for my students.</p>
-              <h4>Technologies:</h4>
+              <h5>Contribution:</h5>
+              <p>[Personal project] This is book is for my students.</p>
+              <h5>Technologies:</h5>
               <ul>
                 <li>WebPack</li>
                 <li>TypeScript</li>
                 <li>LESS</li>
                 <li>Pug</li>
-              </ul>
-            </div>
-          </article>
-          <article class="project">
-            <h3><span aria-label="Kaspersky: Managed Protection">Kaspersky: Managed Protection</span>
-            </h3>
-            <div class="description">
-              <div class="image" aria-hidden="true">
-                <picture>
-                  <source srcset="styles/images/projects/kmp.webp" type="image/webp"/>
-                  <source srcset="styles/images/projects/kmp.jpg" type="image/jpeg"/><img src="styles/images/projects/kmp.jpg" alt="Kaspersky: Managed Protection"/>
-                </picture>
-              </div>
-              <h4>Contribution:</h4>
-              <p>Front end development of threat-hunting sequrity service.</p>
-              <h4>Technologies:</h4>
-              <ul>
-                <li>Angular 7</li>
-                <li>TypeScript</li>
-                <li>Webpack</li>
               </ul>
             </div>
           </article>
@@ -331,13 +312,73 @@
                   <source srcset="styles/images/projects/kaspersky.jpg" type="image/jpeg"/><img src="styles/images/projects/kaspersky.jpg" alt="Kaspersky: Tailored Intelligence Reporting System"/>
                 </picture>
               </div>
-              <h4>Contribution:</h4>
+              <h5>Contribution:</h5>
               <p>Front end development of internal data collection/analysis portal for the analytical department.</p>
-              <h4>Technologies:</h4>
+              <h5>Technologies:</h5>
               <ul>
-                <li>Angular 7</li>
+                <li>Angular</li>
                 <li>TypeScript</li>
                 <li>WebSocket</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project">
+            <h3><a href="https://github.com/Artik-Man/hiddens" target="_blank" rel="noreferrer" aria-label="Hiddens">Hiddens</a>
+            </h3>
+            <div class="description">
+              <div class="image" aria-hidden="true"><a href="https://github.com/Artik-Man/hiddens" target="_blank" rel="noreferrer" aria-label="Hiddens">
+                  <picture>
+                    <source srcset="styles/images/projects/hiddens.webp" type="image/webp"/>
+                    <source srcset="styles/images/projects/hiddens.jpg" type="image/jpeg"/><img src="styles/images/projects/hiddens.jpg" alt="Hiddens"/>
+                  </picture></a>
+              </div>
+              <h5>Contribution:</h5>
+              <p>[Personal project] Front end development of simple chat, based on WebSocket Post Server</p>
+              <h5>Technologies:</h5>
+              <ul>
+                <li>Angular</li>
+                <li>WebSocket</li>
+                <li>Hammer.js</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project">
+            <h3><a href="https://github.com/Artik-Man/ws-post-server" target="_blank" rel="noreferrer" aria-label="WebSocket Post Server">WebSocket Post Server</a>
+            </h3>
+            <div class="description">
+              <div class="image" aria-hidden="true"><a href="https://github.com/Artik-Man/ws-post-server" target="_blank" rel="noreferrer" aria-label="WebSocket Post Server">
+                  <picture>
+                    <source srcset="styles/images/projects/wsps.webp" type="image/webp"/>
+                    <source srcset="styles/images/projects/wsps.jpg" type="image/jpeg"/><img src="styles/images/projects/wsps.jpg" alt="WebSocket Post Server"/>
+                  </picture></a>
+              </div>
+              <h5>Contribution:</h5>
+              <p>[Personal project] Back end development of simple WebSocket Server</p>
+              <h5>Technologies:</h5>
+              <ul>
+                <li>Node.js</li>
+                <li>WebSocket</li>
+                <li>Express.js</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project">
+            <h3><span aria-label="Kaspersky: Managed Protection">Kaspersky: Managed Protection</span>
+            </h3>
+            <div class="description">
+              <div class="image" aria-hidden="true">
+                <picture>
+                  <source srcset="styles/images/projects/kmp.webp" type="image/webp"/>
+                  <source srcset="styles/images/projects/kmp.jpg" type="image/jpeg"/><img src="styles/images/projects/kmp.jpg" alt="Kaspersky: Managed Protection"/>
+                </picture>
+              </div>
+              <h5>Contribution:</h5>
+              <p>Front end development of threat-hunting sequrity service.</p>
+              <h5>Technologies:</h5>
+              <ul>
+                <li>Angular</li>
+                <li>TypeScript</li>
+                <li>Webpack</li>
               </ul>
             </div>
           </article>
@@ -351,9 +392,9 @@
                     <source srcset="styles/images/projects/hashboard-cabinet.jpg" type="image/jpeg"/><img src="styles/images/projects/hashboard-cabinet.jpg" alt="Hashboard cabinet"/>
                   </picture></a>
               </div>
-              <h4>Contribution:</h4>
+              <h5>Contribution:</h5>
               <p>Front end development of #hashboard service. This web application uses client-side localization, HTML5 Audio/Video, the combination of AngularJS + RequireJS + REST API.</p>
-              <h4>Technologies:</h4>
+              <h5>Technologies:</h5>
               <ul>
                 <li>AngularJS</li>
                 <li>RequireJS</li>
@@ -371,9 +412,9 @@
                     <source srcset="styles/images/projects/hashboard-player.jpg" type="image/jpeg"/><img src="styles/images/projects/hashboard-player.jpg" alt="Hashboard player"/>
                   </picture></a>
               </div>
-              <h4>Contribution:</h4>
+              <h5>Contribution:</h5>
               <p>Front end development of #hashboard service. This web application uses HTML5 Video and Audio, handles internet-connection troubles. Web site has a fluid layout.</p>
-              <h4>Technologies:</h4>
+              <h5>Technologies:</h5>
               <ul>
                 <li>jQuery</li>
                 <li>RequireJS</li>
@@ -391,9 +432,9 @@
                     <source srcset="styles/images/projects/hashboard.jpg" type="image/jpeg"/><img src="styles/images/projects/hashboard.jpg" alt="Hashboard"/>
                   </picture></a>
               </div>
-              <h4>Contribution:</h4>
+              <h5>Contribution:</h5>
               <p>Front end development of #hashboard service. Cross-browser code, responsive layout, Website localization.</p>
-              <h4>Technologies:</h4>
+              <h5>Technologies:</h5>
               <ul>
                 <li>jQuery</li>
                 <li>Bootstrap</li>
@@ -411,9 +452,9 @@
                     <source srcset="styles/images/projects/m315.jpg" type="image/jpeg"/><img src="styles/images/projects/m315.jpg" alt="Watches online shop «3–15»"/>
                   </picture></a>
               </div>
-              <h4>Contribution:</h4>
+              <h5>Contribution:</h5>
               <p>Front end web development, extension of bootstrap grid, CSS3-transitions.</p>
-              <h4>Technologies:</h4>
+              <h5>Technologies:</h5>
               <ul>
                 <li>AngularJS</li>
                 <li>Bootstrap</li>
@@ -431,9 +472,9 @@
                     <source srcset="styles/images/projects/pr.jpg" type="image/jpeg"/><img src="styles/images/projects/pr.jpg" alt="Pricereporter"/>
                   </picture></a>
               </div>
-              <h4>Contribution:</h4>
+              <h5>Contribution:</h5>
               <p>Front end web development and technical support of a commercial site</p>
-              <h4>Technologies:</h4>
+              <h5>Technologies:</h5>
               <ul>
                 <li>jQuery</li>
                 <li>Bootstrap</li>
@@ -451,53 +492,13 @@
                     <source srcset="styles/images/projects/artik.jpg" type="image/jpeg"/><img src="styles/images/projects/artik.jpg" alt="Artik.me"/>
                   </picture></a>
               </div>
-              <h4>Contribution:</h4>
+              <h5>Contribution:</h5>
               <p>[Personal project] Full cycle of development of web page: from design to caching with ServiceWorker</p>
-              <h4>Technologies:</h4>
+              <h5>Technologies:</h5>
               <ul>
                 <li>ServiceWorker</li>
                 <li>HTML5</li>
                 <li>Pug</li>
-              </ul>
-            </div>
-          </article>
-          <article class="project">
-            <h3><a href="https://github.com/Artik-Man/ws-post-server" target="_blank" rel="noreferrer" aria-label="WebSocket Post Server">WebSocket Post Server</a>
-            </h3>
-            <div class="description">
-              <div class="image" aria-hidden="true"><a href="https://github.com/Artik-Man/ws-post-server" target="_blank" rel="noreferrer" aria-label="WebSocket Post Server">
-                  <picture>
-                    <source srcset="styles/images/projects/wsps.webp" type="image/webp"/>
-                    <source srcset="styles/images/projects/wsps.jpg" type="image/jpeg"/><img src="styles/images/projects/wsps.jpg" alt="WebSocket Post Server"/>
-                  </picture></a>
-              </div>
-              <h4>Contribution:</h4>
-              <p>[Personal project] Back end development of simple WebSocket Server</p>
-              <h4>Technologies:</h4>
-              <ul>
-                <li>Node.js</li>
-                <li>WebSocket</li>
-                <li>Express.js</li>
-              </ul>
-            </div>
-          </article>
-          <article class="project">
-            <h3><a href="https://github.com/Artik-Man/hiddens" target="_blank" rel="noreferrer" aria-label="Hiddens">Hiddens</a>
-            </h3>
-            <div class="description">
-              <div class="image" aria-hidden="true"><a href="https://github.com/Artik-Man/hiddens" target="_blank" rel="noreferrer" aria-label="Hiddens">
-                  <picture>
-                    <source srcset="styles/images/projects/hiddens.webp" type="image/webp"/>
-                    <source srcset="styles/images/projects/hiddens.jpg" type="image/jpeg"/><img src="styles/images/projects/hiddens.jpg" alt="Hiddens"/>
-                  </picture></a>
-              </div>
-              <h4>Contribution:</h4>
-              <p>[Personal project] Front end development of simple chat, based on WebSocket Post Server</p>
-              <h4>Technologies:</h4>
-              <ul>
-                <li>Angular 7</li>
-                <li>WebSocket</li>
-                <li>Hammer.js</li>
               </ul>
             </div>
           </article>
