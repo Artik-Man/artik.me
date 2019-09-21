@@ -13,8 +13,7 @@
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: local('Bebas Neue Book'), local('BebasNeueBook'),
-    url('./fonts/bebas/font/bebasneuebook.woff2') format('woff2'),
+  src: local('Bebas Neue Book'), local('BebasNeueBook'), url('./fonts/bebas/font/bebasneuebook.woff2') format('woff2'),
     url('./fonts/bebas/font/bebasneuebook.woff') format('woff'),
     url('./fonts/bebas/font/bebasneuebook.ttf') format('truetype');
   font-weight: 300;
@@ -35,7 +34,8 @@
 }
 
 .bebas {
-  font-family: 'Bebas Neue', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Bebas Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {
@@ -80,7 +80,7 @@ h6 {
   font-weight: 200;
   .bebas;
 
-  >* {
+  > * {
     font-family: inherit;
     font-weight: inherit;
   }
@@ -93,26 +93,29 @@ h6 {
 }
 
 h1 {
-  font-size: 100px;
-  line-height: 0.5;
-  word-spacing: 100vw;
+  font-size: 23vw;
+  line-height: 1.2;
   padding: 20vh 0 0;
   font-weight: 200;
   opacity: 0.8;
-
-  small {
-    display: block;
-    line-height: 1.2;
-    font-size: 60%;
+  b {
+    &::before {
+      content: ' ';
+    }
   }
-
-  +.subtitle {
+  + .subtitle {
     text-transform: uppercase;
     letter-spacing: 6px;
     font-size: 12px;
     margin: -15px 0 0;
     padding: 0 0 20vh;
-    opacity: .8;
+    opacity: 0.8;
+  }
+  @media (min-width: 600px) {
+    font-size: 140px;
+  }
+  @media (min-width: 900px) {
+    font-size: 160px;
   }
 }
 
@@ -183,7 +186,7 @@ b {
 }
 
 cite {
-  quotes: '«''»';
+  quotes: '«' '»';
   font-size: 22px;
   padding: 50px 0;
   display: block;
