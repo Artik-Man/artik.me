@@ -123,16 +123,14 @@ class SiteServiceWorker {
         }
     }
 }
-if (location.hostname !== 'localhost') {
-    const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
-    self.addEventListener('install', () => {
-        console.log('[SW]: Install');
-        self.skipWaiting();
-        setTimeout(() => {
-            serviceWorker.checkUpdates(true);
-        }, 2000);
-    });
-    self.addEventListener('fetch', (event) => {
-        event.respondWith(serviceWorker.onFetch(event.request));
-    });
-}
+const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
+self.addEventListener('install', () => {
+    console.log('[SW]: Install');
+    self.skipWaiting();
+    setTimeout(() => {
+        serviceWorker.checkUpdates(true);
+    }, 2000);
+});
+self.addEventListener('fetch', (event) => {
+    event.respondWith(serviceWorker.onFetch(event.request));
+});

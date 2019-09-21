@@ -160,23 +160,21 @@ class SiteServiceWorker {
   }
 }
 
-if (location.hostname !== 'localhost') {
-  const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
+const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
 
-  self.addEventListener('install', () => {
-    console.log('[SW]: Install');
-    // @ts-ignore
-    self.skipWaiting();
-    setTimeout(() => {
-      serviceWorker.checkUpdates(true);
-    }, 2000);
-  });
+self.addEventListener('install', () => {
+  console.log('[SW]: Install');
+  // @ts-ignore
+  self.skipWaiting();
+  setTimeout(() => {
+    serviceWorker.checkUpdates(true);
+  }, 2000);
+});
 
-  self.addEventListener(
-    'fetch',
-    // @ts-ignore
-    (event: FetchEvent) => {
-      event.respondWith(serviceWorker.onFetch(event.request));
-    },
-  );
-}
+self.addEventListener(
+  'fetch',
+  // @ts-ignore
+  (event: FetchEvent) => {
+    event.respondWith(serviceWorker.onFetch(event.request));
+  },
+);
