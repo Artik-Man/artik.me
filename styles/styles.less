@@ -6,9 +6,6 @@
 
 * {
   box-sizing: border-box; // font-family: Lato, sans-serif;
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol;
-  font-weight: 300;
 
   &::selection {
     background-color: lighten(black, 90%);
@@ -20,6 +17,8 @@ body {
   padding: 0;
   margin: 0;
   background-color: @dark;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
 body {
@@ -266,45 +265,50 @@ cite {
     }
   }
 }
+.projects {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .project {
+    border-left: 2px solid white;
+    padding: 0 0 0 16px;
+    margin: 5vh 0 10vh;
+    position: relative;
+    display: block;
 
-.project {
-  border-left: 2px solid white;
-  padding: 0 0 0 16px;
-  margin: 5vh 0 10vh;
-  position: relative;
-
-  h3 {
-    font-family: inherit;
-    padding-bottom: 24px;
-  }
-
-  h5 {
-    font-family: inherit;
-    padding-bottom: 8px;
-  }
-
-  .description {
-    &:after {
-      content: '';
-      display: block;
-      clear: both;
+    h3 {
+      font-family: inherit;
+      padding-bottom: 24px;
     }
-  }
 
-  .image {
-    margin: 32px 0;
+    h5 {
+      font-family: inherit;
+      padding-bottom: 8px;
+    }
 
-    a {
-      display: block;
-      border: none;
-
+    .description {
       &:after {
-        bottom: -10px;
+        content: '';
+        display: block;
+        clear: both;
       }
     }
 
-    picture {
-      max-height: 420px;
+    .image {
+      margin: 32px 0;
+
+      a {
+        display: block;
+        border: none;
+
+        &:after {
+          bottom: -10px;
+        }
+      }
+
+      picture {
+        max-height: 420px;
+      }
     }
   }
 }
@@ -348,45 +352,46 @@ picture {
     margin: 0 32px 0 0;
     float: none;
   }
+  .projects {
+    .project {
+      border-left: none;
 
-  .project {
-    border-left: none;
+      &:hover {
+        .description {
+          opacity: 1;
+        }
 
-    &:hover {
+        .image {
+          picture {
+            opacity: 1;
+            filter: grayscale(0);
+          }
+        }
+      }
+
+      h3 {
+        padding-left: 332px;
+        text-transform: none;
+      }
+
       .description {
-        opacity: 1;
+        transition: opacity 150ms ease-in-out;
+        padding-left: 332px;
+        opacity: 0.5;
       }
 
       .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 320px;
+        margin: 0;
+
         picture {
-          opacity: 1;
-          filter: grayscale(0);
+          transition: all 150ms ease-in-out;
+          opacity: 0.7;
+          filter: grayscale(1);
         }
-      }
-    }
-
-    h3 {
-      padding-left: 332px;
-      text-transform: none;
-    }
-
-    .description {
-      transition: opacity 150ms ease-in-out;
-      padding-left: 332px;
-      opacity: 0.5;
-    }
-
-    .image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 320px;
-      margin: 0;
-
-      picture {
-        transition: all 150ms ease-in-out;
-        opacity: 0.7;
-        filter: grayscale(1);
       }
     }
   }

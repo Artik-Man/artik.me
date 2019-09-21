@@ -1,26 +1,22 @@
 @media print {
-
   * {
     color: black;
     background: none;
   }
 
+  html {
+    .light;
+  }
+  html,
+  body {
+    background-color: white !important;
+  }
   .container {
     max-width: 100% !important;
     page-break-inside: avoid;
   }
 
-  html,
   body {
-    background-color: white;
-  }
-
-  a {
-    color: black;
-  }
-
-  body {
-
     &:before,
     &:after {
       display: none;
@@ -40,22 +36,11 @@
     }
 
     h1 {
-      padding: 50px 0 0;
-      font-size: 60px;
-
-      small {
-        font-size: 100%;
-        display: inline;
-        margin-left: 10px;
-      }
-
-      +.subtitle {
-        margin: 0;
-        padding: 10px 0;
-        font-size: 16px;
-        letter-spacing: 0;
-        color: #444;
-      }
+      padding: 50px 0 10px;
+      font-size: 71px;
+    }
+    .subtitle {
+      padding-bottom: 30px;
     }
 
     .ava {
@@ -95,7 +80,6 @@
     }
 
     .experience {
-
       .left,
       .right,
       .year {
@@ -152,39 +136,40 @@
         }
       }
     }
+    .projects {
+      .project {
+        page-break-inside: avoid;
+        border: none;
+        border-bottom: 1px solid #aaa;
+        padding: 0 0 20px;
+        margin: 0 0 20px;
 
-    .project {
-      page-break-inside: avoid;
-      border: none;
-      border-bottom: 1px solid #aaa;
-      padding: 0 0 20px;
-      margin: 0 0 20px;
+        .description {
+          padding: 0;
+        }
 
-      .description {
-        padding: 0;
-      }
+        h3 {
+          padding: 0 0 10px 0;
+        }
 
-      h3 {
-        padding: 0 0 10px 0;
-      }
+        h5 {
+          display: none;
+        }
 
-      h4 {
-        display: none;
-      }
+        .image {
+          display: none;
+        }
 
-      .image {
-        display: none;
-      }
+        ul {
+          display: block;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
 
-      ul {
-        display: block;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-          display: inline;
-          margin-right: 10px;
+          li {
+            display: inline;
+            margin-right: 10px;
+          }
         }
       }
     }
@@ -193,5 +178,4 @@
       display: none !important;
     }
   }
-
 }

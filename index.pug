@@ -157,7 +157,7 @@ html#html(lang="en")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Yanone+Kaffeesatz:200,300&display=swap&subset=cyrillic")
     link(rel="stylesheet", href="./styles/styles.css")
   body
-    main.page
+    .page
       header
         .container
           .flex
@@ -172,15 +172,16 @@ html#html(lang="en")
                   a(href=contact.url, aria-label=contact.label, rel="noreferrer")
                     i.icon(aria-hidden="true", class=contact.iconClass)
                     span.text=contact.text
+      main
 
-      section
-        .container
-          h1 Artik
-            span Man
+        section.container
+          h1
+            span ARTIK
+            | &nbsp;
+            span MAN
           p.subtitle Frontend-developer
 
-      section
-        .container
+        section.container
           .about
             .ava-box(aria-hidden="true")
               picture.ava
@@ -219,8 +220,7 @@ html#html(lang="en")
                         span.text=(contact.fullText||contact.text)
               cite Heavy frameworks should be used only where necessary
 
-      section
-        .container
+        section.container
           h2 Key skills
           .skills
             ul
@@ -234,8 +234,7 @@ html#html(lang="en")
               li Angular
               li Webpack
 
-      section
-        .container
+        section.container
           h2 Experience
           .experience(aria-label="In 2010 I entered the university. Then in 2014, I passed through webmaster courses. In 2015, I got a job at PrimePix in the position of junior interface developer. In 2016, I graduated from the university, received a bachelor's degree in Mathematics, Information and Space Technologies and started working at Hashboard. In 2017, I moved to St. Petersburg and got a job at Luxoft. Later, in 2018, I started working at Kaspersky Lab. and got a master’s degree in Information Technologies and Automated Systems.")
             .table(aria-hidden="true")
@@ -335,34 +334,34 @@ html#html(lang="en")
                   .year 2012
                 .td.empty
 
-      section
-        .container
-          h2 Projects
-          each project in projects
-            article.project
-              h3
-                if project.url
-                  a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)=project.title
-                else
-                  span(aria-label=project.title)=project.title
-              .description
-                .image(aria-hidden="true")
+        section.container
+          h2 Portfolio
+          ul.projects
+            each project in projects
+              li.project
+                h3
                   if project.url
-                    a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)
+                    a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)=project.title
+                  else
+                    span(aria-label=project.title)=project.title
+                .description
+                  .image(aria-hidden="true")
+                    if project.url
+                      a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)
+                        picture
+                          source(srcset="styles/images/projects/"+project.picture+".webp", type="image/webp")
+                          source(srcset="styles/images/projects/"+project.picture+".jpg", type="image/jpeg")
+                          img(src="styles/images/projects/"+project.picture+".jpg", alt=project.title)
+                    else
                       picture
                         source(srcset="styles/images/projects/"+project.picture+".webp", type="image/webp")
                         source(srcset="styles/images/projects/"+project.picture+".jpg", type="image/jpeg")
                         img(src="styles/images/projects/"+project.picture+".jpg", alt=project.title)
-                  else
-                    picture
-                      source(srcset="styles/images/projects/"+project.picture+".webp", type="image/webp")
-                      source(srcset="styles/images/projects/"+project.picture+".jpg", type="image/jpeg")
-                      img(src="styles/images/projects/"+project.picture+".jpg", alt=project.title)
-                h5 Contribution:
-                p= project.contribution
-                h5 Technologies:
-                ul
-                  each tech in project.techList
-                    li=tech
+                  h5 Contribution:
+                  p= project.contribution
+                  h5 Technologies:
+                  ul
+                    each tech in project.techList
+                      li=tech
 
   script(src="app.js")

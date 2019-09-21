@@ -85,7 +85,7 @@ h6 {
   text-transform: uppercase;
   .font-primary;
 
-  > * {
+  * {
     font-family: inherit;
     font-weight: inherit;
   }
@@ -104,25 +104,26 @@ h1 {
   font-weight: 200;
   text-transform: uppercase;
   opacity: 0.8;
-  span {
+  span:last-child {
     font-weight: 300;
-    &::before {
-      content: ' ';
-    }
   }
-  + .subtitle {
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    font-size: 12px;
-    margin: -15px 0 0;
-    padding: 0 0 20vh;
-    opacity: 0.8;
-  }
+
   @media (min-width: 600px) {
-    font-size: 140px;
+    font-size: 135px;
   }
   @media (min-width: 900px) {
     font-size: 160px;
+  }
+}
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 12px;
+  margin: -15px 0 0;
+  padding: 0 0 20vh;
+  opacity: 0.8;
+  @media (min-width: 900px) {
+    font-size: 16px;
   }
 }
 
@@ -159,6 +160,7 @@ table {
 
   th {
     padding-right: 16px;
+    font-weight: 300;
   }
 
   td {
