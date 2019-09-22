@@ -84,21 +84,38 @@
     }
   }
   .experience {
-    li .edu:not(.no-line)::after,
-    li .job:not(.no-line)::after {
-      border-right: 1px solid fade(@dark, 70%);
-    }
-    li .edu h4::after,
-    li .job h4::after {
-      background: @dark;
+    li {
+      &::before {
+        border-left-color: @dark;
+      }
+      h3 {
+        &::after {
+          background: @dark;
+        }
+      }
+      .job,
+      .edu {
+        &:not(.no-line) {
+          &::after {
+            border-right: 1px solid fade(@dark, 70%);
+          }
+        }
+        h4 {
+          &&:after {
+            background: @dark;
+          }
+        }
+      }
     }
     .merge {
       filter: invert(1);
     }
   }
   .portfolio {
-    > li:hover {
+    > li {
+      border-left-color: @dark;
     }
+
     .description .image {
       opacity: 0.8;
     }
