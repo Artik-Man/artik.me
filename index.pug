@@ -159,191 +159,170 @@ html#html(lang="en")
   body
     .page
       header
-        .container
-          .flex
-            .left-block
-              a.logo(href="", aria-label=meta.title) AM
-              label.switch-theme(title="Change theme")
-                input#theme-switcher(type="checkbox" role="button" aira-label="Switch Theme" title="Switch Theme")
-                span 
-            ul.right-block.contacts
-              each contact in contacts
-                li
-                  a(href=contact.url, aria-label=contact.label, rel="noreferrer")
-                    i.icon(aria-hidden="true", class=contact.iconClass)
-                    span.text=contact.text
+        //- .left-block
+        a.logo(href="", aria-label=meta.title) AM
+        label.switch-theme(title="Change theme")
+          input#theme-switcher(type="checkbox" role="button" aira-label="Switch Theme" title="Switch Theme")
+          span 
+
+        each contact in contacts
+          a(href=contact.url, aria-label=contact.label, rel="noreferrer")
+            span.icon(aria-hidden="true", class=contact.iconClass)
+            span.text=contact.text
       main
 
-        section.container
-          h1
-            span ARTIK
-            | &nbsp;
-            span MAN
-          p.subtitle Frontend-developer
+        h1
+          span ARTIK
+          | &nbsp;
+          span MAN
+        p Frontend-developer
 
-        section.container
-          .about
-            .ava-box(aria-hidden="true")
-              picture.ava
-                source(srcset="styles/images/me.webp", type="image/webp")
-                source(srcset="styles/images/me.jpg", type="image/jpeg")
-                img(src="styles/images/me.jpg", alt=meta.title)
-            .mobile-reverse
-              table
-                tr
-                  th Age
-                  td 
-                    span#age 25 years
-                tr
-                  th Commercial Experience
-                  td
-                    span#exp 4.5 years
-                tr
-                  th Languages
-                  td 
-                    nobr Russian (native),
-                    nobr English (Pre-Intermediate)
-                tr
-                  th Current location
-                  td
-                    a(target="_blank", rel="noreferrer", href="//www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986")
-                      i.icon.icon_location
-                      span Russia,&nbsp;
-                        nobr St. Petersburg
+        .about
+          .ava-box(aria-label=meta.title)
+            picture.ava
+              source(srcset="styles/images/me.webp", type="image/webp")
+              source(srcset="styles/images/me.png", type="image/png")
+              img(src="styles/images/me.png", alt=meta.title)
+          cite Heavy frameworks should be&nbsp;used only where necessary
+          table
+            tr
+              th Age
+              td 
+                span#age 25 years
+            tr
+              th Commercial Experience
+              td
+                span#exp 4.5 years
+            tr
+              th Languages
+              td 
+                nobr Russian (native),
+                nobr English (Pre-Intermediate)
+            tr
+              th Current location
+              td
+                a(target="_blank", rel="noreferrer", href="//www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986")
+                  span.icon.icon_location
+                  span Russia,&nbsp;
+                    nobr St. Petersburg
 
-                each contact in contacts
-                  tr.hidden-md
-                    th=contact.label
-                    td
-                      a(href=contact.url, aria-label=contact.label, rel="noreferrer")
-                        i.icon(aria-hidden="true", class=contact.iconClass)
-                        span.text=(contact.fullText||contact.text)
-              cite Heavy frameworks should be used only where necessary
+            each contact in contacts
+              tr.hidden-md
+                th=contact.label
+                td
+                  a(href=contact.url, aria-label=contact.label, rel="noreferrer")
+                    i.icon(aria-hidden="true", class=contact.iconClass)
+                    span.text=(contact.fullText||contact.text)
 
-        section.container
+
+        section
           h2 Key skills
-          .skills
-            ul
-              li HTML
-              li CSS
-              li LESS
-              li GIT
-            ul
-              li JavaScript
-              li TypeScript
-              li Angular
-              li Webpack
+          ul.skills
+            li HTML
+            li CSS
+            li LESS
+            li GIT
+            li JavaScript
+            li TypeScript
+            li Angular
+            li Webpack
 
-        section.container
+        section
           h2 Experience
-          .experience(aria-label="In 2010 I entered the university. Then in 2014, I passed through webmaster courses. In 2015, I got a job at PrimePix in the position of junior interface developer. In 2016, I graduated from the university, received a bachelor's degree in Mathematics, Information and Space Technologies and started working at Hashboard. In 2017, I moved to St. Petersburg and got a job at Luxoft. Later, in 2018, I started working at Kaspersky Lab. and got a master’s degree in Information Technologies and Automated Systems.")
-            .table(aria-hidden="true")
+          ul.experience
 
-              .tr.no-print
-                .td.empty
-                  h4.text-right Education
-                .td &nbsp;
-                .td
-                  h4 Work
-              .tr.no-print
-                .td &nbsp;
-                .td
-                  .year 2019
-                    i.icon.icon_merge(aria-hidden="true")
-                .td
-                  .right
+            li
+              h3 
+              .job.no-point
+                h4.title Work
+              .edu.no-point.no-line
+                h4.title Education
 
-              .tr
-                .td
-                  .left
-                    p.title Master`s degree
-                    p.description 
-                      a(href="//narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
-                        b Northern (Arctic) Federal University 
-                      <br>
-                      | Higher School of Information Technologies and Automated Systems <br>
-                      | 2016 &mdash; 2018
-                .td
-                  .year 2018
-                .td
-                  .right
-                    p.title
-                      a(href="//kaspersky.com", target="_blank", rel="noreferrer", aria-label="Kaspersky Lab.") Kaspersky Lab.
-                    p.description Developer
+            li
+              h3 2019
+                .merge
+              .job
+                h4
+              .edu
 
-              .tr
-                .td &nbsp;
-                .td
-                  .year 2017
-                    i.icon.icon_merge(aria-hidden="true")
-                .td
-                  .right
-                    p.title
-                      a(href="//luxoft.com", target="_blank", rel="noreferrer", aria-label="Luxoft") Luxoft
-                    p.description Senior Frontend Developer
+            li
+              h3 2018
+              .job
+                h4 
+                  a(href="//kaspersky.com", target="_blank", rel="noreferrer", aria-label="Kaspersky Lab.") Kaspersky Lab.
+                p Developer
 
-              .tr
-                .td
-                  .left
-                    p.title Bachelor`s degree
-                    p.description 
-                      a(href="//narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
-                        b Northern (Arctic) Federal University 
-                      <br>
-                      | Institute of Mathematics, Information and Space Technologies <br>
-                      | 2012 &mdash; 2016
-                .td
-                  .year 2016
-                .td
-                  .right
-                    p.title
-                      a(href="//hashboard.ru", target="_blank", rel="noreferrer", aria-label="Hashboard") Hashboard
-                    p.description Frontend Developer
+              .edu
+                h4 Master`s degree
+                p
+                  a(href="//narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
+                    b Northern (Arctic) Federal University 
+                p Higher School of Information Technologies and Automated Systems
+                p 2016 &mdash; 2018
 
-              .tr
-                .td &nbsp;
-                .td
-                  .year 2015
-                    i.icon.icon_merge(aria-hidden="true")
-                .td.empty
-                  .right
-                    p.title
-                      a(href="http://primepix.ru", target="_blank", rel="noreferrer", aria-label="PrimePix") PrimePix
-                    p.description Junior Frontend Developer
+            li 
+              h3 2017
+                .merge
+              .job
+                h4 
+                  a(href="//luxoft.com", target="_blank", rel="noreferrer", aria-label="Luxoft") Luxoft
+                p Senior Frontend Developer
+              .edu
 
-              .tr.no-print
-                .td
-                  .left
-                    p.description Webmaster Courses
-                .td
-                  .year 2014
-                .td.empty
+            li 
+              h3 2016
+              .job
+                h4  
+                  a(href="//hashboard.ru", target="_blank", rel="noreferrer", aria-label="Hashboard") Hashboard
+                p Frontend Developer
+              .edu 
+                h4 Bachelor`s degree
+                p  
+                  a(href="//narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
+                    b Northern (Arctic) Federal University 
+                p Institute of Mathematics, Information and Space Technologies <br>
+                p 2012 &mdash; 2016
 
-              .tr.no-print
-                .td &nbsp;
-                .td
-                  .year 2013
-                .td.empty
+            li
+              h3 2015
+                .merge
+              .job.no-line
+                h4
+                  a(href="http://primepix.ru", target="_blank", rel="noreferrer", aria-label="PrimePix") PrimePix
+                p Junior Frontend Developer
+              .edu
 
-              .tr.no-print
-                .td
-                  .left
-                    p.title Initial commit
-                    p.description In 2012 I entered the university
-                .td
-                  .year 2012
-                .td.empty
+            li
+              h3 2014
+              .job.no-line
+              .edu
+                h4 Webmaster Courses
 
-        section.container
+            li
+              h3 2013
+              .job.no-line
+              .edu
+
+            li
+              h3 2012
+              .job.no-line
+              .edu
+                h4 Initial commit
+                p In 2012 I entered the university
+
+          //- In 2012 I entered the university. Then in 2014, I passed through webmaster courses. In 2015, I got a job at PrimePix in the position of junior interface developer. In 2016, I graduated from the university, received a bachelor's degree in Mathematics, Information and Space Technologies and started working at Hashboard. In 2017, I moved to St. Petersburg and got a job at Luxoft. Later, in 2018, I started working at Kaspersky Lab. and got a master’s degree in Information Technologies and Automated Systems.
+
+        section
           h2 Portfolio
-          ul.projects
+
+          ul.portfolio
             each project in projects
-              li.project
+              li
                 h3
                   if project.url
                     a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)=project.title
                   else
-                    span(aria-label=project.title)=project.title
+                    span=project.title
                 .description
                   .image(aria-hidden="true")
                     if project.url
@@ -357,9 +336,9 @@ html#html(lang="en")
                         source(srcset="styles/images/projects/"+project.picture+".webp", type="image/webp")
                         source(srcset="styles/images/projects/"+project.picture+".jpg", type="image/jpeg")
                         img(src="styles/images/projects/"+project.picture+".jpg", alt=project.title)
-                  h5 Contribution:
+                  h4 Contribution:
                   p= project.contribution
-                  h5 Technologies:
+                  h4 Technologies:
                   ul
                     each tech in project.techList
                       li=tech

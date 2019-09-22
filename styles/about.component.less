@@ -1,0 +1,35 @@
+// out: false
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .ava-box {
+    margin: 1em auto;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    box-shadow: 0 0 2px 0 gray;
+  }
+  .icon {
+    margin-right: 0.25em;
+  }
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    .ava-box {
+      margin: 1em;
+    }
+    cite {
+      max-width: 50%;
+      text-align: left;
+    }
+  }
+  @media (min-width: @tv) {
+    .ava-box {
+      width: 480px;
+      height: 480px;
+    }
+  }
+}

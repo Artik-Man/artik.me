@@ -1,0 +1,62 @@
+// out: false
+@dark: #10272f;
+@light: #f2f2f2;
+
+@tablet: 700px;
+@laptop: 1300px;
+@tv: 2400px;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.font-primary {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: @light @dark;
+  body {
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px fade(@dark, 30%);
+      background-color: @dark;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: @light;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px fade(@dark, 30%);
+      background-color: @light;
+    }
+  }
+  &.light {
+    scrollbar-color: @dark @light;
+    body {
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px fade(@light, 30%);
+        background-color: @light;
+      }
+
+      &::-webkit-scrollbar {
+        background-color: @dark;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 6px fade(@light, 30%);
+        background-color: @dark;
+      }
+    }
+  }
+}

@@ -1,6 +1,4 @@
 User-Agent: Yandex
 User-Agent: *
 
-Disallow: /styles/
-
 Host: artik.me
