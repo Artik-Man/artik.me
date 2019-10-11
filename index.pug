@@ -67,21 +67,21 @@
     },
     {
       title: 'Hashboard cabinet',
-      url: '//new.hashboard.ru/cabinet/',
+      url: 'https://new.hashboard.ru/cabinet/',
       picture: 'hashboard-cabinet',
       contribution: 'Front end development of #hashboard service. This web application uses client-side localization, HTML5 Audio/Video, the combination of AngularJS + RequireJS + REST API.',
       techList: ['AngularJS', 'RequireJS', 'REST']
     },
     {
       title: 'Hashboard player',
-      url: '//new.hashboard.ru/play/?login=artik@hb.ru',
+      url: 'https://new.hashboard.ru/play/?login=artik@hb.ru',
       picture: 'hashboard-player',
       contribution: 'Front end development of #hashboard service. This web application uses HTML5 Video and Audio, handles internet-connection troubles. Web site has a fluid layout.',
       techList: ['jQuery', 'RequireJS', 'REST']
     },
     {
       title: 'Hashboard',
-      url: '//hashboard.ru',
+      url: 'https://hashboard.ru',
       picture: 'hashboard',
       contribution: 'Front end development of #hashboard service. Cross-browser code, responsive layout, Website localization.',
       techList: ['jQuery', 'Bootstrap', 'LESS']
@@ -201,7 +201,7 @@ html#html(lang="en")
             tr
               th Current location
               td
-                a(target="_blank", rel="noreferrer", href="//www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986")
+                a.no-print-href(target="_blank", rel="noreferrer", href="https://www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986")
                   span.icon.icon_location
                   span Russia,&nbsp;
                     nobr St. Petersburg
@@ -210,13 +210,13 @@ html#html(lang="en")
               tr.hidden-md
                 th=contact.label
                 td
-                  a(href=contact.url, aria-label=contact.label, rel="noreferrer")
+                  a.no-print-href(href=contact.url, aria-label=contact.label, rel="noreferrer")
                     i.icon(aria-hidden="true", class=contact.iconClass)
                     span.text=(contact.fullText||contact.text)
 
 
         section
-          h2 Key skills
+          h2.no-print Key skills
           ul.skills
             li HTML
             li CSS
@@ -231,14 +231,14 @@ html#html(lang="en")
           h2 Experience
           ul.experience
 
-            li
+            li.no-print 
               h3 
               .job.no-point
                 h4.title Career
               .edu.no-point.no-line
                 h4.title Education
 
-            li
+            li.no-print 
               h3 2019
                 .merge
               .job
@@ -249,13 +249,13 @@ html#html(lang="en")
               h3 2018
               .job
                 h4 
-                  a(href="//kaspersky.com", target="_blank", rel="noreferrer", aria-label="Kaspersky Lab.") Kaspersky Lab.
+                  a(href="https://kaspersky.com", target="_blank", rel="noreferrer", aria-label="Kaspersky Lab.") Kaspersky Lab.
                 p Developer
 
               .edu
                 h4 Master`s degree
                 p
-                  a(href="//narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
+                  a(href="https://narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
                     b Northern (Arctic) Federal University 
                 p Higher School of Information Technologies and Automated Systems
                 p 2016 &mdash; 2018
@@ -265,20 +265,20 @@ html#html(lang="en")
                 .merge
               .job
                 h4 
-                  a(href="//luxoft.com", target="_blank", rel="noreferrer", aria-label="Luxoft") Luxoft
+                  a(href="https://luxoft.com", target="_blank", rel="noreferrer", aria-label="Luxoft") Luxoft
                 p Senior Frontend Developer
-              .edu
+              .edu.no-print 
 
             li 
               h3 2016
               .job
                 h4  
-                  a(href="//hashboard.ru", target="_blank", rel="noreferrer", aria-label="Hashboard") Hashboard
+                  a(href="https://hashboard.ru", target="_blank", rel="noreferrer", aria-label="Hashboard") Hashboard
                 p Frontend Developer
               .edu 
                 h4 Bachelor`s degree
                 p  
-                  a(href="//narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
+                  a(href="https://narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
                     b Northern (Arctic) Federal University 
                 p Institute of Mathematics, Information and Space Technologies <br>
                 p 2012 &mdash; 2016
@@ -290,20 +290,20 @@ html#html(lang="en")
                 h4
                   a(href="http://primepix.ru", target="_blank", rel="noreferrer", aria-label="PrimePix") PrimePix
                 p Junior Frontend Developer
-              .edu
+              .edu.no-print 
 
-            li
+            li.no-print 
               h3 2014
               .job.no-line
               .edu
                 h4 Webmaster Courses
 
-            li
+            li.no-print 
               h3 2013
               .job.no-line
               .edu
 
-            li
+            li.no-print 
               h3 2012
               .job.no-line
               .edu
@@ -324,7 +324,7 @@ html#html(lang="en")
                   else
                     span=project.title
                 .description
-                  .image(aria-hidden="true")
+                  .image.no-print(aria-hidden="true")
                     if project.url
                       a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)
                         picture
