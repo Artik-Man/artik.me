@@ -12,35 +12,77 @@
   expBlock.innerText =
     Math.round((exp.getFullYear() - start.getFullYear() + exp.getMonth() / 12) / 0.5) * 0.5 + ' years';
 
-  if (window.matchMedia) {
-    // Theming
-    var setTheme = (light = false) => {
-      if (light) {
-        html.classList.add('light');
-      } else {
-        html.classList.remove('light');
-      }
-      themeSwitcher.checked = light;
-    };
+  // if (window.matchMedia) {
+  //   // Theming
+  //   var setTheme = (light = false) => {
+  //     if (light) {
+  //       html.classList.add('light');
+  //     } else {
+  //       html.classList.remove('light');
+  //     }
+  //     themeSwitcher.checked = light;
+  //   };
 
-    var html = document.getElementById('html');
-    var themeSwitcher = document.getElementById('theme-switcher');
-    themeSwitcher.classList.remove('hidden');
-    themeSwitcher.addEventListener('change', function(event) {
-      var checked = event.target.checked;
-      setTheme(checked);
-      if (checked) {
-        localStorage.setItem('theme', 'light');
-      } else {
-        localStorage.setItem('theme', 'dark');
-      }
-    });
+  //   var html = document.getElementById('html');
+  //   var themeSwitcher = document.getElementById('theme-switcher');
+  //   themeSwitcher.classList.remove('hidden');
+  //   themeSwitcher.addEventListener('change', function(event) {
+  //     var checked = event.target.checked;
+  //     setTheme(checked);
+  //     if (checked) {
+  //       localStorage.setItem('theme', 'light');
+  //     } else {
+  //       localStorage.setItem('theme', 'dark');
+  //     }
+  //   });
 
-    var theme = localStorage.getItem('theme');
-    if (theme) {
-      setTheme(theme === 'light');
+  //   var theme = localStorage.getItem('theme');
+  //   if (theme) {
+  //     setTheme(theme === 'light');
+  //   } else {
+  //     setTheme(window.matchMedia('(prefers-color-scheme: light)').matches);
+  //   }
+  // }
+})();
+
+(function() {
+  var html = document.getElementById('html'),
+    states = ['auto', 'dark', 'light'],
+    switcher = document.getElementById('theme-switcher'),
+    rotator = document.getElementById('theme-rotator');
+
+  var storage = {
+    get: function() {
+      return localStorage.getItem('theme') || states[0];
+    },
+    set: function(theme) {
+      localStorage.setItem('theme', theme);
+    },
+  };
+
+  var currentTheme = storage.get(),
+    angle = states.indexOf(currentTheme);
+
+  var setTheme = function(theme) {
+    rotator.style.transform = `rotate(-${angle++ * 120}deg)`;
+    if (theme === states[2]) {
+      html.classList.add('light');
     } else {
-      setTheme(window.matchMedia('(prefers-color-scheme: light)').matches);
+      html.classList.remove('light');
+    }
+  };
+
+  setTheme(currentTheme);
+
+  switcher.addEventListener('click', function() {
+    var theme = states[angle % 3];
+    setTheme(theme);
+    storage.set(theme);
+  });
+
+  if (window.matchMedia) {
+    if (currentTheme === states[0] && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      setTheme(states[2]);
     }
   }
 })();

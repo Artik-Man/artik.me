@@ -3,39 +3,34 @@
   cursor: pointer;
   user-select: none;
   position: relative;
-  // overflow: hidden; // WTF with iOS? 
   display: inline-block;
   height: 1em;
   width: 1em;
+  font-size: inherit;
+  border: none;
   border-radius: 50%;
+  background-color: transparent;
   opacity: 0.8;
   transition: opacity 150ms linear;
-  background: @dark;
-
-  &:hover {
+  overflow: hidden;
+  outline: none;
+  &:hover,
+  &:focus {
     opacity: 1;
   }
-
-  input[type='checkbox'] {
-    .visually-hidden;
-
-    &:checked + span {
-      right: 25%;
-      top: -10%;
-      background: @light;
-    }
-  }
-
-  span {
-    display: block;
+  .rotator {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
-    right: 0;
-    border-radius: 50%;
-    transition: all 150ms linear 50ms;
-    background: radial-gradient(circle, white 55%, @dark 60%, white 65%);
+    left: 50%;
+    width: 230%;
+    height: 230%;
+    margin-left: -115%;
+    transform: rotate(0deg);
+    transition: all 250ms ease-in-out;
+    display: block;
+    background-size: 100%;
+    background-position: top;
+    background-image: data-uri('./images/svg/theme.svg');
   }
 }
 

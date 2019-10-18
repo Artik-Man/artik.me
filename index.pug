@@ -161,9 +161,10 @@ html#html(lang="en")
       header
         //- .left-block
         a.logo(href="", aria-label=meta.title) AM
-        label.switch-theme(title="Change theme")
-          input#theme-switcher(type="checkbox" role="button" aira-label="Switch Theme" title="Switch Theme")
-          span 
+        button.switch-theme#theme-switcher(title="Change theme")
+          span.rotator#theme-rotator
+          //- input#theme-switcher(type="checkbox" role="button" aira-label="Switch Theme" title="Switch Theme")
+          //- span 
 
         each contact in contacts
           a(href=contact.url, aria-label=contact.label, rel="noreferrer")
