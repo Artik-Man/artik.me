@@ -14,9 +14,11 @@
   transition: opacity 150ms linear;
   overflow: hidden;
   outline: none;
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 1;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px fade(@light, 70%);
   }
   .rotator {
     position: absolute;
@@ -35,6 +37,12 @@
 }
 
 .light {
+  * {
+    outline-color: @dark;
+  }
+  .switch-theme:focus {
+    box-shadow: 0 0 0 2px fade(@dark, 70%);
+  }
   body {
     background: @light;
     color: @dark;
