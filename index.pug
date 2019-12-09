@@ -165,12 +165,9 @@ html#html(lang="en")
   body
     .page
       header
-        //- .left-block
         a.logo(href="", aria-label=meta.title) AM
         button.switch-theme#theme-switcher(title="Change theme")
           span.rotator#theme-rotator
-          //- input#theme-switcher(type="checkbox" role="button" aira-label="Switch Theme" title="Switch Theme")
-          //- span 
 
         each contact in contacts
           a(href=contact.url, aria-label=contact.label, rel="noreferrer")
@@ -229,11 +226,13 @@ html#html(lang="en")
             li HTML
             li CSS
             li LESS
+            li Pug
             li GIT
             li JavaScript
             li TypeScript
             li Angular
             li Webpack
+            li NodeJS
 
         section
           h2 Experience

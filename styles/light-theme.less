@@ -3,9 +3,9 @@
   cursor: pointer;
   user-select: none;
   position: relative;
-  display: inline-block;
   height: 1em;
   width: 1em;
+  padding: 0;
   font-size: inherit;
   border: none;
   border-radius: 50%;
@@ -14,27 +14,37 @@
   transition: opacity 150ms linear;
   overflow: hidden;
   outline: none;
-  &:hover,
-  &:focus {
+  display: block;
+  &:hover {
     opacity: 1;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px fade(@light, 70%);
   }
   .rotator {
     position: absolute;
     top: 0;
     left: 50%;
-    width: 230%;
-    height: 230%;
-    margin-left: -115%;
+    width: 220%;
+    height: 220%;
+    margin-left: -111%;
     transform: rotate(0deg);
     transition: all 250ms ease-in-out;
     display: block;
+    border-radius: 50%;
     background-size: 100%;
-    background-position: top;
+    background-position: 0 50%;
     background-image: data-uri('./images/svg/theme.svg');
   }
 }
 
 .light {
+  * {
+    outline-color: @dark;
+  }
+  .switch-theme:focus {
+    box-shadow: 0 0 0 2px fade(@dark, 70%);
+  }
   body {
     background: @light;
     color: @dark;
