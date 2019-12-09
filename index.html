@@ -4,14 +4,14 @@
     <meta charset="UTF-8"/>
     <title>Artik Man — frontend-developer</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="keywords" content="CV, Mangasaryan, Artik, Artashes, frontend, front-end, Curriculum vitae, резюме, разработчик, фронтенд, фронтендер, Артик, Арташес, Мангасарян"/>
     <meta name="title" content="Artik Man — frontend-developer"/>
     <meta name="author" content="Artik Man"/>
     <meta name="description" content="Frontend developer with over 4 years of experience. Current stack: TypeScript + Angular"/>
-    <meta itemprop="image" content="styles/images/icons/card.png"/>
     <meta property="og:image" content="styles/images/icons/card.png"/>
+    <meta property="og:image:width" content="1280"/>
+    <meta property="og:image:height" content="640"/>
     <meta property="og:site_name" content="Artik Man — frontend-developer"/>
     <meta property="og:type" content="object"/>
     <meta property="og:title" content="Artik Man"/>
@@ -64,6 +64,9 @@
     <link sizes="384x384" href="styles/images/icons/icon-384x384.png" rel="apple-touch-icon"/>
     <link sizes="512x512" href="styles/images/icons/icon-512x512.png" rel="icon"/>
     <link sizes="512x512" href="styles/images/icons/icon-512x512.png" rel="apple-touch-icon"/>
+    <link rel="preload" as="font" type="font/woff2" crossorigin="crossorigin" href="https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"/>
+    <link rel="preload" as="font" type="font/woff2" crossorigin="crossorigin" href="https://fonts.gstatic.com/s/yanonekaffeesatz/v13/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIftodtWZd2GK.woff2"/>
+    <link rel="preload" as="font" type="font/woff2" crossorigin="crossorigin" href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Yanone+Kaffeesatz:200,300&amp;display=swap&amp;subset=cyrillic"/>
     <link rel="stylesheet" href="./styles/styles.css"/>
   </head>
@@ -76,7 +79,7 @@
         <h1><span>ARTIK</span>&nbsp;<span>MAN</span></h1>
         <p>Frontend&mdash;developer</p>
         <div class="about">
-          <div class="ava-box" aria-label="Artik Man — frontend-developer">
+          <div class="ava-box">
             <picture class="ava">
               <source srcset="styles/images/me.webp" type="image/webp"/>
               <source srcset="styles/images/me.png" type="image/png"/><img src="styles/images/me.png" alt="Artik Man — frontend-developer"/>
@@ -94,15 +97,11 @@
             </tr>
             <tr>
               <th>Languages</th>
-              <td> 
-                <nobr>Russian (native),</nobr>
-                <nobr>English (Pre-Intermediate)</nobr>
-              </td>
+              <td> <span class="nowrap">Russian (native),</span><span> </span><span class="nowrap">English (Pre-Intermediate)</span></td>
             </tr>
             <tr>
               <th>Current location</th>
-              <td><a class="no-print-href" target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986"><span class="icon icon_location"></span><span>Russia,&nbsp;
-                    <nobr>St. Petersburg</nobr></span></a></td>
+              <td><a class="no-print-href" target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986"><span class="icon icon_location"></span><span>Russia,&nbsp;<span class="nowrap">St. Petersburg</span></span></a></td>
             </tr>
             <tr class="hidden-md">
               <th>Phone</th>
@@ -135,7 +134,7 @@
           <h2>Experience</h2>
           <ul class="experience">
             <li class="no-print"> 
-              <h3> </h3>
+              <h3>&nbsp;</h3>
               <div class="job no-point">
                 <h4 class="title">Career</h4>
               </div>
@@ -144,11 +143,9 @@
               </div>
             </li>
             <li class="no-print"> 
-              <h3>2019
-                <div class="merge"></div>
-              </h3>
+              <h3>2019<span class="merge"></span></h3>
               <div class="job">
-                <h4></h4>
+                <h4>&nbsp;</h4>
               </div>
               <div class="edu"></div>
             </li>
@@ -166,9 +163,7 @@
               </div>
             </li>
             <li> 
-              <h3>2017
-                <div class="merge"></div>
-              </h3>
+              <h3>2017<span class="merge"></span></h3>
               <div class="job">
                 <h4> <a href="https://luxoft.com" target="_blank" rel="noreferrer" aria-label="Luxoft">Luxoft</a></h4>
                 <p>Senior Frontend Developer</p>
@@ -189,9 +184,7 @@
               </div>
             </li>
             <li>
-              <h3>2015
-                <div class="merge"></div>
-              </h3>
+              <h3>2015<span class="merge"></span></h3>
               <div class="job no-line">
                 <h4><a href="http://primepix.ru" target="_blank" rel="noreferrer" aria-label="PrimePix">PrimePix</a></h4>
                 <p>Junior Frontend Developer</p>
@@ -448,6 +441,6 @@
         </section>
       </main>
     </div>
+    <script src="app.js"></script>
   </body>
-  <script src="app.js"></script>
 </html>

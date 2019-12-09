@@ -113,15 +113,16 @@ html#html(lang="en")
     meta(charset="UTF-8")
     title=meta.title
     link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
-    meta(http-equiv="content-type", content="text/html; charset=utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(name="keywords", content="CV, Mangasaryan, Artik, Artashes, frontend, front-end, Curriculum vitae, резюме, разработчик, фронтенд, фронтендер, Артик, Арташес, Мангасарян")
     meta(name="title", content=meta.title)
     meta(name="author", content=meta.full_name)
     meta(name="description", content=meta.description)
-    meta(itemprop="image", content=meta.card)
+    //- meta(itemprop="image", content=meta.card)
 
     meta(property="og:image", content=meta.card)
+    meta(property="og:image:width", content="1280")
+    meta(property="og:image:height", content="640")
     meta(property="og:site_name", content=meta.title)
     meta(property="og:type", content="object")
     meta(property="og:title", content=meta.full_name)
@@ -154,7 +155,12 @@ html#html(lang="en")
       link(sizes=(size+'x'+size), href=("styles/images/icons/icon-"+(size+'x'+size)+".png"), rel="icon")
       link(sizes=(size+'x'+size), href=("styles/images/icons/icon-"+(size+'x'+size)+".png"), rel="apple-touch-icon")
 
+    link(rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2")
+    link(rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/yanonekaffeesatz/v13/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIftodtWZd2GK.woff2")
+    link(rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2")
+
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Yanone+Kaffeesatz:200,300&display=swap&subset=cyrillic")
+
     link(rel="stylesheet", href="./styles/styles.css")
   body
     .page
@@ -179,7 +185,7 @@ html#html(lang="en")
         p Frontend&mdash;developer
 
         .about
-          .ava-box(aria-label=meta.title)
+          .ava-box
             picture.ava
               source(srcset="styles/images/me.webp", type="image/webp")
               source(srcset="styles/images/me.png", type="image/png")
@@ -197,15 +203,16 @@ html#html(lang="en")
             tr
               th Languages
               td 
-                nobr Russian (native),
-                nobr English (Pre-Intermediate)
+                span.nowrap Russian (native),
+                span 
+                span.nowrap English (Pre-Intermediate)
             tr
               th Current location
               td
                 a.no-print-href(target="_blank", rel="noreferrer", href="https://www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986")
                   span.icon.icon_location
                   span Russia,&nbsp;
-                    nobr St. Petersburg
+                    span.nowrap St. Petersburg
 
             each contact in contacts
               tr.hidden-md
@@ -233,7 +240,7 @@ html#html(lang="en")
           ul.experience
 
             li.no-print 
-              h3 
+              h3 &nbsp;
               .job.no-point
                 h4.title Career
               .edu.no-point.no-line
@@ -241,9 +248,9 @@ html#html(lang="en")
 
             li.no-print 
               h3 2019
-                .merge
+                span.merge
               .job
-                h4
+                h4 &nbsp;
               .edu
 
             li
@@ -263,7 +270,7 @@ html#html(lang="en")
 
             li 
               h3 2017
-                .merge
+                span.merge
               .job
                 h4 
                   a(href="https://luxoft.com", target="_blank", rel="noreferrer", aria-label="Luxoft") Luxoft
@@ -286,7 +293,7 @@ html#html(lang="en")
 
             li
               h3 2015
-                .merge
+                span.merge
               .job.no-line
                 h4
                   a(href="http://primepix.ru", target="_blank", rel="noreferrer", aria-label="PrimePix") PrimePix
@@ -344,4 +351,4 @@ html#html(lang="en")
                     each tech in project.techList
                       li=tech
 
-  script(src="app.js")
+    script(src="app.js")
