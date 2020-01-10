@@ -46,8 +46,8 @@ gulp.task('pug', () => {
           const fullPath = path.resolve(src);
           let content =   fs.readFileSync(fullPath, 'utf-8');
           return content
-            .replace('<svg', `<symbol id="${src.split('/').slice(-1)[0]}"`)
-            .replace('svg>','symbol>');
+            .replace(/<svg [a-z\s":\/=\d.]+>/g, `<symbol id="${src.split('/').slice(-1)[0]}">`)
+            .replace('</svg>','</symbol>');
         }
       }
      }))
