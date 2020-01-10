@@ -23,9 +23,6 @@
       background: transparent;
       color: inherit;
     }
-    .icon {
-      filter: invert(1);
-    }
     header {
       display: none;
     }
@@ -52,15 +49,20 @@
     }
     .skills {
       list-style: none;
-      padding: 0;
+      padding: 0 .25em;
       margin: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
       li {
-        display: inline-block;
-        margin: 2em 1em 1em .5em;
+        padding: .2em;
       }
     }
     section {
       page-break-inside: avoid;
+    }
+    .merge {
+      display: none;
     }
     .experience {
       padding: 0;

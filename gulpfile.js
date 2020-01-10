@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const less = require('gulp-less');
@@ -34,11 +36,19 @@ gulp.task('pug', () => {
   console.log('task: pug');
   return gulp
     .src('./*.pug')
-    .pipe(pug({ pretty: true,
+    .pipe(pug({
+      pretty: true,
       filters: {
         svg: code => {
           return code;
         },
+        inlineSVG: src => {
+          const fullPath = path.resolve(src);
+          let content =   fs.readFileSync(fullPath, 'utf-8');
+          return content
+            .replace('<svg', `<symbol id="${src.split('/').slice(-1)[0]}"`)
+            .replace('svg>','symbol>');
+        }
       }
      }))
     .pipe(gulp.dest(file => './'));

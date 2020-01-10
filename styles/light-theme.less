@@ -56,9 +56,6 @@
   a::after {
     background: @dark;
   }
-  .icon {
-    filter: invert(1);
-  }
   .about {
     .ava-box {
       filter: grayscale(1) brightness(1.2);
@@ -102,7 +99,7 @@
       }
     }
     .merge {
-      filter: invert(1);
+      color: fade(@dark, 100%);
     }
   }
   .portfolio {
