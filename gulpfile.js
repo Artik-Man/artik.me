@@ -34,7 +34,13 @@ gulp.task('pug', () => {
   console.log('task: pug');
   return gulp
     .src('./*.pug')
-    .pipe(pug({ pretty: true }))
+    .pipe(pug({ pretty: true,
+      filters: {
+        svg: code => {
+          return code;
+        },
+      }
+     }))
     .pipe(gulp.dest(file => './'));
 });
 

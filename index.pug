@@ -165,7 +165,9 @@ html#html(lang="en")
 
         each contact in contacts
           a(href=contact.url, aria-label=contact.label, rel="noreferrer")
-            span.icon(aria-hidden="true", class=contact.iconClass)
+            //- span.icon(aria-hidden="true", class=contact.iconClass)
+            svg.icon
+              use(xlink:href="#"+contact.iconClass)
             span.text=contact.text
       main
 
@@ -232,7 +234,7 @@ html#html(lang="en")
           ul.experience
 
             li.no-print 
-              h3 
+              h3 2020
               .job.no-point
                 h4.title Career
               .edu.no-point.no-line
@@ -242,7 +244,6 @@ html#html(lang="en")
               h3 2019
                 .merge
               .job
-                h4
               .edu
 
             li
@@ -343,4 +344,54 @@ html#html(lang="en")
                     each tech in project.techList
                       li=tech
 
-  script(src="app.js")
+    svg(xmlns="http://www.w3.org/2000/svg", style="isolation:isolate")
+      symbol(id="icon_email")
+        :svg
+          <defs>
+            <clipPath id="a">
+              <path d="M0 0h24v24H0z"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#a)">
+            <mask id="b">
+              <path d="M20 5.5H4c-.664.033-.987.389-1 1.038l9 7.166 9-7.076c-.039-.71-.362-1.076-1-1.128z" fill="#fff"/>
+            </mask>
+              <path d="M20 5.5H4c-.664.033-.987.389-1 1.038l9 7.166 9-7.076c-.039-.71-.362-1.076-1-1.128z" mask="url(#b)" vector-effect="non-scaling-stroke" stroke-width="2" stroke="#fff" fill="#fff" stroke-linejoin="round" stroke-linecap="round"/>
+            <mask id="c">
+              <path d="M3 7.452V18c.011.501.071.525 1 .5h16c.946-.023.958-.011 1-.5V7.543l-8.775 6.906a.37.37 0 0 1-.225.079.365.365 0 0 1-.225-.079L3 7.452z" fill="#fff"/>
+            </mask>
+            <path d="M3 7.452V18c.011.501.071.525 1 .5h16c.946-.023.958-.011 1-.5V7.543l-8.775 6.906a.37.37 0 0 1-.225.079.365.365 0 0 1-.225-.079L3 7.452z" mask="url(#c)" vector-effect="non-scaling-stroke" stroke-width="2" stroke="#fff" fill="#fff" stroke-linejoin="round" stroke-linecap="round"/>
+          </g>
+      symbol(id="icon_phone")
+        :svg
+          <defs>
+              <clipPath id="a">
+                  <path d="M0 0h24v24H0z"/>
+              </clipPath>
+          </defs>
+          <g clip-path="url(#a)">
+              <path fill="#fff" d="M20.023 15.488c-.63-.015-1.423-.052-1.924-.14a14.67 14.67 0 0 1-1.653-.425 1.017 1.017 0 0 0-1.019.253L13.21 17.38a15.376 15.376 0 0 1-3.798-2.792A15.376 15.376 0 0 1 6.62 10.79l2.204-2.218c.266-.267.365-.659.253-1.019-.142-.458-.329-1.11-.424-1.652-.089-.501-.125-1.294-.141-1.924A1 1 0 0 0 7.51 3H4c-.438 0-1 .328-1 1 0 4.539 1.84 8.874 4.966 12.034C11.126 19.16 15.461 21 20 21c.672 0 1-.562 1-1v-3.51a1 1 0 0 0-.977-1.002z"/>
+          </g>
+      symbol(id="icon_github")
+        :svg
+          <defs>
+              <clipPath id="a">
+                  <path d="M0 0h24v24H0z"/>
+              </clipPath>
+          </defs>
+          <g clip-path="url(#a)">
+              <path d="M12 2a9.51 9.51 0 0 0-9.513 9.513 9.507 9.507 0 0 0 6.505 9.025c.475.083.654-.202.654-.452 0-.226-.012-.975-.012-1.772-2.39.44-3.009-.582-3.199-1.118-.107-.273-.571-1.117-.975-1.343-.333-.179-.809-.619-.012-.63.749-.012 1.284.689 1.463.975.856 1.438 2.223 1.034 2.77.784.084-.618.333-1.034.607-1.272-2.117-.238-4.329-1.058-4.329-4.697a3.7 3.7 0 0 1 .976-2.556c-.096-.238-.429-1.213.095-2.521 0 0 .796-.25 2.616.975a8.825 8.825 0 0 1 2.378-.321 8.83 8.83 0 0 1 2.378.321c1.819-1.237 2.616-.975 2.616-.975.523 1.308.19 2.283.095 2.521.606.666.975 1.51.975 2.556 0 3.651-2.223 4.459-4.34 4.697.345.297.642.868.642 1.76 0 1.272-.012 2.295-.012 2.616 0 .25.179.547.654.452a9.528 9.528 0 0 0 6.481-9.025A9.51 9.51 0 0 0 12 2z" fill-rule="evenodd" fill="#FFF"/>
+          </g>
+      symbol(id="icon_location")
+        :svg
+          <defs>
+              <clipPath id="a">
+                  <path d="M0 0h16.29v24H0z"/>
+              </clipPath>
+          </defs>
+          <g clip-path="url(#a)">
+              <path fill="none" d="M0 0h16.29v24H0z"/>
+              <path d="M8.145 0C3.654 0 0 3.654 0 8.145c0 1.805 1.063 4.55 3.344 8.638a92.13 92.13 0 0 0 3.172 5.245l1.12 1.698a.61.61 0 0 0 1.019 0l1.12-1.698c.064-.098 1.603-2.434 3.171-5.245 2.282-4.088 3.344-6.833 3.344-8.638C16.29 3.654 12.636 0 8.145 0zm3.736 16.188a90.427 90.427 0 0 1-3.125 5.168l-.611.926-.61-.926a91.14 91.14 0 0 1-3.125-5.168C2.294 12.396 1.221 9.69 1.221 8.145a6.932 6.932 0 0 1 6.924-6.924c3.818 0 6.925 3.106 6.925 6.924 0 1.545-1.073 4.251-3.189 8.043zM8.145 3.578a4.521 4.521 0 0 0-4.516 4.516 4.521 4.521 0 0 0 4.516 4.516 4.521 4.521 0 0 0 4.516-4.516 4.521 4.521 0 0 0-4.516-4.516zm0 7.812A3.3 3.3 0 0 1 4.85 8.094a3.299 3.299 0 0 1 3.295-3.295 3.3 3.3 0 0 1 3.296 3.295 3.3 3.3 0 0 1-3.296 3.296z" fill-rule="evenodd" fill="#FFF"/>
+          </g>
+
+    script(src="app.js")
