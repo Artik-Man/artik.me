@@ -62,7 +62,6 @@
 })();
 
 (function() {
-  return;
   // ServiceWorker
   if (location.hostname !== 'localhost') {
     if ('serviceWorker' in navigator) {
