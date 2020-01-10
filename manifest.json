@@ -6,7 +6,7 @@
   "background_color": "#10272f",
   "display": "standalone",
   "scope": "./",
-  "start_url": "index.html",
+  "start_url": "https://artik.me/",
   "lang": "English",
   "orientation": "portrait-primary",
   "icons": [
