@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 -
-  var meta = {
+  const meta = {
     title: 'Artik Man — frontend-developer',
     full_name: 'Artik Man',
     name: 'Artik',
@@ -9,8 +9,8 @@
     card: 'styles/images/icons/card.png',
     color: '#10272f'
   };
-  var iconsSizes = [16, 48, 72, 76, 96, 120, 128, 144, 152, 180, 192, 256, 384, 512];
-  var contacts = [
+  const iconsSizes = [16, 48, 72, 76, 96, 120, 128, 144, 152, 180, 192, 256, 384, 512];
+  const contacts = [
     {
       url: 'tel:+79062824201',
       label: 'Phone',
@@ -31,7 +31,7 @@
       fullText: 'github.com/Artik-Man'
     },
   ];
-  var projects = [
+  const projects = [
     {
       title: 'HTML Practice',
       url: 'https://artik-man.github.io/HTML-Practice/',
@@ -127,7 +127,7 @@ html#html(lang="en")
     meta(property="og:type", content="object")
     meta(property="og:title", content=meta.full_name)
     meta(property="og:url", content=meta.url)
-    meta(property="og:description" ,content=meta.description)
+    meta(property="og:description", content=meta.description)
 
     link(rel="manifest", href="manifest.json")
 
@@ -152,8 +152,8 @@ html#html(lang="en")
     link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphoneplus_splash.png", media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)")
 
     each size in iconsSizes
-      link(sizes=(size+'x'+size), href=("styles/images/icons/icon-"+(size+'x'+size)+".png"), rel="icon")
-      link(sizes=(size+'x'+size), href=("styles/images/icons/icon-"+(size+'x'+size)+".png"), rel="apple-touch-icon")
+      link(sizes=(size + 'x' + size), href=("styles/images/icons/icon-" + (size + 'x' + size) + ".png"), rel="icon")
+      link(sizes=(size + 'x' + size), href=("styles/images/icons/icon-" + (size + 'x' + size) + ".png"), rel="apple-touch-icon")
 
     link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2")
     link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://fonts.gstatic.com/s/yanonekaffeesatz/v13/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIftodtWZd2GK.woff2")
@@ -171,8 +171,8 @@ html#html(lang="en")
 
         each contact in contacts
           a(href=contact.url, aria-label=contact.label, rel="noreferrer")
-            svg.icon(aria-hidden="true")
-              use(xlink:href="#"+contact.iconClass)
+            svg.icon(aria-hidden="true", xmlns="http://www.w3.org/2000/svg")
+              use(href="./styles/sprite.svg#" + contact.iconClass)
             span.text=contact.text
       main
 
@@ -192,7 +192,7 @@ html#html(lang="en")
           table
             tr
               th Age
-              td 
+              td
                 span#age 25 years
             tr
               th Commercial Experience
@@ -200,16 +200,16 @@ html#html(lang="en")
                 span#exp 4.5 years
             tr
               th Languages
-              td 
+              td
                 span.nowrap Russian (native),
-                span 
+                span
                 span.nowrap English (Pre-Intermediate)
             tr
               th Current location
               td
                 a.no-print-href(target="_blank", rel="noreferrer", href="https://www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986")
-                  svg.icon(viewBox="0 0 24 24", aria-hidden="true")
-                    use(xlink:href="#location.svg")
+                  svg.icon(viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg", aria-hidden="true")
+                    use(href="./styles/sprite.svg#location.svg")
                   span Russia,&nbsp;
                     span.nowrap St. Petersburg
 
@@ -218,9 +218,9 @@ html#html(lang="en")
                 th=contact.label
                 td
                   a.no-print-href(href=contact.url, aria-label=contact.label, rel="noreferrer")
-                    svg.icon(viewBox="0 0 24 24", aria-hidden="true")
-                      use(xlink:href="#"+contact.iconClass)
-                    span.text=(contact.fullText||contact.text)
+                    svg.icon(viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg", aria-hidden="true")
+                      use(href="./styles/sprite.svg#" + contact.iconClass)
+                    span.text=(contact.fullText || contact.text)
 
         section
           h2.no-print Key skills
@@ -240,7 +240,7 @@ html#html(lang="en")
           h2 Experience
           ul.experience
 
-            li.no-print 
+            li.no-print
               h3 2020
 
               .job.no-point
@@ -248,25 +248,25 @@ html#html(lang="en")
               .edu.no-point.no-line
                 h4.title Education
 
-            li.no-print 
+            li.no-print
               h3 2019
                 span.merge
-                  svg(viewBox="0 0 70 70", preserveAspectRatio="none", aria-hidden="true")
-                    use(xlink:href="#merge.svg")
+                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true")
+                    use(href="./styles/sprite.svg#merge.svg")
               .job
               .edu
 
             li
               h3 2018
               .job
-                h4 
+                h4
                   a(href="https://kaspersky.com", target="_blank", rel="noreferrer", aria-label="Kaspersky Lab.") Kaspersky Lab.
                 p Developer
 
               .edu
                 h4 Master`s degree
                 p
-                  a(href="https://narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
+                  a(href="https://narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University")
                     b Northern (Arctic) Federal University 
                 p Higher School of Information Technologies and Automated Systems
                 p 2016 &mdash; 2018
@@ -274,24 +274,24 @@ html#html(lang="en")
             li
               h3 2017
                 span.merge
-                  svg(viewBox="0 0 70 70", preserveAspectRatio="none", aria-hidden="true")
-                    use(xlink:href="#merge.svg")
+                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true")
+                    use(href="./styles/sprite.svg#merge.svg")
               .job
-                h4 
+                h4
                   a(href="https://luxoft.com", target="_blank", rel="noreferrer", aria-label="Luxoft") Luxoft
                 p Senior Frontend Developer
               .edu
 
-            li 
+            li
               h3 2016
               .job
-                h4  
+                h4
                   a(href="https://hashboard.ru", target="_blank", rel="noreferrer", aria-label="Hashboard") Hashboard
                 p Frontend Developer
-              .edu 
+              .edu
                 h4 Bachelor`s degree
-                p  
-                  a(href="https://narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University") 
+                p
+                  a(href="https://narfu.ru", target="_blank", rel="noreferrer", aria-label="Northern (Arctic) Federal University")
                     b Northern (Arctic) Federal University 
                 p Institute of Mathematics, Information and Space Technologies <br>
                 p 2012 &mdash; 2016
@@ -299,8 +299,8 @@ html#html(lang="en")
             li
               h3 2015
                 span.merge
-                  svg(viewBox="0 0 70 70", preserveAspectRatio="none", aria-hidden="true")
-                    use(xlink:href="#merge.svg")
+                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true")
+                    use(href="./styles/sprite.svg#merge.svg")
               .job.no-line
                 h4
                   a(href="http://primepix.ru", target="_blank", rel="noreferrer", aria-label="PrimePix") PrimePix
@@ -318,7 +318,7 @@ html#html(lang="en")
               .job.no-line
               .edu
 
-            li.no-print 
+            li.no-print
               h3 2012
               .job.no-line
               .edu
@@ -343,14 +343,14 @@ html#html(lang="en")
                     if project.url
                       a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)
                         picture
-                          source(srcset="styles/images/projects/"+project.picture+".webp", type="image/webp")
-                          source(srcset="styles/images/projects/"+project.picture+".jpg", type="image/jpeg")
-                          img(src="styles/images/projects/"+project.picture+".jpg", alt=project.title)
+                          source(srcset="styles/images/projects/" + project.picture + ".webp", type="image/webp")
+                          source(srcset="styles/images/projects/" + project.picture + ".jpg", type="image/jpeg")
+                          img(src="styles/images/projects/" + project.picture + ".jpg", alt=project.title)
                     else
                       picture
-                        source(srcset="styles/images/projects/"+project.picture+".webp", type="image/webp")
-                        source(srcset="styles/images/projects/"+project.picture+".jpg", type="image/jpeg")
-                        img(src="styles/images/projects/"+project.picture+".jpg", alt=project.title)
+                        source(srcset="styles/images/projects/" + project.picture + ".webp", type="image/webp")
+                        source(srcset="styles/images/projects/" + project.picture + ".jpg", type="image/jpeg")
+                        img(src="styles/images/projects/" + project.picture + ".jpg", alt=project.title)
                   h4 Contribution:
                   p= project.contribution
                   h4 Technologies:
@@ -358,15 +358,4 @@ html#html(lang="en")
                     each tech in project.techList
                       li=tech
 
-    svg(xmlns="http://www.w3.org/2000/svg", style="isolation:isolate; position: absolute; width: 0; height: 0;", viewBox="0 0 24 24", aria-hidden="true")
-      :inlineSVG
-        ./styles/images/svg/email.svg
-      :inlineSVG
-        ./styles/images/svg/github.svg
-      :inlineSVG
-        ./styles/images/svg/phone.svg
-      :inlineSVG
-        ./styles/images/svg/location.svg
-      :inlineSVG
-        ./styles/images/svg/merge.svg
     script(src="app.js")
