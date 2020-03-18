@@ -1,6 +1,7 @@
 interface Commit {
   url: string;
   sha: string;
+
   [field: string]: any;
 }
 
@@ -8,6 +9,7 @@ function throttle(func: () => void, ms: number) {
   let isThrottled = false,
     savedArgs: {} | null,
     savedThis: null;
+
   function wrapper() {
     if (isThrottled) {
       savedArgs = arguments;
@@ -19,7 +21,7 @@ function throttle(func: () => void, ms: number) {
     // @ts-ignore
     func.apply(this, arguments);
     isThrottled = true;
-    setTimeout(function() {
+    setTimeout(function () {
       isThrottled = false;
       if (savedArgs) {
         // @ts-ignore
@@ -28,6 +30,7 @@ function throttle(func: () => void, ms: number) {
       }
     }, ms);
   }
+
   return wrapper;
 }
 
@@ -35,7 +38,7 @@ class SiteServiceWorker {
   public cacheName: string;
   public commitsUrl: string;
   private urls: Set<string>;
-  private lazyCheckUpdates: () => void;
+  private readonly lazyCheckUpdates: () => void;
 
   constructor(cacheName: string, commitsUrl: string) {
     this.cacheName = cacheName;
@@ -44,7 +47,7 @@ class SiteServiceWorker {
     this.lazyCheckUpdates = throttle(this.checkUpdates, 60 * 60 * 1000);
   }
 
-  async get(request: Request | string, noCache = false): Promise<Response | undefined> {
+  async get(request: Request | string, noCache = false): Promise<Response> {
     try {
       const response = await fetch(request, {
         cache: noCache ? 'no-cache' : 'default',
@@ -52,13 +55,13 @@ class SiteServiceWorker {
 
       if (!noCache) {
         const cache = await caches.open(this.cacheName);
-        cache.put(request, response.clone());
+        await cache.put(request, response.clone());
       }
 
       return response;
     } catch (e) {
       console.warn('[SW]: No internet connection');
-      return;
+      return this.get(request, noCache);
     }
   }
 
@@ -71,7 +74,7 @@ class SiteServiceWorker {
       });
     } else {
       const cache = await caches.open(this.cacheName);
-      cache.put(this.commitsUrl, clone);
+      await cache.put(this.commitsUrl, clone);
 
       [...this.urls.values()].forEach((url: string) => {
         this.get(url);
@@ -135,7 +138,7 @@ class SiteServiceWorker {
 
     // @ts-ignore
     self.clients
-      .matchAll({ includeUncontrolled: true, type: 'window' })
+      .matchAll({includeUncontrolled: true, type: 'window'})
       .then((clients: { forEach: (arg0: (client: any) => void) => void }) => {
         clients.forEach((client: { postMessage: (arg0: any) => void }) => {
           client.postMessage(JSON.stringify(message));
@@ -143,8 +146,10 @@ class SiteServiceWorker {
       });
   }
 
-  async onFetch(request: Request) {
-    const canBePreCached = request.url.indexOf(location.origin) === 0;
+  async onFetch(request: Request): Promise<Response> {
+    const url = new URL(request.url);
+    const canBePreCached = ['https://fonts.gstatic.com', 'https://fonts.googleapis.com', location.origin].includes(url.origin);
+
     if (canBePreCached) {
       this.urls.add(request.url);
 
@@ -167,13 +172,13 @@ self.addEventListener('install', () => {
   // @ts-ignore
   self.skipWaiting();
   setTimeout(() => {
-    serviceWorker.checkUpdates(true);
+    serviceWorker.checkUpdates(true).then();
   }, 2000);
 });
 
+// @ts-ignore
 self.addEventListener(
   'fetch',
-  // @ts-ignore
   (event: FetchEvent) => {
     event.respondWith(serviceWorker.onFetch(event.request));
   },

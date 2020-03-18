@@ -1,6 +1,6 @@
-(function() {
+(function () {
   // Age and experience
-  var ageBlock = document.getElementById('age'),
+  const ageBlock = document.getElementById('age'),
     expBlock = document.getElementById('exp'),
     born = new Date('1994-08-01'),
     work = new Date('2015-05-01'),
@@ -14,26 +14,28 @@
     Math.round((exp.getFullYear() - start.getFullYear() + exp.getMonth() / 12) / 0.5) * 0.5 + ' years';
 })();
 
-(function() {
+(function () {
   // Theming
-  var html = document.getElementById('html'),
-    themes = { auto: 'auto', dark: 'dark', light: 'light' },
+  const html = document.getElementById('html'),
+    themes = {auto: 'auto', dark: 'dark', light: 'light'},
     states = Object.keys(themes),
     switcher = document.getElementById('theme-switcher'),
     rotator = document.getElementById('theme-rotator');
 
-  var storage = {
-    get: function() {
+  switcher.classList.remove('off');
+
+  const storage = {
+    get: function () {
       return localStorage.getItem('theme') || states[0];
     },
-    set: function(theme) {
+    set: function (theme) {
       localStorage.setItem('theme', theme);
     }
   };
 
-  var angle = states.indexOf(storage.get());
+  let angle = states.indexOf(storage.get());
 
-  var setTheme = function(theme) {
+  const setTheme = function (theme) {
     rotator.style.transform = `rotate(-${angle++ * 120}deg)`;
     switch (theme) {
       case themes.auto:
@@ -54,23 +56,23 @@
 
   setTheme(storage.get());
 
-  switcher.addEventListener('click', function() {
-    var theme = states[angle % 3];
+  switcher.addEventListener('click', function () {
+    const theme = states[angle % 3];
     setTheme(theme);
     storage.set(theme);
   });
 })();
 
-(function() {
+(function () {
   // ServiceWorker
   if (location.hostname !== 'localhost') {
     if ('serviceWorker' in navigator) {
-      var swMessages = function(reg) {
-        navigator.serviceWorker.addEventListener('message', function(event) {
+      const swMessages = function (reg) {
+        navigator.serviceWorker.addEventListener('message', function (event) {
           const message = JSON.parse(event.data);
           console.log('[APP]: new message from ServiceWorker:', message);
           if (message.code === 1) {
-            reg.unregister();
+            reg.unregister().then();
             location.reload();
           }
         });
@@ -85,7 +87,7 @@
           .register('sw.js', {
             scope: './'
           })
-          .then(function(reg) {
+          .then(function (reg) {
             swMessages(reg);
           });
       }
@@ -93,14 +95,14 @@
   }
 })();
 
-(function() {
+(function () {
   // Yandex.Metrika counter
   if (location.hostname !== 'localhost') {
-    (function(m, e, t, r, i, k, a) {
+    (function (m, e, t, r, i, k, a) {
       try {
         m[i] =
           m[i] ||
-          function() {
+          function () {
             (m[i].a = m[i].a || []).push(arguments);
           };
         m[i].l = 1 * new Date();

@@ -15,12 +15,19 @@
   overflow: hidden;
   outline: none;
   display: block;
+
+  &.off {
+    visibility: hidden;
+  }
+
   &:hover {
     opacity: 1;
   }
+
   &:focus {
-    box-shadow: 0 0 0 2px fade(@light, 70%);
+    box-shadow: 0 0 0 2px hsla(var(--accent-hsl), .7);
   }
+
   .rotator {
     position: absolute;
     top: 0;
@@ -38,77 +45,12 @@
   }
 }
 
-.light {
-  * {
-    outline-color: @dark;
-  }
-  .switch-theme:focus {
-    box-shadow: 0 0 0 2px fade(@dark, 70%);
-  }
-  body {
-    background: @light;
-    color: @dark;
-    &::before,
-    &::after {
-      box-shadow: 0 0 5vh 5vh @light, 0 0 5vh 5vh @light;
-    }
-  }
-  a::after {
-    background: @dark;
-  }
-  .about {
-    .ava-box {
-      filter: grayscale(1) brightness(1.2);
-      background: white;
-      position: relative;
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: white;
-        opacity: 0.1;
-      }
-    }
-  }
-  .experience {
-    li {
-      &::before {
-        border-left-color: @dark;
-      }
-      h3 {
-        &::after {
-          background: @dark;
-        }
-      }
-      .job,
-      .edu {
-        &:not(.no-line) {
-          &::after {
-            border-right: 1px solid fade(@dark, 70%);
-          }
-        }
-        h4 {
-          &::after {
-            background: @dark;
-          }
-        }
-      }
-    }
-    .merge {
-      color: fade(@dark, 100%);
-    }
-  }
-  .portfolio {
-    > li {
-      border-left-color: @dark;
-    }
+html.light {
+  --primary-h: 195;
+  --primary-s: 0;
+  --primary-l: 95;
 
-    .description .image {
-      opacity: 0.8;
-    }
-  }
+  --accent-h: 195;
+  --accent-s: 49;
+  --accent-l: 12;
 }

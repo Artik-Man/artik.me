@@ -173,7 +173,7 @@ html#html(lang="en")
     .page
       header
         a.logo(href="", aria-label=meta.title) AM
-        button.switch-theme#theme-switcher(title="Change theme")
+        button.switch-theme.off#theme-switcher(title="Change theme")
           span.rotator#theme-rotator
 
         each contact in contacts
@@ -183,7 +183,7 @@ html#html(lang="en")
             span.text=contact.text
       main
 
-        h1
+        h1.notranslate
           span ARTIK
           | &nbsp;
           span MAN
@@ -204,7 +204,7 @@ html#html(lang="en")
             tr
               th Commercial Experience
               td
-                span#exp 4.5 years
+                span#exp 5 years
             tr
               th Languages
               td
@@ -231,7 +231,7 @@ html#html(lang="en")
 
         section
           h2.no-print Key skills
-          ul.skills
+          ul.skills.notranslate
             li HTML
             li CSS
             li LESS
@@ -240,7 +240,7 @@ html#html(lang="en")
             li JavaScript
             li TypeScript
             li Angular
-            li Webpack
+            li RxJS
             li NodeJS
 
         section
@@ -266,9 +266,9 @@ html#html(lang="en")
             li
               h3 2018
               .job
-                h4
+                h4.notranslate
                   a(href="https://kaspersky.com", target="_blank", rel="noreferrer", aria-label="Kaspersky Lab.") Kaspersky Lab.
-                p Developer
+                p.notranslate Developer
 
               .edu
                 h4 Master`s degree
@@ -284,17 +284,17 @@ html#html(lang="en")
                   svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true")
                     use(href="./styles/sprite.svg#merge.svg")
               .job
-                h4
+                h4.notranslate
                   a(href="https://luxoft.com", target="_blank", rel="noreferrer", aria-label="Luxoft") Luxoft
-                p Senior Frontend Developer
+                p.notranslate Senior Frontend Developer
               .edu
 
             li
               h3 2016
               .job
-                h4
+                h4.notranslate
                   a(href="https://hashboard.ru", target="_blank", rel="noreferrer", aria-label="Hashboard") Hashboard
-                p Frontend Developer
+                p.notranslate Frontend Developer
               .edu
                 h4 Bachelor`s degree
                 p
@@ -309,9 +309,9 @@ html#html(lang="en")
                   svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true")
                     use(href="./styles/sprite.svg#merge.svg")
               .job.no-line
-                h4
+                h4.notranslate
                   a(href="http://primepix.ru", target="_blank", rel="noreferrer", aria-label="PrimePix") PrimePix
-                p Junior Frontend Developer
+                p.notranslate Junior Frontend Developer
               .edu
 
             li.no-print
@@ -329,7 +329,7 @@ html#html(lang="en")
               h3 2012
               .job.no-line
               .edu
-                h4 Initial commit
+                h4.notranslate Initial commit
                 p In 2012 I entered the university
 
           //- In 2012 I entered the university. Then in 2014, I passed through webmaster courses. In 2015, I got a job at PrimePix in the position of junior interface developer. In 2016, I graduated from the university, received a bachelor's degree in Mathematics, Information and Space Technologies and started working at Hashboard. In 2017, I moved to St. Petersburg and got a job at Luxoft. Later, in 2018, I started working at Kaspersky Lab. and got a master’s degree in Information Technologies and Automated Systems.
@@ -340,7 +340,7 @@ html#html(lang="en")
           ul.portfolio
             each project in projects
               li
-                h3
+                h3.notranslate
                   if project.url
                     a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)=project.title
                   else
@@ -358,10 +358,10 @@ html#html(lang="en")
                         source(srcset="styles/images/projects/" + project.picture + ".webp", type="image/webp")
                         source(srcset="styles/images/projects/" + project.picture + ".jpg", type="image/jpeg")
                         img(src="styles/images/projects/" + project.picture + ".jpg", alt=project.title)
-                  h4 Contribution:
+                  h4.notranslate Contribution:
                   p= project.contribution
-                  h4 Technologies:
-                  ul
+                  h4.notranslate Technologies:
+                  ul.notranslate
                     each tech in project.techList
                       li=tech
 

@@ -1,15 +1,25 @@
 @media print {
   html,
   html.light {
+    --primary-h: 0;
+    --primary-s: 0;
+    --primary-l: 0;
+
+    --accent-h: 0;
+    --accent-s: 0;
+    --accent-l: 100;
+
     body {
       font-size: 16px;
-      background: white;
-      color: black;
+      background: var(--accent);
+      color: var(--primary);
+
       &::before,
       &::after {
         display: none;
       }
     }
+
     a:not(.no-print-href)::after {
       content: ' [ ' attr(href) ' ] ';
       font-size: 0.7em;
@@ -23,30 +33,38 @@
       background: transparent;
       color: inherit;
     }
+
     header {
       display: none;
     }
+
     h1 {
       margin-top: 50px;
       font-size: 6em;
+
       + p {
         margin-bottom: 50px;
         font-size: 1em;
       }
     }
+
     h2 {
       margin: 50px 0 20px;
     }
+
     .about {
       page-break-inside: avoid;
+
       .ava-box {
         filter: grayscale(1) brightness(1.2);
-        background: white;
+        background: var(--accent);
+
         &::after {
           display: none;
         }
       }
     }
+
     .skills {
       list-style: none;
       padding: 0 .25em;
@@ -54,30 +72,38 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
       li {
         padding: .2em;
       }
     }
+
     section {
       page-break-inside: avoid;
     }
+
     .merge {
       display: none;
     }
+
     .experience {
       padding: 0;
+
       li {
         page-break-inside: avoid;
+
         &::before,
         h3::after {
           display: none;
         }
+
         .edu,
         .job {
           padding-bottom: 1em;
         }
       }
     }
+
     .portfolio {
       li {
         page-break-inside: avoid;
@@ -85,6 +111,7 @@
         border: none;
       }
     }
+
     .no-print {
       display: none;
     }

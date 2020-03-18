@@ -44,13 +44,13 @@ gulp.task('pug', () => {
         },
         inlineSVG: src => {
           const fullPath = path.resolve(src);
-          let content =   fs.readFileSync(fullPath, 'utf-8');
+          let content = fs.readFileSync(fullPath, 'utf-8');
           return content
             .replace(/<svg [a-z\s":\/=\d.]+>/g, `<symbol id="${src.split('/').slice(-1)[0]}">`)
-            .replace('</svg>','</symbol>');
+            .replace('</svg>', '</symbol>');
         }
       }
-     }))
+    }))
     .pipe(gulp.dest(file => './'));
 });
 

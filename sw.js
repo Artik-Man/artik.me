@@ -34,13 +34,13 @@ class SiteServiceWorker {
             });
             if (!noCache) {
                 const cache = await caches.open(this.cacheName);
-                cache.put(request, response.clone());
+                await cache.put(request, response.clone());
             }
             return response;
         }
         catch (e) {
             console.warn('[SW]: No internet connection');
-            return;
+            return this.get(request, noCache);
         }
     }
     async updateCache(clone, clean = true) {
@@ -53,7 +53,7 @@ class SiteServiceWorker {
         }
         else {
             const cache = await caches.open(this.cacheName);
-            cache.put(this.commitsUrl, clone);
+            await cache.put(this.commitsUrl, clone);
             [...this.urls.values()].forEach((url) => {
                 this.get(url);
             });
@@ -110,7 +110,9 @@ class SiteServiceWorker {
         });
     }
     async onFetch(request) {
-        const canBePreCached = request.url.indexOf(location.origin) === 0;
+        const url = new URL(request.url);
+        const canBePreCached = ['https://fonts.gstatic.com', 'https://fonts.googleapis.com', location.origin].includes(url.origin);
+        console.log(url, canBePreCached);
         if (canBePreCached) {
             this.urls.add(request.url);
             this.lazyCheckUpdates();
@@ -128,7 +130,7 @@ self.addEventListener('install', () => {
     console.log('[SW]: Install');
     self.skipWaiting();
     setTimeout(() => {
-        serviceWorker.checkUpdates(true);
+        serviceWorker.checkUpdates(true).then();
     }, 2000);
 });
 self.addEventListener('fetch', (event) => {
