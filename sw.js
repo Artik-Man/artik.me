@@ -112,7 +112,6 @@ class SiteServiceWorker {
     async onFetch(request) {
         const url = new URL(request.url);
         const canBePreCached = ['https://fonts.gstatic.com', 'https://fonts.googleapis.com', location.origin].includes(url.origin);
-        console.log(url, canBePreCached);
         if (canBePreCached) {
             this.urls.add(request.url);
             this.lazyCheckUpdates();

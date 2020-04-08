@@ -115,7 +115,7 @@
       techList: ['ServiceWorker', 'CSS: prefers-color-scheme', 'Pug']
     }
   ];
-html#html(lang="en")
+html#html.no-js(lang="en")
   head
     meta(charset="UTF-8")
     title=meta.title
@@ -163,9 +163,6 @@ html#html(lang="en")
       link(sizes=(size + 'x' + size), href=("styles/images/icons/icon-" + (size + 'x' + size) + ".png"), rel="apple-touch-icon")
 
     link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://fonts.gstatic.com/s/yanonekaffeesatz/v14/3y976aknfjLm_3lMKjiMgmUUYBs04Y8bH-o.woff2")
-    link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2")
-    link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2")
-    link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc4.woff2")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500%7CYanone+Kaffeesatz:200,300&display=swap&subset=cyrillic")
 
     link(rel="stylesheet", href="./styles/styles.css")
@@ -248,12 +245,25 @@ html#html(lang="en")
           ul.experience
 
             li.no-print
-              h3 2020
-
+              h3 &nbsp;
               .job.no-point
                 h4.title Career
-              .edu.no-point.no-line
+              .edu.no-point
                 h4.title Education
+
+            li
+              h3 2020
+                span.merge.reverse
+                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true")
+                    use(href="./styles/sprite.svg#merge.svg")
+
+              .job.no-point
+              .edu
+                h4 Mentor
+                p
+                  a(href="https://htmlacademy.ru/", target="_blank", rel="noreferrer", aria-label="HTML Academy")
+                    b HTML Academy
+                p HTML and CSS (lvl. 1 and 2)
 
             li.no-print
               h3 2019
