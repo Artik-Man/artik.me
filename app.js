@@ -91,16 +91,14 @@
   }
 }
 
-(function () {
+{
   // Yandex.Metrika counter
   if (location.hostname !== 'localhost') {
     (function (m, e, t, r, i, k, a) {
       try {
-        m[i] =
-          m[i] ||
-          function () {
-            (m[i].a = m[i].a || []).push(arguments);
-          };
+        m[i] = m[i] || function () {
+          (m[i].a = m[i].a || []).push(arguments);
+        };
         m[i].l = 1 * new Date();
         (k = e.createElement(t)),
           (a = e.getElementsByTagName(t)[0]),
@@ -120,4 +118,4 @@
       webvisor: true
     });
   }
-})();
+}

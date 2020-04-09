@@ -12,12 +12,11 @@
       padding-left: 0;
       position: relative;
       margin-bottom: 5em;
-      &:hover {
-        .description {
-          .image {
-            opacity: 1;
-            filter: grayscale(0);
-          }
+      &:hover .description .image,
+      .description .image a:focus {
+        picture {
+          opacity: 1;
+          filter: grayscale(0);
         }
       }
     }
@@ -54,9 +53,11 @@
         position: absolute;
         top: 0;
         left: 0;
-        opacity: 0.5;
-        filter: grayscale(0.8);
-        transition: all 250ms ease-in-out;
+        picture {
+          opacity: 0.5;
+          filter: grayscale(0.8);
+          transition: all 250ms ease-in-out;
+        }
       }
       @media (min-width: @tv) {
         max-width: 600px;

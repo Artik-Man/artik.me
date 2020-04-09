@@ -115,6 +115,13 @@
       techList: ['ServiceWorker', 'CSS: prefers-color-scheme', 'Pug']
     }
   ];
+
+mixin project_picture(project)
+  picture
+    source(srcset="styles/images/projects/" + project.picture + ".webp", type="image/webp")
+    source(srcset="styles/images/projects/" + project.picture + ".jpg", type="image/jpeg")
+    img(src="styles/images/projects/" + project.picture + ".jpg", alt=project.title, loading="lazy", width="600", height="420")
+
 html#html.no-js(lang="en")
   head
     meta(charset="UTF-8")
@@ -125,7 +132,6 @@ html#html.no-js(lang="en")
     meta(name="title", content=meta.title)
     meta(name="author", content=meta.full_name)
     meta(name="description", content=meta.description)
-    //- meta(itemprop="image", content=meta.card)
 
     meta(property="og:image", content=meta.card)
     meta(property="og:image:width", content="1280")
@@ -147,16 +153,16 @@ html#html.no-js(lang="en")
     meta(name="apple-mobile-web-app-status-bar-style", content="black")
     meta(name="msapplication-starturl", content="index.html")
 
-    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphone5_splash.png",    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)")
-    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphone6_splash.png",    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)")
-    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphonexr_splash.png",   media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)")
-    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphonex_splash.png",    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)")
-    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphonexsmax_splash.png",media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)")
-    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/ipad_splash.png",       media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)")
-    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/ipadpro1_splash.png",   media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)")
-    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/ipadpro3_splash.png",   media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)")
-    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/ipadpro2_splash.png",   media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)")
-    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphoneplus_splash.png", media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)")
+    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphone5_splash.png",     media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)")
+    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphone6_splash.png",     media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)")
+    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphonexr_splash.png",    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)")
+    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphonex_splash.png",     media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)")
+    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphonexsmax_splash.png", media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)")
+    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/iphoneplus_splash.png",  media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)")
+    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/ipad_splash.png",        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)")
+    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/ipadpro1_splash.png",    media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)")
+    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/ipadpro3_splash.png",    media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)")
+    link(rel="apple-touch-startup-image", href="styles/images/splashscreens/ipadpro2_splash.png",    media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)")
 
     each size in iconsSizes
       link(sizes=(size + 'x' + size), href=("styles/images/icons/icon-" + (size + 'x' + size) + ".png"), rel="icon")
@@ -175,7 +181,7 @@ html#html.no-js(lang="en")
 
         each contact in contacts
           a(href=contact.url, aria-label=contact.label, rel="noreferrer")
-            svg.icon(aria-hidden="true", xmlns="http://www.w3.org/2000/svg")
+            svg.icon(aria-hidden="true", xmlns="http://www.w3.org/2000/svg", width="20", height="20")
               use(href="./styles/sprite.svg#" + contact.iconClass)
             span.text=contact.text
       main
@@ -191,7 +197,7 @@ html#html.no-js(lang="en")
             picture.ava
               source(srcset="styles/images/me.webp", type="image/webp")
               source(srcset="styles/images/me.png", type="image/png")
-              img(src="styles/images/me.png", alt=meta.title)
+              img(src="styles/images/me.png", alt=meta.title, width="480", height="480")
           cite Heavy JavaScript-frameworks should be&nbsp;used only where necessary
           table
             tr
@@ -212,17 +218,17 @@ html#html.no-js(lang="en")
               th Current location
               td
                 a.no-print-href(target="_blank", rel="noreferrer", href="https://www.google.com/maps/place/St+Petersburg,+Russia/@59.9390095,29.5303098,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a65ed:0x6dc7673fab848eff!8m2!3d59.9342802!4d30.3350986")
-                  svg.icon(viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg", aria-hidden="true")
+                  svg.icon(viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg", aria-hidden="true", width="24", height="24")
                     use(href="./styles/sprite.svg#location.svg")
                   span Russia,&nbsp;
                     span.nowrap St. Petersburg
 
             each contact in contacts
-              tr.hidden-md
+              tr
                 th=contact.label
                 td
                   a.no-print-href(href=contact.url, aria-label=contact.label, rel="noreferrer")
-                    svg.icon(viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg", aria-hidden="true")
+                    svg.icon(viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg", aria-hidden="true", width="24", height="24")
                       use(href="./styles/sprite.svg#" + contact.iconClass)
                     span.text=(contact.fullText || contact.text)
 
@@ -254,7 +260,7 @@ html#html.no-js(lang="en")
             li
               h3 2020
                 span.merge.reverse
-                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true")
+                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true", width="10", height="10")
                     use(href="./styles/sprite.svg#merge.svg")
 
               .job.no-point
@@ -268,7 +274,7 @@ html#html.no-js(lang="en")
             li.no-print
               h3 2019
                 span.merge
-                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true")
+                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true", width="10", height="10")
                     use(href="./styles/sprite.svg#merge.svg")
               .job
               .edu
@@ -291,7 +297,7 @@ html#html.no-js(lang="en")
             li
               h3 2017
                 span.merge
-                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true")
+                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true", width="10", height="10")
                     use(href="./styles/sprite.svg#merge.svg")
               .job
                 h4.notranslate
@@ -316,7 +322,7 @@ html#html.no-js(lang="en")
             li
               h3 2015
                 span.merge
-                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true")
+                  svg(viewBox="0 0 70 70", xmlns="http://www.w3.org/2000/svg", preserveAspectRatio="none", aria-hidden="true", width="10", height="10")
                     use(href="./styles/sprite.svg#merge.svg")
               .job.no-line
                 h4.notranslate
@@ -342,8 +348,6 @@ html#html.no-js(lang="en")
                 h4.notranslate Initial commit
                 p In 2012 I entered the university
 
-          //- In 2012 I entered the university. Then in 2014, I passed through webmaster courses. In 2015, I got a job at PrimePix in the position of junior interface developer. In 2016, I graduated from the university, received a bachelor's degree in Mathematics, Information and Space Technologies and started working at Hashboard. In 2017, I moved to St. Petersburg and got a job at Luxoft. Later, in 2018, I started working at Kaspersky Lab. and got a master’s degree in Information Technologies and Automated Systems.
-
         section
           h2 Portfolio
 
@@ -352,22 +356,16 @@ html#html.no-js(lang="en")
               li
                 h3.notranslate
                   if project.url
-                    a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)=project.title
+                    a(href=project.url, target="_blank",  rel="noreferrer")=project.title
                   else
-                    span=project.title
+                    =project.title
                 .description
                   .image.no-print(aria-hidden="true")
                     if project.url
                       a(href=project.url, target="_blank",  rel="noreferrer", aria-label=project.title)
-                        picture
-                          source(srcset="styles/images/projects/" + project.picture + ".webp", type="image/webp")
-                          source(srcset="styles/images/projects/" + project.picture + ".jpg", type="image/jpeg")
-                          img(src="styles/images/projects/" + project.picture + ".jpg", alt=project.title, loading="lazy", width="600", height="420")
+                        +project_picture(project)
                     else
-                      picture
-                        source(srcset="styles/images/projects/" + project.picture + ".webp", type="image/webp")
-                        source(srcset="styles/images/projects/" + project.picture + ".jpg", type="image/jpeg")
-                        img(src="styles/images/projects/" + project.picture + ".jpg", alt=project.title, loading="lazy", width="600", height="420")
+                      +project_picture(project)
                   h4.notranslate Contribution:
                   p= project.contribution
                   h4.notranslate Technologies:
@@ -375,4 +373,4 @@ html#html.no-js(lang="en")
                     each tech in project.techList
                       li=tech
 
-    script(src="app.js", async, defer)
+    script(src="app.js", async)
