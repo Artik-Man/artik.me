@@ -93,7 +93,9 @@
 
 {
   // Yandex.Metrika counter
-  if (location.hostname !== 'localhost' && !localStorage.getItem('do-not-track')) {
+  if (localStorage.getItem('do-not-track') || location.hostname === 'localhost') {
+    console.log('I will not track you');
+  } else {
     (function (m, e, t, r, i, k, a) {
       try {
         m[i] = m[i] || function () {
@@ -117,7 +119,5 @@
       accurateTrackBounce: true,
       webvisor: true
     });
-  } else {
-    console.log('I will not track you')
   }
 }
