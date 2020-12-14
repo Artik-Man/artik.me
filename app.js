@@ -93,7 +93,7 @@
 
 {
   // Yandex.Metrika counter
-  if (localStorage.getItem('do-not-track') || location.hostname === 'localhost') {
+  if (location.hash === '#do-not-track' || location.hostname === 'localhost') {
     console.log('I will not track you');
   } else {
     (function (m, e, t, r, i, k, a) {

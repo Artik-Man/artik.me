@@ -65,6 +65,7 @@ gulp.task('webserver', () =>
 
 gulp.task('watch', () => {
   console.log('task: watch');
+  gulp.watch('./app.js');
   gulp.watch('./styles/*.less', gulp.series('less'));
   gulp.watch('./*.pug', gulp.series('pug'));
 });
