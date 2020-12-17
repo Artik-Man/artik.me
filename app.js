@@ -2,20 +2,17 @@
   // Age and experience
   const ageBlock = document.getElementById('age'),
     expBlock = document.getElementById('exp'),
-    born = new Date('1994-08-01'),
-    work = new Date('2015-05-01'),
-    now = new Date(),
-    age = new Date(now.getTime() - born.getTime()),
-    exp = new Date(now.getTime() - work.getTime()),
-    start = new Date(0);
+    dateOfBirth = new Date('1994-08-01'),
+    careerStartDate = new Date('2015-05-01'),
+    currentDate = new Date();
 
-  ageBlock.innerText = age.getFullYear() - start.getFullYear() + ' years';
-  expBlock.innerText = Math.round((exp.getFullYear() - start.getFullYear() + exp.getMonth() / 12) * 2) / 2 + ' years';
+  ageBlock.innerText = currentDate.getFullYear() - dateOfBirth.getFullYear() + ' years';
+  expBlock.innerText = Math.round(currentDate.getFullYear() - careerStartDate.getFullYear()) + ' years';
 }
 
 {
   // Theming
-  const html = document.getElementById('html'),
+  const html = document.querySelector('html'),
     themes = {auto: 'auto', dark: 'dark', light: 'light'},
     states = Object.keys(themes),
     switcher = document.getElementById('theme-switcher'),

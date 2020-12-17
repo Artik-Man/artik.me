@@ -24,8 +24,12 @@
     opacity: 1;
   }
 
-  &:focus {
+  &:focus-visible {
     box-shadow: 0 0 0 2px hsla(var(--accent-hsl), .7);
+  }
+
+  &:focus {
+    outline: none;
   }
 
   .rotator {
