@@ -40,7 +40,13 @@ class SiteServiceWorker {
         }
         catch (e) {
             console.warn('[SW]: No internet connection');
-            return this.get(request, noCache);
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    this.get(request, noCache).then(response => {
+                        resolve(response);
+                    });
+                }, 10000);
+            });
         }
     }
     async updateCache(clone, clean = true) {

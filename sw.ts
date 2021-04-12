@@ -61,7 +61,13 @@ class SiteServiceWorker {
       return response;
     } catch (e) {
       console.warn('[SW]: No internet connection');
-      return this.get(request, noCache);
+      return new Promise(resolve => {
+        setTimeout(() => {
+          this.get(request, noCache).then(response => {
+            resolve(response)
+          })
+        }, 10000);
+      })
     }
   }
 
@@ -138,7 +144,7 @@ class SiteServiceWorker {
 
     // @ts-ignore
     self.clients
-      .matchAll({includeUncontrolled: true, type: 'window'})
+      .matchAll({ includeUncontrolled: true, type: 'window' })
       .then((clients: { forEach: (arg0: (client: any) => void) => void }) => {
         clients.forEach((client: { postMessage: (arg0: any) => void }) => {
           client.postMessage(JSON.stringify(message));
