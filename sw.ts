@@ -47,7 +47,7 @@ class SiteServiceWorker {
     this.lazyCheckUpdates = throttle(this.checkUpdates, 60 * 60 * 1000);
   }
 
-  async get(request: Request | string, noCache = false): Promise<Response> {
+  async get(request: Request | string, noCache = false): Promise<Response | undefined> {
     try {
       const response = await fetch(request, {
         cache: noCache ? 'no-cache' : 'default',
@@ -61,15 +61,8 @@ class SiteServiceWorker {
       return response;
     } catch (e) {
       console.warn('[SW]: No internet connection');
-      console.log(e)
-      return new Promise(resolve => {
-        setTimeout(() => {
-          this.get(request, noCache).then(response => {
-            resolve(response)
-          })
-        }, 10000);
-      })
     }
+    return;
   }
 
   async updateCache(clone: Response, clean = true): Promise<void> {
@@ -153,7 +146,7 @@ class SiteServiceWorker {
       });
   }
 
-  async onFetch(request: Request): Promise<Response> {
+  async onFetch(request: Request): Promise<Response | undefined> {
     const url = new URL(request.url);
     const canBePreCached = ['https://fonts.gstatic.com', 'https://fonts.googleapis.com', location.origin].includes(url.origin);
 
@@ -184,9 +177,10 @@ self.addEventListener('install', () => {
 });
 
 // @ts-ignore
-self.addEventListener(
-  'fetch',
-  (event: FetchEvent) => {
-    event.respondWith(serviceWorker.onFetch(event.request));
-  },
-);
+self.addEventListener('fetch', (event: FetchEvent) => {
+  serviceWorker.onFetch(event.request).then(response => {
+    if (response) {
+      event.respondWith(response);
+    }
+  });
+});

@@ -40,15 +40,8 @@ class SiteServiceWorker {
         }
         catch (e) {
             console.warn('[SW]: No internet connection');
-            console.log(e);
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    this.get(request, noCache).then(response => {
-                        resolve(response);
-                    });
-                }, 10000);
-            });
         }
+        return;
     }
     async updateCache(clone, clean = true) {
         console.log('[SW]: Update cache');
@@ -140,5 +133,9 @@ self.addEventListener('install', () => {
     }, 2000);
 });
 self.addEventListener('fetch', (event) => {
-    event.respondWith(serviceWorker.onFetch(event.request));
+    serviceWorker.onFetch(event.request).then(response => {
+        if (response) {
+            event.respondWith(response);
+        }
+    });
 });
