@@ -40,6 +40,7 @@ class SiteServiceWorker {
         }
         catch (e) {
             console.warn('[SW]: No internet connection');
+            console.log(e);
             return new Promise(resolve => {
                 setTimeout(() => {
                     this.get(request, noCache).then(response => {
