@@ -160,7 +160,7 @@ class SiteServiceWorker {
 
       return resp || (await this.get(request));
     } else {
-      return await this.get(request, true);
+      return;
     }
   }
 }
@@ -178,8 +178,8 @@ self.addEventListener('install', () => {
 
 // @ts-ignore
 self.addEventListener('fetch', async (event: FetchEvent) => {
-  const response = await serviceWorker.onFetch(event.request);
-  if (response) {
-    event.respondWith(response);
+  try {
+    event.respondWith(serviceWorker.onFetch(event.request) as Promise<Response>);
+  } catch (e) {
   }
 });

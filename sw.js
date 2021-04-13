@@ -120,7 +120,7 @@ class SiteServiceWorker {
             return resp || (await this.get(request));
         }
         else {
-            return await this.get(request, true);
+            return;
         }
     }
 }
@@ -133,8 +133,9 @@ self.addEventListener('install', () => {
     }, 2000);
 });
 self.addEventListener('fetch', async (event) => {
-    const response = await serviceWorker.onFetch(event.request);
-    if (response) {
-        event.respondWith(response);
+    try {
+        event.respondWith(serviceWorker.onFetch(event.request));
+    }
+    catch (e) {
     }
 });
