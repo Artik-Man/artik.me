@@ -177,10 +177,9 @@ self.addEventListener('install', () => {
 });
 
 // @ts-ignore
-self.addEventListener('fetch', (event: FetchEvent) => {
-  serviceWorker.onFetch(event.request).then(response => {
-    if (response) {
-      event.respondWith(response);
-    }
-  });
+self.addEventListener('fetch', async (event: FetchEvent) => {
+  const response = await serviceWorker.onFetch(event.request);
+  if (response) {
+    event.respondWith(response);
+  }
 });

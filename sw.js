@@ -132,10 +132,9 @@ self.addEventListener('install', () => {
         serviceWorker.checkUpdates(true).then();
     }, 2000);
 });
-self.addEventListener('fetch', (event) => {
-    serviceWorker.onFetch(event.request).then(response => {
-        if (response) {
-            event.respondWith(response);
-        }
-    });
+self.addEventListener('fetch', async (event) => {
+    const response = await serviceWorker.onFetch(event.request);
+    if (response) {
+        event.respondWith(response);
+    }
 });
