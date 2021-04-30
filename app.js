@@ -2,11 +2,11 @@
   // Age and experience
   const ageBlock = document.getElementById('age'),
     expBlock = document.getElementById('exp'),
-    dateOfBirth = new Date('1994-08-01'),
+    // dateOfBirth = new Date('1994-08-01'),
     careerStartDate = new Date('2015-05-01'),
     currentDate = new Date();
 
-  ageBlock.innerText = (Math.floor(currentDate.getFullYear() - dateOfBirth.getFullYear() + (currentDate.getMonth() - dateOfBirth.getMonth()) / 12)) + ' years';
+  // ageBlock.innerText = (Math.floor(currentDate.getFullYear() - dateOfBirth.getFullYear() + (currentDate.getMonth() - dateOfBirth.getMonth()) / 12)) + ' years';
   expBlock.innerText = Math.round(currentDate.getFullYear() - careerStartDate.getFullYear()) + ' years';
 }
 
