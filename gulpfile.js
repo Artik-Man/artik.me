@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const less = require('gulp-less');
+const rename = require("gulp-rename");
 const cssmin = require('gulp-cssmin');
 const plumber = require('gulp-plumber');
 const htmlmin = require("gulp-htmlmin");
@@ -132,6 +133,7 @@ const html = () => (
   gulp.src('./templates/index.njk')
     .pipe(nunjucks.compile(data))
     .pipe(htmlmin({collapseWhitespace: true, conservativeCollapse: true}))
+    .pipe(rename("index.html"))
     .pipe(gulp.dest('./'))
     .pipe(sync.stream())
 );
