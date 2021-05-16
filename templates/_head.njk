@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>{{ meta.title }}</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="keywords"
+        content="CV, Mangasaryan, Artik, Artashes, frontend, front-end, Curriculum vitae, резюме, разработчик, фронтенд, фронтендер, Артик, Арташес, Мангасарян"/>
+  <meta name="title" content="{{ meta.title }}"/>
+  <meta name="author" content="{{ meta.full_name }}"/>
+  <meta name="description"
+        content="{{ meta.description }}"/>
+  <meta property="og:image" content="{{ meta.card }}"/>
+  <meta property="og:image:width" content="1280"/>
+  <meta property="og:image:height" content="640"/>
+  <meta property="og:site_name" content="{{ meta.title }}"/>
+  <meta property="og:type" content="object"/>
+  <meta property="og:title" content="{{ meta.full_name }}"/>
+  <meta property="og:url" content="{{ meta.url }}"/>
+  <meta property="og:description"
+        content="{{ meta.description }}"/>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="application-name" content="{{ meta.name }}"/>
+  <meta name="apple-mobile-web-app-title" content="{{ meta.name }}"/>
+  <meta name="theme-color" content="{{ meta.color }}"/>
+  <meta name="msapplication-navbutton-color" content="{{ meta.color }}"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="msapplication-starturl" content="index.html"/>
+  <link rel="apple-touch-startup-image" href="styles/images/splashscreens/iphone5_splash.png"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="styles/images/splashscreens/iphone6_splash.png"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="styles/images/splashscreens/iphonexr_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="styles/images/splashscreens/iphonex_splash.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"/>
+  <link rel="apple-touch-startup-image" href="styles/images/splashscreens/iphonexsmax_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"/>
+  <link rel="apple-touch-startup-image" href="styles/images/splashscreens/iphoneplus_splash.png"
+        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"/>
+  <link rel="apple-touch-startup-image" href="styles/images/splashscreens/ipad_splash.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="styles/images/splashscreens/ipadpro1_splash.png"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="styles/images/splashscreens/ipadpro3_splash.png"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="styles/images/splashscreens/ipadpro2_splash.png"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"/>
+
+  {% for size in iconSizes %}
+    <link sizes="{{ size }}x{{ size }}" href="styles/images/icons/icon-{{ size }}x{{ size }}.png" rel="icon"/>
+    <link sizes="{{ size }}x{{ size }}" href="styles/images/icons/icon-{{ size }}x{{ size }}.png"
+          rel="apple-touch-icon"/>
+  {% endfor %}
+
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
+        href="./styles/fonts/yanone-kaffeesatz-v15-latin_cyrillic-200.woff2"/>
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
+        href="./styles/fonts/roboto-v20-latin_cyrillic-300.woff2"/>
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
+        href="./styles/fonts/roboto-v20-latin_cyrillic-regular.woff2"/>
+  <link rel="stylesheet" href="./styles/styles.css"/>
+
+
+</head>
+<body>
