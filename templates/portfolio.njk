@@ -1,0 +1,48 @@
+{% macro projectPicture(project) %}
+  <picture aria-hidden="true">
+    <source srcset="styles/images/projects/{{ project.picture }}.webp" type="image/webp"/>
+    <source srcset="styles/images/projects/{{ project.picture }}.jpg" type="image/jpeg"/>
+    <img src="styles/images/projects/{{ project.picture }}.jpg"
+         alt="{{ project.title }}" loading="lazy" width="600" height="420"/>
+  </picture>
+{% endmacro %}
+
+<section>
+  <h2>Portfolio</h2>
+  <ul class="portfolio">
+    {% for project in projects %}
+      <li>
+        <h3 class="notranslate">
+          {% if project.url %}
+            <a href="{{ project.url }}" target="_blank" rel="noreferrer">
+              {{ project.title }}
+            </a>
+          {% else %}
+            {{ project.title }}
+          {% endif %}
+        </h3>
+        <div class="description">
+          <div class="image no-print">
+            {% if project.url %}
+              <a href="{{ project.url }}" target="_blank" rel="noreferrer"
+                 aria-label="HTML Practice">
+                {{ projectPicture(project) }}
+              </a>
+            {% else %}
+              {{ projectPicture(project) }}
+            {% endif %}
+          </div>
+          <h4 class="notranslate">Contribution:</h4>
+          <p>{{ project.contribution }}</p>
+          <h4 class="notranslate">Technologies:</h4>
+          <ul class="notranslate">
+            {% for tech in project.techList %}
+            <li>{{ tech }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+    {% endfor %}
+
+  </ul>
+</section>
