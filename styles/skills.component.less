@@ -1,7 +1,20 @@
 // out: false
 .skills {
+  line-height: 2;
   @media (min-width: @tablet) {
-    column-count: 2;
-    display: inline-block;
+    //column-count: 2;
+    //display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  > li {
+    min-width: 10rem;
+  }
+
+  ul {
+    //margin-right: 2rem;
+    //margin-bottom: 1.2rem;
   }
 }

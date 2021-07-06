@@ -103,7 +103,7 @@ const projects = [
     url: 'https://github.com/Artik-Man/artik.me',
     picture: 'artik',
     contribution: '[Personal project] Full cycle of development of web page: from design to caching with ServiceWorker',
-    techList: ['ServiceWorker', 'CSS: prefers-color-scheme', 'Pug']
+    techList: ['ServiceWorker', 'CSS Custom Properties', 'Nunjucks']
   }
 ];
 
