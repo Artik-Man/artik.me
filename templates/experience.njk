@@ -1,119 +1,61 @@
 <section>
   <h2>Experience</h2>
-  <ul class="experience">
-    <li class="no-print">
-      <h3>&nbsp;</h3>
-      <div class="job no-point">
-        <h4 class="title">Career</h4>
-      </div>
-      <div class="edu no-point">
-        <h4 class="title">Education</h4>
-      </div>
-    </li>
-    <li class="no-print">
-      <h3>2021</h3>
-      <div class="job no-point"></div>
-      <div class="edu">
-        {# <h4>Author of the Course<a href="https://htmlacademy.ru/intensive/for-middle/angular" target="_blank" #}
-        {# rel="noreferrer">"Angular for Experienced Developers"</a></h4> #}
-        {# <p><a href="https://htmlacademy.ru/" target="_blank" rel="noreferrer"><b>HTML Academy</b></a></p> #}
-      </div>
-    </li>
-    <li>
-      <h3>2020<span class="merge reverse">
-                  <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                       aria-hidden="true" width="10" height="10">
-                    <use href="./styles/sprite.svg#merge.svg"></use>
-                  </svg></span></h3>
-      <div class="job no-point"></div>
-      <div class="edu">
-        <h4>Mentor</h4>
-        <p><a href="https://htmlacademy.ru/" target="_blank" rel="noreferrer"><b>HTML Academy</b></a></p>
-        <p>I teach HTML, CSS, and Javascript</p>
-      </div>
-    </li>
-    <li class="no-print">
-      <h3>2019<span class="merge">
-                  <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                       aria-hidden="true" width="10" height="10">
-                    <use href="./styles/sprite.svg#merge.svg"></use>
-                  </svg></span></h3>
-      <div class="job"></div>
-      <div class="edu"></div>
-    </li>
-    <li>
-      <h3>2018</h3>
-      <div class="job">
-        <h4 class="notranslate">
-          <a href="https://kaspersky.com" target="_blank" rel="noreferrer">Kaspersky Lab.</a>
-        </h4>
-        <p class="notranslate">Developer</p>
-      </div>
-      <div class="edu">
-        <h4>Master's degree</h4>
-        <p><a href="https://narfu.ru" target="_blank" rel="noreferrer"><b>Northern (Arctic) Federal
-              University</b></a></p>
-        <p>Higher School of Information Technologies and Automated Systems</p>
-        <p>2016 &mdash; 2018</p>
-      </div>
-    </li>
-    <li>
-      <h3>2017<span class="merge">
-                  <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                       aria-hidden="true" width="10" height="10">
-                    <use href="./styles/sprite.svg#merge.svg"></use>
-                  </svg></span></h3>
-      <div class="job">
-        <h4 class="notranslate"><a href="https://luxoft.com" target="_blank" rel="noreferrer">Luxoft</a></h4>
-        <p class="notranslate">Senior Frontend Developer</p>
-      </div>
-      <div class="edu"></div>
-    </li>
-    <li>
-      <h3>2016</h3>
-      <div class="job">
-        <h4 class="notranslate"><a href="https://hashboard.ru" target="_blank" rel="noreferrer">Hashboard</a></h4>
-        <p class="notranslate">Frontend Developer</p>
-      </div>
-      <div class="edu">
-        <h4>Bachelor's degree</h4>
-        <p><a href="https://narfu.ru" target="_blank" rel="noreferrer"><b>Northern (Arctic) Federal
-              University</b></a></p>
-        <p>Institute of Mathematics, Information and Space Technologies <br></p>
-        <p>2012 &mdash; 2016</p>
-      </div>
-    </li>
-    <li>
-      <h3>2015<span class="merge">
-                  <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                       aria-hidden="true" width="10" height="10">
-                    <use href="./styles/sprite.svg#merge.svg"></use>
-                  </svg></span></h3>
-      <div class="job no-line">
-        <h4 class="notranslate"><a href="http://primepix.ru" target="_blank" rel="noreferrer">PrimePix</a></h4>
-        <p class="notranslate">Junior Frontend Developer</p>
-      </div>
-      <div class="edu"></div>
-    </li>
-    <li class="no-print">
-      <h3>2014</h3>
-      <div class="job no-line"></div>
-      <div class="edu">
-        <h4>Webmaster Courses</h4>
-      </div>
-    </li>
-    <li class="no-print">
-      <h3>2013</h3>
-      <div class="job no-line"></div>
-      <div class="edu"></div>
-    </li>
-    <li class="no-print">
-      <h3>2012</h3>
-      <div class="job no-line"></div>
-      <div class="edu">
-        <h4 class="notranslate">Initial commit</h4>
-        <p>In 2012 I entered the university</p>
-      </div>
-    </li>
+
+
+  <ul class="lifeline" style="
+    --current-year: {{ now.year }};
+    --current-month: 12;
+    --start-year: {{ lifeline[0].from.year }};
+    --start-month: 1">
+
+    {% for year in years %}
+      <li class="line timeline"
+          style="
+            --start-year: {{ year }};
+            --start-month: 1;
+            --end-year: {{ year }};
+            --end-month: 12"
+          aria-hidden="true">
+        <p>{{ year }}</p>
+      </li>
+    {% endfor %}
+
+    {% for point in lifeline %}
+      <li class="line {{ point.classes }}" style="
+        --start-year: {{ point.from.year }};
+        --start-month: {{ point.from.month }};
+        --end-year: {{ point.to.year }};
+        --end-month: {{ point.to.month }}">
+
+        <section class="info">
+          <h3 class="notranslate">
+            {% if (point.url) %}
+              <a href="{{ point.url }}" target="_blank" rel="noreferrer">{{ point.title }}</a>
+            {% else %}
+              <span>{{ point.title }}</span>
+            {% endif %}
+          </h3>
+
+          {{ point.text | safe }}
+
+          <p class="date">
+            <time datetime="{{ point.from.year }}-{{ point.from.month }}-01">
+              {{ months[point.from.month-1] }} {{ point.from.year }}
+            </time>
+            —
+            {% if (point.to.year === now.year and point.to.month === now.month) %}
+              <span>Until now</span>
+            {% else %}
+              <time datetime="{{ point.to.year }}-{{ point.to.month }}-01">
+                {{ months[point.to.month-1] }} {{ point.to.year }}
+              </time>
+            {% endif %}
+          </p>
+
+        </section>
+      </li>
+    {% endfor %}
+
   </ul>
 </section>
+

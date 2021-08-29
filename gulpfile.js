@@ -7,6 +7,13 @@ const htmlmin = require("gulp-htmlmin");
 const nunjucks = require('gulp-nunjucks');
 const sync = require("browser-sync").create();
 
+const careerStartDate = new Date('2015-05-01');
+const currentDate = new Date();
+const experience = Math.round(currentDate.getFullYear() - careerStartDate.getFullYear());
+const now = {
+  year: currentDate.getFullYear(),
+  month: 12
+}
 const iconsSizes = [16, 48, 72, 76, 96, 120, 128, 144, 152, 180, 192, 256, 384, 512];
 const contacts = [
   {
@@ -106,11 +113,84 @@ const projects = [
     techList: ['ServiceWorker', 'CSS Custom Properties', 'Nunjucks']
   }
 ];
-
-const careerStartDate = new Date('2015-05-01');
-const currentDate = new Date();
-const experience = Math.round(currentDate.getFullYear() - careerStartDate.getFullYear());
-
+const lifeline = [
+  {
+    title: 'Northern (Arctic) Federal University',
+    url: 'https://narfu.ru',
+    text: `
+    <p>Institute of Mathematics, Information and Space Technologies</p>
+    <p><b>Bachelor's degree</b></p>
+    `,
+    from: {year: 2012, month: 9},
+    to: {year: 2016, month: 6}
+  },
+  {
+    title: 'Northern (Arctic) Federal University',
+    url: 'https://narfu.ru',
+    text: `
+    <p>Higher School of Information Technologies and Automated Systems</p>
+    <p><b>Master's degree</b></p>
+    `,
+    from: {year: 2016, month: 9},
+    to: {year: 2018, month: 6}
+  },
+  {
+    title: 'Webmaster Courses',
+    from: {year: 2014, month: 2},
+    to: {year: 2014, month: 7},
+    classes: 'no-print'
+  },
+  {
+    title: 'PrimePix',
+    url: 'http://primepix.ru',
+    text: '<p>Junior Frontend Developer</p>',
+    from: {year: 2015, month: 5},
+    to: {year: 2016, month: 5}
+  },
+  {
+    title: 'Hashboard',
+    url: 'https://hashboard.ru',
+    text: '<p>Frontend Developer</p>',
+    from: {year: 2016, month: 6},
+    to: {year: 2017, month: 4}
+  },
+  {
+    title: 'Luxoft',
+    url: 'https://luxoft.com',
+    text: '<p>Senior Frontend Developer</p>',
+    from: {year: 2017, month: 5},
+    to: {year: 2018, month: 5}
+  },
+  {
+    title: 'Kaspersky Lab.',
+    url: 'https://kaspersky.com',
+    text: '<p>Developer</p>',
+    from: {year: 2018, month: 6},
+    to: now
+  },
+  {
+    title: 'HTML Academy',
+    url: 'https://htmlacademy.ru',
+    text: `
+    <p><b>Mentor</b></p>
+    <p>I taught HTML, CSS, and Javascript</p>
+    `,
+    from: {year: 2020, month: 3},
+    to: {year: 2021, month: 5}
+  },
+  {
+    title: 'Diasoft',
+    url: 'https://www.diasoft.ru/',
+    text: '<p>Lead Software Engineer</p>',
+    from: {year: 2021, month: 6},
+    to: now,
+    classes: 'fix-start'
+  }
+].sort((a, b) => a.from.year - b.from.year)
+const yMin = Math.min(...lifeline.map(p => p.from.year));
+const yMax = Math.max(...lifeline.map(p => p.to.year));
+const years = new Array(yMax - yMin + 1).fill(0).map((x, i) => yMax - i);
+const months = `January,February,March,April,May,June,July,August,September,October,November,December`.split(',');
 const meta = {
   title: 'Artik Man — frontend-developer',
   full_name: 'Artik Man',
@@ -126,7 +206,11 @@ const data = {
   iconsSizes,
   contacts,
   projects,
-  experience
+  experience,
+  lifeline,
+  years,
+  months,
+  now
 }
 
 const html = () => (
