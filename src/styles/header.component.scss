@@ -1,0 +1,30 @@
+// out: false
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 7vh 0;
+  font-size: 1.3em;
+  .logo {
+    margin-right: 1em;
+    font-size: 0.8em;
+    line-height: 1;
+  }
+  .switch-theme {
+    margin-right: auto;
+    align-self: baseline;
+  }
+  a {
+    margin-left: 1em;
+    line-height: 1;
+    vertical-align: text-top;
+    .text {
+      font-size: 0.6em;
+      vertical-align: middle;
+      margin-left: 0.5em;
+      @media (max-width: $tablet) {
+        @include visually-hidden;
+      }
+    }
+  }
+}

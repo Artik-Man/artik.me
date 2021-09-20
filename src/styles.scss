@@ -1,0 +1,224 @@
+@import "src/styles/fonts";
+@import 'src/styles/tools';
+@import 'src/styles/light-theme';
+@import 'src/styles/header.component';
+@import 'src/styles/about.component';
+@import 'src/styles/skills.component';
+@import 'src/styles/experience.component';
+@import 'src/styles/portfolio.component';
+@import 'src/styles/print';
+
+* {
+  box-sizing: border-box;
+  outline-color: var(--accent);
+
+  &::selection {
+    background-color: hsla(var(--accent-h), calc(var(--accent-s) * 1%), calc(var(--accent-l) * 1%), .3);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background: var(--primary) linear-gradient(90deg, var(--primary) 66%, hsl(var(--primary-h), calc(var(--primary-s) * 1.3 * 1%), calc(var(--primary-l) * 2 * 1%)) 100%);
+  background-size: contain;
+  color: css-hsl(var(--accent-hsl), .85);
+
+  &::before,
+  &::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 0;
+    box-shadow: 0 0 5vh 5vh var(--primary), 0 0 5vh 5vh var(--primary);
+    z-index: 10;
+    background: var(--primary);
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 1.25rem;
+  }
+  @media (min-width: $tv) {
+    font-size: 2.375rem;
+  }
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+  width: 100%;
+  @media (min-width: $tv) {
+    max-width: 1800px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    transition: all 250ms ease-in-out;
+    background: var(--accent);
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+h1 {
+  @include font-primary;
+  font-size: 22vw;
+  font-weight: 200;
+  margin: 17vh 0 0;
+  line-height: 1;
+  text-align: center;
+
+  span + span {
+    font-weight: 300;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 6em;
+  }
+  @media (min-width: $laptop) {
+    font-size: 7em;
+  }
+
+  + p {
+    text-align: center;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    margin: 0 0 17vh;
+    font-size: 3.64vw;
+    line-height: 1;
+    opacity: 0.8;
+    padding-left: .2em;
+    @media (min-width: $tablet) {
+      font-size: 1em;
+    }
+    @media (min-width: $laptop) {
+      font-size: 1.16em;
+    }
+  }
+}
+
+h2 {
+  @include font-primary;
+  font-weight: 200;
+  font-size: 3em;
+  text-transform: uppercase;
+  margin: 15vh 0 5vh;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1.5em;
+  margin: 0 0 0.5em;
+}
+
+h4 {
+  font-size: 1.5em;
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+p {
+  margin: 0 0 0.5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  line-height: 1.4;
+  margin: 0;
+  padding: 0 0 0 1em;
+}
+
+b {
+  font-weight: 400;
+}
+
+picture {
+  display: block;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+blockquote {
+  text-align: center;
+  quotes: '«' '»';
+  font-size: 1.5em;
+  //padding: 5vh 0;
+  display: block;
+
+  &::before {
+    content: open-quote;
+  }
+
+  &::after {
+    content: close-quote;
+  }
+}
+
+table {
+  width: 100%;
+  border: none;
+  border-spacing: 0.5em;
+  line-height: 1.3;
+
+  th {
+    text-align: left;
+  }
+
+  th,
+  td {
+    font-weight: 300;
+    vertical-align: top;
+    padding: 0.2em 0;
+  }
+}
+
+span.nowrap {
+  white-space: nowrap;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  font-size: inherit;
+}

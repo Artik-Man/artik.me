@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>{{ data.meta.title }}</title>
+
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="keywords"
+        content="CV, Mangasaryan, Artik, Artashes, frontend, front-end, Curriculum vitae, резюме, разработчик, фронтенд, фронтендер, Артик, Арташес, Мангасарян"/>
+  <meta name="title" content="{{ data.meta.title }}"/>
+  <meta name="author" content="{{ data.meta.full_name }}"/>
+  <meta name="description"
+        content="{{ data.meta.description }}"/>
+  <meta property="og:image" content="{{ data.meta.card }}"/>
+  <meta property="og:image:width" content="1280"/>
+  <meta property="og:image:height" content="640"/>
+  <meta property="og:site_name" content="{{ data.meta.title }}"/>
+  <meta property="og:type" content="object"/>
+  <meta property="og:title" content="{{ data.meta.full_name }}"/>
+  <meta property="og:url" content="{{ data.meta.url }}"/>
+  <meta property="og:description"
+        content="{{ data.meta.description }}"/>
+  <link rel="manifest" href="./assets/manifest.json"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="application-name" content="{{ data.meta.name }}"/>
+  <meta name="apple-mobile-web-app-title" content="{{ data.meta.name }}"/>
+  <meta name="theme-color" content="{{ data.meta.color }}"/>
+  <meta name="msapplication-navbutton-color" content="{{ data.meta.color }}"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="msapplication-starturl" content="index.html"/>
+  <link rel="apple-touch-startup-image" href="assets/images/splashscreens/iphone5_splash.png"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="assets/images/splashscreens/iphone6_splash.png"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="assets/images/splashscreens/iphonexr_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="assets/images/splashscreens/iphonex_splash.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"/>
+  <link rel="apple-touch-startup-image" href="assets/images/splashscreens/iphonexsmax_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"/>
+  <link rel="apple-touch-startup-image" href="assets/images/splashscreens/iphoneplus_splash.png"
+        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"/>
+  <link rel="apple-touch-startup-image" href="assets/images/splashscreens/ipad_splash.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="assets/images/splashscreens/ipadpro1_splash.png"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="assets/images/splashscreens/ipadpro3_splash.png"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"/>
+  <link rel="apple-touch-startup-image" href="assets/images/splashscreens/ipadpro2_splash.png"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"/>
+
+  {% for size in data.iconsSizes %}
+    <link sizes="{{ size }}x{{ size }}" href="assets/images/icons/icon-{{ size }}x{{ size }}.png" rel="icon"/>
+    <link sizes="{{ size }}x{{ size }}" href="assets/images/icons/icon-{{ size }}x{{ size }}.png"
+          rel="apple-touch-icon"/>
+  {% endfor %}
+
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
+        href="./assets/fonts/yanone-kaffeesatz-v15-latin_cyrillic-200.woff2"/>
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
+        href="./assets/fonts/roboto-v20-latin_cyrillic-300.woff2"/>
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
+        href="./assets/fonts/roboto-v20-latin_cyrillic-regular.woff2"/>
+  <link rel="stylesheet" href="./styles.css"/>
+
+
+</head>
+<body>

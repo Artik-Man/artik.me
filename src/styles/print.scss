@@ -1,0 +1,107 @@
+// out: false
+@media print {
+  html,
+  html.light {
+    --primary-h: 0;
+    --primary-s: 0;
+    --primary-l: 0;
+
+    --accent-h: 0;
+    --accent-s: 0;
+    --accent-l: 100;
+
+    body {
+      font-size: 16px;
+      background: var(--accent);
+      color: var(--primary);
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    a:not(.no-print-href)::after {
+      content: ' [ ' attr(href) ' ] ';
+      font-size: 0.7em;
+      margin: 0 1ex;
+      display: inline-block;
+      position: static;
+      top: auto;
+      bottom: auto;
+      width: auto;
+      height: auto;
+      background: transparent;
+      color: inherit;
+    }
+
+    header {
+      display: none;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 6em;
+
+      + p {
+        margin-bottom: 50px;
+        font-size: 1em;
+      }
+    }
+
+    h2 {
+      margin: 50px 0 20px;
+    }
+
+    .about {
+      page-break-inside: avoid;
+
+      .ava-box {
+        filter: grayscale(1) brightness(1.2);
+        background: var(--accent);
+
+        &::after {
+          display: none;
+        }
+      }
+
+      blockquote {
+        margin: 0;
+        font-size: 1.3em;
+      }
+    }
+
+    .skills {
+      margin-top: 30px;
+      list-style: none;
+      padding: 0 .25em;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      li {
+        padding: .2em;
+      }
+    }
+
+    section {
+      page-break-inside: avoid;
+    }
+
+    .merge {
+      display: none;
+    }
+
+    .portfolio {
+      li {
+        page-break-inside: avoid;
+        padding: 0;
+        border: none;
+      }
+    }
+
+    .no-print {
+      display: none;
+    }
+  }
+}
