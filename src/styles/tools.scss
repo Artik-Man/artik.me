@@ -1,0 +1,67 @@
+// out: false
+
+$phone_landscape: 500px;
+$tablet: 700px;
+$laptop: 1300px;
+$tv: 2400px;
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin font-primary {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+@function css-hsl($args...) {
+  @return unquote("hsl("+$args+")")
+}
+
+html {
+  --primary-h: 195;
+  --primary-s: 49;
+  --primary-l: 12;
+  --primary-hsl: var(--primary-h), calc(var(--primary-s) * 1%), calc(var(--primary-l) * 1%);
+  --primary: hsl(var(--primary-hsl));
+
+  --accent-h: 195;
+  --accent-s: 0;
+  --accent-l: 95;
+  --accent-hsl: var(--accent-h), calc(var(--accent-s) * 1%), calc(var(--accent-l) * 1%);
+  --accent: hsl(var(--accent-hsl));
+}
+
+.reverse {
+  transform: scale(-1, 1);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--primary);
+
+  body {
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px css-hsl(var(--primary-hsl), .3);
+      background-color: var(--primary);
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: var(--accent);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px css-hsl(var(--primary-hsl), .3);
+      background-color: var(--accent);
+    }
+  }
+
+}

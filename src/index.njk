@@ -1,0 +1,23 @@
+{% set data = loadJS('src/_data.js') %}
+
+{% include "./templates/head.njk" %}
+
+<div class="page">
+
+  {% include "./templates/header.njk" %}
+
+  <main>
+    <h1 class="notranslate"><span>ARTIK</span>&nbsp;<span>MAN</span></h1>
+    <p>Frontend&mdash;developer</p>
+
+    {% include "./templates/about.njk" %}
+
+    {% include "./templates/skills.njk" %}
+
+    {% include "./templates/experience.njk" %}
+
+    {% include "./templates/portfolio.njk" %}
+  </main>
+</div>
+
+{% include "./templates/footer.njk" %}

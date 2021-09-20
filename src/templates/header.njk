@@ -1,0 +1,17 @@
+<header>
+  <a class="logo" href="./" aria-label="Artik Man — frontend-developer">AM</a>
+
+  <button class="switch-theme off" id="theme-switcher" title="Change theme">
+    <span class="rotator" id="theme-rotator"></span>
+  </button>
+
+  {% for contact in data.contacts %}
+    <a href="{{ contact.url }}" aria-label="{{ contact.label }}" rel="noreferrer">
+      <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <use href="./assets/sprite.svg#{{ contact.iconClass }}"></use>
+      </svg>
+      <span class="text">{{ contact.text }}</span>
+    </a>
+  {% endfor %}
+
+</header>

@@ -1,0 +1,71 @@
+// out: false
+.switch-theme {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  height: 1em;
+  width: 1em;
+  padding: 0;
+  font-size: inherit;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0.8;
+  transition: opacity 150ms linear;
+  overflow: hidden;
+  outline: none;
+  display: block;
+
+  &.off {
+    visibility: hidden;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px css-hsl(var(--accent-hsl), .7);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .rotator {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 220%;
+    height: 220%;
+    margin-left: -111%;
+    transform: rotate(0deg);
+    transition: all 250ms ease-in-out;
+    display: block;
+    border-radius: 50%;
+    background-size: 100%;
+    background-position: 0 50%;
+    background-image: url('./assets/images/svg/theme.svg');
+  }
+}
+
+@mixin light-theme {
+  --primary-h: 195;
+  --primary-s: 0;
+  --primary-l: 95;
+
+  --accent-h: 195;
+  --accent-s: 49;
+  --accent-l: 12;
+}
+
+html.light {
+  @include light-theme;
+}
+
+@media (prefers-color-scheme: light) {
+  html.no-js {
+    @include light-theme;
+  }
+}
+
