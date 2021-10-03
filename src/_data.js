@@ -34,14 +34,35 @@
       url: 'https://artik-man.github.io/HTML-Practice/',
       picture: 'html-practice',
       contribution: '[Personal project] This is book is for my students. Front end development, print/book layout.',
-      techList: ['WebPack', 'TypeScript', 'LESS', 'Pug']
+      techList: ['SamuraiJS', 'TypeScript', 'Sass', 'Nunjucks']
     },
     {
       title: 'Material Theme Creator',
       url: 'https://artik-man.github.io/material-theme-creator/',
       picture: 'material-theme-creator',
       contribution: '[Personal project] This library is designed to converting Angular Material themes to CSS Custom Properties (CSS Variables). In addition, you can create a Material-like theme from one color.',
-      techList: ['SCSS', 'CSS Custom Properties', 'Angular Material']
+      techList: ['Sass', 'CSS Custom Properties', 'Angular Material']
+    },
+    {
+      title: 'SamuraiJS',
+      url: 'https://artik-man.github.io/SamuraiJS/',
+      picture: 'samuraijs',
+      contribution: '[Personal project] Super simple Nunjucks + TypeScript + Sass builder primarily for static sites.',
+      techList: ['Nunjucks', 'TypeScript', 'Sass', 'NodeJS']
+    },
+    {
+      title: 'Simple Date parser',
+      url: 'https://artik-man.github.io/simple-date-parser/',
+      picture: 'simple-date-parser',
+      contribution: '[Personal project] Parse strings into JS Date.',
+      techList: ['JavaScript']
+    },
+    {
+      title: 'Q.Palette',
+      url: 'https://qpalette.diasoft.ru/',
+      picture: 'qpalette',
+      contribution: 'Development of a design system and framework that allows you to use several web applications on one page in the form of web-components',
+      techList: ['Angular', 'TypeScript', 'Web-Components']
     },
     {
       title: 'Kaspersky Lab: Tailored Intelligence Reporting System',
@@ -102,7 +123,7 @@
       url: 'https://github.com/Artik-Man/artik.me',
       picture: 'artik',
       contribution: '[Personal project] Full cycle of development of web page: from design to caching with ServiceWorker',
-      techList: ['ServiceWorker', 'CSS Custom Properties', 'Nunjucks']
+      techList: ['SamuraiJS', 'ServiceWorker', 'CSS Custom Properties']
     }
   ];
   const lifeline = [

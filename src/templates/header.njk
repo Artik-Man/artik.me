@@ -6,7 +6,7 @@
   </button>
 
   {% for contact in data.contacts %}
-    <a href="{{ contact.url }}" aria-label="{{ contact.label }}" rel="noreferrer">
+    <a href="{{ contact.url }}" aria-label="{{ contact.label }}" rel="noreferrer" target="_blank">
       <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
         <use href="./assets/sprite.svg#{{ contact.iconClass }}"></use>
       </svg>
