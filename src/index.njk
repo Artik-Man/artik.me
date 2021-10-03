@@ -24,7 +24,7 @@
   <meta property="og:url" content="{{ data.meta.url }}"/>
   <meta property="og:description"
         content="{{ data.meta.description }}"/>
-  <link rel="manifest" href="./assets/manifest.json"/>
+  <link rel="manifest" href="./manifest.json"/>
   <meta name="mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="application-name" content="{{ data.meta.name }}"/>
@@ -55,8 +55,8 @@
         media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"/>
 
   {% for size in data.iconsSizes %}
-    <link sizes="{{ size }}x{{ size }}" href="assets/images/icons/icon-{{ size }}x{{ size }}.png" rel="icon"/>
-    <link sizes="{{ size }}x{{ size }}" href="assets/images/icons/icon-{{ size }}x{{ size }}.png"
+    <link sizes="{{ size }}x{{ size }}" href="./assets/images/icons/icon-{{ size }}x{{ size }}.png" rel="icon"/>
+    <link sizes="{{ size }}x{{ size }}" href="./assets/images/icons/icon-{{ size }}x{{ size }}.png"
           rel="apple-touch-icon"/>
   {% endfor %}
 

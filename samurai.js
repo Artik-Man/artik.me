@@ -18,7 +18,7 @@ new Samurai({
   paths: {
     source: 'src',
     destination: 'dist',
-    assets: ['src/assets'],
+    assets: ['src/assets', 'src/manifest.json'],
     exclude: ['src/templates', 'src/styles', 'src/scripts']
   },
   logLevel: 'debug',
