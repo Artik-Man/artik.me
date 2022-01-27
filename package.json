@@ -32,7 +32,7 @@
     "nunjucks": "^3.2.3",
     "png-to-jpeg": "^1.0.1",
     "prettier": "^2.4.1",
-    "samuraijs": "^0.0.10",
+    "samuraijs": "0.0.12",
     "sass": "^1.41.1",
     "typescript": "^4.4.3"
   }
