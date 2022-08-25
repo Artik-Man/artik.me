@@ -92,28 +92,28 @@
     },
     {
       title: 'Hashboard cabinet',
-      url: 'https://new.hashboard.ru/cabinet/',
+      // url: 'https://new.hashboard.ru/cabinet/',
       picture: 'hashboard-cabinet',
       contribution: 'Front end development of #hashboard service. This web application uses client-side localization, HTML5 Audio/Video, the combination of AngularJS + RequireJS + REST API.',
       techList: ['AngularJS', 'RequireJS', 'REST']
     },
     {
       title: 'Hashboard player',
-      url: 'https://new.hashboard.ru/play/?login=artik@hb.ru',
+      // url: 'https://new.hashboard.ru/play/?login=artik@hb.ru',
       picture: 'hashboard-player',
       contribution: 'Front end development of #hashboard service. This web application uses HTML5 Video and Audio, handles internet-connection troubles. Web site has a fluid layout.',
       techList: ['jQuery', 'RequireJS', 'REST']
     },
     {
       title: 'Hashboard',
-      url: 'https://hashboard.ru',
+      // url: 'https://hashboard.ru',
       picture: 'hashboard',
       contribution: 'Front end development of #hashboard service. Cross-browser code, responsive layout, Website localization.',
       techList: ['jQuery', 'Bootstrap', 'LESS']
     },
     {
       title: 'Pricereporter',
-      url: 'http://primepix.ru/portfolio/mgrabber/',
+      url: 'https://pricereporter.ru/',
       picture: 'pr',
       contribution: 'Front end web development and technical support of a commercial site',
       techList: ['jQuery', 'Bootstrap', 'Bitrix']
@@ -162,7 +162,7 @@
     },
     {
       title: 'Hashboard',
-      url: 'https://hashboard.ru',
+      // url: 'https://hashboard.ru',
       text: '<p>Frontend Developer</p>',
       from: {year: 2016, month: 6},
       to: {year: 2017, month: 4}
