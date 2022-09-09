@@ -3,24 +3,26 @@
 .lifeline {
   --months: calc((var(--current-year) * 12 + var(--current-month)) - (var(--start-year) * 12 + var(--start-month)));
 
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-template-columns: max-content 1fr 1fr;
+  grid-template-rows: repeat(var(--months), auto);
+  gap: 5px;
+
+  //display: flex;
+  //flex-direction: column-reverse;
   //gap: 5px;
-  font-size: 1rem;
+  font-size: .8rem;
   list-style: none;
   padding: 0;
   margin: 0;
 
   @media (min-width: $phone_landscape) {
-    display: grid;
-    grid-auto-columns: auto;
-    grid-template-columns: max-content 1fr 1fr;
-    grid-template-rows: repeat(var(--months), auto);
-    gap: 5px;
+    font-size: 1rem;
   }
   @media print {
-    display: flex;
-    justify-content: space-between;
+    //display: flex;
+    //justify-content: space-between;
   }
 
   .line {
@@ -28,13 +30,23 @@
     --end: calc(((var(--current-year) * 12 + var(--current-month)) - (var(--end-year) * 12 + var(--end-month)) + 1));
 
     grid-row: var(--end) / span var(--duration);
-    padding: 0.7em 1em;
+    padding: 0.5em;
     background-color: rgba(127, 127, 127, 0.1);
     border-radius: 3px;
     margin-bottom: 5px;
 
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    @media (min-width: 375px) {
+      writing-mode: unset;
+      text-orientation: unset;
+    }
+
     @media (min-width: $phone_landscape) {
-      margin-bottom: 0;
+      padding: 0.7em 1em;
+      writing-mode: unset;
+      text-orientation: unset;
     }
 
     &.fix-start {
@@ -43,25 +55,36 @@
 
     @media print {
       page-break-inside: avoid;
-      padding: 1em 0;
-      background-color: transparent;
-      border-radius: 0;
-      border-bottom: 1px solid;
+
+      writing-mode: unset;
+      text-orientation: unset;
+
+      //padding: 1em 0;
+      //background-color: transparent;
+      //border-radius: 0;
+      //border-bottom: 1px solid;
     }
   }
 
   .timeline {
-    display: none;
+    display: block;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+
     @media (min-width: $phone_landscape) {
-      display: block;
+      //display: block;
+      writing-mode: unset;
+      text-orientation: unset;
     }
     @media print {
-      display: none;
+      //display: none;
     }
 
-
     p {
+      font-size: max(16px, 1em);
       margin: 0;
+      text-align: center;
       //@media not print {
       //  position: sticky;
       //  top: 7vh;
@@ -78,15 +101,15 @@
     //}
 
     h3 {
-      font-size: 1.2em;
+      font-size: max(16px, 1.2em);
     }
 
     p {
-      font-size: 1em;
+      font-size: max(14px, 1em);
     }
 
     .date {
-      font-size: .8em;
+      font-size: max(12px, .8em);
     }
 
     .text {
