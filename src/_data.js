@@ -189,7 +189,7 @@
       url: 'https://kaspersky.com',
       text: '<p>Developer</p>',
       from: {year: 2018, month: 6},
-      to: now
+      to: {year: 2022, month: 9}
     },
     {
       title: 'Diasoft',
