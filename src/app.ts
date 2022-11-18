@@ -45,6 +45,14 @@
 }
 
 {
+  const value = decodeURI(location.hash).slice(1);
+  if (value.length) {
+      const template = document.createElement('div');
+      document.querySelector('blockquote').innerText = value;
+  }
+}
+
+{
   // ServiceWorker
   if (location.hostname !== 'localhost') {
     if ('serviceWorker' in navigator) {
