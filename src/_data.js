@@ -194,7 +194,7 @@
     {
       title: 'Diasoft',
       url: 'https://www.diasoft.ru/',
-      text: '<p>Lead Software Engineer</p>',
+      text: '<p>Lead Software Engineer, Teamlead</p>',
       from: {year: 2021, month: 6},
       to: now,
       classes: 'fix-start'
