@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/Artik-Man/artik.me#readme",
   "devDependencies": {
-    "browser-sync": "^2.27.5",
+    "browser-sync": "^2.29.1",
     "esbuild": "^0.12.28",
     "imagemin": "^8.0.1",
     "imagemin-webp": "^7.0.0",
