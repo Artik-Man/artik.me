@@ -29,7 +29,7 @@
     "imagemin": "^8.0.1",
     "imagemin-webp": "^7.0.0",
     "node-sass": "^7.0.1",
-    "nunjucks": "^3.2.3",
+    "nunjucks": "^3.2.4",
     "png-to-jpeg": "^1.0.1",
     "prettier": "^2.4.1",
     "samuraijs": "0.0.12",
