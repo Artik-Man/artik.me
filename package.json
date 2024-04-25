@@ -28,7 +28,7 @@
     "esbuild": "^0.12.28",
     "imagemin": "^8.0.1",
     "imagemin-webp": "^7.0.0",
-    "node-sass": "^7.0.1",
+    "node-sass": "^9.0.0",
     "nunjucks": "^3.2.4",
     "png-to-jpeg": "^1.0.1",
     "prettier": "^2.4.1",
