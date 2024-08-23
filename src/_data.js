@@ -196,8 +196,15 @@
       url: 'https://www.diasoft.ru/',
       text: '<p>Lead Software Engineer, Teamlead</p>',
       from: {year: 2021, month: 6},
-      to: now,
+      to: {year: 2024, month: 5},
       classes: 'fix-start'
+    },
+    {
+      title: 'RT Solar',
+      url: 'https://rt-solar.ru/',
+      text: '<p>Lead Software Engineer, Teamlead</p>',
+      from: {year: 2024, month: 6},
+      to: now,
     }
   ];
   const yMin = Math.min(...lifeline.map(p => p.from.year));
