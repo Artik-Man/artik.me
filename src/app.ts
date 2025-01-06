@@ -57,7 +57,7 @@
     if ('serviceWorker' in navigator) {
       const swMessages = reg => {
         navigator.serviceWorker.addEventListener('message', event => {
-          const message = JSON.parse(event.data);
+          const message = event.data;
           console.log('[APP]: new message from ServiceWorker:', message);
           if (event.data && event.data.type === 'VERSION_OUTDATED') {
             reg.unregister().then();
