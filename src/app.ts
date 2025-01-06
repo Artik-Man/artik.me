@@ -64,14 +64,14 @@
             location.reload();
           }
         });
-
-        navigator.serviceWorker.controller.postMessage({ type: 'CHECK_VERSION' });
       };
 
       if (navigator.serviceWorker.controller) {
         navigator.serviceWorker.getRegistration().then(reg => {
           swMessages(reg);
         });
+
+        navigator.serviceWorker.controller.postMessage({ type: 'CHECK_VERSION' });
       } else {
         navigator.serviceWorker
           .register('sw.js', {
