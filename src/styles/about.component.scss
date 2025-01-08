@@ -26,6 +26,14 @@
       width: 480px;
       height: 480px;
     }
+
+    .ava {
+      img {
+        width: 140%;
+        margin: 1% -10%;
+        mix-blend-mode: luminosity;
+      }
+    }
   }
 
   blockquote {
@@ -47,7 +55,9 @@
   .about {
     .ava-box {
       .ava {
-        filter: grayscale(1) brightness(1.2);
+        img{
+          mix-blend-mode: normal;
+        }
       }
     }
   }

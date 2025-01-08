@@ -1,185 +1,142 @@
+const CACHE_NAME = 'cache-v5';
+const VERSION_URL = 'https://api.github.com/repos/Artik-Man/artik.me/commits';
+const DOMAIN_WHITELIST = [
+  location.origin,
+  'https://fonts.gstatic.com',
+  'https://fonts.googleapis.com'
+];
+
 interface Commit {
-  url: string;
   sha: string;
-
-  [field: string]: any;
+  [key: string]: any;
 }
 
-function throttle(func: () => void, ms: number) {
-  let isThrottled = false,
-    savedArgs: {} | null,
-    savedThis: null;
-
-  function wrapper() {
-    if (isThrottled) {
-      savedArgs = arguments;
-      savedThis =
-        // @ts-ignore
-        this;
-      return;
-    }
-    // @ts-ignore
-    func.apply(this, arguments);
-    isThrottled = true;
-    setTimeout(function () {
-      isThrottled = false;
-      if (savedArgs) {
-        // @ts-ignore
-        wrapper.apply(savedThis, savedArgs);
-        savedArgs = savedThis = null;
-      }
-    }, ms);
-  }
-
-  return wrapper;
+function getCommitSha(json: Commit[]): string | undefined {
+  return json[0]?.sha;
 }
 
-class SiteServiceWorker {
-  public cacheName: string;
-  public commitsUrl: string;
-  private urls: Set<string>;
-  private readonly lazyCheckUpdates: () => void;
-
-  constructor(cacheName: string, commitsUrl: string) {
-    this.cacheName = cacheName;
-    this.commitsUrl = commitsUrl;
-    this.urls = new Set();
-    this.lazyCheckUpdates = throttle(this.checkUpdates, 60 * 60 * 1000);
-  }
-
-  async get(request: Request | string, noCache = false): Promise<Response | undefined> {
-    try {
-      const response = await fetch(request, {
-        cache: noCache ? 'no-cache' : 'default',
-      });
-
-      if (!noCache) {
-        const cache = await caches.open(this.cacheName);
-        await cache.put(request, response.clone());
-      }
-
-      return response;
-    } catch (e) {
-      console.warn('[SW]: No internet connection');
+// Функция для получения текущей версии с сервера
+async function fetchVersion(): Promise<string | null> {
+  try {
+    const response = await fetch(VERSION_URL, { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`Failed to fetch version: ${response.statusText}`);
     }
-    return;
-  }
-
-  async updateCache(clone: Response, clean = true): Promise<void> {
-    console.log('[SW]: Update cache');
-    if (clean) {
-      const cachesKeys = await caches.keys();
-      cachesKeys.forEach(key => {
-        caches.delete(key).then();
-      });
-    } else {
-      const cache = await caches.open(this.cacheName);
-      await cache.put(this.commitsUrl, clone);
-
-      [...this.urls.values()].forEach((url: string) => {
-        this.get(url);
-      });
-    }
-  }
-
-  async checkUpdates(justFetch = false): Promise<void> {
-    console.log('[SW]: Check updates...');
-    const fetchedResponse = await this.get(this.commitsUrl, true);
-    if (!fetchedResponse) {
-      return;
-    }
-
-    const clone = fetchedResponse.clone();
-    const cache = await caches.open(this.cacheName);
-
-    const cachedResponse = await cache.match(this.commitsUrl);
-    if (!cachedResponse) {
-      justFetch = true;
-    }
-
-    if (justFetch) {
-      this.updateCache(clone, false);
-      return;
-    }
-
-    const sha = async (commitsResponse: Response): Promise<string> => {
-      if (!commitsResponse) {
-        return '';
-      }
-
-      const commits: Commit[] = await commitsResponse.clone().json();
-      const last = Array.isArray(commits) && commits.length ? commits[0] : null;
-
-      if (last) {
-        return last.sha;
-      }
-
-      return '';
-    };
-
-    const fetchedSHA = await sha(fetchedResponse),
-      cachedSHA = await sha(cachedResponse as Response);
-
-    if (fetchedSHA !== cachedSHA) {
-      this.updateCache(clone);
-      this.newVersionIsAvailable();
-    } else {
-      console.log('[SW]: No updates found');
-    }
-  }
-
-  async newVersionIsAvailable(): Promise<void> {
-    console.log('[SW]: Please reload the page');
-
-    const message = {
-      message: '[SW]: Update me, please',
-      code: 1,
-    };
-
-    // @ts-ignore
-    self.clients
-      .matchAll({ includeUncontrolled: true, type: 'window' })
-      .then((clients: { forEach: (arg0: (client: any) => void) => void }) => {
-        clients.forEach((client: { postMessage: (arg0: any) => void }) => {
-          client.postMessage(JSON.stringify(message));
-        });
-      });
-  }
-
-  async onFetch(request: Request): Promise<Response | undefined> {
-    const url = new URL(request.url);
-    const canBePreCached = ['https://fonts.gstatic.com', 'https://fonts.googleapis.com', location.origin].includes(url.origin);
-
-    if (canBePreCached) {
-      this.urls.add(request.url);
-
-      this.lazyCheckUpdates();
-
-      const cache = await caches.open(this.cacheName);
-      const resp = await cache.match(request);
-
-      return resp || (await this.get(request));
-    } else {
-      return;
-    }
+    const json = await response.json();
+    return getCommitSha(json);
+  } catch (error) {
+    console.error('[SW]: Error fetching version:', error);
+    return null;
   }
 }
 
-const serviceWorker = new SiteServiceWorker('cache-v4', 'https://api.github.com/repos/Artik-Man/artik.me/commits');
+// Функция для обновления кэша
+async function updateCache(request: RequestInfo, response: Response): Promise<void> {
+  const cache = await caches.open(CACHE_NAME);
+  await cache.put(request, response);
+}
 
-self.addEventListener('install', () => {
+// Установка service worker
+self.addEventListener('install', event => {
   console.log('[SW]: Install');
   // @ts-ignore
-  self.skipWaiting();
-  setTimeout(() => {
-    serviceWorker.checkUpdates(true).then();
-  }, 2000);
+  self.skipWaiting(); // Убедитесь, что TypeScript понимает, что self является ServiceWorkerGlobalScope
+  event.waitUntil(
+    fetchVersion().then(version => {
+      console.log('[SW]: Fetched version during install:', version);
+    })
+  );
 });
 
-// @ts-ignore
-self.addEventListener('fetch', async (event: FetchEvent) => {
-  try {
-    event.respondWith(serviceWorker.onFetch(event.request) as Promise<Response>);
-  } catch (e) {
+// Активация service worker
+self.addEventListener('activate', event => {
+  console.log('[SW]: Activate');
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('[SW]: Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+  // @ts-ignore
+  self.clients.claim(); // Убедитесь, что TypeScript понимает, что self является ServiceWorkerGlobalScope
+});
+
+// Обработка сообщений от клиента
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'CHECK_VERSION') {
+    console.log('[SW]: Received CHECK_VERSION message');
+    checkAndUpdateVersion();
   }
+});
+
+// Функция для проверки и обновления версии
+async function checkAndUpdateVersion(): Promise<void> {
+  const cache = await caches.open(CACHE_NAME);
+  const currentVersion = await fetchVersion();
+  const cachedVersion = await cache.match(VERSION_URL).then(res => res?.json().then(json => getCommitSha(json)));
+
+  if (currentVersion && cachedVersion && currentVersion === cachedVersion) {
+    console.log('[SW]: Version matches. No update needed.');
+  } else {
+    console.log('[SW]: Version mismatch. Updating cache and notifying clients.');
+    try {
+      const response = await fetch(VERSION_URL);
+      if (response.ok) {
+        await updateCache(VERSION_URL, response.clone());
+      }
+      notifyClientsAboutUpdate();
+    } catch (error) {
+      console.error('[SW]: Error updating version:', error);
+    }
+  }
+}
+
+// Функция для уведомления клиентов об устаревшей версии
+function notifyClientsAboutUpdate(): void {
+  // @ts-ignore
+  self.clients.matchAll({ includeUncontrolled: true, type: 'window' }).then(clients => {
+    clients.forEach(client => {
+      client.postMessage({ type: 'VERSION_OUTDATED' });
+    });
+  });
+}
+
+// Обработка событий fetch
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    (async () => {
+      const requestUrl = new URL(event.request.url);
+
+      // Проверяем, относится ли запрос к разрешённым доменам
+      if (DOMAIN_WHITELIST.includes(requestUrl.origin)) {
+        const cache = await caches.open(CACHE_NAME);
+        const cachedResponse = await cache.match(event.request);
+
+        if (cachedResponse) {
+          // Версия совпадает, отдаём из кэша
+          console.log('[SW]: Serving from cache:', event.request.url);
+          return cachedResponse;
+        } else {
+          // Запрашивает и кэширует новые ресурсы
+          console.log('[SW]: Fetching and updating cache:', event.request.url);
+        
+          const response = await fetch(event.request);
+          if (response.ok) {
+            await updateCache(event.request, response.clone());
+          }
+          return response;
+        
+        }
+      } else {
+        // Если запрос не относится к разрешённым доменам, просто выполняем запрос
+        return fetch(event.request);
+      }
+    })()
+  );
 });

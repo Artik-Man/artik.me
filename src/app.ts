@@ -1,7 +1,10 @@
+import { types } from "sass";
+import String = types.String;
+
 {
   // Theming
   const html = document.querySelector('html'),
-    themes = {auto: 'auto', dark: 'dark', light: 'light'},
+    themes = { auto: 'auto', dark: 'dark', light: 'light' },
     states = Object.keys(themes),
     switcher = document.getElementById('theme-switcher'),
     rotator = document.getElementById('theme-rotator');
@@ -17,7 +20,7 @@
   let angle = states.indexOf(storage.get());
 
   const setTheme = theme => {
-    rotator.style.transform = `rotate(-${angle++ * 120}deg)`;
+    rotator.style.transform = `rotate(-${ angle++ * 120 }deg)`;
     switch (theme) {
       case themes.auto:
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
@@ -47,8 +50,7 @@
 {
   const value = decodeURI(location.hash).slice(1);
   if (value.length) {
-      const template = document.createElement('div');
-      document.querySelector('blockquote').innerText = value;
+    document.querySelector('blockquote').innerText = value;
   }
 }
 
@@ -58,9 +60,9 @@
     if ('serviceWorker' in navigator) {
       const swMessages = reg => {
         navigator.serviceWorker.addEventListener('message', event => {
-          const message = JSON.parse(event.data);
+          const message = event.data;
           console.log('[APP]: new message from ServiceWorker:', message);
-          if (message.code === 1) {
+          if (event.data && event.data.type === 'VERSION_OUTDATED') {
             reg.unregister().then();
             location.reload();
           }
@@ -71,6 +73,8 @@
         navigator.serviceWorker.getRegistration().then(reg => {
           swMessages(reg);
         });
+
+        navigator.serviceWorker.controller.postMessage({ type: 'CHECK_VERSION' });
       } else {
         navigator.serviceWorker
           .register('sw.js', {
@@ -114,4 +118,11 @@
       webvisor: true
     });
   }
+}
+
+{
+  document.addEventListener('mousedown', () => {
+    const hue = Number(getComputedStyle(document.documentElement).getPropertyValue('--hue')) + 30;
+    document.documentElement.style.setProperty('--hue', hue+'');
+  })
 }

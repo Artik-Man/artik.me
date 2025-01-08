@@ -25,7 +25,7 @@
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 2px css-hsl(var(--accent-hsl), .7);
+    box-shadow: 0 0 0 2px oklch(from var(--accent) l c h /.7);
   }
 
   &:focus {
@@ -43,20 +43,13 @@
     transition: all 250ms ease-in-out;
     display: block;
     border-radius: 50%;
-    background-size: 100%;
-    background-position: 0 50%;
-    background-image: url('./assets/images/svg/theme.svg');
   }
 }
 
 @mixin light-theme {
-  --primary-h: 195;
-  --primary-s: 0;
-  --primary-l: 95;
-
-  --accent-h: 195;
-  --accent-s: 49;
-  --accent-l: 12;
+  --hue: 60;
+  --accent: oklch(.25 .03 var(--hue));
+  --primary: oklch(.85 .01 var(--hue));
 }
 
 html.light {
