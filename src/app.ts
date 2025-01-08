@@ -1,3 +1,6 @@
+import { types } from "sass";
+import String = types.String;
+
 {
   // Theming
   const html = document.querySelector('html'),
@@ -17,7 +20,7 @@
   let angle = states.indexOf(storage.get());
 
   const setTheme = theme => {
-    rotator.style.transform = `rotate(-${angle++ * 120}deg)`;
+    rotator.style.transform = `rotate(-${ angle++ * 120 }deg)`;
     switch (theme) {
       case themes.auto:
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
@@ -115,4 +118,11 @@
       webvisor: true
     });
   }
+}
+
+{
+  document.addEventListener('mousedown', () => {
+    const hue = Number(getComputedStyle(document.documentElement).getPropertyValue('--hue')) + 30;
+    document.documentElement.style.setProperty('--hue', hue+'');
+  })
 }

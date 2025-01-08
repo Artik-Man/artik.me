@@ -30,8 +30,8 @@
     .ava {
       img {
         width: 140%;
-        filter: sepia(1) saturate(0.6) brightness(0.7) contrast(1) grayscale(0) hue-rotate(139deg);
         margin: 1% -10%;
+        mix-blend-mode: luminosity;
       }
     }
   }
@@ -56,7 +56,7 @@
     .ava-box {
       .ava {
         img{
-          filter: none;
+          mix-blend-mode: normal;
         }
       }
     }

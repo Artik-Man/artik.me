@@ -4,7 +4,7 @@
   padding: 0;
 
   > li {
-    border-left: 1px solid css-hsl(var(--accent-hsl), .8);
+    border-left: 1px solid oklch(from var(--accent) l c h /.8);
     padding-left: 1em;
     margin-bottom: 3em;
     @media (min-width: $tablet) {
@@ -16,7 +16,8 @@
       .description .image a:focus {
         picture {
           opacity: 1;
-          filter: grayscale(0);
+          //filter: grayscale(0);
+          mix-blend-mode: normal;
         }
       }
     }
@@ -64,7 +65,8 @@
         left: 0;
         picture {
           opacity: 0.5;
-          filter: grayscale(0.8);
+          //filter: grayscale(0.8);
+          mix-blend-mode: luminosity;
           transition: all 250ms ease-in-out;
         }
       }

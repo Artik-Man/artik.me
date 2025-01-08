@@ -2,13 +2,8 @@
 @media print {
   html,
   html.light {
-    --primary-h: 0;
-    --primary-s: 0;
-    --primary-l: 0;
-
-    --accent-h: 0;
-    --accent-s: 0;
-    --accent-l: 100;
+    --accent: oklch(0 0.03 224);
+    --primary: oklch(1 0.03 224);
 
     body {
       font-size: 16px;
